@@ -4,7 +4,7 @@ Read `PLAN.md` first. It is the contract; decisions there are settled unless it 
 
 ## Stack
 No-build vanilla JS PWA (ES modules), IndexedDB, service worker. Same skeleton as
-`~/Apps/healthHub`. No backend, no API key. Hosting: GitHub Pages (user decision; not yet set up).
+`~/Apps/healthHub`. No backend, no API key. Hosted on GitHub Pages: https://dancrxss.github.io/cisspCoach/ (repo dancrxss/cisspCoach, main branch, root). Append to DEPLOY_LOG.md after each push that changes the site.
 
 ## Layout
 - `index.html`, `css/app.css`, `sw.js`, `manifest.webmanifest`, `icons/`

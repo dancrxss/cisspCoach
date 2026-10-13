@@ -3,8 +3,9 @@
 Offline-first CISSP prep PWA with a Claude Code coaching loop. `PLAN.md` is the contract.
 
 **Status (2026-10-13):** Phases 0–4 built. Coach, Drill, Flashcards, Mock Test and Progress
-all work offline with 400 reviewed questions and 304 flashcards. Phase 5 (the `/cissp-coach`
-skill + iCloud export path) is next. Not yet hosted.
+all work offline with 400 reviewed questions and 304 flashcards. Live at
+https://dancrxss.github.io/cisspCoach/ (add to Home Screen on iPhone). Phase 5 (the `/cissp-coach`
+skill + iCloud export path) is next.
 
 ## Run locally
 ```bash
