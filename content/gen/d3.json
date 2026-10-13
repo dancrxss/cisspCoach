@@ -1,0 +1,2281 @@
+{
+  "questions": [
+    {
+      "id": "q-d3-sub01-001",
+      "domain": 3,
+      "subdomain": "3.1",
+      "difficulty": 1,
+      "stem": "A design review states that the system's protection must not depend on keeping its algorithms or internal design secret, because the design will be scrutinized by outsiders. Which secure design principle is being applied?",
+      "options": [
+        "Open design",
+        "Defense in depth",
+        "Fail securely",
+        "Economy of mechanism"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Is the statement about how many layers of control exist, or about what the protection depends on?",
+        "If an attacker fully understands how the system works, what is the only thing that should still protect it?"
+      ],
+      "explanation": {
+        "correct": "Open design (Kerckhoffs's principle) holds that security must rest on protected keys and sound controls, not on the secrecy of the design. Publicly reviewed designs tend to be stronger because flaws are found before attackers exploit them.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Defense in depth is about layering multiple independent controls, not about whether the design is secret."
+          },
+          {
+            "option": 2,
+            "why": "Fail securely governs the system state when a component fails; it says nothing about design secrecy."
+          },
+          {
+            "option": 3,
+            "why": "Economy of mechanism means keeping the design simple and small. Simplicity helps review but is a different principle."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub01-002",
+      "domain": 3,
+      "subdomain": "3.1",
+      "difficulty": 2,
+      "stem": "A developer proposes that when the authorization service times out, the payment application should approve the transaction so customers are not inconvenienced. Which secure design principle does this proposal violate?",
+      "options": [
+        "Separation of duties",
+        "Fail securely",
+        "Psychological acceptability",
+        "Least common mechanism"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What state should a system default to when a security decision cannot be made?",
+        "Which principle is concerned with the outcome of a failure rather than with who performs a task?",
+        "Does approving by default preserve or erode the control that the authorization service provides?"
+      ],
+      "explanation": {
+        "correct": "Fail securely (fail closed) requires that errors and timeouts default to denial so a failure does not open a path around the control. Approving transactions when authorization is unavailable bypasses the very check the service exists to perform.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Separation of duties splits critical tasks among people; the proposal is about system behavior on error, not task division."
+          },
+          {
+            "option": 2,
+            "why": "Psychological acceptability asks that controls be usable. It may tempt you because the proposal favors users, but it does not justify bypassing the control."
+          },
+          {
+            "option": 3,
+            "why": "Least common mechanism limits shared mechanisms between users or processes; it is unrelated to timeout handling."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub01-003",
+      "domain": 3,
+      "subdomain": "3.1",
+      "difficulty": 1,
+      "stem": "An organization's internal network currently trusts any traffic originating inside the corporate LAN. Which statement BEST describes the zero trust principle that would replace this assumption?",
+      "options": [
+        "Internal traffic is trusted once the user has connected through the VPN",
+        "Perimeter firewalls are hardened so internal hosts need not authenticate",
+        "Every request is verified regardless of network location",
+        "Only devices on the management VLAN are exempt from verification"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Does zero trust treat network location as a source of trust or as irrelevant to it?",
+        "Which option still grants implicit trust to some category of traffic?"
+      ],
+      "explanation": {
+        "correct": "Zero trust assumes breach and removes implicit trust based on network location. Each access request is authenticated, authorized, and evaluated against policy every time, using identity, device posture, and context.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Trusting VPN-connected users is still implicit trust based on how they connected, which zero trust rejects."
+          },
+          {
+            "option": 1,
+            "why": "Relying on a hardened perimeter is the traditional castle-and-moat model that zero trust replaces."
+          },
+          {
+            "option": 3,
+            "why": "Exempting a class of devices from verification creates exactly the implicit trust zero trust is meant to remove."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub01-004",
+      "domain": 3,
+      "subdomain": "3.1",
+      "difficulty": 2,
+      "stem": "A vendor's product was threat modeled and has well-reviewed code, but it ships with unnecessary services enabled and a default administrator password. Which element of \"secure by design, secure by default, secure in deployment\" is MOST clearly lacking?",
+      "options": [
+        "Secure by design",
+        "Secure in deployment",
+        "Secure in communications",
+        "Secure by default"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which of the product's problems exist at the moment it leaves the vendor, before any customer touches it?",
+        "Is the weakness in the architecture and code, or in the out-of-the-box configuration?",
+        "Which element is about the vendor's shipped configuration rather than the customer's rollout guidance?"
+      ],
+      "explanation": {
+        "correct": "Secure by default means the product's initial configuration is hardened: minimal services, no default credentials, restrictive settings. The design and code were sound, so the failing element is the shipped default state.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The scenario states the design was threat modeled and the code reviewed, so the design element is met."
+          },
+          {
+            "option": 1,
+            "why": "Secure in deployment concerns guidance, tooling, and patching that help customers run the product safely; the flaw here is in the shipped configuration itself."
+          },
+          {
+            "option": 2,
+            "why": "Secure in communications addresses protected interactions, such as encrypted channels, which the scenario does not raise."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub02-001",
+      "domain": 3,
+      "subdomain": "3.2",
+      "difficulty": 1,
+      "stem": "What does the Bell-LaPadula simple security property prohibit?",
+      "options": [
+        "Writing data to a lower level (no write down)",
+        "Reading data at a higher level (no read up)",
+        "Reading data at a lower level (no read down)",
+        "Writing data to a higher level (no write up)"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Bell-LaPadula protects which security objective: confidentiality, integrity, or availability?",
+        "The simple property concerns reading, the star property concerns writing; which direction of reading would leak secrets?"
+      ],
+      "explanation": {
+        "correct": "The simple security property is \"no read up\": a subject may not read objects classified above its clearance. This protects confidentiality. The star (*) property adds \"no write down\" to stop leakage by writing.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "No write down is the star (*) property, not the simple security property."
+          },
+          {
+            "option": 2,
+            "why": "No read down is a Biba integrity rule (simple integrity axiom), not a Bell-LaPadula confidentiality rule."
+          },
+          {
+            "option": 3,
+            "why": "No write up is a Biba integrity rule (star integrity axiom), not part of Bell-LaPadula."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub02-002",
+      "domain": 3,
+      "subdomain": "3.2",
+      "difficulty": 1,
+      "stem": "Which security model is concerned with integrity and enforces \"no read down, no write up\" to prevent contamination by lower-integrity data?",
+      "options": [
+        "Bell-LaPadula",
+        "Brewer-Nash",
+        "Biba",
+        "Graham-Denning"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Is the model's goal keeping secrets from leaking, or keeping data from being corrupted?",
+        "Which model is described as the integrity counterpart to Bell-LaPadula?"
+      ],
+      "explanation": {
+        "correct": "Biba is the integrity model: the simple integrity axiom forbids reading lower-integrity data and the star integrity axiom forbids writing to higher-integrity objects. It is essentially Bell-LaPadula inverted.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Bell-LaPadula enforces confidentiality with no read up and no write down."
+          },
+          {
+            "option": 1,
+            "why": "Brewer-Nash prevents conflicts of interest through dynamic access control based on prior access."
+          },
+          {
+            "option": 3,
+            "why": "Graham-Denning defines primitive rules for creating and deleting subjects and objects and managing rights."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub02-003",
+      "domain": 3,
+      "subdomain": "3.2",
+      "difficulty": 1,
+      "stem": "Which model governs integrity using constrained data items (CDIs), transformation procedures (TPs), and integrity verification procedures (IVPs)?",
+      "options": [
+        "Biba",
+        "Bell-LaPadula",
+        "Brewer-Nash",
+        "Clark-Wilson"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which terms in the question are unique to one model's vocabulary?",
+        "Of the integrity models you know, which one works through programs and procedures rather than integrity levels?"
+      ],
+      "explanation": {
+        "correct": "Clark-Wilson uses CDIs that can be modified only by certified TPs, with IVPs checking consistency. Users reach data only through programs, which enforces well-formed transactions and separation of duties.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Biba is a level-based integrity model without the CDI, TP, or IVP constructs."
+          },
+          {
+            "option": 1,
+            "why": "Bell-LaPadula is a confidentiality model built on classification levels."
+          },
+          {
+            "option": 2,
+            "why": "Brewer-Nash addresses conflict-of-interest classes and does not use these constructs."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub02-004",
+      "domain": 3,
+      "subdomain": "3.2",
+      "difficulty": 2,
+      "stem": "A consulting firm serves two competing banks. Once a consultant has accessed Bank A's data, the system must block that consultant from Bank B's data. Which model BEST fits this requirement?",
+      "options": [
+        "Brewer-Nash",
+        "Bell-LaPadula",
+        "Clark-Wilson",
+        "Biba"
+      ],
+      "correct": 0,
+      "ladder": [
+        "What decides whether access is allowed here: a fixed clearance, or what the user has already accessed?",
+        "If access rights change as a user's history grows, is the control static or dynamic, and which model is built around conflict-of-interest classes?"
+      ],
+      "explanation": {
+        "correct": "Brewer-Nash (Chinese Wall) dynamically changes a user's access rights based on prior access to prevent conflicts of interest between competing entities. Access to one company's data in a conflict class blocks its competitors.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Bell-LaPadula uses static clearances and classifications; it does not track a user's access history."
+          },
+          {
+            "option": 2,
+            "why": "Clark-Wilson enforces well-formed transactions and separation of duties, not conflict-of-interest classes."
+          },
+          {
+            "option": 3,
+            "why": "Biba protects integrity by level and does not address competing-client conflicts."
+          }
+        ]
+      },
+      "tags": [
+        "scenario"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub02-005",
+      "domain": 3,
+      "subdomain": "3.2",
+      "difficulty": 2,
+      "stem": "A designer needs a model that defines eight primitive operations governing how subjects and objects are securely created and deleted and how access rights are granted, read, and transferred. Which model is this?",
+      "options": [
+        "Harrison-Ruzzo-Ullman",
+        "Take-Grant",
+        "Graham-Denning",
+        "Lipner"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which models in the list are access-matrix based, and which use a graph or a commercial-requirements approach?",
+        "Among the access-matrix models, which one is defined by a fixed list of rules for creating, deleting, and granting rather than by a proof about undecidability?"
+      ],
+      "explanation": {
+        "correct": "Graham-Denning defines eight primitive protection rules (create and delete object, create and delete subject, and read, grant, delete, and transfer access rights) over an access matrix. HRU builds on it with six primitive operations.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Harrison-Ruzzo-Ullman uses six primitive operations and focuses on proving that safety is undecidable in general."
+          },
+          {
+            "option": 1,
+            "why": "Take-Grant models rights propagation with a directed graph using take, grant, create, and remove rules."
+          },
+          {
+            "option": 3,
+            "why": "Lipner combines confidentiality and integrity ideas to map commercial requirements; it is not defined by eight primitives."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub02-006",
+      "domain": 3,
+      "subdomain": "3.2",
+      "difficulty": 2,
+      "stem": "Under Bell-LaPadula, a Secret-cleared user copies Secret data into an Unclassified document. Which property is MOST directly violated?",
+      "options": [
+        "Simple security property",
+        "Discretionary security property",
+        "Invocation property",
+        "Star (*) security property"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Was the user reading data above their clearance, or writing data to a lower level?",
+        "Which Bell-LaPadula property governs the direction of writing, as opposed to reading?"
+      ],
+      "explanation": {
+        "correct": "The star (*) property forbids a subject from writing to an object at a lower classification, preventing downward leakage. Copying Secret content into an Unclassified document is exactly a write down.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The simple security property (no read up) is not violated: the user read Secret data at their own level."
+          },
+          {
+            "option": 1,
+            "why": "The discretionary security property uses an access matrix for need-to-know within the mandatory rules; it is not about writing downward."
+          },
+          {
+            "option": 2,
+            "why": "The invocation property is a Biba rule about invoking subjects of higher integrity."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub02-007",
+      "domain": 3,
+      "subdomain": "3.2",
+      "difficulty": 3,
+      "stem": "Which statement BEST describes the principal result of the Harrison-Ruzzo-Ullman (HRU) model?",
+      "options": [
+        "Safety of arbitrary access-matrix systems is undecidable",
+        "Any access-matrix system can be proven safe by exhaustive enumeration",
+        "Data integrity is guaranteed by restricting changes to certified transactions",
+        "Information may flow only upward through a lattice of labels"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Is HRU mainly a model of information flow, of integrity transactions, or of whether rights can leak?",
+        "If a general algorithm existed to decide whether a right can leak, what would the model's authors have concluded?"
+      ],
+      "explanation": {
+        "correct": "HRU formalizes access-matrix commands built from primitive operations and shows that determining whether a right can leak to an unauthorized subject is undecidable in the general case. This is why practical systems restrict the command set.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Exhaustive enumeration fails in the general case, which is the very result HRU establishes."
+          },
+          {
+            "option": 2,
+            "why": "Certified transactions describe Clark-Wilson, not HRU."
+          },
+          {
+            "option": 3,
+            "why": "Upward-only flow over a lattice describes Bell-LaPadula style information-flow models."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub02-008",
+      "domain": 3,
+      "subdomain": "3.2",
+      "difficulty": 3,
+      "stem": "A finance system must ensure that the person who enters a payment cannot also approve it, and that payment records change only through audited, certified programs. Which model BEST addresses these requirements?",
+      "options": [
+        "Biba",
+        "Clark-Wilson",
+        "Bell-LaPadula",
+        "Brewer-Nash"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Do the requirements describe security levels, or controlled transactions and duties?",
+        "Biba and Clark-Wilson both protect integrity; which one addresses who may perform each step of a process?",
+        "Does the requirement concern who may touch the data, or how data may be changed and by whom?"
+      ],
+      "explanation": {
+        "correct": "Clark-Wilson enforces integrity through well-formed transactions, access only via certified transformation procedures, and separation of duties through its subject-program-object triples. Those are exactly the stated requirements.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Biba uses integrity levels and the no-read-down, no-write-up rules; it does not enforce separation of duties or certified programs."
+          },
+          {
+            "option": 2,
+            "why": "Bell-LaPadula protects confidentiality and is not designed for payment integrity."
+          },
+          {
+            "option": 3,
+            "why": "Brewer-Nash prevents conflicts of interest between competing clients, not duties inside one process."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub03-001",
+      "domain": 3,
+      "subdomain": "3.3",
+      "difficulty": 1,
+      "stem": "After selecting a control baseline, an organization modifies certain controls to fit its specific mission and environment. What is this activity called?",
+      "options": [
+        "Scoping",
+        "Accreditation",
+        "Hardening",
+        "Tailoring"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Is the organization choosing which controls apply or adjusting how they are specified?",
+        "Of the activities of choosing applicable controls, formally accepting risk, and securing a configuration, which involves altering control specifications for local conditions?"
+      ],
+      "explanation": {
+        "correct": "Tailoring adjusts baseline controls to the organization's risk, mission, and environment, for example by adding compensating controls or changing parameters. Scoping, by contrast, decides which baseline controls apply at all.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Scoping decides which baseline controls apply to a system and is one part of the wider tailoring process; it does not itself modify the controls."
+          },
+          {
+            "option": 1,
+            "why": "Accreditation is management's formal acceptance of risk and authorization to operate."
+          },
+          {
+            "option": 2,
+            "why": "Hardening configures a system securely; it is not the baseline adjustment process."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub03-002",
+      "domain": 3,
+      "subdomain": "3.3",
+      "difficulty": 2,
+      "stem": "In the NIST Risk Management Framework, what is done immediately BEFORE security controls are selected for a new information system?",
+      "options": [
+        "The system is categorized by impact",
+        "The implemented controls are assessed",
+        "The system is authorized to operate",
+        "The controls are monitored continuously"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which step must come first: choosing controls or understanding how much harm the system's compromise could cause?",
+        "Which of the options are steps that clearly occur after controls exist?"
+      ],
+      "explanation": {
+        "correct": "Categorization based on the potential impact to confidentiality, integrity, and availability drives selection of the control baseline. Controls cannot be sensibly chosen before the system's impact level is known.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Assessment happens after controls are implemented."
+          },
+          {
+            "option": 2,
+            "why": "Authorization is the decision made after assessment of the implemented controls."
+          },
+          {
+            "option": 3,
+            "why": "Continuous monitoring is the final step, performed during operations."
+          }
+        ]
+      },
+      "tags": [
+        "ordering"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub03-003",
+      "domain": 3,
+      "subdomain": "3.3",
+      "difficulty": 3,
+      "stem": "In Common Criteria evaluations, which document is an implementation-independent set of security requirements for a category of products, typically written by a consumer community?",
+      "options": [
+        "Security Target",
+        "Protection Profile",
+        "Target of Evaluation",
+        "Evaluation Assurance Level"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Who writes the document: the buyer community or the vendor of one specific product?",
+        "Is the document generic to a product class, or specific to one product?"
+      ],
+      "explanation": {
+        "correct": "A Protection Profile states reusable, implementation-independent requirements for a class of products. A vendor then writes a Security Target describing how its specific product meets them.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The Security Target is product-specific and written by the vendor; it is the closest distractor but is not implementation-independent."
+          },
+          {
+            "option": 2,
+            "why": "The Target of Evaluation is the product or system under evaluation, not a requirements document."
+          },
+          {
+            "option": 3,
+            "why": "An Evaluation Assurance Level (EAL1-EAL7) expresses depth of assurance testing, not a set of requirements."
+          }
+        ]
+      },
+      "tags": [
+        "definition",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub04-001",
+      "domain": 3,
+      "subdomain": "3.4",
+      "difficulty": 2,
+      "stem": "To ensure a laptop's full-disk encryption key is released only if the boot components are unmodified, which hardware capability is MOST appropriate?",
+      "options": [
+        "Network-attached hardware security module",
+        "Smart card reader",
+        "Trusted Platform Module",
+        "BIOS password"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which part of the requirement is about verifying the machine's boot state before a key is released?",
+        "Which options are separate devices or authentication aids rather than platform integrity measurement?"
+      ],
+      "explanation": {
+        "correct": "A TPM is a hardware chip on the machine that records boot measurements in platform configuration registers and can seal keys so they release only when the measured state matches. This binds disk encryption to an untampered boot.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A network HSM stores and uses keys centrally but does not measure this laptop's boot state."
+          },
+          {
+            "option": 1,
+            "why": "A smart card reader supports user authentication but does not verify platform integrity."
+          },
+          {
+            "option": 3,
+            "why": "A BIOS password limits configuration changes; it does not measure boot components or seal keys."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub04-002",
+      "domain": 3,
+      "subdomain": "3.4",
+      "difficulty": 1,
+      "stem": "Which memory protection technique randomizes the locations of code, stack, and heap to make exploitation more difficult?",
+      "options": [
+        "Address space layout randomization",
+        "Data execution prevention",
+        "Stack canaries",
+        "Process isolation"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which technique changes where things are in memory rather than marking regions or detecting overwrites?",
+        "Which option makes an attacker unable to predict target addresses?"
+      ],
+      "explanation": {
+        "correct": "ASLR randomizes memory layout on each run so attackers cannot rely on fixed addresses for return-oriented or shellcode attacks.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Data execution prevention marks memory regions non-executable; it does not randomize locations."
+          },
+          {
+            "option": 2,
+            "why": "Stack canaries detect stack buffer overwrites by checking a sentinel value."
+          },
+          {
+            "option": 3,
+            "why": "Process isolation separates address spaces between processes but does not randomize layout."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub04-003",
+      "domain": 3,
+      "subdomain": "3.4",
+      "difficulty": 1,
+      "stem": "What is the Trusted Computing Base (TCB)?",
+      "options": [
+        "The set of trusted users permitted to administer a system",
+        "Hardware, firmware, and software that enforce policy",
+        "The accredited list of software approved to run on a system",
+        "The subset of the operating system that handles network traffic"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Does the term describe people, a software whitelist, or the mechanisms that enforce policy?",
+        "Which part of a system, if flawed, would compromise every security guarantee?"
+      ],
+      "explanation": {
+        "correct": "The TCB is the totality of protection mechanisms, spanning hardware, firmware, and software, responsible for enforcing the security policy. The reference monitor concept is implemented within it.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The TCB is composed of system components, not of users."
+          },
+          {
+            "option": 2,
+            "why": "An approved software list is an application control, not the TCB."
+          },
+          {
+            "option": 3,
+            "why": "The TCB covers all policy-enforcing mechanisms, not only network handling."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub05-001",
+      "domain": 3,
+      "subdomain": "3.5",
+      "difficulty": 1,
+      "stem": "An attacker who controls one guest virtual machine exploits a flaw to execute code on the underlying hypervisor. What is this attack called?",
+      "options": [
+        "VM sprawl",
+        "Image tampering",
+        "VM escape",
+        "Resource exhaustion"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Is the attacker moving from the guest into a layer beneath it, or merely creating too many VMs?",
+        "Which term describes breaking out of the isolation boundary?"
+      ],
+      "explanation": {
+        "correct": "A VM escape breaks the isolation between a guest and its hypervisor or host, letting the attacker reach other guests. Hypervisor patching and minimal attack surface are key mitigations.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "VM sprawl is uncontrolled growth in the number of VMs, a management problem rather than an attack."
+          },
+          {
+            "option": 1,
+            "why": "Image tampering alters a VM template or image, not the guest-to-host boundary."
+          },
+          {
+            "option": 3,
+            "why": "Resource exhaustion denies service by consuming resources and does not run code on the hypervisor."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub05-002",
+      "domain": 3,
+      "subdomain": "3.5",
+      "difficulty": 1,
+      "stem": "A company runs workloads on virtual machines in an IaaS cloud. Who is responsible for patching the guest operating system?",
+      "options": [
+        "The cloud provider",
+        "Both parties through a joint patch window",
+        "The hardware vendor",
+        "The customer"
+      ],
+      "correct": 3,
+      "ladder": [
+        "In IaaS, which layers does the provider manage: physical, hypervisor, or the guest operating system?",
+        "As you move from SaaS to IaaS, does the customer's share grow or shrink?"
+      ],
+      "explanation": {
+        "correct": "Under the shared responsibility model, the IaaS provider secures the physical infrastructure and hypervisor, while the customer secures the guest OS, applications, data, and configuration. Patching the guest OS is therefore the customer's job.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The provider patches only the layers it manages, such as hosts and hypervisors."
+          },
+          {
+            "option": 1,
+            "why": "Responsibility is allocated by service model, not shared through a joint window."
+          },
+          {
+            "option": 2,
+            "why": "The hardware vendor has no role in patching a customer's guest operating system."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub05-003",
+      "domain": 3,
+      "subdomain": "3.5",
+      "difficulty": 2,
+      "stem": "A security assessment finds that a plant's Modbus traffic carries commands with no authentication or encryption. Which characteristic of legacy ICS protocols does this illustrate?",
+      "options": [
+        "Strong authentication that was implemented poorly",
+        "Designed for trusted networks, not security",
+        "A requirement for internet connectivity to operate",
+        "Proprietary encryption that has been broken"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What assumption about the network did the designers of early industrial protocols make?",
+        "Did the protocol ever include authentication to be implemented poorly?"
+      ],
+      "explanation": {
+        "correct": "Many legacy ICS protocols such as Modbus were built for isolated serial networks where availability and safety mattered and attackers were not anticipated. They lack authentication and encryption, so segmentation and monitoring are required.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Modbus never had authentication; it is absent, not poorly implemented."
+          },
+          {
+            "option": 2,
+            "why": "These protocols were built for isolated plant networks and do not need the internet."
+          },
+          {
+            "option": 3,
+            "why": "There is no proprietary encryption to break; traffic is sent in clear text."
+          }
+        ]
+      },
+      "tags": [
+        "scenario"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub05-004",
+      "domain": 3,
+      "subdomain": "3.5",
+      "difficulty": 1,
+      "stem": "Building sensors use hardcoded credentials that cannot be changed and receive no firmware updates. What is the BEST compensating approach?",
+      "options": [
+        "Rely on the obscurity of the default credentials",
+        "Install endpoint antivirus on each sensor",
+        "Isolate them on a segment behind firewall rules",
+        "Accept the risk because sensors hold no data"
+      ],
+      "correct": 2,
+      "ladder": [
+        "If the device itself cannot be fixed, where can you limit what an attacker can reach?",
+        "Which options depend on the device being patchable or being unattractive to attackers?"
+      ],
+      "explanation": {
+        "correct": "When an IoT device cannot be patched or reconfigured, compensating controls reduce exposure. Network segmentation with restrictive rules limits who can reach the device and what a compromised device can reach.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Hardcoded credentials are discoverable by attackers, so obscurity is not a control."
+          },
+          {
+            "option": 1,
+            "why": "Embedded sensors generally cannot run antivirus."
+          },
+          {
+            "option": 3,
+            "why": "A compromised sensor can still be a pivot point into the network, so ignoring the risk is unwise."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub05-005",
+      "domain": 3,
+      "subdomain": "3.5",
+      "difficulty": 2,
+      "stem": "A containerized microservices application has many services calling each other inside the cluster. Which approach BEST provides authenticated, encrypted service-to-service communication?",
+      "options": [
+        "A web application firewall at the cluster edge",
+        "An access control list on the perimeter firewall",
+        "A shared API key baked into each container image",
+        "A service mesh enforcing mutual TLS"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Does the traffic in question cross the perimeter or stay inside the cluster?",
+        "Which option gives each service its own verifiable identity for both sides of a connection?"
+      ],
+      "explanation": {
+        "correct": "East-west traffic between microservices needs per-service identity and encryption. A service mesh provisions certificates and enforces mutual TLS so both sides authenticate each other without changes to application code.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A WAF at the edge inspects north-south traffic and never sees traffic between internal services."
+          },
+          {
+            "option": 1,
+            "why": "A perimeter ACL cannot see or control traffic that stays inside the cluster."
+          },
+          {
+            "option": 2,
+            "why": "A shared key in images is a static, widely distributed secret with no per-service identity or rotation."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub05-006",
+      "domain": 3,
+      "subdomain": "3.5",
+      "difficulty": 3,
+      "stem": "Two cooperating processes at different classification levels signal each other: one fills and empties a shared disk partition, and the other observes the free space. What type of channel is this?",
+      "options": [
+        "Covert storage channel",
+        "Covert timing channel",
+        "Overt channel",
+        "Side channel"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Is the signal carried by the state of a shared resource or by the timing of operations?",
+        "Do the two processes cooperate deliberately, or is an attacker only observing a leak?"
+      ],
+      "explanation": {
+        "correct": "A covert storage channel conveys information by one process altering a shared storage attribute, here free space, that another process reads. A covert timing channel instead modulates timing, for example response delays.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "A timing channel signals through the timing of events, not through changes to a stored value."
+          },
+          {
+            "option": 2,
+            "why": "An overt channel is a legitimate, authorized communication path."
+          },
+          {
+            "option": 3,
+            "why": "A side channel is an unintended observable leak, such as power use, usually exploited without the victim cooperating."
+          }
+        ]
+      },
+      "tags": [
+        "scenario"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub06-001",
+      "domain": 3,
+      "subdomain": "3.6",
+      "difficulty": 1,
+      "stem": "Which set lists the key lengths supported by the Advanced Encryption Standard (AES)?",
+      "options": [
+        "56, 112, and 168 bits",
+        "64, 128, and 256 bits",
+        "128, 192, and 256 bits",
+        "128, 256, and 512 bits"
+      ],
+      "correct": 2,
+      "ladder": [
+        "AES has a fixed 128-bit block size; how many key lengths does it offer?",
+        "Which option belongs to a predecessor algorithm?"
+      ],
+      "explanation": {
+        "correct": "AES uses a 128-bit block and supports 128-, 192-, and 256-bit keys, with 10, 12, and 14 rounds respectively.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "These sizes echo DES (56-bit) and Triple DES (112/168-bit effective), its predecessors."
+          },
+          {
+            "option": 1,
+            "why": "AES has no 64-bit key option."
+          },
+          {
+            "option": 3,
+            "why": "AES does not define a 512-bit key length."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub06-002",
+      "domain": 3,
+      "subdomain": "3.6",
+      "difficulty": 1,
+      "stem": "To provide non-repudiation for a message, with which key does the sender create the digital signature?",
+      "options": [
+        "The sender's public key",
+        "The recipient's public key",
+        "A shared symmetric session key",
+        "The sender's private key"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Who alone should be able to produce the signature, and who should be able to verify it?",
+        "Does a shared key identify one individual uniquely?"
+      ],
+      "explanation": {
+        "correct": "Signing the message hash with the sender's private key lets anyone verify with the public key while only the sender could have signed. This ties the message to the sender, giving non-repudiation.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The public key is known to everyone, so anyone could forge a signature made with it."
+          },
+          {
+            "option": 1,
+            "why": "The recipient's public key is used to encrypt for confidentiality, not to sign."
+          },
+          {
+            "option": 2,
+            "why": "A shared key is known to both parties, so either could have produced the result and non-repudiation is lost."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub06-003",
+      "domain": 3,
+      "subdomain": "3.6",
+      "difficulty": 2,
+      "stem": "Which mechanism provides both message integrity and origin authentication between two parties using a shared secret key?",
+      "options": [
+        "HMAC",
+        "A plain SHA-256 hash",
+        "A CRC checksum",
+        "A digital signature"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which options involve a secret that only the two parties know?",
+        "A digital signature uses which kind of key, symmetric or asymmetric?"
+      ],
+      "explanation": {
+        "correct": "An HMAC combines a hash function with a shared secret key, so only someone holding the key can generate a valid tag. This proves integrity and that the sender knew the key.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "A plain hash can be recomputed by anyone, giving integrity at most, not authentication."
+          },
+          {
+            "option": 2,
+            "why": "A CRC detects accidental errors and offers no security against deliberate change."
+          },
+          {
+            "option": 3,
+            "why": "A digital signature uses asymmetric keys, not a shared secret, and adds non-repudiation."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub06-004",
+      "domain": 3,
+      "subdomain": "3.6",
+      "difficulty": 1,
+      "stem": "Which PKI mechanism allows a client to query a responder for the real-time revocation status of a single certificate?",
+      "options": [
+        "Certificate Revocation List",
+        "Online Certificate Status Protocol",
+        "Registration authority",
+        "Certificate policy"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Is the client asking about one certificate right now, or downloading a periodically published list?",
+        "Which option is a role or document rather than a status lookup?"
+      ],
+      "explanation": {
+        "correct": "OCSP lets a client request the current status of an individual certificate from a responder, avoiding the lag of periodically published lists.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A CRL is a signed list published at intervals, so it can be stale and must be downloaded in full."
+          },
+          {
+            "option": 2,
+            "why": "A registration authority verifies identities before certificates are issued; it does not report status."
+          },
+          {
+            "option": 3,
+            "why": "A certificate policy is a document describing how certificates may be used and issued."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub06-005",
+      "domain": 3,
+      "subdomain": "3.6",
+      "difficulty": 3,
+      "stem": "A policy requires that no single administrator ever knows the complete master key; each of two administrators holds half. Which concept does this describe?",
+      "options": [
+        "Dual control",
+        "Key escrow",
+        "Separation of duties",
+        "Split knowledge"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Is the policy about what a person knows, or about how many people must be present to act?",
+        "In the scenario, does each administrator know part of the secret, or must both merely be present to act?"
+      ],
+      "explanation": {
+        "correct": "Split knowledge divides secret information so no one person possesses all of it. Dual control is different: it requires two people to act together but does not by itself say that either knows only part of the key.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Dual control requires two authorized people to perform a task jointly; it is commonly paired with split knowledge but is about action, not knowledge."
+          },
+          {
+            "option": 1,
+            "why": "Key escrow deposits a copy of a key with a trusted third party for recovery."
+          },
+          {
+            "option": 2,
+            "why": "Separation of duties divides roles across people to prevent fraud; it is a broader concept."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub06-006",
+      "domain": 3,
+      "subdomain": "3.6",
+      "difficulty": 2,
+      "stem": "A security manager wants recorded TLS sessions to stay confidential even if the server's long-term private key is later compromised. Which property should be required?",
+      "options": [
+        "Perfect forward secrecy",
+        "Non-repudiation",
+        "Key escrow",
+        "Certificate pinning"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which property keeps past sessions safe after a later key theft?",
+        "How would session keys need to be generated so the long-term key cannot recover them?"
+      ],
+      "explanation": {
+        "correct": "With perfect forward secrecy, session keys come from ephemeral Diffie-Hellman exchanges and are discarded, so stealing the long-term key later cannot decrypt recorded traffic.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Non-repudiation proves who performed an action, not confidentiality of past traffic."
+          },
+          {
+            "option": 2,
+            "why": "Key escrow stores keys for recovery, which actually increases the chance of recorded traffic being decrypted."
+          },
+          {
+            "option": 3,
+            "why": "Certificate pinning guards against fraudulent certificates, not decryption of recorded sessions."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub06-007",
+      "domain": 3,
+      "subdomain": "3.6",
+      "difficulty": 1,
+      "stem": "What is the primary advantage of elliptic curve cryptography (ECC) over RSA?",
+      "options": [
+        "It is a symmetric algorithm and therefore faster",
+        "Comparable strength with much smaller keys",
+        "It removes the need for key management",
+        "It is immune to attacks by quantum computers"
+      ],
+      "correct": 1,
+      "ladder": [
+        "ECC and RSA are both which type of cryptography, symmetric or asymmetric?",
+        "What practical benefit does a smaller key give constrained devices?"
+      ],
+      "explanation": {
+        "correct": "ECC provides equivalent security with far smaller keys, for example about 256 bits versus 3072-bit RSA for roughly 128-bit security. This reduces computation, storage, and bandwidth.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "ECC is asymmetric, not symmetric."
+          },
+          {
+            "option": 2,
+            "why": "Every cryptosystem requires key management."
+          },
+          {
+            "option": 3,
+            "why": "ECC is vulnerable to Shor's algorithm, as RSA is."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub06-008",
+      "domain": 3,
+      "subdomain": "3.6",
+      "difficulty": 3,
+      "stem": "Which combination of requirements must be met for a one-time pad to provide perfect secrecy?",
+      "options": [
+        "A pseudorandom key stretched from a short seed and used once",
+        "A truly random key shorter than the message, reused after rotation",
+        "A truly random key, at least message length, used once",
+        "A truly random 256-bit key used for a single session only"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What would make the pad's key stream predictable or repeatable?",
+        "Which options relax randomness, length, or single use?"
+      ],
+      "explanation": {
+        "correct": "A one-time pad is unbreakable only if the key is truly random, at least as long as the plaintext, and never reused. Relaxing any one of these conditions removes the guarantee.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A pseudorandom key from a seed is a stream cipher, not a one-time pad, and carries only the seed's entropy."
+          },
+          {
+            "option": 1,
+            "why": "A shorter, reused key repeats, which permits frequency and crib attacks."
+          },
+          {
+            "option": 3,
+            "why": "A 256-bit key is far shorter than any realistic message, so key material would repeat."
+          }
+        ]
+      },
+      "tags": [
+        "definition",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub06-009",
+      "domain": 3,
+      "subdomain": "3.6",
+      "difficulty": 2,
+      "stem": "A database is encrypted with AES-256, but administrators store the decryption key in a configuration file on the same server. What is the GREATEST weakness?",
+      "options": [
+        "The key is stored with the data it protects",
+        "AES-256 is too weak for database encryption",
+        "Symmetric encryption cannot protect data at rest",
+        "The key is not changed for every session"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Is the weakness in the algorithm or in how the key is protected?",
+        "What does an attacker who steals the server or a backup gain, given where the key sits?"
+      ],
+      "explanation": {
+        "correct": "The strength of encryption depends on protecting the key. Keeping the key beside the encrypted data defeats the control, so key storage should be separated, for instance in an HSM or key management service.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "AES-256 is a strong, approved algorithm; the failure is in key handling."
+          },
+          {
+            "option": 2,
+            "why": "Symmetric encryption is widely used and appropriate for data at rest."
+          },
+          {
+            "option": 3,
+            "why": "Session-based rotation is irrelevant to stored data; protecting and managing the key matters."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub07-001",
+      "domain": 3,
+      "subdomain": "3.7",
+      "difficulty": 1,
+      "stem": "An attacker holds several matching plaintext and ciphertext pairs and tries to deduce the key. Which attack is this?",
+      "options": [
+        "Ciphertext-only attack",
+        "Known-plaintext attack",
+        "Chosen-ciphertext attack",
+        "Brute-force attack"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What does the attacker possess beyond the ciphertext?",
+        "Did the attacker choose the inputs, or simply obtain pairs?"
+      ],
+      "explanation": {
+        "correct": "In a known-plaintext attack, the analyst has samples of plaintext and the corresponding ciphertext and uses them to recover the key or break the cipher.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Ciphertext-only attacks assume the attacker has only ciphertext."
+          },
+          {
+            "option": 2,
+            "why": "Chosen-ciphertext requires the attacker to select ciphertexts to be decrypted; no such choice is described."
+          },
+          {
+            "option": 3,
+            "why": "Brute force tries every possible key and does not rely on matched pairs for analysis."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub07-002",
+      "domain": 3,
+      "subdomain": "3.7",
+      "difficulty": 2,
+      "stem": "Which attack exploits probability theory to find two different inputs that produce the same hash value more easily than brute force?",
+      "options": [
+        "Rainbow table attack",
+        "Meet-in-the-middle attack",
+        "Birthday attack",
+        "Replay attack"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Is the attacker seeking a specific hash or any two inputs that collide?",
+        "Which probability result shows that matches in a set appear far sooner than intuition suggests?"
+      ],
+      "explanation": {
+        "correct": "The birthday attack uses the birthday paradox: a collision in an n-bit hash needs roughly 2^(n/2) attempts rather than 2^n. This is why longer hash outputs are required.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Rainbow tables are precomputed hash-to-password lookups for cracking, not collision finding."
+          },
+          {
+            "option": 1,
+            "why": "Meet-in-the-middle targets multiple encryption, such as double encryption, not hash collisions."
+          },
+          {
+            "option": 3,
+            "why": "Replay attack retransmits captured valid messages."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub07-003",
+      "domain": 3,
+      "subdomain": "3.7",
+      "difficulty": 2,
+      "stem": "An attacker measures the power consumption of a smart card while it performs cryptographic operations and recovers the secret key. What type of attack is this?",
+      "options": [
+        "Brute-force attack",
+        "Known-plaintext attack",
+        "Man-in-the-middle attack",
+        "Side-channel attack"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Is the attacker attacking the algorithm's math or its physical implementation?",
+        "What other observable emissions, such as timing or electromagnetic, would count as the same class?"
+      ],
+      "explanation": {
+        "correct": "Side-channel attacks exploit physical characteristics of an implementation, such as power use, timing, or electromagnetic emissions, to infer secrets without breaking the algorithm itself.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Brute force tries keys and does not observe physical characteristics."
+          },
+          {
+            "option": 1,
+            "why": "Known-plaintext uses plaintext-ciphertext pairs for analysis, not physical measurements."
+          },
+          {
+            "option": 2,
+            "why": "Man-in-the-middle intercepts or alters communications between parties."
+          }
+        ]
+      },
+      "tags": [
+        "scenario"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub07-004",
+      "domain": 3,
+      "subdomain": "3.7",
+      "difficulty": 3,
+      "stem": "Which cryptanalytic technique studies how specific differences in pairs of plaintexts propagate to differences in the ciphertexts to infer key bits?",
+      "options": [
+        "Linear cryptanalysis",
+        "Differential cryptanalysis",
+        "Frequency analysis",
+        "Related-key attack"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Does the technique compare pairs of inputs, or approximate the cipher with linear equations?",
+        "Which option applies to classical substitution ciphers rather than block ciphers?"
+      ],
+      "explanation": {
+        "correct": "Differential cryptanalysis analyzes how chosen input differences affect output differences across rounds of a block cipher. Linear cryptanalysis instead builds linear approximations using known plaintext.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Linear cryptanalysis approximates the cipher with linear relations using known plaintext, not paired input differences."
+          },
+          {
+            "option": 2,
+            "why": "Frequency analysis counts letter frequencies in classical substitution ciphers."
+          },
+          {
+            "option": 3,
+            "why": "A related-key attack exploits mathematical relationships between different keys, not input differences."
+          }
+        ]
+      },
+      "tags": [
+        "definition",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub08-001",
+      "domain": 3,
+      "subdomain": "3.8",
+      "difficulty": 1,
+      "stem": "Which approach uses natural surveillance, natural access control, and territorial reinforcement in site design to discourage crime?",
+      "options": [
+        "Defense in depth",
+        "Target hardening",
+        "CPTED",
+        "Security zoning"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Does the approach rely on physical barriers or on the way the environment is designed and used?",
+        "Which option is about design that influences behavior rather than a specific hardware control?"
+      ],
+      "explanation": {
+        "correct": "CPTED shapes the physical environment, using sightlines, lighting, landscaping, and clear boundaries, so legitimate users feel ownership and offenders feel observed.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Defense in depth layers different controls but does not define these three strategies."
+          },
+          {
+            "option": 1,
+            "why": "Target hardening adds physical barriers, such as locks and bars, rather than design that encourages surveillance."
+          },
+          {
+            "option": 3,
+            "why": "Security zoning separates areas by sensitivity; it is not the named strategy set."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub08-002",
+      "domain": 3,
+      "subdomain": "3.8",
+      "difficulty": 2,
+      "stem": "Where within a multi-story office building is the BEST location for a data center?",
+      "options": [
+        "The basement near utility feeds",
+        "The top floor below rooftop chillers",
+        "The ground floor near the lobby",
+        "The interior core of a middle floor"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which locations are exposed to flooding, roof leaks, or public access?",
+        "Which location is shielded from outside walls and windows?"
+      ],
+      "explanation": {
+        "correct": "An interior core on a middle floor avoids flood risk in the basement, roof and storm exposure at the top, and the vehicle and public access around the ground floor. It also lacks exterior walls that invite attack or surveillance.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Basements are prone to flooding and water intrusion."
+          },
+          {
+            "option": 1,
+            "why": "The top floor is exposed to roof leaks, wind, and lightning."
+          },
+          {
+            "option": 2,
+            "why": "The ground floor near the lobby has the greatest public access and vehicle-ramming risk."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub09-001",
+      "domain": 3,
+      "subdomain": "3.9",
+      "difficulty": 1,
+      "stem": "In the US fire classification, which class involves energized electrical equipment?",
+      "options": [
+        "Class C",
+        "Class A",
+        "Class B",
+        "Class D"
+      ],
+      "correct": 0,
+      "ladder": [
+        "What kind of fire involves equipment that is still connected to power, and what does that rule out for suppressants?",
+        "Which classes cover ordinary combustibles, liquids, and metals?"
+      ],
+      "explanation": {
+        "correct": "Class C is energized electrical fires. A: ordinary combustibles; B: flammable liquids; D: combustible metals; K: cooking oils and fats.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Class A is ordinary combustibles such as wood and paper."
+          },
+          {
+            "option": 2,
+            "why": "Class B is flammable liquids and gases."
+          },
+          {
+            "option": 3,
+            "why": "Class D is combustible metals such as magnesium."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub09-002",
+      "domain": 3,
+      "subdomain": "3.9",
+      "difficulty": 2,
+      "stem": "An unstaffed equipment room has a suppression system that removes oxygen and would be lethal to anyone trapped inside. Which agent is MOST likely in use?",
+      "options": [
+        "FM-200",
+        "Wet chemical",
+        "Carbon dioxide",
+        "Water mist"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which agent works by displacing oxygen rather than interrupting the chemical reaction or cooling?",
+        "Which agents are safe at design concentration for occupied space?"
+      ],
+      "explanation": {
+        "correct": "Carbon dioxide suppresses fire by displacing oxygen. At extinguishing concentrations it is dangerous to humans, so it is generally restricted to unoccupied spaces.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "FM-200 interrupts combustion chemically at concentrations survivable by people."
+          },
+          {
+            "option": 1,
+            "why": "Wet chemical agents are used on Class K cooking-oil fires."
+          },
+          {
+            "option": 3,
+            "why": "Water mist cools and displaces oxygen only locally and is not lethal in this way."
+          }
+        ]
+      },
+      "tags": [
+        "scenario"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub09-003",
+      "domain": 3,
+      "subdomain": "3.9",
+      "difficulty": 3,
+      "stem": "A data center manager wants to minimize accidental water discharge. Which sprinkler system requires BOTH a smoke or heat detection event and a fused sprinkler head before water is released?",
+      "options": [
+        "Wet pipe",
+        "Dry pipe",
+        "Deluge",
+        "Pre-action"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which systems keep pipes dry, and which of those need a second trigger beyond a melted head?",
+        "Which system lets water into the pipes only after detection?"
+      ],
+      "explanation": {
+        "correct": "A pre-action system holds water out of the pipes until detection triggers a valve, then releases water only if a head also fuses. The double trigger greatly reduces accidental discharge, so it is preferred for data centers.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Wet pipe holds water in the pipes at all times and releases when a head fuses."
+          },
+          {
+            "option": 1,
+            "why": "Dry pipe holds air, not water, but releases water as soon as a head fuses with no detection event."
+          },
+          {
+            "option": 2,
+            "why": "Deluge uses open heads and floods the whole area once detection triggers, which is more disruptive."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub09-004",
+      "domain": 3,
+      "subdomain": "3.9",
+      "difficulty": 2,
+      "stem": "What is the MOST direct risk of letting relative humidity in a server room fall well below the recommended range?",
+      "options": [
+        "Static discharge damaging chips",
+        "Condensation shorting circuits",
+        "Corrosion of connector contacts",
+        "Fungal growth on cable jackets"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Does dry air increase or reduce the buildup of static charge?",
+        "Which options describe problems of excess moisture?"
+      ],
+      "explanation": {
+        "correct": "Low humidity raises electrostatic discharge, which can damage components. The usual recommended range is about 40 to 60 percent relative humidity.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Condensation arises from high humidity."
+          },
+          {
+            "option": 2,
+            "why": "Corrosion is associated with excess moisture."
+          },
+          {
+            "option": 3,
+            "why": "Fungal growth requires damp conditions."
+          }
+        ]
+      },
+      "tags": [
+        "scenario"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub09-005",
+      "domain": 3,
+      "subdomain": "3.9",
+      "difficulty": 1,
+      "stem": "What is a prolonged period of low voltage called?",
+      "options": [
+        "Blackout",
+        "Brownout",
+        "Surge",
+        "Sag"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Is the voltage absent entirely or merely reduced?",
+        "Which terms describe a brief dip instead of a prolonged one?"
+      ],
+      "explanation": {
+        "correct": "A brownout is a prolonged drop in voltage. A sag is momentary low voltage, a blackout is complete power loss, and a surge is a prolonged rise (a spike is the momentary rise).",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A blackout is complete loss of power."
+          },
+          {
+            "option": 2,
+            "why": "A surge is a prolonged rise in voltage, not a drop; a spike is the momentary rise."
+          },
+          {
+            "option": 3,
+            "why": "A sag is a momentary dip, not prolonged."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub09-006",
+      "domain": 3,
+      "subdomain": "3.9",
+      "difficulty": 2,
+      "stem": "Which type of UPS continuously powers the load from its inverter, with no transfer time and conditioning against sags and surges?",
+      "options": [
+        "Standby (offline) UPS",
+        "Line-interactive UPS",
+        "Rotary generator set",
+        "Online double-conversion UPS"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which UPS designs ever route the load directly from the mains, and which never do?",
+        "Which designs switch to the battery only when a fault occurs, so a transfer happens?"
+      ],
+      "explanation": {
+        "correct": "An online double-conversion UPS rectifies incoming power to DC, then inverts back to clean AC, so the load never sees a switchover and is isolated from line disturbances.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Standby UPS passes mains through and switches to battery on failure, causing a transfer delay."
+          },
+          {
+            "option": 1,
+            "why": "Line-interactive units regulate voltage but still transfer to battery during outages."
+          },
+          {
+            "option": 2,
+            "why": "A rotary generator set provides long-term backup power and is not a battery UPS with a continuously running inverter."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub09-007",
+      "domain": 3,
+      "subdomain": "3.9",
+      "difficulty": 3,
+      "stem": "A new data center will use a gaseous fire suppression system. What should be the PRIMARY consideration in selecting and configuring it?",
+      "options": [
+        "Safety of personnel in the room",
+        "Protection of servers from fire damage",
+        "Lowest installation and refill cost",
+        "Fastest possible discharge time"
+      ],
+      "correct": 0,
+      "ladder": [
+        "When protecting people and protecting equipment conflict, which does the exam prioritize?",
+        "Which option is about assets and which about human life?"
+      ],
+      "explanation": {
+        "correct": "Human life safety always comes first in security and safety decisions. Agent choice, concentration, alarms, delays, and evacuation all follow from keeping occupants safe.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Equipment protection matters, but is secondary to life safety."
+          },
+          {
+            "option": 2,
+            "why": "Cost is a constraint and never outranks safety."
+          },
+          {
+            "option": 3,
+            "why": "Speed helps contain fire but must not endanger occupants; a pre-discharge alarm delay is required."
+          }
+        ]
+      },
+      "tags": [
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub10-001",
+      "domain": 3,
+      "subdomain": "3.10",
+      "difficulty": 1,
+      "stem": "At which phase of the system development lifecycle should security requirements FIRST be identified?",
+      "options": [
+        "Testing and validation",
+        "Initiation and requirements",
+        "Deployment and rollout",
+        "Operations and maintenance"
+      ],
+      "correct": 1,
+      "ladder": [
+        "When are the system's purpose and needs first being defined?",
+        "Is it cheaper to add security early or late?"
+      ],
+      "explanation": {
+        "correct": "Security requirements should be identified at the start, alongside functional requirements. Building security in early is far cheaper than retrofitting it.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Testing verifies requirements already defined."
+          },
+          {
+            "option": 2,
+            "why": "Deployment is too late to determine requirements."
+          },
+          {
+            "option": 3,
+            "why": "Operations and maintenance occurs after the system is built and running."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub10-002",
+      "domain": 3,
+      "subdomain": "3.10",
+      "difficulty": 2,
+      "stem": "Which sanitization level makes data infeasible to recover even with laboratory techniques while still allowing the media to be reused?",
+      "options": [
+        "Clearing",
+        "Physical destruction",
+        "Purging",
+        "Quick formatting"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which level defeats laboratory recovery but leaves the media usable?",
+        "Which options leave the media unusable, or leave data recoverable?"
+      ],
+      "explanation": {
+        "correct": "Purging, for example degaussing or cryptographic erase, defeats laboratory recovery while allowing reuse in many cases. Clearing protects only against simple non-invasive recovery.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Clearing, such as a logical overwrite, resists only simple recovery techniques."
+          },
+          {
+            "option": 1,
+            "why": "Physical destruction defeats recovery but makes reuse impossible."
+          },
+          {
+            "option": 3,
+            "why": "Quick formatting leaves data recoverable with ordinary tools."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub10-003",
+      "domain": 3,
+      "subdomain": "3.10",
+      "difficulty": 2,
+      "stem": "Who formally accepts the residual risk of a system and authorizes it to operate?",
+      "options": [
+        "The authorizing official",
+        "The system custodian",
+        "The testing security analyst",
+        "The independent assessor"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Technical certification measures controls; who decides whether the remaining risk is acceptable to the business?",
+        "Is a risk-acceptance decision made by those who operate and test the system, or by someone accountable for the mission?"
+      ],
+      "explanation": {
+        "correct": "Accreditation or authorization is management's formal acceptance of residual risk, made by a senior official accountable for the mission. Technical staff provide the evidence but do not own the risk decision.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "The custodian operates controls but does not accept organizational risk."
+          },
+          {
+            "option": 2,
+            "why": "Analysts supply findings and recommendations without authority to accept risk."
+          },
+          {
+            "option": 3,
+            "why": "Assessors provide independent evaluation, and independence precludes them from deciding to accept risk."
+          }
+        ]
+      },
+      "tags": [
+        "manager-mindset",
+        "scenario"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d3-sub10-004",
+      "domain": 3,
+      "subdomain": "3.10",
+      "difficulty": 3,
+      "stem": "An accredited system is in operation. The business now wants to add a new internet-facing feature that processes payment data. What should the security manager do FIRST?",
+      "options": [
+        "Immediately add stronger encryption to the system",
+        "Run a security impact analysis in change control",
+        "Wait for the next scheduled annual reassessment",
+        "Require the vendor to issue patches for the feature"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Has the system's risk profile changed since it was accredited?",
+        "Which action ensures decisions are made before the change goes live?",
+        "Which option relies on the calendar or the vendor instead of on managing this particular change?"
+      ],
+      "explanation": {
+        "correct": "Significant changes to an accredited system require a security impact analysis within change management so the new risk is understood and re-authorized if needed before implementation. Assess first, then select controls.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Jumping to a technical fix presumes you know what the risk is before analyzing it."
+          },
+          {
+            "option": 2,
+            "why": "Waiting for the annual review allows an unassessed high-risk change into production."
+          },
+          {
+            "option": 3,
+            "why": "Patches address known vulnerabilities, but this is a new feature whose risks must be analyzed."
+          }
+        ]
+      },
+      "tags": [
+        "manager-mindset",
+        "scenario"
+      ],
+      "reviewed": true
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f-d3-sub01-001",
+      "domain": 3,
+      "subdomain": "3.1",
+      "front": "Saltzer and Schroeder: economy of mechanism",
+      "back": "Keep the design as simple and small as possible. Simpler mechanisms have fewer flaws and are easier to verify.",
+      "whyItMatters": "Asked as the principle behind small, simple security mechanisms, versus open design or fail-safe defaults."
+    },
+    {
+      "id": "f-d3-sub01-002",
+      "domain": 3,
+      "subdomain": "3.1",
+      "front": "Complete mediation vs least common mechanism",
+      "back": "Complete mediation: every access to every object is checked every time. Least common mechanism: minimize mechanisms shared by users or processes.",
+      "whyItMatters": "Often asked as which principle a described design violates."
+    },
+    {
+      "id": "f-d3-sub02-001",
+      "domain": 3,
+      "subdomain": "3.2",
+      "front": "Bell-LaPadula rules",
+      "back": "Simple security: no read up. Star (*): no write down. Strong star: read and write only at the same level. Confidentiality only.",
+      "whyItMatters": "Exam loves asking which model addresses confidentiality vs integrity."
+    },
+    {
+      "id": "f-d3-sub02-002",
+      "domain": 3,
+      "subdomain": "3.2",
+      "front": "Biba rules",
+      "back": "Simple integrity: no read down. Star integrity: no write up. Invocation: do not call higher-integrity subjects. Integrity only.",
+      "whyItMatters": "Mirror image of Bell-LaPadula; questions test the direction of each rule."
+    },
+    {
+      "id": "f-d3-sub02-003",
+      "domain": 3,
+      "subdomain": "3.2",
+      "front": "Clark-Wilson model constructs",
+      "back": "CDIs change only through TPs; IVPs verify consistency. Users access via programs (subject-program-object triples), enforcing separation of duties.",
+      "whyItMatters": "The commercial integrity model; recognized by its vocabulary."
+    },
+    {
+      "id": "f-d3-sub02-004",
+      "domain": 3,
+      "subdomain": "3.2",
+      "front": "Brewer-Nash (Chinese Wall)",
+      "back": "Dynamic access control based on conflict-of-interest classes and the user's prior access history.",
+      "whyItMatters": "Triggered by consultants or competing clients in scenarios."
+    },
+    {
+      "id": "f-d3-sub02-005",
+      "domain": 3,
+      "subdomain": "3.2",
+      "front": "Graham-Denning vs Harrison-Ruzzo-Ullman",
+      "back": "Graham-Denning: 8 primitive protection rules. HRU: access matrix with 6 primitive operations; safety is undecidable in general.",
+      "whyItMatters": "Count of primitives and the undecidability result are favorite distinctions."
+    },
+    {
+      "id": "f-d3-sub02-006",
+      "domain": 3,
+      "subdomain": "3.2",
+      "front": "Take-Grant model",
+      "back": "A directed-graph model of rights propagation using the take, grant, create, and remove rules.",
+      "whyItMatters": "Appears as a distractor beside access-matrix models."
+    },
+    {
+      "id": "f-d3-sub03-001",
+      "domain": 3,
+      "subdomain": "3.3",
+      "front": "Scoping vs tailoring",
+      "back": "Scoping decides which baseline controls apply to a system. Tailoring modifies the selected controls to fit the organization's risk and mission.",
+      "whyItMatters": "Standards questions hinge on this distinction."
+    },
+    {
+      "id": "f-d3-sub03-002",
+      "domain": 3,
+      "subdomain": "3.3",
+      "front": "Common Criteria EAL scale",
+      "back": "EAL1 to EAL7: EAL1 functionally tested, EAL4 methodically designed, tested and reviewed, EAL7 formally verified design and tested.",
+      "whyItMatters": "Exam asks the meaning of EAL4 and that higher EAL means deeper assurance, not more security."
+    },
+    {
+      "id": "f-d3-sub04-001",
+      "domain": 3,
+      "subdomain": "3.4",
+      "front": "TPM vs HSM",
+      "back": "TPM: chip on the motherboard for platform integrity measurement, sealed keys, and disk encryption. HSM: dedicated device for generating, storing, and using keys.",
+      "whyItMatters": "Which hardware fits the use case is a common scenario."
+    },
+    {
+      "id": "f-d3-sub04-002",
+      "domain": 3,
+      "subdomain": "3.4",
+      "front": "Four security modes of operation",
+      "back": "Dedicated: clearance and need-to-know for all data. System high: clearance for all, need-to-know for some. Compartmented: clearance for all, formal approval for some. Multilevel: not all users cleared for all.",
+      "whyItMatters": "Ordered by increasing complexity of access control."
+    },
+    {
+      "id": "f-d3-sub05-001",
+      "domain": 3,
+      "subdomain": "3.5",
+      "front": "Type 1 vs Type 2 hypervisor",
+      "back": "Type 1 runs directly on hardware (bare metal). Type 2 runs as an application on a host operating system.",
+      "whyItMatters": "Type 1 has a smaller attack surface and is used in data centers."
+    },
+    {
+      "id": "f-d3-sub05-002",
+      "domain": 3,
+      "subdomain": "3.5",
+      "front": "Shared responsibility by service model",
+      "back": "Provider always secures physical facilities. Customer share grows from SaaS (data and access) to PaaS (plus applications) to IaaS (plus OS and network configuration).",
+      "whyItMatters": "Exam asks who patches or configures at each layer."
+    },
+    {
+      "id": "f-d3-sub05-003",
+      "domain": 3,
+      "subdomain": "3.5",
+      "front": "Purdue model for ICS",
+      "back": "Level 0 sensors and actuators, 1 controllers (PLCs), 2 supervisory (HMI), 3 site operations, 4-5 enterprise IT. Place a DMZ between IT and OT.",
+      "whyItMatters": "Used to justify segmentation of ICS from corporate networks."
+    },
+    {
+      "id": "f-d3-sub05-004",
+      "domain": 3,
+      "subdomain": "3.5",
+      "front": "Covert channel types",
+      "back": "Storage channel: signaling by altering a shared storage state. Timing channel: signaling by modulating the timing of events.",
+      "whyItMatters": "Definition-style questions ask to tell storage from timing."
+    },
+    {
+      "id": "f-d3-sub06-001",
+      "domain": 3,
+      "subdomain": "3.6",
+      "front": "Symmetric algorithm key sizes",
+      "back": "DES 56-bit key (64-bit block), 3DES 112 or 168-bit keys, AES 128/192/256-bit keys with a 128-bit block, Blowfish 32 to 448 bits.",
+      "whyItMatters": "Key size and block size facts are examined directly."
+    },
+    {
+      "id": "f-d3-sub06-002",
+      "domain": 3,
+      "subdomain": "3.6",
+      "front": "Asymmetric algorithms and equivalent strength",
+      "back": "RSA relies on factoring, Diffie-Hellman and ElGamal on discrete logarithms, ECC on elliptic curves. ECC 256-bit is about RSA 3072-bit.",
+      "whyItMatters": "ECC's smaller key advantage is a common question."
+    },
+    {
+      "id": "f-d3-sub06-003",
+      "domain": 3,
+      "subdomain": "3.6",
+      "front": "Hash function output sizes",
+      "back": "MD5 128-bit, SHA-1 160-bit, SHA-256 256-bit, SHA-512 512-bit. MD5 and SHA-1 are collision-broken. SHA-3 uses Keccak.",
+      "whyItMatters": "Exam tests which hashes are deprecated and their sizes."
+    },
+    {
+      "id": "f-d3-sub06-004",
+      "domain": 3,
+      "subdomain": "3.6",
+      "front": "Digital signature process",
+      "back": "Hash the message, then encrypt the hash with the sender's private key. Verify with the public key. Provides integrity, authentication, and non-repudiation, not confidentiality.",
+      "whyItMatters": "Frequently confused with encrypting for confidentiality."
+    },
+    {
+      "id": "f-d3-sub06-005",
+      "domain": 3,
+      "subdomain": "3.6",
+      "front": "Encrypting for confidentiality with public keys",
+      "back": "Encrypt with the recipient's public key. Only the recipient's private key decrypts. Asymmetric is slow, so it exchanges a symmetric session key.",
+      "whyItMatters": "Exam asks which key is used for confidentiality vs signing."
+    },
+    {
+      "id": "f-d3-sub06-006",
+      "domain": 3,
+      "subdomain": "3.6",
+      "front": "PKI components",
+      "back": "CA issues certificates (X.509 v3); RA verifies identity; CRL and OCSP report revocation; a certificate binds a public key to an identity signed by the CA.",
+      "whyItMatters": "Questions ask which component performs which role."
+    },
+    {
+      "id": "f-d3-sub06-007",
+      "domain": 3,
+      "subdomain": "3.6",
+      "front": "Split knowledge vs dual control",
+      "back": "Split knowledge: no one person knows the whole secret. Dual control: two or more people must act together to perform a task.",
+      "whyItMatters": "Often paired and often confused in key management questions."
+    },
+    {
+      "id": "f-d3-sub06-008",
+      "domain": 3,
+      "subdomain": "3.6",
+      "front": "Block cipher modes",
+      "back": "ECB: identical blocks give identical ciphertext (weak). CBC chains blocks with an IV. CTR turns a block cipher into a stream cipher. GCM adds authentication.",
+      "whyItMatters": "Exam picks ECB as the insecure mode."
+    },
+    {
+      "id": "f-d3-sub07-001",
+      "domain": 3,
+      "subdomain": "3.7",
+      "front": "Four cryptanalysis attack types",
+      "back": "Ciphertext-only; known-plaintext; chosen-plaintext (attacker picks plaintexts); chosen-ciphertext (attacker picks ciphertexts to decrypt).",
+      "whyItMatters": "Increasing attacker capability; questions give a scenario to classify."
+    },
+    {
+      "id": "f-d3-sub07-002",
+      "domain": 3,
+      "subdomain": "3.7",
+      "front": "Defending against rainbow tables",
+      "back": "Use a unique random salt per password plus a slow key derivation function such as bcrypt, PBKDF2, scrypt, or Argon2.",
+      "whyItMatters": "Salted, slow hashing is the expected answer to password-storage attack questions."
+    },
+    {
+      "id": "f-d3-sub07-003",
+      "domain": 3,
+      "subdomain": "3.7",
+      "front": "Birthday attack and meet-in-the-middle",
+      "back": "Birthday: a collision in an n-bit hash takes about 2^(n/2) tries. Meet-in-the-middle cut 2DES to about 2^57 effort, hence 3DES.",
+      "whyItMatters": "Explains why hashes need long outputs and why 2DES was skipped."
+    },
+    {
+      "id": "f-d3-sub08-001",
+      "domain": 3,
+      "subdomain": "3.8",
+      "front": "CPTED strategies",
+      "back": "Natural surveillance, natural access control, territorial reinforcement; maintenance supports all three.",
+      "whyItMatters": "Naming the three CPTED strategies is a common recall question."
+    },
+    {
+      "id": "f-d3-sub08-002",
+      "domain": 3,
+      "subdomain": "3.8",
+      "front": "Fence height guidance",
+      "back": "3 to 4 feet deters casual trespassers. 6 to 7 feet is hard to climb. 8 feet with three strands of barbed wire deters determined intruders.",
+      "whyItMatters": "Exam asks which height fits the threat."
+    },
+    {
+      "id": "f-d3-sub09-001",
+      "domain": 3,
+      "subdomain": "3.9",
+      "front": "US fire classes",
+      "back": "A ordinary combustibles, B flammable liquids, C energized electrical, D combustible metals, K cooking oils and fats.",
+      "whyItMatters": "Core recall; pairs with suppressant selection."
+    },
+    {
+      "id": "f-d3-sub09-002",
+      "domain": 3,
+      "subdomain": "3.9",
+      "front": "Suppressant by fire class",
+      "back": "A: water. B: CO2, foam, gas agents. C: CO2 or gas (non-conductive). D: dry powder. K: wet chemical.",
+      "whyItMatters": "Using water on electrical or metal fires is a classic wrong answer."
+    },
+    {
+      "id": "f-d3-sub09-003",
+      "domain": 3,
+      "subdomain": "3.9",
+      "front": "Sprinkler system types",
+      "back": "Wet pipe: water always in pipes. Dry pipe: air in pipes. Pre-action: detection plus fused head, preferred for data centers. Deluge: open heads flood on detection.",
+      "whyItMatters": "Pre-action vs dry pipe distinction is commonly tested."
+    },
+    {
+      "id": "f-d3-sub09-004",
+      "domain": 3,
+      "subdomain": "3.9",
+      "front": "Halon and its replacements",
+      "back": "Halon 1301 depletes ozone and was banned by the Montreal Protocol. Replacements include FM-200 (HFC-227ea), Inergen, and Novec 1230.",
+      "whyItMatters": "Appears as which agent is no longer permitted."
+    },
+    {
+      "id": "f-d3-sub09-005",
+      "domain": 3,
+      "subdomain": "3.9",
+      "front": "Data center HVAC targets",
+      "back": "About 64 to 75 degrees F (18 to 24 C) and 40 to 60 percent humidity. Low humidity causes static, high causes corrosion and condensation. Keep positive air pressure.",
+      "whyItMatters": "Numbers and effects are tested."
+    },
+    {
+      "id": "f-d3-sub09-006",
+      "domain": 3,
+      "subdomain": "3.9",
+      "front": "Power anomaly terms",
+      "back": "Fault: momentary loss. Blackout: prolonged loss. Sag: momentary low. Brownout: prolonged low. Spike: momentary high. Surge: prolonged high.",
+      "whyItMatters": "Exam gives a description and asks the term."
+    },
+    {
+      "id": "f-d3-sub10-001",
+      "domain": 3,
+      "subdomain": "3.10",
+      "front": "Media sanitization levels",
+      "back": "Clear: logical overwrite. Purge: degauss, cryptographic erase; defeats lab recovery. Destroy: shred, disintegrate, incinerate. Follows NIST SP 800-88.",
+      "whyItMatters": "Match method to data sensitivity and reuse."
+    },
+    {
+      "id": "f-d3-sub10-002",
+      "domain": 3,
+      "subdomain": "3.10",
+      "front": "Certification vs accreditation",
+      "back": "Certification: technical evaluation of controls. Accreditation (authorization to operate): management's formal acceptance of residual risk.",
+      "whyItMatters": "Management owns the risk acceptance decision."
+    },
+    {
+      "id": "f-d3-sub10-003",
+      "domain": 3,
+      "subdomain": "3.10",
+      "front": "NIST SP 800-64 lifecycle phases",
+      "back": "Initiation, development or acquisition, implementation and assessment, operations and maintenance, disposal.",
+      "whyItMatters": "Order and the point at which security enters each phase."
+    }
+  ]
+}

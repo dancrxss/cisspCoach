@@ -1,0 +1,2311 @@
+{
+ "questions": [
+  {
+   "id": "q-d8-sub01-001",
+   "domain": 8,
+   "subdomain": "8.1",
+   "difficulty": 1,
+   "stem": "Which software development model is characterised by sequential phases, where each phase is completed and signed off before the next begins?",
+   "options": [
+    "Waterfall",
+    "Spiral",
+    "Agile",
+    "Rapid prototyping"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Does the model allow work to revisit an earlier phase, or does it flow in one direction?",
+    "Which model is usually drawn as a cascade of phases?"
+   ],
+   "explanation": {
+    "correct": "Waterfall moves strictly from requirements to design, implementation, testing and maintenance with little provision for returning to an earlier phase. Late discovery of defects makes it costly to fix them.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Spiral is iterative: each loop repeats planning, risk analysis, engineering and evaluation. People confuse it with Waterfall because both are phased."
+     },
+     {
+      "option": 2,
+      "why": "Agile delivers working software in short iterations with continuous feedback, the opposite of completing each phase once."
+     },
+     {
+      "option": 3,
+      "why": "Prototyping builds throwaway or evolving models to refine requirements, rather than sign-off of sequential phases."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub01-002",
+   "domain": 8,
+   "subdomain": "8.1",
+   "difficulty": 1,
+   "stem": "Which feature MOST distinguishes the spiral development model from other lifecycle models?",
+   "options": [
+    "Requirements are fixed before any coding starts",
+    "Risk analysis is performed in every iteration",
+    "Developers and operations staff share a single team",
+    "Work is delivered in fixed-length sprints"
+   ],
+   "correct": 1,
+   "ladder": [
+    "What activity is built into every loop of the spiral?",
+    "What does a spiral loop repeat that a straight-line model never repeats?"
+   ],
+   "explanation": {
+    "correct": "The spiral model repeats planning, risk analysis, engineering and evaluation in each loop, so risks are identified and reduced progressively. It suits large, high-risk projects.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Fixed upfront requirements describe Waterfall. Spiral expects requirements to evolve with each loop."
+     },
+     {
+      "option": 2,
+      "why": "That describes DevOps, which is a cultural and process approach, not the defining feature of the spiral model."
+     },
+     {
+      "option": 3,
+      "why": "Sprints belong to Scrum/Agile. Spiral loops are driven by risk, not a fixed time box."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub01-003",
+   "domain": 8,
+   "subdomain": "8.1",
+   "difficulty": 2,
+   "stem": "A penetration test performed one week before launch uncovers fundamental design flaws in an application. Fixing them will delay release by months. What should the security manager recommend to BEST prevent a repeat on future projects?",
+   "options": [
+    "Schedule penetration tests much earlier in every project",
+    "Require a security sign-off immediately before each release",
+    "Add threat modelling and security requirements at the start",
+    "Purchase a web application firewall to cover the flaws"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Is the question asking how to find problems sooner, or how to stop creating them?",
+    "Would the same flaw be cheaper to correct on a whiteboard or in a finished build?"
+   ],
+   "explanation": {
+    "correct": "Defects found in design are far cheaper to fix than those found at test time. Building security in from the start (\"shift left\") addresses the root cause of the problem.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Earlier testing helps, but testing a half-built system still finds flaws after design decisions are made. It does not address why security was missing from design."
+     },
+     {
+      "option": 1,
+      "why": "A late gate is exactly the process that produced this outcome. It detects problems but does not prevent them."
+     },
+     {
+      "option": 3,
+      "why": "A WAF is a compensating control that cannot fix design flaws and does not change how projects are run."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "manager-mindset",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub01-004",
+   "domain": 8,
+   "subdomain": "8.1",
+   "difficulty": 1,
+   "stem": "An organisation measures its software processes using statistical techniques and uses the results to control performance. At which Capability Maturity Model Integration (CMMI) level is it operating?",
+   "options": [
+    "Level 2, Managed",
+    "Level 3, Defined",
+    "Level 4, Quantitatively Managed",
+    "Level 5, Optimizing"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Which word in the stem points to the level that introduces measurement?",
+    "What does level 5 add on top of measurement?"
+   ],
+   "explanation": {
+    "correct": "Level 4 is where processes are measured and controlled using quantitative and statistical data. CMMI levels run: 1 Initial, 2 Managed, 3 Defined, 4 Quantitatively Managed, 5 Optimizing.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "At level 2 projects are planned and tracked, but there is no organisation-wide quantitative control."
+     },
+     {
+      "option": 1,
+      "why": "At level 3 processes are standardised and documented across the organisation, not yet statistically controlled."
+     },
+     {
+      "option": 3,
+      "why": "Level 5 adds continuous improvement driven by quantitative feedback. Measurement alone is level 4."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub01-005",
+   "domain": 8,
+   "subdomain": "8.1",
+   "difficulty": 1,
+   "stem": "In which phase of the system development lifecycle should security requirements FIRST be identified?",
+   "options": [
+    "Initiation and requirements",
+    "Architecture and design",
+    "Coding and development",
+    "Testing and acceptance"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Where does the lifecycle define what the system must do?",
+    "Can a control be tested if no requirement ever specified it?"
+   ],
+   "explanation": {
+    "correct": "Security requirements are derived from risk, compliance and business needs and must be captured with functional requirements so they can be designed in and tested.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Design should address requirements that already exist. Starting here means requirements were missed."
+     },
+     {
+      "option": 2,
+      "why": "Coding implements designed controls. Discovering requirements now causes costly rework."
+     },
+     {
+      "option": 3,
+      "why": "Testing verifies that stated requirements are met. It cannot test requirements nobody defined."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub01-006",
+   "domain": 8,
+   "subdomain": "8.1",
+   "difficulty": 2,
+   "stem": "A development team works in two-week sprints. The security manager wants to keep security assurance without slowing delivery. Which approach is MOST appropriate?",
+   "options": [
+    "Add a dedicated security phase after the final sprint ends",
+    "Write security needs as backlog items with acceptance criteria",
+    "Require full documentation sign-off before every sprint starts",
+    "Exempt sprint work from security review until release candidates"
+   ],
+   "correct": 1,
+   "ladder": [
+    "How can a security need become a normal part of the work the team already does each sprint?",
+    "Which option integrates security rather than adding a gate?"
+   ],
+   "explanation": {
+    "correct": "Writing security needs as backlog items with acceptance criteria makes them part of the definition of done in every sprint. This integrates security into Agile delivery and keeps it enforceable without a separate gate.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "This reintroduces a late security gate and conflicts with iterative delivery. Defects are found when they are most expensive."
+     },
+     {
+      "option": 2,
+      "why": "Heavy upfront documentation defeats Agile principles and will be bypassed by the team."
+     },
+     {
+      "option": 3,
+      "why": "Postponing review accumulates security debt and leaves vulnerabilities unfound for weeks."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "manager-mindset",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub01-007",
+   "domain": 8,
+   "subdomain": "8.1",
+   "difficulty": 2,
+   "stem": "A legacy billing system is being retired. Which security activity is MOST important during the disposal phase of the lifecycle?",
+   "options": [
+    "Run a final penetration test on the system",
+    "Update the system design documentation",
+    "Sanitise or archive data per retention rules",
+    "Transfer the hardware to another department"
+   ],
+   "correct": 2,
+   "ladder": [
+    "What remains on the system after it is switched off?",
+    "Which obligation, legal or classification-based, still applies to that data?"
+   ],
+   "explanation": {
+    "correct": "Disposal must ensure data is retained where required and securely destroyed otherwise, including media, backups and keys. Otherwise residual data may be exposed.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Testing a system about to be decommissioned yields little benefit and does nothing about the data left behind."
+     },
+     {
+      "option": 1,
+      "why": "Documentation is useful for records, but is not the main security risk at retirement."
+     },
+     {
+      "option": 3,
+      "why": "Reusing hardware without sanitising its storage carries data over to people who should not see it."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub01-008",
+   "domain": 8,
+   "subdomain": "8.1",
+   "difficulty": 3,
+   "stem": "A DevOps team deploys to production several times a day. The security team insists on manually approving every release, which is causing delays and workarounds. What should the security manager do to retain assurance MOST effectively?",
+   "options": [
+    "Add more reviewers to the manual release approval process",
+    "Move to a quarterly security audit of released software",
+    "Allow developers to self-certify the security of releases",
+    "Automate security checks in the pipeline, owned by security"
+   ],
+   "correct": 3,
+   "ladder": [
+    "Is the problem the control itself or the way it is performed?",
+    "How can assurance scale to many releases a day without a person in every release?",
+    "Which option would still work if the number of releases doubled tomorrow?"
+   ],
+   "explanation": {
+    "correct": "Embedding automated testing and policy checks in the pipeline keeps assurance consistent at speed, and the security team keeps ownership of the rules (DevSecOps).",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "More reviewers reduce delay slightly, but manual approval still cannot keep pace with several releases a day."
+     },
+     {
+      "option": 1,
+      "why": "Periodic audit is after the fact, so unreviewed vulnerable code runs in production for months."
+     },
+     {
+      "option": 2,
+      "why": "Self-certification removes independent oversight and violates separation of duties."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "manager-mindset",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub01-009",
+   "domain": 8,
+   "subdomain": "8.1",
+   "difficulty": 1,
+   "stem": "The Building Security In Maturity Model (BSIMM) is BEST described as which of the following?",
+   "options": [
+    "A descriptive study of practices observed at real organisations",
+    "A prescriptive framework of mandatory secure coding steps",
+    "An international standard against which software is certified",
+    "A scoring system for rating individual vulnerabilities"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Does the model tell you what to do, or tell you what others are doing?",
+    "Which description would be an appropriate output of a measurement study rather than a rulebook?"
+   ],
+   "explanation": {
+    "correct": "BSIMM is built from measuring what many firms actually do in software security. It lets an organisation compare itself with peers rather than prescribing practices.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "BSIMM is descriptive, not prescriptive. It reports what others do rather than dictating what to do."
+     },
+     {
+      "option": 2,
+      "why": "BSIMM is a measurement study, not a certification scheme."
+     },
+     {
+      "option": 3,
+      "why": "Vulnerability scoring is performed by CVSS. BSIMM measures organisational practices."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub01-010",
+   "domain": 8,
+   "subdomain": "8.1",
+   "difficulty": 2,
+   "stem": "An organisation wants a free, open, prescriptive framework to assess its current software security practices and build a phased improvement roadmap. Which is the MOST suitable choice?",
+   "options": [
+    "BSIMM",
+    "OWASP SAMM",
+    "Waterfall model",
+    "CMMI level 1"
+   ],
+   "correct": 1,
+   "ladder": [
+    "Which key words in the stem separate a prescriptive tool from a descriptive one?",
+    "Between the two maturity models, which one prescribes activities rather than reporting on other organisations?"
+   ],
+   "explanation": {
+    "correct": "SAMM is an open, prescriptive model with maturity levels across business functions that supports assessment and roadmap planning.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "BSIMM is descriptive and compares you against other firms, rather than prescribing a roadmap. Many confuse it with SAMM because both measure maturity."
+     },
+     {
+      "option": 2,
+      "why": "Waterfall is a development lifecycle, not a maturity assessment framework."
+     },
+     {
+      "option": 3,
+      "why": "Level 1 is the lowest maturity (Initial) rather than a tool for planning improvement."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub01-011",
+   "domain": 8,
+   "subdomain": "8.1",
+   "difficulty": 1,
+   "stem": "What is the PRIMARY aim of the DevSecOps approach?",
+   "options": [
+    "Replace the security team with automated scanners",
+    "Give developers direct write access to production",
+    "Build security into each pipeline stage, shared by all teams",
+    "Remove change management controls from the pipeline"
+   ],
+   "correct": 2,
+   "ladder": [
+    "What does the \"Sec\" in DevSecOps add to the Dev and Ops partnership?",
+    "Does the approach remove controls, or change who owns them and when they run?"
+   ],
+   "explanation": {
+    "correct": "DevSecOps treats security as a shared responsibility and integrates automated checks throughout the pipeline, rather than as a separate late stage.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Automation supports security professionals; it does not replace governance, design and risk decisions."
+     },
+     {
+      "option": 1,
+      "why": "Developer access to production breaks separation of duties and is not part of DevSecOps."
+     },
+     {
+      "option": 3,
+      "why": "DevSecOps automates and speeds change control, but changes are still governed."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub02-001",
+   "domain": 8,
+   "subdomain": "8.2",
+   "difficulty": 2,
+   "stem": "During a code review, a security manager discovers a database password committed to a shared source code repository two years ago. What should be done FIRST?",
+   "options": [
+    "Delete the file from the latest commit",
+    "Make the repository private",
+    "Add the file to the ignore list",
+    "Revoke and rotate the credential"
+   ],
+   "correct": 3,
+   "ladder": [
+    "Can you assume the secret has stayed private for two years?",
+    "What makes a leaked secret worthless to whoever has it?"
+   ],
+   "explanation": {
+    "correct": "The secret has to be assumed compromised because it persists in history and may have been copied. Rotation removes its value to an attacker immediately.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "The credential remains in repository history, forks and clones, so it is still exposed."
+     },
+     {
+      "option": 1,
+      "why": "Restricting access limits future viewing but does not undo past exposure, and the secret stays valid."
+     },
+     {
+      "option": 2,
+      "why": "Ignore rules only stop future tracking of the file and do not deal with the credential already exposed."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub02-002",
+   "domain": 8,
+   "subdomain": "8.2",
+   "difficulty": 1,
+   "stem": "What is a software bill of materials (SBOM)?",
+   "options": [
+    "An inventory of the components and dependencies in a product",
+    "A report of vulnerabilities found during testing",
+    "A contract defining the vendor's support obligations",
+    "A register of the individuals licensed to use the software"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Is this document about people, defects, or contents?",
+    "What would you need to know to find every product that uses one vulnerable library?"
+   ],
+   "explanation": {
+    "correct": "An SBOM lists the libraries, versions and suppliers inside software so owners can quickly find where a vulnerable component is used.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Test results list vulnerabilities. An SBOM lists ingredients and does not need to include any vulnerabilities."
+     },
+     {
+      "option": 2,
+      "why": "Support obligations belong in a service level agreement."
+     },
+     {
+      "option": 3,
+      "why": "User licensing is administered separately. An SBOM concerns components, not users."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub02-003",
+   "domain": 8,
+   "subdomain": "8.2",
+   "difficulty": 2,
+   "stem": "What is the PRIMARY purpose of software composition analysis (SCA) in a development pipeline?",
+   "options": [
+    "Detect injection flaws in the organisation's own source code",
+    "Identify known-vulnerable or restricted third-party components",
+    "Send malformed input to a running application at runtime",
+    "Verify that every code change was formally approved"
+   ],
+   "correct": 1,
+   "ladder": [
+    "Whose code is SCA examining: the team's own, or someone else's?",
+    "What does SCA compare components against?"
+   ],
+   "explanation": {
+    "correct": "SCA matches the open-source and third-party components in a build against vulnerability databases and licence terms.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Scanning custom code for flaws is static application security testing (SAST)."
+     },
+     {
+      "option": 2,
+      "why": "That is fuzzing, a form of dynamic testing."
+     },
+     {
+      "option": 3,
+      "why": "Approval is verified by change control and repository permissions rather than SCA."
+     }
+    ]
+   },
+   "tags": [
+    "definition",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub02-004",
+   "domain": 8,
+   "subdomain": "8.2",
+   "difficulty": 1,
+   "stem": "Why should developers NOT normally have access to the production environment?",
+   "options": [
+    "Developers cannot be trusted with confidential data",
+    "Production systems cannot be reached from developer networks",
+    "Separation of duties reduces unauthorised or unreviewed changes",
+    "Developers generally lack the skills to administer servers"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Is the restriction about distrust of individuals, technical limits, or a structural control?",
+    "What goes wrong if the author of a change can also push it live?"
+   ],
+   "explanation": {
+    "correct": "Keeping development and production duties separate means changes pass through testing and approval, and prevents a single person from both writing and deploying code.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Restriction is based on duties and risk, not an assumption that developers are untrustworthy."
+     },
+     {
+      "option": 1,
+      "why": "Remote access is technically possible. The restriction is a deliberate control choice, not a network limitation."
+     },
+     {
+      "option": 3,
+      "why": "Skill levels are not the reason; separation of duties is a control principle."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub02-005",
+   "domain": 8,
+   "subdomain": "8.2",
+   "difficulty": 2,
+   "stem": "A production outage is traced to a defect, and a developer wants to push a hotfix directly to production. What should the security manager advise?",
+   "options": [
+    "Wait for the next scheduled change advisory board meeting",
+    "Let the developer deploy now and write it up afterwards",
+    "Skip testing entirely because the system is already down",
+    "Apply the emergency change process with approval and review"
+   ],
+   "correct": 3,
+   "ladder": [
+    "Does the organisation need to choose between speed and control?",
+    "What would an auditor expect to find afterwards for any change made during an outage?"
+   ],
+   "explanation": {
+    "correct": "Emergency changes still need control. A defined emergency process allows speed while preserving authorisation, records and later review.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Rigidly waiting prolongs the outage and encourages teams to avoid the process in future."
+     },
+     {
+      "option": 1,
+      "why": "Unrecorded, unauthorised changes defeat change control and leave no audit trail."
+     },
+     {
+      "option": 2,
+      "why": "Skipping testing risks making the incident worse. Emergency procedures shorten testing, not eliminate it."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "manager-mindset",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub02-006",
+   "domain": 8,
+   "subdomain": "8.2",
+   "difficulty": 3,
+   "stem": "An attacker used a compromised build server to insert malicious code into signed releases. The build server had broad administrative rights across the network. Which action BEST reduces the risk of recurrence?",
+   "options": [
+    "Harden the pipeline with least privilege and isolated agents",
+    "Sign all releases using a stronger hashing algorithm",
+    "Scan production servers for malware on a daily schedule",
+    "Force developers to rotate their passwords more frequently"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Where in the supply chain did the attack occur?",
+    "Why did the signature provide no protection here?"
+   ],
+   "explanation": {
+    "correct": "The build environment is a high-value target. Limiting its privileges, isolating it and verifying artifacts address how the attack worked and limit its impact.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "The attacker signed malicious code legitimately via the compromised server, so stronger algorithms do nothing about it."
+     },
+     {
+      "option": 2,
+      "why": "Detection in production happens after tainted code is already released."
+     },
+     {
+      "option": 3,
+      "why": "Password changes do not address excessive server privileges or the integrity of the build."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "manager-mindset",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub02-007",
+   "domain": 8,
+   "subdomain": "8.2",
+   "difficulty": 1,
+   "stem": "Customers want assurance that software they download has not been altered since the publisher released it. Which control BEST provides this?",
+   "options": [
+    "Obfuscating the distributed code before release",
+    "Signing the package with the publisher's private key",
+    "Running static analysis on all code before release",
+    "Enabling address space layout randomisation in builds"
+   ],
+   "correct": 1,
+   "ladder": [
+    "What would a customer need in order to check where a package came from and that it is unchanged?",
+    "Of the options, which are cryptographic, and which of those binds an identity to the file?"
+   ],
+   "explanation": {
+    "correct": "A digital signature lets users verify integrity and the identity of the publisher before installing.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Obfuscation makes code harder to read but does not show whether it was tampered with."
+     },
+     {
+      "option": 2,
+      "why": "Analysis finds defects before release but gives users nothing to verify later."
+     },
+     {
+      "option": 3,
+      "why": "ASLR is a runtime memory protection and is unrelated to download integrity."
+     }
+    ]
+   },
+   "tags": [
+    "definition",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub02-008",
+   "domain": 8,
+   "subdomain": "8.2",
+   "difficulty": 2,
+   "stem": "Which control BEST mitigates the risk of a developer inserting malicious code into the main branch of a code repository?",
+   "options": [
+    "Encrypting the repository volume and its backups",
+    "Taking frequent backups of the repository to offsite storage",
+    "Mandatory peer review with branch protection before merging",
+    "Annual secure coding training for all developers"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Is the threat accidental, or deliberate by someone with access?",
+    "Which option would still stop a determined insider who has legitimate write access?"
+   ],
+   "explanation": {
+    "correct": "Requiring independent approval for merges means no single person can change the main code alone. This enforces separation of duties.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Encryption protects stored data from theft but does not control what is merged."
+     },
+     {
+      "option": 1,
+      "why": "Backups support recovery but would also preserve the malicious code."
+     },
+     {
+      "option": 3,
+      "why": "Training lowers accidental defects but does not restrain a deliberate insider."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub02-009",
+   "domain": 8,
+   "subdomain": "8.2",
+   "difficulty": 3,
+   "stem": "A build pulls an open-source package from a public registry, and an attacker has published a public package with the same name as an internal one, with a higher version number. Which control BEST prevents this?",
+   "options": [
+    "Run antivirus on developer workstations and build servers",
+    "Manually review every open-source package before each build",
+    "Prohibit the use of open-source software across the company",
+    "Use a private registry with scoped names and pinned hashes"
+   ],
+   "correct": 3,
+   "ladder": [
+    "Why did the build trust the attacker's package?",
+    "Which options leave the build's choice of package source unchanged?",
+    "Which option is realistic and preventive, not just detective?"
+   ],
+   "explanation": {
+    "correct": "Controlling where dependencies come from and verifying them stops substitution of look-alike public packages (dependency confusion).",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Antivirus may miss the malicious package and does not control where the build obtains dependencies."
+     },
+     {
+      "option": 1,
+      "why": "Manual review of everything is unrealistic and does not prevent the build from selecting the wrong source."
+     },
+     {
+      "option": 2,
+      "why": "This is disproportionate, and internal package naming remains a weakness regardless."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub02-010",
+   "domain": 8,
+   "subdomain": "8.2",
+   "difficulty": 2,
+   "stem": "A team provisions cloud infrastructure using templates stored in a repository. Which approach BEST prevents insecure configurations reaching production?",
+   "options": [
+    "Scan templates in the pipeline before provisioning",
+    "Review the cloud console weekly after deployment",
+    "Restrict provisioning to manual console changes",
+    "Rely on the provider's default security settings"
+   ],
+   "correct": 0,
+   "ladder": [
+    "When is a misconfiguration cheapest to fix?",
+    "Which options only find a problem after the resource is already running?"
+   ],
+   "explanation": {
+    "correct": "Infrastructure-as-code can be checked automatically against policy before anything is deployed, which is the cheapest time to fix misconfigurations.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Reviews after deployment find issues only once insecure resources exist and may be exploited."
+     },
+     {
+      "option": 2,
+      "why": "Manual changes are less consistent and harder to audit than reviewed templates."
+     },
+     {
+      "option": 3,
+      "why": "Defaults are generic and do not meet organisational policy; the customer remains responsible for configuration."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub03-001",
+   "domain": 8,
+   "subdomain": "8.3",
+   "difficulty": 1,
+   "stem": "Which type of testing analyses application source code for flaws without executing it?",
+   "options": [
+    "Dynamic application security testing (DAST)",
+    "Static application security testing (SAST)",
+    "Interactive application security testing (IAST)",
+    "Penetration testing"
+   ],
+   "correct": 1,
+   "ladder": [
+    "Is the code running when the test happens?",
+    "Which testing type needs only the code, not a working application?"
+   ],
+   "explanation": {
+    "correct": "SAST examines source or compiled code without running it, so it can be used early in the lifecycle but produces false positives and misses runtime issues.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "DAST tests a running application from the outside, so the application is executed."
+     },
+     {
+      "option": 2,
+      "why": "IAST uses agents inside a running application and so needs execution."
+     },
+     {
+      "option": 3,
+      "why": "Penetration testing attacks running systems, typically a manual exercise."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub03-002",
+   "domain": 8,
+   "subdomain": "8.3",
+   "difficulty": 2,
+   "stem": "Which testing approach uses an agent instrumented inside a running application to observe code execution while tests or users exercise it?",
+   "options": [
+    "Static application security testing (SAST)",
+    "Dynamic application security testing (DAST)",
+    "Interactive application security testing (IAST)",
+    "Software composition analysis (SCA)"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Where does the testing tool sit relative to the application?",
+    "Which approaches need the application to be running while the test happens?"
+   ],
+   "explanation": {
+    "correct": "IAST combines elements of static and dynamic testing. Instrumentation sees code paths during execution, which gives accurate findings with the line of code involved.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "SAST does not need the application to run."
+     },
+     {
+      "option": 1,
+      "why": "DAST is a black-box approach that has no visibility inside the application."
+     },
+     {
+      "option": 3,
+      "why": "SCA inventories third-party components and does not observe execution."
+     }
+    ]
+   },
+   "tags": [
+    "definition",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub03-003",
+   "domain": 8,
+   "subdomain": "8.3",
+   "difficulty": 2,
+   "stem": "A company must assess a purchased compiled application for vulnerabilities but has no access to the vendor's source code. Which approach is MOST suitable?",
+   "options": [
+    "Static analysis of the vendor's source code",
+    "Peer code review by the development team",
+    "Unit testing by the vendor's developers",
+    "Dynamic testing of the running application"
+   ],
+   "correct": 3,
+   "ladder": [
+    "What information does the assessor not have?",
+    "Which testing method works from the outside?"
+   ],
+   "explanation": {
+    "correct": "Dynamic testing, including fuzzing, needs no source code. It finds runtime weaknesses by exercising the deployed application from the outside.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Source code is not available to the company."
+     },
+     {
+      "option": 1,
+      "why": "There is no in-house code to review."
+     },
+     {
+      "option": 2,
+      "why": "Unit testing is performed by the vendor, and does not provide independent assurance."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub03-004",
+   "domain": 8,
+   "subdomain": "8.3",
+   "difficulty": 1,
+   "stem": "Which technique supplies malformed, unexpected or random data to an application to find crashes and memory errors?",
+   "options": [
+    "Fuzzing",
+    "Regression testing",
+    "Code walkthrough",
+    "Fagan inspection"
+   ],
+   "correct": 0,
+   "ladder": [
+    "What does the tool feed the application?",
+    "Which technique is described by the idea \"break it with bad input\"?"
+   ],
+   "explanation": {
+    "correct": "Fuzzing automatically generates invalid inputs and monitors for crashes, hangs and leaks, which often reveal exploitable flaws.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Regression testing confirms that earlier functionality still works after a change."
+     },
+     {
+      "option": 2,
+      "why": "A walkthrough is a manual review of code by peers."
+     },
+     {
+      "option": 3,
+      "why": "A formal peer review of design or code, not an automated input technique."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub03-005",
+   "domain": 8,
+   "subdomain": "8.3",
+   "difficulty": 3,
+   "stem": "A static analysis scan of a web application reported no high-severity findings, but a penetration tester then bypassed authentication through a flaw in the application's workflow. What is the BEST conclusion?",
+   "options": [
+    "Replace the static analysis tool with a different product",
+    "Static analysis alone misses logic flaws, so test in layers",
+    "Disregard the penetration test because the scan was clean",
+    "Penetration testing should replace static analysis entirely"
+   ],
+   "correct": 1,
+   "ladder": [
+    "Does a clean tool result prove that no flaws exist?",
+    "What kind of flaw depends on behaviour rather than code patterns?",
+    "Does any single testing method find every class of flaw?"
+   ],
+   "explanation": {
+    "correct": "Automated static tools are weak at logic and design flaws that depend on how the application behaves. Combining testing methods and design review gives better coverage.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Switching tools will not fix a limitation that applies to the whole category."
+     },
+     {
+      "option": 2,
+      "why": "A clean scan is not proof of absence of vulnerabilities, so the penetration test result stands."
+     },
+     {
+      "option": 3,
+      "why": "Each method finds different problems. Dropping static analysis loses early, broad code coverage."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "manager-mindset",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub03-006",
+   "domain": 8,
+   "subdomain": "8.3",
+   "difficulty": 3,
+   "stem": "Testing shows that a medium-risk vulnerability in an application cannot be fixed before a business-critical launch date. What should the security manager do?",
+   "options": [
+    "Delay the launch until the vulnerability is remediated",
+    "Accept the risk personally as the security manager",
+    "Document the residual risk and obtain business owner acceptance",
+    "Omit the vulnerability from reports to avoid alarm"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Who owns the decision to live with a risk?",
+    "What should the security manager provide to that person?"
+   ],
+   "explanation": {
+    "correct": "Remediation trade-offs are a business decision. The manager presents the risk and the owner formally accepts it, ideally with compensating controls.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "The security manager advises but does not unilaterally decide to halt the business when the owner can accept the risk."
+     },
+     {
+      "option": 1,
+      "why": "The risk belongs to the business owner, not the security manager."
+     },
+     {
+      "option": 3,
+      "why": "Concealing known risk is unethical and removes the basis for informed decisions."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "manager-mindset",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub03-007",
+   "domain": 8,
+   "subdomain": "8.3",
+   "difficulty": 1,
+   "stem": "After a developer fixes a reported vulnerability, which testing confirms that the fix has not broken existing functionality or introduced new defects?",
+   "options": [
+    "Acceptance testing",
+    "Fuzz testing",
+    "Load testing",
+    "Regression testing"
+   ],
+   "correct": 3,
+   "ladder": [
+    "What is being re-checked: new behaviour or old behaviour?",
+    "Which test is run again every time the code changes?"
+   ],
+   "explanation": {
+    "correct": "Regression testing re-runs earlier tests after a change to ensure that previously working behaviour and fixes remain intact.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Acceptance testing checks that the system satisfies the customer's requirements, usually before go-live."
+     },
+     {
+      "option": 1,
+      "why": "Fuzzing uses malformed input to find new flaws, rather than verifying that a change had no side effects."
+     },
+     {
+      "option": 2,
+      "why": "Load testing evaluates performance under volume."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub03-008",
+   "domain": 8,
+   "subdomain": "8.3",
+   "difficulty": 2,
+   "stem": "Where should an organisation perform dynamic security testing of a new application release?",
+   "options": [
+    "A production-like staging environment with sanitised data",
+    "The live production environment during peak trading hours",
+    "Developers' laptops loaded with real customer data",
+    "A shared test environment with no resemblance to production"
+   ],
+   "correct": 0,
+   "ladder": [
+    "What two properties does a good test environment need: realism and what else?",
+    "Why should real customer data not appear in testing?"
+   ],
+   "explanation": {
+    "correct": "Staging gives realistic results without risk to live service, and sanitised data avoids exposing real personal information to testers.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Testing live risks disruption and data exposure."
+     },
+     {
+      "option": 2,
+      "why": "Developer machines differ from production and real data should not be copied there."
+     },
+     {
+      "option": 3,
+      "why": "Findings would not reflect production behaviour, so assurance would be misleading."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub04-001",
+   "domain": 8,
+   "subdomain": "8.4",
+   "difficulty": 1,
+   "stem": "What is the purpose of a software escrow agreement?",
+   "options": [
+    "It guarantees that the delivered software contains no vulnerabilities",
+    "A third party holds source code for release if the vendor fails",
+    "It transfers ownership of the software to the customer outright",
+    "It records every software licence the organisation has purchased"
+   ],
+   "correct": 1,
+   "ladder": [
+    "What risk to a customer arises if a small vendor disappears?",
+    "What could a customer need access to if its supplier ceased trading?"
+   ],
+   "explanation": {
+    "correct": "Escrow protects a customer who depends on proprietary software against vendor bankruptcy or abandonment by allowing access to source code under defined conditions.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Escrow gives no assurance about quality or security."
+     },
+     {
+      "option": 2,
+      "why": "Ownership remains with the vendor. Escrow only gives access in specified events."
+     },
+     {
+      "option": 3,
+      "why": "Licence records are kept by asset or software licence management."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub04-002",
+   "domain": 8,
+   "subdomain": "8.4",
+   "difficulty": 2,
+   "stem": "A business unit wants to adopt a popular open-source library in a customer-facing product. What should the security manager do FIRST?",
+   "options": [
+    "Approve it because many other organisations use it",
+    "Prohibit all open-source libraries in customer-facing products",
+    "Evaluate its provenance, maintenance and flaw history",
+    "Fork the library and maintain it internally immediately"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Should the decision be based on popularity or on evaluation?",
+    "What would you want to know about the people maintaining it?"
+   ],
+   "explanation": {
+    "correct": "Open-source components must be assessed like any third-party software before use, and this determines whether the risk is acceptable.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Popularity is not an assurance of security or suitable licensing."
+     },
+     {
+      "option": 1,
+      "why": "A blanket ban is disproportionate and ignores risk-based decision-making."
+     },
+     {
+      "option": 3,
+      "why": "Forking assumes a commitment to maintenance without first knowing whether the library is acceptable."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "manager-mindset",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub04-003",
+   "domain": 8,
+   "subdomain": "8.4",
+   "difficulty": 1,
+   "stem": "Which is the BEST way to gain assurance about the security of commercial off-the-shelf (COTS) software before purchase?",
+   "options": [
+    "Rely on the claims in the vendor's marketing material",
+    "Choose the lowest-priced product that meets requirements",
+    "Select the vendor with the largest installed customer base",
+    "Review independent evaluations and test it independently"
+   ],
+   "correct": 3,
+   "ladder": [
+    "Who is making the claim, and who has verified it?",
+    "Which option gives objective evidence?"
+   ],
+   "explanation": {
+    "correct": "Independent evaluation (such as Common Criteria) combined with your own testing provides objective evidence rather than vendor claims.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Marketing claims are unverified and a conflict of interest."
+     },
+     {
+      "option": 1,
+      "why": "Cost is unrelated to security and low price may even indicate weak engineering."
+     },
+     {
+      "option": 2,
+      "why": "Market share is not evidence of security."
+     }
+    ]
+   },
+   "tags": [
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub04-004",
+   "domain": 8,
+   "subdomain": "8.4",
+   "difficulty": 2,
+   "stem": "An organisation is contracting an external company to build a custom application. Which is MOST important to include in the contract?",
+   "options": [
+    "Security requirements, acceptance testing and audit rights",
+    "A non-disclosure agreement covering all project material",
+    "A fixed price with penalty-free termination for the buyer",
+    "A requirement that all developers work on the buyer's site"
+   ],
+   "correct": 0,
+   "ladder": [
+    "What lets the customer check that the supplier did what it promised?",
+    "Which options address only commercial or confidentiality terms rather than assurance over the code delivered?"
+   ],
+   "explanation": {
+    "correct": "The contract should define required security, enable independent verification and give the customer the right to inspect, so that obligations are enforceable.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "An NDA protects confidentiality only and says nothing about the security of the code."
+     },
+     {
+      "option": 2,
+      "why": "Price terms do not address security quality."
+     },
+     {
+      "option": 3,
+      "why": "Location is not a security assurance; it does not demonstrate secure development."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub04-005",
+   "domain": 8,
+   "subdomain": "8.4",
+   "difficulty": 3,
+   "stem": "A business-critical application depends on a component that its vendor no longer supports and will not patch. What should the security manager do FIRST?",
+   "options": [
+    "Shut the application down until a replacement is ready",
+    "Assess the risk and recommend compensating controls",
+    "Continue using it unchanged because it has been stable",
+    "Ask the vendor to publish the source code publicly"
+   ],
+   "correct": 1,
+   "ladder": [
+    "Is this a purely technical choice or one the business must make with an understanding of risk?",
+    "What should the manager bring to the owner to support that decision?"
+   ],
+   "explanation": {
+    "correct": "Unsupported software is a risk decision for the business owner. The manager quantifies the risk and recommends compensating controls and a path to replacement before anything else.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "This disrupts a critical business function without consulting the owner on the trade-off."
+     },
+     {
+      "option": 2,
+      "why": "Without patches the component will accumulate unmitigated vulnerabilities, and ignoring the risk is not due care."
+     },
+     {
+      "option": 3,
+      "why": "The vendor is unlikely to comply and it does not resolve the risk of running unsupported code."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "manager-mindset",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub04-006",
+   "domain": 8,
+   "subdomain": "8.4",
+   "difficulty": 3,
+   "stem": "An organisation moves a function to a software-as-a-service (SaaS) provider. Which security responsibility remains with the customer under the shared responsibility model?",
+   "options": [
+    "Patching the code of the SaaS application itself",
+    "Securing the hypervisor and physical hardware",
+    "Managing user access and data settings in the tenant",
+    "Fixing vulnerabilities in the provider's source code"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Which layers of the stack does a SaaS customer never see?",
+    "What does the customer still control inside the service?",
+    "Which options describe work the provider does on its own platform?"
+   ],
+   "explanation": {
+    "correct": "In SaaS the provider secures the application and infrastructure, but the customer remains accountable for identities, access rights, data classification and tenant configuration.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "The SaaS provider maintains and patches the application."
+     },
+     {
+      "option": 1,
+      "why": "Infrastructure is the provider's responsibility."
+     },
+     {
+      "option": 3,
+      "why": "Customers have no access to or responsibility for the provider's source code."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub04-007",
+   "domain": 8,
+   "subdomain": "8.4",
+   "difficulty": 1,
+   "stem": "To reduce the risk of tampered software, where should an organisation obtain open-source packages and how should it verify them?",
+   "options": [
+    "From any mirror site with a high download count",
+    "From a copy on a colleague's shared network drive",
+    "From the first result returned by a search engine",
+    "From the official source, checking its signature or hash"
+   ],
+   "correct": 3,
+   "ladder": [
+    "How can you confirm a file is exactly what its publisher released?",
+    "Which source can you trust to be the origin?"
+   ],
+   "explanation": {
+    "correct": "Official distribution points and checking signatures or hashes help ensure the package is authentic and unmodified.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Mirrors may be compromised and download counts say nothing about integrity."
+     },
+     {
+      "option": 1,
+      "why": "A shared copy cannot be verified and may be outdated or altered."
+     },
+     {
+      "option": 2,
+      "why": "Search results can be manipulated by attackers to promote malicious look-alikes."
+     }
+    ]
+   },
+   "tags": [
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub04-008",
+   "domain": 8,
+   "subdomain": "8.4",
+   "difficulty": 2,
+   "stem": "A critical vulnerability is announced in a widely embedded third-party library. Which document would MOST help the organisation determine which of its applications are affected?",
+   "options": [
+    "A software bill of materials for each application",
+    "The business impact analysis for each application",
+    "The incident response plan for each application",
+    "The vendor's service level agreement for the library"
+   ],
+   "correct": 0,
+   "ladder": [
+    "What information tells you where a particular library is used?",
+    "Which record would a developer search by component name?"
+   ],
+   "explanation": {
+    "correct": "An SBOM lists the components and versions inside each product, so affected applications can be identified quickly.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "A BIA identifies critical processes and recovery priorities, not software components."
+     },
+     {
+      "option": 2,
+      "why": "The plan describes how to respond but does not list the components in each application."
+     },
+     {
+      "option": 3,
+      "why": "An SLA sets service levels and not the software's contents."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub05-001",
+   "domain": 8,
+   "subdomain": "8.5",
+   "difficulty": 1,
+   "stem": "Which is the MOST effective primary defence against SQL injection?",
+   "options": [
+    "Encrypting the database",
+    "Parameterised queries",
+    "Using a network firewall",
+    "Enforcing long passwords"
+   ],
+   "correct": 1,
+   "ladder": [
+    "Where does the attack change meaning: in the data or in the command?",
+    "Which technique keeps the two separate?"
+   ],
+   "explanation": {
+    "correct": "Parameterised queries keep user input separate from the query structure, so input cannot change the command.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Encryption protects stored data but does not stop injected commands from running."
+     },
+     {
+      "option": 2,
+      "why": "A network firewall does not inspect application-layer queries."
+     },
+     {
+      "option": 3,
+      "why": "Passwords do not affect how the application builds queries."
+     }
+    ]
+   },
+   "tags": [
+    "definition",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub05-002",
+   "domain": 8,
+   "subdomain": "8.5",
+   "difficulty": 1,
+   "stem": "Which control is the PRIMARY defence against cross-site scripting (XSS)?",
+   "options": [
+    "Encrypting session cookies in transit",
+    "Limiting the number of login attempts",
+    "Output encoding for each display context",
+    "Hashing user input before storing it"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Where does XSS execute: server, database or the victim's browser?",
+    "Which control acts at the point where data is written into the page?"
+   ],
+   "explanation": {
+    "correct": "Encoding data according to where it is displayed (HTML, attribute, script) ensures that the browser treats it as text, not executable script.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Cookie encryption protects confidentiality in transit/storage but does not stop injected script from running."
+     },
+     {
+      "option": 1,
+      "why": "This mitigates password guessing, not script injection."
+     },
+     {
+      "option": 3,
+      "why": "Hashing destroys the data and does not stop script being rendered if data is later displayed."
+     }
+    ]
+   },
+   "tags": [
+    "definition",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub05-003",
+   "domain": 8,
+   "subdomain": "8.5",
+   "difficulty": 2,
+   "stem": "An attacker tricks a logged-in user's browser into submitting an unintended request to a banking site. Which control is the MOST effective prevention?",
+   "options": [
+    "Input length limits",
+    "Salted password hashing",
+    "Database encryption",
+    "Anti-CSRF tokens"
+   ],
+   "correct": 3,
+   "ladder": [
+    "Why does the site trust the forged request?",
+    "What can the attacker not know that the real page does?"
+   ],
+   "explanation": {
+    "correct": "A unique, unpredictable token in each state-changing request proves it came from the application's own page, which a forged request cannot supply.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Length restrictions do not stop a legitimate-looking forged request."
+     },
+     {
+      "option": 1,
+      "why": "Password storage is not the weakness in this attack."
+     },
+     {
+      "option": 2,
+      "why": "Encryption does not prevent a forged request from being accepted."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub05-004",
+   "domain": 8,
+   "subdomain": "8.5",
+   "difficulty": 1,
+   "stem": "A user alters an account number in a web address and views another customer's records. Which OWASP Top 10 category does this represent?",
+   "options": [
+    "Broken access control",
+    "Injection",
+    "Cryptographic failures",
+    "Security logging and monitoring failures"
+   ],
+   "correct": 0,
+   "ladder": [
+    "What check should the server perform on every request for an object?",
+    "Is the failure about how data is interpreted, how it is protected, how events are recorded, or something else?"
+   ],
+   "explanation": {
+    "correct": "The application did not check that the user is authorised to access the requested object. Broken access control is the leading category in the OWASP Top 10.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Injection involves untrusted data interpreted as commands; here only an identifier was changed."
+     },
+     {
+      "option": 2,
+      "why": "Failures of cryptography concern exposure of sensitive data through weak protection, not missing authorisation checks."
+     },
+     {
+      "option": 3,
+      "why": "Logging might help detect the incident but its absence is not what allowed access."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub05-005",
+   "domain": 8,
+   "subdomain": "8.5",
+   "difficulty": 1,
+   "stem": "Which defence BEST reduces the likelihood of buffer overflow vulnerabilities?",
+   "options": [
+    "Strong password policies",
+    "Bounds checking on all input",
+    "Database parameterisation",
+    "Using HTTPS for all traffic"
+   ],
+   "correct": 1,
+   "ladder": [
+    "What happens when more data is written than the buffer can hold?",
+    "Which options concern credentials, query building or transport rather than memory?"
+   ],
+   "explanation": {
+    "correct": "Verifying that data fits the allocated space, or using languages that enforce this, removes the condition that causes overflow.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Password policy does not affect memory handling."
+     },
+     {
+      "option": 2,
+      "why": "Parameterisation prevents SQL injection, not memory corruption."
+     },
+     {
+      "option": 3,
+      "why": "HTTPS protects data in transit, not the program's memory safety."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub05-006",
+   "domain": 8,
+   "subdomain": "8.5",
+   "difficulty": 2,
+   "stem": "An attacker changes a file between the time a program checks its permissions and the time the program uses it. Which vulnerability is this?",
+   "options": [
+    "Buffer overflow",
+    "Cross-site request forgery",
+    "TOCTOU race condition",
+    "Default credentials abuse"
+   ],
+   "correct": 2,
+   "ladder": [
+    "What changed in the interval between the two operations?",
+    "Which options depend on memory bounds, a browser session or a configuration default rather than on timing?"
+   ],
+   "explanation": {
+    "correct": "The program's decision relies on a state that can change between check and use, which an attacker can exploit by timing.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Overflow involves writing beyond memory bounds, not exploiting timing."
+     },
+     {
+      "option": 1,
+      "why": "CSRF abuses a user's authenticated browser session, not the timing of a file check."
+     },
+     {
+      "option": 3,
+      "why": "Default credentials are a configuration weakness and unrelated to timing between operations."
+     }
+    ]
+   },
+   "tags": [
+    "definition",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub05-007",
+   "domain": 8,
+   "subdomain": "8.5",
+   "difficulty": 3,
+   "stem": "A multilevel database holds records about a military operation. Users with a lower clearance must see a plausible but different record to prevent them from inferring the existence of the true one. Which technique does this describe?",
+   "options": [
+    "Aggregation",
+    "Database normalisation",
+    "Referential integrity",
+    "Polyinstantiation"
+   ],
+   "correct": 3,
+   "ladder": [
+    "Is the stem asking for an attack or a countermeasure?",
+    "What would keep a low-level user from deducing that a record exists?",
+    "Which option is a design technique for classified data rather than a database hygiene or integrity rule?"
+   ],
+   "explanation": {
+    "correct": "Polyinstantiation stores multiple versions of the same record at different classification levels, so lower-level users see cover information and cannot infer the real data.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Aggregation is the problem of combining low-sensitivity items to reveal higher sensitivity information, not a control that stores multiple versions."
+     },
+     {
+      "option": 1,
+      "why": "Normalisation organises tables to reduce redundancy and does not provide multilevel secrecy."
+     },
+     {
+      "option": 2,
+      "why": "Referential integrity ensures foreign keys match valid records and is not about classification."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub05-008",
+   "domain": 8,
+   "subdomain": "8.5",
+   "difficulty": 2,
+   "stem": "A clerk with access to many individually unclassified reports combines them and obtains information that would be classified at a higher level. Which database security issue does this describe?",
+   "options": [
+    "Aggregation",
+    "Polyinstantiation",
+    "Inference",
+    "Deadlock"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Is the clerk collecting many items or reasoning from one?",
+    "What does combining lower-level pieces create?"
+   ],
+   "explanation": {
+    "correct": "Aggregation occurs when separate pieces of lower-sensitivity data are combined to produce information of higher sensitivity.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "This is a countermeasure that stores multiple record versions, not a description of the problem."
+     },
+     {
+      "option": 2,
+      "why": "Inference deduces sensitive information from non-sensitive data without necessarily collecting and combining the items. The stem emphasises combining many items."
+     },
+     {
+      "option": 3,
+      "why": "Deadlock is a concurrency problem where transactions wait on each other."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub05-009",
+   "domain": 8,
+   "subdomain": "8.5",
+   "difficulty": 3,
+   "stem": "A mobile application calls an API. The gateway validates the API key, but a user can retrieve other customers' orders by changing the order number in a request. Which control BEST addresses the flaw?",
+   "options": [
+    "Rotating the API keys on a shorter cycle",
+    "Per-object authorisation checks on the server",
+    "Applying strict rate limits at the gateway",
+    "Encrypting all requests with TLS 1.3"
+   ],
+   "correct": 1,
+   "ladder": [
+    "What does the server know about who is calling, and what does it check about the object?",
+    "Which control decides whether this caller may see this specific order?",
+    "Which options are about the channel rather than the decision?"
+   ],
+   "explanation": {
+    "correct": "The API must verify that the authenticated caller is allowed to access each requested object. Authentication alone does not provide this.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "The key identifies the application, and rotation does not address the lack of per-user checks."
+     },
+     {
+      "option": 2,
+      "why": "Rate limiting slows enumeration but does not stop an authenticated user retrieving data they should not see."
+     },
+     {
+      "option": 3,
+      "why": "TLS protects data in transit and does not control what the server returns."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub05-010",
+   "domain": 8,
+   "subdomain": "8.5",
+   "difficulty": 1,
+   "stem": "Which characteristic distinguishes a worm from a virus?",
+   "options": [
+    "It requires a user to open an attachment before it runs",
+    "It can only infect mobile devices such as phones and tablets",
+    "It spreads on its own across networks without a host file",
+    "It encrypts files and demands a ransom for the key"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Which malware needs no host program or human action?",
+    "How does each type spread?"
+   ],
+   "explanation": {
+    "correct": "Worms propagate on their own, often by exploiting vulnerabilities, while viruses attach to host files and typically need a user to run them.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "This reverses the properties. Viruses typically need user action to run, while worms do not."
+     },
+     {
+      "option": 1,
+      "why": "Worms affect any networked system, not just mobile devices."
+     },
+     {
+      "option": 3,
+      "why": "That behaviour describes ransomware, which is defined by its payload and not by how it spreads."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub05-011",
+   "domain": 8,
+   "subdomain": "8.5",
+   "difficulty": 2,
+   "stem": "A developer proposes to protect a form field by blocking a list of known malicious characters. Which approach is BEST?",
+   "options": [
+    "Expanding the list of blocked characters over time",
+    "Removing validation so the database rejects bad data",
+    "Validating input only when a user reports a problem",
+    "Allow-listing the expected format, length and characters"
+   ],
+   "correct": 3,
+   "ladder": [
+    "What is the weakness of any list that must anticipate every attacker technique?",
+    "What happens when the attacker finds a variation you have not listed?"
+   ],
+   "explanation": {
+    "correct": "Defining what is valid is more reliable than trying to enumerate everything that is dangerous, which attackers can evade with encodings and variations.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Deny-lists are always incomplete, so attackers find variations that are not listed."
+     },
+     {
+      "option": 1,
+      "why": "The database is a poor place to find bad input, and invalid data would already have reached it."
+     },
+     {
+      "option": 2,
+      "why": "Validation must be applied to all input, not applied reactively."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub05-012",
+   "domain": 8,
+   "subdomain": "8.5",
+   "difficulty": 2,
+   "stem": "A developer argues that JavaScript validation in the browser is enough to protect an application's form input. What should the security manager respond?",
+   "options": [
+    "The server must validate too, as client checks are bypassable",
+    "Client-side validation is sufficient provided HTTPS is used",
+    "Server-side validation should be replaced by firewall rules",
+    "Validation is only needed on forms for administrator users"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Who controls the code running in the browser?",
+    "Where must a security decision be enforced?"
+   ],
+   "explanation": {
+    "correct": "Attackers control the client and can send requests directly, so only server-side validation is trustworthy. Client-side checks are for usability.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "HTTPS protects data in transit but does not prevent the user modifying the data before sending it."
+     },
+     {
+      "option": 2,
+      "why": "A firewall cannot understand the application's input rules."
+     },
+     {
+      "option": 3,
+      "why": "All users can submit malicious input."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d8-sub05-013",
+   "domain": 8,
+   "subdomain": "8.5",
+   "difficulty": 3,
+   "stem": "A web application connects to its database using an account with full administrative rights because it is convenient for the developers. Which principle is being violated and what is the BEST remedy?",
+   "options": [
+    "Defence in depth; add a backup administrative account",
+    "Least privilege; use a dedicated, minimally privileged account",
+    "Separation of duties; share the account between two developers",
+    "Fail secure; make the application stop on database errors"
+   ],
+   "correct": 1,
+   "ladder": [
+    "Is the flaw about how many people have access, how the system fails, or how much power one component has?",
+    "What level of access does the application actually need?",
+    "Which options leave the application's permissions unchanged?"
+   ],
+   "explanation": {
+    "correct": "Giving the application only the permissions it needs limits what an injection or compromise can do. The account should not hold administrative rights.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "More administrative accounts increase exposure and do not reduce privilege."
+     },
+     {
+      "option": 2,
+      "why": "Sharing credentials destroys accountability and does not separate duties."
+     },
+     {
+      "option": 3,
+      "why": "Failing securely addresses behaviour on error, not the excessive privileges of the account."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "manager-mindset",
+    "best-answer"
+   ],
+   "reviewed": true
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "f-d8-sub01-001",
+   "domain": 8,
+   "subdomain": "8.1",
+   "front": "CMMI maturity levels 1 to 5, in order",
+   "back": "1 Initial, 2 Managed, 3 Defined, 4 Quantitatively Managed, 5 Optimizing.",
+   "whyItMatters": "Exam gives a description (e.g. statistical control) and asks for the level."
+  },
+  {
+   "id": "f-d8-sub01-002",
+   "domain": 8,
+   "subdomain": "8.1",
+   "front": "Waterfall vs spiral: which is risk-driven and iterative?",
+   "back": "Spiral repeats planning, risk analysis, engineering and evaluation in each loop. Waterfall is sequential with little return to earlier phases.",
+   "whyItMatters": "Exam asks which model fits a large, high-risk project."
+  },
+  {
+   "id": "f-d8-sub01-003",
+   "domain": 8,
+   "subdomain": "8.1",
+   "front": "Agile Manifesto: four value statements",
+   "back": "Individuals and interactions over processes and tools; working software over comprehensive documentation; customer collaboration over contract negotiation; responding to change over following a plan.",
+   "whyItMatters": "Used to judge whether a practice conflicts with Agile."
+  },
+  {
+   "id": "f-d8-sub01-004",
+   "domain": 8,
+   "subdomain": "8.1",
+   "front": "OWASP SAMM vs BSIMM",
+   "back": "SAMM is open and prescriptive, used to build a roadmap. BSIMM is descriptive, based on observed practices of real organisations.",
+   "whyItMatters": "Classic pair of look-alike answers."
+  },
+  {
+   "id": "f-d8-sub01-005",
+   "domain": 8,
+   "subdomain": "8.1",
+   "front": "Order of SDLC phases",
+   "back": "Initiation/requirements, design, development, testing/acceptance, implementation/deployment, operations and maintenance, disposal.",
+   "whyItMatters": "Exam asks which phase comes first or where an activity belongs."
+  },
+  {
+   "id": "f-d8-sub01-006",
+   "domain": 8,
+   "subdomain": "8.1",
+   "front": "What does \"shift left\" mean?",
+   "back": "Moving security activities such as requirements, threat modelling and testing earlier in the lifecycle, where defects are cheaper to fix.",
+   "whyItMatters": "Correct answer when a scenario asks how to reduce defects found late, such as design flaws discovered at penetration test."
+  },
+  {
+   "id": "f-d8-sub01-007",
+   "domain": 8,
+   "subdomain": "8.1",
+   "front": "Rapid application development (RAD) and prototyping main risk",
+   "back": "Prototypes may be pushed into production without security design or documentation, since requirements are refined by iteration.",
+   "whyItMatters": "Appears in questions on lifecycle model weaknesses."
+  },
+  {
+   "id": "f-d8-sub01-008",
+   "domain": 8,
+   "subdomain": "8.1",
+   "front": "Security activities in the disposal phase",
+   "back": "Sanitise media, archive or destroy data per retention rules, revoke access and keys, and update asset records.",
+   "whyItMatters": "Disposal is the phase people forget on the exam."
+  },
+  {
+   "id": "f-d8-sub02-001",
+   "domain": 8,
+   "subdomain": "8.2",
+   "front": "Software bill of materials (SBOM)",
+   "back": "A formal, machine-readable inventory of the components, versions and suppliers within a software product.",
+   "whyItMatters": "Linked to rapid identification of affected systems when a vulnerability is announced."
+  },
+  {
+   "id": "f-d8-sub02-002",
+   "domain": 8,
+   "subdomain": "8.2",
+   "front": "SCA vs SAST",
+   "back": "SCA finds known-vulnerable and licence-restricted third-party components. SAST analyses the organisation's own source code for flaws.",
+   "whyItMatters": "Exam mixes up which tool inspects which code."
+  },
+  {
+   "id": "f-d8-sub02-003",
+   "domain": 8,
+   "subdomain": "8.2",
+   "front": "Dependency confusion attack",
+   "back": "A build pulls a malicious public package that shares a name with an internal one. Mitigate with private registries, scoped names, pinned versions and hashes.",
+   "whyItMatters": "Supply chain attack that appears in modern CISSP content."
+  },
+  {
+   "id": "f-d8-sub02-004",
+   "domain": 8,
+   "subdomain": "8.2",
+   "front": "What to do when a secret is committed to a repository",
+   "back": "Revoke and rotate it first. Deleting the commit does not help because the secret remains in history and clones.",
+   "whyItMatters": "Exam wants rotation before clean-up."
+  },
+  {
+   "id": "f-d8-sub02-005",
+   "domain": 8,
+   "subdomain": "8.2",
+   "front": "Code signing provides what?",
+   "back": "Integrity of the code and authenticity of the publisher, using a digital signature with the publisher's private key.",
+   "whyItMatters": "Not confidentiality, and not proof of safe code."
+  },
+  {
+   "id": "f-d8-sub02-006",
+   "domain": 8,
+   "subdomain": "8.2",
+   "front": "Why separate development, test and production environments?",
+   "back": "Enforces separation of duties and ensures that only tested, approved code reaches production, with no developer access to live data.",
+   "whyItMatters": "Frequent reason-for-control question."
+  },
+  {
+   "id": "f-d8-sub02-007",
+   "domain": 8,
+   "subdomain": "8.2",
+   "front": "Change management steps in development",
+   "back": "Request, impact analysis, approval, testing, scheduled implementation with a back-out plan, documentation and post-change review.",
+   "whyItMatters": "Questions ask which step is missing or comes first."
+  },
+  {
+   "id": "f-d8-sub03-001",
+   "domain": 8,
+   "subdomain": "8.3",
+   "front": "SAST vs DAST vs IAST",
+   "back": "SAST analyses code without running it. DAST tests a running application from outside (black box). IAST instruments a running application from inside.",
+   "whyItMatters": "Core testing distinction on the exam."
+  },
+  {
+   "id": "f-d8-sub03-002",
+   "domain": 8,
+   "subdomain": "8.3",
+   "front": "Fuzzing",
+   "back": "Feeding malformed or random input to a program to expose crashes, hangs and memory errors. A form of dynamic testing.",
+   "whyItMatters": "Right answer when no source code is available."
+  },
+  {
+   "id": "f-d8-sub03-003",
+   "domain": 8,
+   "subdomain": "8.3",
+   "front": "Regression testing purpose",
+   "back": "Re-running tests after a change to confirm that existing functionality and previous fixes still work.",
+   "whyItMatters": "Exam distinguishes it from acceptance, unit and fuzz testing when a fix has just been applied."
+  },
+  {
+   "id": "f-d8-sub03-004",
+   "domain": 8,
+   "subdomain": "8.3",
+   "front": "Code review styles: walkthrough vs Fagan inspection",
+   "back": "A walkthrough is an informal peer review. A Fagan inspection is a formal, structured review with defined roles and entry/exit criteria.",
+   "whyItMatters": "Exam asks which is the more formal."
+  },
+  {
+   "id": "f-d8-sub03-005",
+   "domain": 8,
+   "subdomain": "8.3",
+   "front": "What static analysis misses",
+   "back": "Runtime issues, configuration problems and business logic flaws. It also produces false positives.",
+   "whyItMatters": "Justifies layered testing."
+  },
+  {
+   "id": "f-d8-sub03-006",
+   "domain": 8,
+   "subdomain": "8.3",
+   "front": "Who accepts residual risk found in testing?",
+   "back": "The business or system owner, not the security manager or developer, after the risk is documented and communicated.",
+   "whyItMatters": "Manager-mindset answer in many testing scenarios."
+  },
+  {
+   "id": "f-d8-sub03-007",
+   "domain": 8,
+   "subdomain": "8.3",
+   "front": "Black-box, white-box and grey-box testing",
+   "back": "Black box: no knowledge of internals. White box: full knowledge including source. Grey box: partial knowledge.",
+   "whyItMatters": "Matches DAST and SAST to knowledge level."
+  },
+  {
+   "id": "f-d8-sub04-001",
+   "domain": 8,
+   "subdomain": "8.4",
+   "front": "Software escrow",
+   "back": "Source code is held by a trusted third party and released to the customer if the vendor goes out of business or fails to support the product.",
+   "whyItMatters": "Appears in vendor risk questions."
+  },
+  {
+   "id": "f-d8-sub04-002",
+   "domain": 8,
+   "subdomain": "8.4",
+   "front": "Common Criteria evaluation assurance levels",
+   "back": "EAL1 to EAL7, with higher levels meaning more rigorous testing and verification of the evaluated product.",
+   "whyItMatters": "Exam asks what EAL measures: assurance, not strength of features."
+  },
+  {
+   "id": "f-d8-sub04-003",
+   "domain": 8,
+   "subdomain": "8.4",
+   "front": "Assurance for acquired software",
+   "back": "Review independent evaluations, conduct acceptance testing, use SCA and SBOMs, and include audit rights and security terms in the contract.",
+   "whyItMatters": "Typical best answer for COTS and outsourced code."
+  },
+  {
+   "id": "f-d8-sub04-004",
+   "domain": 8,
+   "subdomain": "8.4",
+   "front": "SaaS: customer retains responsibility for what?",
+   "back": "Identities and access, data classification and tenant configuration. The provider secures the application and platform.",
+   "whyItMatters": "Shared responsibility question."
+  },
+  {
+   "id": "f-d8-sub04-005",
+   "domain": 8,
+   "subdomain": "8.4",
+   "front": "Open-source adoption checks",
+   "back": "Provenance, maintenance activity, vulnerability history, licence terms and the ability to verify integrity of downloads.",
+   "whyItMatters": "Pre-approval scenarios expect evaluation of provenance and maintenance before any block, ban or approval."
+  },
+  {
+   "id": "f-d8-sub04-006",
+   "domain": 8,
+   "subdomain": "8.4",
+   "front": "End-of-life software decision",
+   "back": "Assess the risk, present compensating controls and a migration plan to the business owner, who decides whether to accept the risk.",
+   "whyItMatters": "Manager-mindset scenario on unsupported products."
+  },
+  {
+   "id": "f-d8-sub05-001",
+   "domain": 8,
+   "subdomain": "8.5",
+   "front": "OWASP Top 10 number one category",
+   "back": "Broken access control: failures to enforce what users are allowed to do, such as changing an ID to view another user's data.",
+   "whyItMatters": "Recent editions rank it first."
+  },
+  {
+   "id": "f-d8-sub05-002",
+   "domain": 8,
+   "subdomain": "8.5",
+   "front": "Fix for SQL injection",
+   "back": "Parameterised queries (prepared statements) separating data from commands, with least-privilege database accounts.",
+   "whyItMatters": "Most common secure coding question."
+  },
+  {
+   "id": "f-d8-sub05-003",
+   "domain": 8,
+   "subdomain": "8.5",
+   "front": "Fix for XSS",
+   "back": "Contextual output encoding of untrusted data, plus input validation and content security policy.",
+   "whyItMatters": "Contrast with CSRF, which uses tokens."
+  },
+  {
+   "id": "f-d8-sub05-004",
+   "domain": 8,
+   "subdomain": "8.5",
+   "front": "Fix for CSRF",
+   "back": "Anti-CSRF tokens in state-changing requests, plus SameSite cookies and re-authentication for sensitive actions.",
+   "whyItMatters": "Exam pairs the attack with its token defence."
+  },
+  {
+   "id": "f-d8-sub05-005",
+   "domain": 8,
+   "subdomain": "8.5",
+   "front": "Aggregation vs inference",
+   "back": "Aggregation: combining many low-sensitivity items to reveal higher-sensitivity information. Inference: deducing sensitive facts from non-sensitive data.",
+   "whyItMatters": "Two attacks that look the same on the exam."
+  },
+  {
+   "id": "f-d8-sub05-006",
+   "domain": 8,
+   "subdomain": "8.5",
+   "front": "Polyinstantiation",
+   "back": "Storing multiple versions of a record at different classification levels so lower-level users cannot infer the real data.",
+   "whyItMatters": "Countermeasure for inference in multilevel databases."
+  },
+  {
+   "id": "f-d8-sub05-007",
+   "domain": 8,
+   "subdomain": "8.5",
+   "front": "Database ACID properties",
+   "back": "Atomicity, Consistency, Isolation, Durability: transactions complete fully or not at all, keep data valid, do not interfere, and persist.",
+   "whyItMatters": "Database integrity question."
+  },
+  {
+   "id": "f-d8-sub05-008",
+   "domain": 8,
+   "subdomain": "8.5",
+   "front": "Allow-list vs deny-list validation",
+   "back": "Allow-lists accept only known-good input and are preferred. Deny-lists block known-bad input and can be bypassed. Always validate server-side.",
+   "whyItMatters": "Secure coding principle on input handling."
+  },
+  {
+   "id": "f-d8-sub05-009",
+   "domain": 8,
+   "subdomain": "8.5",
+   "front": "TOCTOU",
+   "back": "Time-of-check to time-of-use race condition, where state changes between a security check and the use of the resource.",
+   "whyItMatters": "Named attack on the exam."
+  },
+  {
+   "id": "f-d8-sub05-010",
+   "domain": 8,
+   "subdomain": "8.5",
+   "front": "Worm vs virus vs logic bomb",
+   "back": "Worm: self-replicates over networks. Virus: attaches to a host file, needs a user to run it. Logic bomb: malicious code triggered by a condition.",
+   "whyItMatters": "Common malware definitions question."
+  }
+ ]
+}

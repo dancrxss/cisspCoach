@@ -1,0 +1,83 @@
+{
+  "outlineVersion": "2024-04-15",
+  "domains": [
+    { "id": 1, "name": "Security and Risk Management", "weight": 0.16, "subdomains": [
+      { "id": "1.1", "name": "Professional ethics" },
+      { "id": "1.2", "name": "Security concepts (CIA, authenticity, non-repudiation)" },
+      { "id": "1.3", "name": "Security governance principles" },
+      { "id": "1.4", "name": "Legal, regulatory and compliance issues" },
+      { "id": "1.5", "name": "Investigation types" },
+      { "id": "1.6", "name": "Policy, standards, procedures and guidelines" },
+      { "id": "1.7", "name": "Business continuity requirements" },
+      { "id": "1.8", "name": "Personnel security policies" },
+      { "id": "1.9", "name": "Risk management concepts" },
+      { "id": "1.10", "name": "Threat modelling" },
+      { "id": "1.11", "name": "Supply chain risk management" },
+      { "id": "1.12", "name": "Security awareness, education and training" }
+    ]},
+    { "id": 2, "name": "Asset Security", "weight": 0.10, "subdomains": [
+      { "id": "2.1", "name": "Identify and classify information and assets" },
+      { "id": "2.2", "name": "Information and asset handling requirements" },
+      { "id": "2.3", "name": "Provision information and assets securely" },
+      { "id": "2.4", "name": "Data lifecycle management" },
+      { "id": "2.5", "name": "Asset retention" },
+      { "id": "2.6", "name": "Data security controls and compliance requirements" }
+    ]},
+    { "id": 3, "name": "Security Architecture and Engineering", "weight": 0.13, "subdomains": [
+      { "id": "3.1", "name": "Secure design principles in engineering processes" },
+      { "id": "3.2", "name": "Security models" },
+      { "id": "3.3", "name": "Controls based on system security requirements" },
+      { "id": "3.4", "name": "Security capabilities of information systems" },
+      { "id": "3.5", "name": "Vulnerabilities of architectures, designs and solution elements" },
+      { "id": "3.6", "name": "Cryptographic solutions" },
+      { "id": "3.7", "name": "Cryptanalytic attacks" },
+      { "id": "3.8", "name": "Security principles in site and facility design" },
+      { "id": "3.9", "name": "Site and facility security controls" },
+      { "id": "3.10", "name": "Information system lifecycle" }
+    ]},
+    { "id": 4, "name": "Communication and Network Security", "weight": 0.13, "subdomains": [
+      { "id": "4.1", "name": "Secure design principles in network architectures" },
+      { "id": "4.2", "name": "Secure network components" },
+      { "id": "4.3", "name": "Secure communication channels" }
+    ]},
+    { "id": 5, "name": "Identity and Access Management", "weight": 0.13, "subdomains": [
+      { "id": "5.1", "name": "Physical and logical access control" },
+      { "id": "5.2", "name": "Identification and authentication strategy" },
+      { "id": "5.3", "name": "Federated identity with third-party services" },
+      { "id": "5.4", "name": "Authorization mechanisms" },
+      { "id": "5.5", "name": "Identity and access provisioning lifecycle" },
+      { "id": "5.6", "name": "Authentication systems" }
+    ]},
+    { "id": 6, "name": "Security Assessment and Testing", "weight": 0.12, "subdomains": [
+      { "id": "6.1", "name": "Assessment, test and audit strategies" },
+      { "id": "6.2", "name": "Security control testing" },
+      { "id": "6.3", "name": "Collect security process data" },
+      { "id": "6.4", "name": "Analyse test output and report" },
+      { "id": "6.5", "name": "Security audits" }
+    ]},
+    { "id": 7, "name": "Security Operations", "weight": 0.13, "subdomains": [
+      { "id": "7.1", "name": "Investigations" },
+      { "id": "7.2", "name": "Logging and monitoring" },
+      { "id": "7.3", "name": "Configuration management" },
+      { "id": "7.4", "name": "Foundational security operations concepts" },
+      { "id": "7.5", "name": "Resource protection" },
+      { "id": "7.6", "name": "Incident management" },
+      { "id": "7.7", "name": "Detective and preventive measures" },
+      { "id": "7.8", "name": "Patch and vulnerability management" },
+      { "id": "7.9", "name": "Change management" },
+      { "id": "7.10", "name": "Recovery strategies" },
+      { "id": "7.11", "name": "Disaster recovery processes" },
+      { "id": "7.12", "name": "Testing disaster recovery plans" },
+      { "id": "7.13", "name": "Business continuity planning and exercises" },
+      { "id": "7.14", "name": "Physical security" },
+      { "id": "7.15", "name": "Personnel safety and security" }
+    ]},
+    { "id": 8, "name": "Software Development Security", "weight": 0.10, "subdomains": [
+      { "id": "8.1", "name": "Security in the SDLC" },
+      { "id": "8.2", "name": "Security controls in software development ecosystems" },
+      { "id": "8.3", "name": "Effectiveness of software security" },
+      { "id": "8.4", "name": "Security impact of acquired software" },
+      { "id": "8.5", "name": "Secure coding guidelines and standards" }
+    ]}
+  ]
+}

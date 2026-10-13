@@ -1,0 +1,2303 @@
+{
+  "questions": [
+    {
+      "id": "q-d2-sub01-001",
+      "domain": 2,
+      "subdomain": "2.1",
+      "difficulty": 1,
+      "stem": "What is the PRIMARY purpose of classifying information and assets?",
+      "options": [
+        "To match protection to value and sensitivity",
+        "To assign a custodian to every file in the organization",
+        "To decide which encryption algorithm is used everywhere",
+        "To set the backup schedule for all systems"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Is classification about a specific technology, or about deciding how much protection something deserves?",
+        "What does the label tell people who later have to handle the data?"
+      ],
+      "explanation": {
+        "correct": "Classification ranks assets by the impact of disclosure, alteration or loss so that controls and handling rules can be proportionate. Without it, organizations either over-protect everything or under-protect critical data.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Custodians are assigned through ownership and governance; classification does not assign them."
+          },
+          {
+            "option": 2,
+            "why": "Algorithm choice may follow from classification, but it is a downstream control decision, not the purpose."
+          },
+          {
+            "option": 3,
+            "why": "Backup frequency is driven by availability and recovery needs, not by the classification activity itself."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub01-002",
+      "domain": 2,
+      "subdomain": "2.1",
+      "difficulty": 1,
+      "stem": "Who is ultimately responsible for deciding the classification of a business dataset?",
+      "options": [
+        "The data custodian",
+        "The data owner",
+        "The data processor",
+        "The security administrator"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which role is accountable for the business value of the data rather than its day-to-day handling?",
+        "Who understands the impact if this data were disclosed?"
+      ],
+      "explanation": {
+        "correct": "The data owner (typically a senior business manager) is accountable for the data and assigns its classification. Security and IT implement the protections that follow from that decision.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The custodian applies controls and operates the storage but does not decide sensitivity."
+          },
+          {
+            "option": 2,
+            "why": "A processor handles data on behalf of a controller and has no authority to classify it."
+          },
+          {
+            "option": 3,
+            "why": "The security administrator configures controls; classification is a business decision."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub01-003",
+      "domain": 2,
+      "subdomain": "2.1",
+      "difficulty": 1,
+      "stem": "Under the US government classification scheme, unauthorized disclosure of which level could reasonably be expected to cause exceptionally grave damage to national security?",
+      "options": [
+        "Secret",
+        "Confidential",
+        "Top Secret",
+        "Sensitive But Unclassified"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What damage wording does each of the three national security levels use?",
+        "Do the lower levels use 'serious' and plain 'damage'?"
+      ],
+      "explanation": {
+        "correct": "Top Secret equals exceptionally grave damage, Secret equals serious damage, and Confidential equals damage to national security. Sensitive But Unclassified is not a national security level.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Secret corresponds to serious damage, one step below exceptionally grave."
+          },
+          {
+            "option": 1,
+            "why": "Confidential corresponds to simple damage, the lowest national security level."
+          },
+          {
+            "option": 3,
+            "why": "Sensitive But Unclassified covers non-national-security information that still needs protection."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub01-004",
+      "domain": 2,
+      "subdomain": "2.1",
+      "difficulty": 2,
+      "stem": "A company has grown quickly and has never defined data classification levels. Executives ask the security manager to improve data protection. What should the manager do FIRST?",
+      "options": [
+        "Deploy a DLP product to every managed endpoint",
+        "Label every file in the company as confidential",
+        "Encrypt all databases and file shares company-wide",
+        "Get management to approve a classification policy"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Can a tool enforce rules that the organization has never defined?",
+        "What gives classification labels authority across business units?"
+      ],
+      "explanation": {
+        "correct": "A classification policy approved by management defines levels, criteria, ownership and handling rules. Everything else, including tooling and labeling, depends on this governance foundation.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "DLP needs defined classes and rules to enforce, so buying it first is premature."
+          },
+          {
+            "option": 1,
+            "why": "Labeling everything confidential defeats the purpose of differentiating protection and creates cost and friction."
+          },
+          {
+            "option": 2,
+            "why": "Blanket encryption is a control applied without understanding which data needs it."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub01-005",
+      "domain": 2,
+      "subdomain": "2.1",
+      "difficulty": 2,
+      "stem": "An analyst combines several public HR statistics into one report that reveals which small department is about to be restructured. How should the report be classified?",
+      "options": [
+        "By the sensitivity of the combined result",
+        "At the lowest classification of its sources",
+        "By the system that stores the report",
+        "By the department that requested it"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Does combining data ever create something more sensitive than the parts?",
+        "What risk does the final report carry if it leaks?"
+      ],
+      "explanation": {
+        "correct": "Aggregation can raise sensitivity because the whole reveals more than the parts. Classification should reflect the impact of disclosing the compiled result.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Inheriting the lowest source level ignores the aggregation effect and under-protects the report."
+          },
+          {
+            "option": 2,
+            "why": "Storage location can influence handling but does not determine data sensitivity."
+          },
+          {
+            "option": 3,
+            "why": "The requester's department has no bearing on the impact of disclosure."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub01-006",
+      "domain": 2,
+      "subdomain": "2.1",
+      "difficulty": 2,
+      "stem": "During an audit, the security manager finds that many assets have no recorded owner. Why is this the MOST significant concern?",
+      "options": [
+        "Hardware depreciation cannot be calculated accurately",
+        "Nobody is accountable for access and classification",
+        "Software license counts will be inaccurate",
+        "Asset tags may be duplicated across sites"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which governance decisions need a named individual to make them?",
+        "Who would approve access or accept risk for these assets?"
+      ],
+      "explanation": {
+        "correct": "An owner is accountable for classification, access approval and risk acceptance. Without one, assets drift without protection decisions being made.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Depreciation is a finance concern, not the main security risk."
+          },
+          {
+            "option": 2,
+            "why": "License accuracy matters to compliance but is not the core accountability gap."
+          },
+          {
+            "option": 3,
+            "why": "Duplicate tags are an inventory hygiene issue, not a governance failure."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub01-007",
+      "domain": 2,
+      "subdomain": "2.1",
+      "difficulty": 2,
+      "stem": "A company's product pricing was classified Restricted before an announcement. After public release, it is still handled as Restricted at high cost. What should happen?",
+      "options": [
+        "The custodian downgrades it during the next backup",
+        "The classification stays until the next audit finds it",
+        "The data owner reviews and downgrades the label",
+        "The security team removes the label on its own authority"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Who decided the original classification and who may change it?",
+        "What triggers the need to re-evaluate a label over time?"
+      ],
+      "explanation": {
+        "correct": "Sensitivity changes over time, and the data owner is responsible for periodic review and declassification. Controls then follow the new classification.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Custodians do not have authority to alter classifications."
+          },
+          {
+            "option": 1,
+            "why": "Waiting for an audit leaves unnecessary cost and confuses handlers."
+          },
+          {
+            "option": 3,
+            "why": "Security advises but does not hold authority to reclassify business data."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub01-008",
+      "domain": 2,
+      "subdomain": "2.1",
+      "difficulty": 1,
+      "stem": "Which of the following BEST describes personally identifiable information (PII)?",
+      "options": [
+        "Any data stored in a human resources system",
+        "Data that an organization has chosen to encrypt",
+        "Information about customers in aggregate form",
+        "Data that can identify or trace one individual"
+      ],
+      "correct": 3,
+      "ladder": [
+        "What makes data personal rather than simply business-related?",
+        "Is the test where it is stored or whether a person can be identified?"
+      ],
+      "explanation": {
+        "correct": "PII is data that can distinguish or trace an individual, alone or combined with other data. Location, format and protection method do not determine whether data is PII.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "HR systems hold non-personal data too, and PII exists outside HR."
+          },
+          {
+            "option": 1,
+            "why": "Encryption is a protection applied to data and does not define it."
+          },
+          {
+            "option": 2,
+            "why": "Properly aggregated data that cannot identify individuals is not PII."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub01-009",
+      "domain": 2,
+      "subdomain": "2.1",
+      "difficulty": 3,
+      "stem": "After acquiring a competitor, an organization finds the new subsidiary classifies data as High, Medium and Low while the parent uses Restricted, Internal and Public. What should the security manager do FIRST?",
+      "options": [
+        "Compare handling requirements and map the schemes",
+        "Relabel all acquired data using the parent scheme",
+        "Run both schemes in parallel with no end date",
+        "Deploy automated discovery tools in the subsidiary"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Are the labels or the protections behind them what matter?",
+        "What could be lost if data is relabeled without understanding what the old labels required?"
+      ],
+      "explanation": {
+        "correct": "A gap analysis or crosswalk shows whether each existing label's protections meet the parent's requirements. This avoids both under-protection and wasteful relabeling and gives a basis for a unified policy.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Immediate relabeling may downgrade data with stricter obligations and ignores contractual commitments."
+          },
+          {
+            "option": 2,
+            "why": "Running two schemes indefinitely creates inconsistent handling and confusion."
+          },
+          {
+            "option": 3,
+            "why": "Discovery tools are useful later but do not resolve how the two schemes relate."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub01-010",
+      "domain": 2,
+      "subdomain": "2.1",
+      "difficulty": 3,
+      "stem": "An automated discovery tool labels a file share as Public, but the security manager notices it holds customer PII. Who should determine the correct classification?",
+      "options": [
+        "The tool vendor, since the tool is authoritative",
+        "The data owner, informed by the tool's findings",
+        "The custodian, who administers the share",
+        "The privacy officer, overriding the business"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Do tools make accountable decisions or supply evidence for them?",
+        "Who is accountable for the data's business impact?"
+      ],
+      "explanation": {
+        "correct": "Tools provide evidence, but accountability for classification stays with the data owner. The owner should review the findings and confirm or adjust the label, with privacy and security advising.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Tool output is an input; accountability cannot be delegated to software or its vendor."
+          },
+          {
+            "option": 2,
+            "why": "The custodian operates the share but does not decide sensitivity."
+          },
+          {
+            "option": 3,
+            "why": "The privacy officer advises on obligations but does not replace owner accountability."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub01-011",
+      "domain": 2,
+      "subdomain": "2.1",
+      "difficulty": 1,
+      "stem": "Which of the following is an example of an intangible asset?",
+      "options": [
+        "A server rack",
+        "A fiber-optic cable",
+        "A trade secret",
+        "A backup tape"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which of these could you pick up and touch?",
+        "Which of these is valuable because of what it represents rather than its physical form?"
+      ],
+      "explanation": {
+        "correct": "Trade secrets, patents, brand reputation and software are intangible assets. Their value comes from knowledge or rights rather than a physical form.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A server rack is tangible hardware."
+          },
+          {
+            "option": 1,
+            "why": "A cable is tangible physical infrastructure."
+          },
+          {
+            "option": 3,
+            "why": "A backup tape is physical media, even though it carries data."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub01-012",
+      "domain": 2,
+      "subdomain": "2.1",
+      "difficulty": 2,
+      "stem": "A scan of the network reveals employees storing company files in an unapproved cloud storage service. What should the security manager do FIRST?",
+      "options": [
+        "Block the service at the firewall immediately",
+        "Require all employees to sign a new policy",
+        "Mandate encryption on the unapproved service",
+        "Identify what data is there and who owns it"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Is the risk known yet, or only the existence of the service?",
+        "What do you need to know about the data before choosing a response?"
+      ],
+      "explanation": {
+        "correct": "Risk-based response starts with understanding the data's classification, owner and exposure. That informs whether to migrate, accept, or block, and avoids disrupting business unnecessarily.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Blocking without scoping may disrupt business and does not address data already exposed."
+          },
+          {
+            "option": 1,
+            "why": "A policy signature does not tell you the actual risk or remediate current exposure."
+          },
+          {
+            "option": 2,
+            "why": "Encrypting an unapproved service legitimizes it without assessing the risk."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub02-001",
+      "domain": 2,
+      "subdomain": "2.2",
+      "difficulty": 1,
+      "stem": "A shared drive holds documents of several classifications, none of which are labeled. How should the drive be protected by default?",
+      "options": [
+        "At the highest classification found",
+        "At the lowest classification it contains",
+        "At the average of the classifications",
+        "At whatever level the custodian chooses"
+      ],
+      "correct": 0,
+      "ladder": [
+        "If you cannot tell which documents are which, what is the safest assumption?",
+        "What happens to the most sensitive file if the drive is treated as low?"
+      ],
+      "explanation": {
+        "correct": "Unlabeled or mixed repositories are protected at the level of the most sensitive content they might hold. This is the conservative handling rule until contents are classified.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Using the lowest level exposes the most sensitive documents."
+          },
+          {
+            "option": 2,
+            "why": "There is no meaningful average; sensitive items still need full protection."
+          },
+          {
+            "option": 3,
+            "why": "Handling must follow policy, not individual custodian preference."
+          }
+        ]
+      },
+      "tags": [
+        "definition",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub02-002",
+      "domain": 2,
+      "subdomain": "2.2",
+      "difficulty": 1,
+      "stem": "What is the main purpose of marking and labeling information with its classification?",
+      "options": [
+        "To prove that encryption has been applied",
+        "To tell handlers which protections apply",
+        "To record who created the document",
+        "To set the document's retention date"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What should a person do differently after reading the label?",
+        "Is the label itself a control, or a signal for controls?"
+      ],
+      "explanation": {
+        "correct": "Labels communicate handling requirements to people and systems, enabling consistent enforcement such as DLP rules or storage restrictions.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Encryption is evidenced by technical configuration, not by a classification label."
+          },
+          {
+            "option": 2,
+            "why": "Authorship is metadata, not classification marking."
+          },
+          {
+            "option": 3,
+            "why": "Retention is governed by a schedule, though labels may be one input."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub02-003",
+      "domain": 2,
+      "subdomain": "2.2",
+      "difficulty": 2,
+      "stem": "A company must ship backup tapes containing confidential data to an off-site vault by courier. Which approach is MOST appropriate?",
+      "options": [
+        "Ship plain tapes in a locked, sealed case",
+        "Send copies unencrypted via two separate couriers",
+        "Encrypt the tapes and keep chain of custody",
+        "Use ordinary post with a tracking number"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What protects the data if the tapes are lost in transit?",
+        "How do you prove who held the media at each point?"
+      ],
+      "explanation": {
+        "correct": "Encryption protects confidentiality if media is lost, and chain of custody provides accountability for every handoff. Together they address both the data and the handling process.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A locked case does not protect the data if the case is lost or opened."
+          },
+          {
+            "option": 1,
+            "why": "Duplicating unencrypted copies doubles exposure instead of reducing it."
+          },
+          {
+            "option": 3,
+            "why": "Tracking helps locate a package but offers no confidentiality or custody accountability."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub02-004",
+      "domain": 2,
+      "subdomain": "2.2",
+      "difficulty": 1,
+      "stem": "A user holds a Secret clearance but is denied access to a Secret project file because they are not assigned to that project. Which principle is being applied?",
+      "options": [
+        "Separation of duties",
+        "Job rotation",
+        "Two-person integrity",
+        "Need-to-know"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Does clearance alone justify access, or does the person's job requirement matter too?",
+        "Beyond clearance level, what other test must be met before access is granted?"
+      ],
+      "explanation": {
+        "correct": "Need-to-know restricts access to information required to perform a specific duty, even for individuals who hold the necessary clearance.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Separation of duties splits critical tasks among people to prevent fraud."
+          },
+          {
+            "option": 1,
+            "why": "Job rotation moves staff between roles to detect irregularities."
+          },
+          {
+            "option": 2,
+            "why": "Two-person integrity requires two people present for sensitive operations."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub02-005",
+      "domain": 2,
+      "subdomain": "2.2",
+      "difficulty": 3,
+      "stem": "A legacy system cannot display or store classification labels, yet policy requires all systems to label data. What should the security manager do?",
+      "options": [
+        "Record an approved exception with compensating controls",
+        "Replace the legacy system with a new platform at once",
+        "Waive the labeling policy because the system is internal",
+        "Label only the room that houses it, not the data itself"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Is this about technical compliance or about managing the resulting risk?",
+        "Who has authority to accept residual risk for this system's data?"
+      ],
+      "explanation": {
+        "correct": "When a control cannot be met, a formal exception with compensating controls and owner risk acceptance preserves governance. It balances business reality and protection and gets reviewed periodically.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Immediate replacement may be disproportionate, costly and disruptive."
+          },
+          {
+            "option": 2,
+            "why": "An informal waiver leaves the gap unmanaged and undocumented."
+          },
+          {
+            "option": 3,
+            "why": "Labeling a room is not a substitute for handling controls on the data."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub02-006",
+      "domain": 2,
+      "subdomain": "2.2",
+      "difficulty": 2,
+      "stem": "Employees often leave sensitive documents sitting in the shared office printer tray. Which control BEST addresses this?",
+      "options": [
+        "Add classification footers to all printouts",
+        "Require badge login before print release",
+        "Ban printing of all sensitive documents",
+        "Relocate the printer to a locked closet"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which control ties a printout's release to its owner's presence?",
+        "Does a label on the page stop the page being picked up by someone else?"
+      ],
+      "explanation": {
+        "correct": "Secure print release holds the job until the owner authenticates at the device, directly eliminating unattended exposure while allowing normal work.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Footers communicate sensitivity but do not stop unauthorized reading."
+          },
+          {
+            "option": 2,
+            "why": "A total ban is disproportionate and disrupts legitimate business use."
+          },
+          {
+            "option": 3,
+            "why": "A locked closet blocks convenient use and does not solve the unattended-output problem."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub03-001",
+      "domain": 2,
+      "subdomain": "2.3",
+      "difficulty": 1,
+      "stem": "What is the primary security benefit of deploying systems from a golden image?",
+      "options": [
+        "Faster network throughput per host",
+        "Automatic license compliance",
+        "A consistent, hardened baseline",
+        "Lower hardware purchase cost"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What does every new system start from when built from the same image?",
+        "Why would that matter for known vulnerabilities and misconfigurations?"
+      ],
+      "explanation": {
+        "correct": "A golden image captures an approved hardened baseline so each deployment starts from the same secure configuration, reducing drift and misconfiguration.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Throughput is a performance matter unrelated to the image's security benefit."
+          },
+          {
+            "option": 1,
+            "why": "License compliance requires separate tracking."
+          },
+          {
+            "option": 3,
+            "why": "Hardware cost is unaffected by how the system is imaged."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub03-002",
+      "domain": 2,
+      "subdomain": "2.3",
+      "difficulty": 2,
+      "stem": "A business unit moves its customer database to a cloud service under a standard contract. Who remains accountable for protecting that data?",
+      "options": [
+        "The cloud service provider",
+        "The provider's compliance auditor",
+        "The contract's legal signatory",
+        "The organization's data owner"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Can an organization transfer accountability along with the data?",
+        "What does the shared responsibility model leave with the customer?"
+      ],
+      "explanation": {
+        "correct": "Responsibility for operations can be shared or transferred, but accountability for data remains with the organization, specifically its data owner. Due care still applies after outsourcing.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The provider is responsible for the infrastructure it operates but is not accountable for the customer's data decisions."
+          },
+          {
+            "option": 1,
+            "why": "Auditors assess controls; they do not hold accountability."
+          },
+          {
+            "option": 2,
+            "why": "Signing a contract does not shift accountability for the data."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub03-003",
+      "domain": 2,
+      "subdomain": "2.3",
+      "difficulty": 2,
+      "stem": "A team is about to purchase a new system that will process confidential data. When should security requirements be defined?",
+      "options": [
+        "Before procurement, in the requirements",
+        "After delivery, during system hardening",
+        "After the first security incident occurs",
+        "During the next annual audit cycle"
+      ],
+      "correct": 0,
+      "ladder": [
+        "What is cheaper, specifying requirements up front or retrofitting them?",
+        "Where do vendors learn what you expect of them?"
+      ],
+      "explanation": {
+        "correct": "Security requirements belong in the RFP and contract so vendors are obligated to meet them. Adding them afterwards is costlier and may be unenforceable.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Hardening after delivery cannot fix contractual or design gaps."
+          },
+          {
+            "option": 2,
+            "why": "Waiting for an incident is reactive and accepts unnecessary risk."
+          },
+          {
+            "option": 3,
+            "why": "Annual audits detect gaps; they do not shape procurement."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub03-004",
+      "domain": 2,
+      "subdomain": "2.3",
+      "difficulty": 2,
+      "stem": "A line manager asks for access for a new hire to a confidential finance dataset. Who should approve the access?",
+      "options": [
+        "The requesting line manager",
+        "The data owner",
+        "The system administrator",
+        "The help desk lead"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Who is accountable for deciding who can see this data?",
+        "Who is merely requesting versus authorizing?"
+      ],
+      "explanation": {
+        "correct": "Access to data is authorized by the data owner (or their delegate) based on need-to-know. Administrators then provision it as approved.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The line manager can request but does not own the finance data."
+          },
+          {
+            "option": 2,
+            "why": "The administrator carries out provisioning without authority to approve."
+          },
+          {
+            "option": 3,
+            "why": "The help desk handles the ticket but has no ownership authority."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub03-005",
+      "domain": 2,
+      "subdomain": "2.3",
+      "difficulty": 3,
+      "stem": "A department has been using a SaaS tool for months with confidential data and no security review. What should the security manager do FIRST?",
+      "options": [
+        "Order the department to stop using the tool",
+        "Request a penetration test of the provider",
+        "Assess the provider against requirements",
+        "Record the tool in the vendor register"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Do you yet know whether the tool actually poses unacceptable risk?",
+        "What evidence would help the owner make a risk decision?"
+      ],
+      "explanation": {
+        "correct": "A third-party risk assessment establishes whether the provider's controls meet requirements and informs the owner's decision to continue, remediate or exit. It avoids rash disruption without ignoring the exposure.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Ordering a stop is premature; the risk is not yet understood and business impact is ignored."
+          },
+          {
+            "option": 1,
+            "why": "Penetration testing a SaaS provider needs permission and is not a first step."
+          },
+          {
+            "option": 3,
+            "why": "Registering the vendor documents existence but does not evaluate risk."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub03-006",
+      "domain": 2,
+      "subdomain": "2.3",
+      "difficulty": 1,
+      "stem": "Which activity belongs at the END of the asset lifecycle?",
+      "options": [
+        "Configuration baselining",
+        "Acceptance testing",
+        "Procurement review",
+        "Secure decommissioning"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which phase occurs after an asset has finished serving the business?",
+        "What must happen to data on it before it leaves control?"
+      ],
+      "explanation": {
+        "correct": "The final lifecycle phase retires assets, including sanitizing media and updating inventory so no data or accountability is left behind.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Baselining takes place when deploying an asset."
+          },
+          {
+            "option": 1,
+            "why": "Acceptance testing occurs before an asset enters production."
+          },
+          {
+            "option": 2,
+            "why": "Procurement review occurs at the beginning of the lifecycle."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub04-001",
+      "domain": 2,
+      "subdomain": "2.4",
+      "difficulty": 1,
+      "stem": "Which sequence correctly lists the phases of the data lifecycle?",
+      "options": [
+        "Create, store, use, share, archive, destroy",
+        "Create, use, store, archive, share, destroy",
+        "Store, create, share, use, destroy, archive",
+        "Create, archive, use, share, store, destroy"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Where does data come into existence, and where does it end?",
+        "Does archiving happen before or after active use and sharing?"
+      ],
+      "explanation": {
+        "correct": "The data lifecycle runs create, store, use, share, archive, destroy. Each phase has different security needs, and destruction ends with verified, policy-based disposal.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Archiving cannot precede sharing in the standard model."
+          },
+          {
+            "option": 2,
+            "why": "Data cannot be stored before it is created."
+          },
+          {
+            "option": 3,
+            "why": "Archiving comes after active use and sharing, not before."
+          }
+        ]
+      },
+      "tags": [
+        "definition",
+        "ordering"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub04-002",
+      "domain": 2,
+      "subdomain": "2.4",
+      "difficulty": 1,
+      "stem": "Which role applies technical controls such as backups, patching and access settings to data on the owner's behalf?",
+      "options": [
+        "Data owner",
+        "Data custodian",
+        "Data steward",
+        "Data subject"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which role operates the systems, as opposed to deciding about the data?",
+        "Who follows the owner's instructions in day-to-day handling?"
+      ],
+      "explanation": {
+        "correct": "The custodian implements and maintains controls in line with the owner's decisions and policy. The owner sets requirements; the custodian carries them out.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The owner is accountable and sets requirements rather than operating controls."
+          },
+          {
+            "option": 2,
+            "why": "The steward focuses on data quality and governance standards."
+          },
+          {
+            "option": 3,
+            "why": "The data subject is the individual the data describes."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub04-003",
+      "domain": 2,
+      "subdomain": "2.4",
+      "difficulty": 1,
+      "stem": "Under privacy regulations like GDPR, which party determines the purposes and means of processing personal data?",
+      "options": [
+        "The data processor",
+        "The data custodian",
+        "The data controller",
+        "The data subject"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Who decides why and how the data is processed?",
+        "Who merely processes on someone else's instructions?"
+      ],
+      "explanation": {
+        "correct": "The controller decides why and how personal data is processed and bears primary compliance obligations. Processors act only on the controller's documented instructions.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A processor handles data on the controller's behalf and cannot set purposes."
+          },
+          {
+            "option": 1,
+            "why": "Custodian is an internal operational role, not a legal determination role."
+          },
+          {
+            "option": 3,
+            "why": "The data subject is the individual the data concerns."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub04-004",
+      "domain": 2,
+      "subdomain": "2.4",
+      "difficulty": 2,
+      "stem": "Which duty BEST describes the role of a data steward?",
+      "options": [
+        "Approving every access request for the whole dataset",
+        "Performing system backups and restores",
+        "Determining the purposes of processing under law",
+        "Maintaining data quality and governance standards"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Is this role about business-level governance of data content or about infrastructure?",
+        "Which role focuses on definitions, quality and consistent use?"
+      ],
+      "explanation": {
+        "correct": "Stewards manage data quality, definitions and compliance with governance standards for a data domain on a day-to-day basis, working with owners and custodians.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Access approval is typically an owner responsibility."
+          },
+          {
+            "option": 1,
+            "why": "Backups and restores are custodian activities."
+          },
+          {
+            "option": 2,
+            "why": "Determining purposes is the controller's legal role."
+          }
+        ]
+      },
+      "tags": [
+        "definition",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub04-005",
+      "domain": 2,
+      "subdomain": "2.4",
+      "difficulty": 2,
+      "stem": "A solid-state drive holding confidential data will be sent to a third-party recycler whose process cannot be verified. Which sanitization is MOST appropriate?",
+      "options": [
+        "Shredding the drive",
+        "Degaussing the drive",
+        "A single-pass overwrite",
+        "A quick logical format"
+      ],
+      "correct": 0,
+      "ladder": [
+        "If control of the media is being lost and nothing about the recycler can be verified, how certain must you be that data cannot be recovered?",
+        "Do magnetic or logical methods behave the same way on flash storage as on spinning disks?"
+      ],
+      "explanation": {
+        "correct": "When media leaves your control or its handling cannot be verified, destruction (shredding, disintegration) gives the highest assurance, and it is the NIST SP 800-88 Destroy category. Flash media makes logical and magnetic methods especially unreliable.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Degaussing has no effect on solid-state flash media, and its results cannot be verified at an untrusted recycler."
+          },
+          {
+            "option": 2,
+            "why": "A single pass may leave remnants in remapped or wear-leveled areas."
+          },
+          {
+            "option": 3,
+            "why": "Formatting does not remove data and leaves it recoverable."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub04-006",
+      "domain": 2,
+      "subdomain": "2.4",
+      "difficulty": 1,
+      "stem": "What is data remanence?",
+      "options": [
+        "Data that is replicated across sites",
+        "Residual data left after deletion",
+        "Data encrypted with an expired key",
+        "Data that is still awaiting classification"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What remains on media after a file is 'deleted'?",
+        "Why does that matter when media is reused or discarded?"
+      ],
+      "explanation": {
+        "correct": "Data remanence is the residual representation of data that persists after attempts to remove it. It drives sanitization requirements before reuse or disposal.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Replication creates intended copies, not residue."
+          },
+          {
+            "option": 2,
+            "why": "Encryption with a lost key is a separate availability concern."
+          },
+          {
+            "option": 3,
+            "why": "Awaiting classification is a lifecycle state, not remanence."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub04-007",
+      "domain": 2,
+      "subdomain": "2.4",
+      "difficulty": 2,
+      "stem": "Data stored in a public cloud must be irretrievable at end of life, but the organization cannot physically access the storage. Which approach is MOST appropriate?",
+      "options": [
+        "Rely on the provider's own delete confirmation",
+        "Overwrite the files via the provider's API",
+        "Crypto-shred by destroying the customer keys",
+        "Move the data to another provider region"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which options depend on trusting the provider, and which depend on something you control?",
+        "If you cannot touch the hardware, what do you still control that determines whether stored data is readable?"
+      ],
+      "explanation": {
+        "correct": "If data is encrypted with keys you control, destroying the keys renders the data unrecoverable even where the provider retains the underlying blocks. This is the standard cloud answer.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Provider confirmation does not verify that underlying blocks are unrecoverable."
+          },
+          {
+            "option": 1,
+            "why": "API overwrites cannot guarantee which physical blocks are rewritten."
+          },
+          {
+            "option": 3,
+            "why": "Moving data does not destroy the original copy."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub04-008",
+      "domain": 2,
+      "subdomain": "2.4",
+      "difficulty": 3,
+      "stem": "A marketing team keeps a decade-old customer database on a shared drive 'just in case'. What should the security manager recommend?",
+      "options": [
+        "Archive it offline, encrypted, and keep it indefinitely",
+        "Anonymize it and then keep the result indefinitely",
+        "Move it to cheaper storage with tighter access limits",
+        "Dispose of it per schedule after a legal-hold check"
+      ],
+      "correct": 3,
+      "ladder": [
+        "What defines how long data should exist?",
+        "What are the risks of keeping data with no business or legal need?"
+      ],
+      "explanation": {
+        "correct": "Data without a retention basis creates exposure and cost. The owner should confirm retention and legal hold status, then dispose of it under policy, with documented, verified destruction.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Indefinite archiving retains risk and violates data minimization."
+          },
+          {
+            "option": 1,
+            "why": "Anonymization may be acceptable in some cases but 'forever' has no policy basis and anonymization quality is hard to guarantee."
+          },
+          {
+            "option": 2,
+            "why": "Cheaper storage reduces cost, not exposure, and ignores the retention schedule."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub04-009",
+      "domain": 2,
+      "subdomain": "2.4",
+      "difficulty": 3,
+      "stem": "Company A hires vendor B to host and analyze customer data under a processing agreement. B then starts using the data to train its own product. What is B's role for that activity?",
+      "options": [
+        "A controller for that activity",
+        "Still a processor for that activity",
+        "A data custodian for that activity",
+        "A data steward for that activity"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Who decided the purpose of the new use?",
+        "Does a contract label change the role that actual decisions create?"
+      ],
+      "explanation": {
+        "correct": "An entity that determines purposes and means of processing is a controller, regardless of the contract label. B has exceeded its processor mandate and takes on controller obligations and liability.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Remaining a processor requires acting only on the controller's instructions, which B is not doing."
+          },
+          {
+            "option": 2,
+            "why": "Custodian is an internal operational role, not a legal classification."
+          },
+          {
+            "option": 3,
+            "why": "Steward is a governance role and not relevant to legal responsibility."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub04-010",
+      "domain": 2,
+      "subdomain": "2.4",
+      "difficulty": 2,
+      "stem": "Which NIST SP 800-88 sanitization category uses logical techniques, such as overwriting, to protect against simple non-invasive data recovery?",
+      "options": [
+        "Purge",
+        "Clear",
+        "Destroy",
+        "Redact"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which of the three categories is the least aggressive?",
+        "Which one applies logical rather than physical or laboratory-resistant techniques?"
+      ],
+      "explanation": {
+        "correct": "Clear applies logical techniques to user-addressable storage, Purge protects against laboratory attacks (for example, cryptographic erase or degaussing), and Destroy renders media unusable.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Purge defends against laboratory-level recovery."
+          },
+          {
+            "option": 2,
+            "why": "Destroy physically renders the media unusable."
+          },
+          {
+            "option": 3,
+            "why": "Redact is a document-editing term, not a NIST media category."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub05-001",
+      "domain": 2,
+      "subdomain": "2.5",
+      "difficulty": 1,
+      "stem": "What should PRIMARILY determine how long an organization retains a category of records?",
+      "options": [
+        "The cost of available storage",
+        "The preferences of the IT department",
+        "Legal, regulatory and business needs",
+        "The age of the oldest backup set"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Who or what outside IT sets the minimum and maximum time records must exist?",
+        "Is retention a technology decision or an obligation?"
+      ],
+      "explanation": {
+        "correct": "Retention periods are set by laws, regulations, contracts and business needs, documented in a retention schedule. Storage cost and convenience are secondary.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Storage cost may influence implementation but not the obligation."
+          },
+          {
+            "option": 1,
+            "why": "IT preference is not a legitimate basis for retention decisions."
+          },
+          {
+            "option": 3,
+            "why": "Backup age is a technical artifact, not a governing requirement."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub05-002",
+      "domain": 2,
+      "subdomain": "2.5",
+      "difficulty": 2,
+      "stem": "Legal counsel notifies the security manager of pending litigation. An automated job is scheduled tonight to purge emails older than three years. What should the manager do FIRST?",
+      "options": [
+        "Let the job run, then restore from backups later",
+        "Ask each department which emails to keep",
+        "Encrypt the relevant emails before deletion",
+        "Suspend deletion for potentially relevant data"
+      ],
+      "correct": 3,
+      "ladder": [
+        "What duty arises once litigation is reasonably anticipated?",
+        "Can destroyed evidence be reliably recovered later?"
+      ],
+      "explanation": {
+        "correct": "A legal hold overrides routine retention schedules. Destroying potentially relevant data after notice risks spoliation and sanctions, so suspend destruction first and then coordinate scope with counsel.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Restoring after deletion is unreliable and may itself show spoliation."
+          },
+          {
+            "option": 1,
+            "why": "Departmental discretion invites inconsistent and incomplete preservation."
+          },
+          {
+            "option": 2,
+            "why": "Encryption does nothing to preserve data that is then deleted."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub05-003",
+      "domain": 2,
+      "subdomain": "2.5",
+      "difficulty": 3,
+      "stem": "A customer requests deletion of all personal data. Some of the records must be kept seven years for tax law. What should the organization do?",
+      "options": [
+        "Delete the rest and restrict the retained records",
+        "Delete all records, as the customer requested",
+        "Refuse the deletion request in its entirety",
+        "Anonymize every record, including tax records"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Do individual rights override every legal obligation?",
+        "Which data has a lawful basis to remain, and which does not?"
+      ],
+      "explanation": {
+        "correct": "Privacy rights are balanced against legal retention duties. Records legally required stay, with restricted use and access, and everything else is erased, and the customer is informed.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Deleting tax-required records breaches the legal obligation."
+          },
+          {
+            "option": 2,
+            "why": "A blanket refusal fails to honor the right for data that has no retention basis."
+          },
+          {
+            "option": 3,
+            "why": "Anonymizing legally required records can defeat their purpose as auditable records."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub05-004",
+      "domain": 2,
+      "subdomain": "2.5",
+      "difficulty": 1,
+      "stem": "What is the GREATEST risk of retaining data longer than required?",
+      "options": [
+        "Reduced availability of the live systems",
+        "Larger breach and discovery exposure",
+        "Lower integrity of stored records",
+        "Slower authentication for all users"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What does the organization hold that an attacker or court could reach?",
+        "Is the main downside technical performance or exposure?"
+      ],
+      "explanation": {
+        "correct": "Surplus data enlarges breach impact and eDiscovery scope and cost, and may breach minimization principles. Disposing of data on schedule reduces liability.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Availability is not materially impacted by retention alone."
+          },
+          {
+            "option": 2,
+            "why": "Retention does not weaken integrity controls by itself."
+          },
+          {
+            "option": 3,
+            "why": "Authentication speed is unrelated to how long records are kept."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub05-005",
+      "domain": 2,
+      "subdomain": "2.5",
+      "difficulty": 2,
+      "stem": "Financial records are archived on tape for ten years. Which practice BEST ensures they remain usable?",
+      "options": [
+        "Keep a second copy in the same room",
+        "Delete the encryption keys once archived",
+        "Test restores and migrate media formats",
+        "Extend retention to fifteen years"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What commonly makes old media unusable years later?",
+        "How would you know an archive actually works?"
+      ],
+      "explanation": {
+        "correct": "Media degrades and formats and drives become obsolete, so periodic restore tests and migration to current media keep archives readable. Key management must also persist.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A copy in the same location shares the same environmental risks."
+          },
+          {
+            "option": 1,
+            "why": "Deleting keys would make encrypted archives permanently unreadable."
+          },
+          {
+            "option": 3,
+            "why": "Longer retention extends the problem and does not ensure usability."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub05-006",
+      "domain": 2,
+      "subdomain": "2.5",
+      "difficulty": 1,
+      "stem": "Who should define the retention period for a business dataset?",
+      "options": [
+        "The data custodian, using storage limits",
+        "The security administrator alone",
+        "The backup operations manager",
+        "The data owner with legal advice"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Who understands the business and legal need for this data?",
+        "Which role operates systems instead of setting requirements?"
+      ],
+      "explanation": {
+        "correct": "The data owner is accountable for the data and sets retention in line with law, regulation and business needs, with legal and compliance counsel's input.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Custodians implement retention but do not set it."
+          },
+          {
+            "option": 1,
+            "why": "Security advises but does not alone decide business retention."
+          },
+          {
+            "option": 2,
+            "why": "Backup operators execute schedules set by others."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub05-007",
+      "domain": 2,
+      "subdomain": "2.5",
+      "difficulty": 3,
+      "stem": "A multinational finds that one country requires employee records be kept for ten years while another requires deletion after five. What should the security manager do?",
+      "options": [
+        "Consult legal counsel to reconcile them",
+        "Apply the shorter period in all regions",
+        "Apply the longer period in all regions",
+        "Let each regional IT team decide alone"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Is this a technical question or a legal one?",
+        "Why might a single global period be unlawful in one location?"
+      ],
+      "explanation": {
+        "correct": "Conflicting jurisdictional obligations are a legal issue. Counsel should determine which law applies to which records and whether data can be segregated by jurisdiction.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Applying the shorter period may breach the longer legal requirement."
+          },
+          {
+            "option": 2,
+            "why": "Applying the longer period may breach the deletion requirement."
+          },
+          {
+            "option": 3,
+            "why": "Uncoordinated regional decisions create inconsistent compliance."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub06-001",
+      "domain": 2,
+      "subdomain": "2.6",
+      "difficulty": 1,
+      "stem": "What is the primary purpose of a data loss prevention (DLP) solution?",
+      "options": [
+        "To encrypt all sensitive data held at rest",
+        "To detect and block sensitive data leaving",
+        "To authenticate users to enterprise applications",
+        "To back up critical files and systems"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which control watches data moving out rather than who is logging in?",
+        "What does DLP inspect to decide on blocking?"
+      ],
+      "explanation": {
+        "correct": "DLP inspects content and context in endpoints, networks and cloud channels to detect and prevent sensitive data leaving authorized boundaries, based on policy.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Someone may pick this because encryption protects sensitive data, but encrypting at rest is a different control and does not stop data leaving through an authorized channel."
+          },
+          {
+            "option": 2,
+            "why": "Authentication is an identity function, not content inspection."
+          },
+          {
+            "option": 3,
+            "why": "Backups address availability, not leakage."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub06-002",
+      "domain": 2,
+      "subdomain": "2.6",
+      "difficulty": 1,
+      "stem": "What does a cloud access security broker (CASB) primarily provide?",
+      "options": [
+        "Physical security for provider data centers",
+        "Hardware encryption for on-premises storage arrays",
+        "Visibility and policy enforcement for cloud use",
+        "Antivirus signature updates for endpoints"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Where does a CASB sit in the data path?",
+        "What problem does it solve for cloud services outside IT's control?"
+      ],
+      "explanation": {
+        "correct": "A CASB sits between users and cloud services to enforce security policy, provide visibility into shadow IT, and apply DLP, access control and encryption controls.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Physical security belongs to facility controls."
+          },
+          {
+            "option": 1,
+            "why": "Storage array encryption is device-level, not a broker function."
+          },
+          {
+            "option": 3,
+            "why": "Antivirus updates are endpoint hygiene, not CASB's role."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub06-003",
+      "domain": 2,
+      "subdomain": "2.6",
+      "difficulty": 2,
+      "stem": "Which data state is typically the MOST difficult to protect with encryption?",
+      "options": [
+        "Data at rest",
+        "Data in transit",
+        "Data in archive",
+        "Data in use"
+      ],
+      "correct": 3,
+      "ladder": [
+        "In which state must data be readable by a processor?",
+        "Where does plaintext usually exist in memory?"
+      ],
+      "explanation": {
+        "correct": "Data in use must be decrypted for processing, so it is exposed in memory and CPU. Protections include memory protection, secure enclaves and confidential computing.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Data at rest is routinely protected using disk or file encryption."
+          },
+          {
+            "option": 1,
+            "why": "Data in transit is protected using TLS or VPN."
+          },
+          {
+            "option": 2,
+            "why": "Archived data is stored data and readily encrypted."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub06-004",
+      "domain": 2,
+      "subdomain": "2.6",
+      "difficulty": 2,
+      "stem": "Which control enforces restrictions such as no printing or forwarding on a document even after it leaves the organization?",
+      "options": [
+        "Digital rights management",
+        "Data loss prevention",
+        "Full-disk encryption",
+        "Transport layer security (TLS)"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Does the protection need to stay with the file after it leaves, or only at a network or device boundary?",
+        "Which of these controls act at a boundary, and which act on the file wherever it goes?"
+      ],
+      "explanation": {
+        "correct": "DRM, also called information rights management, applies persistent protection and usage rules to the file itself, so controls remain after distribution.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "DLP controls data at monitored boundaries and cannot govern use after it leaves."
+          },
+          {
+            "option": 2,
+            "why": "Disk encryption protects the device at rest, not usage rights."
+          },
+          {
+            "option": 3,
+            "why": "TLS protects data only while in transit."
+          }
+        ]
+      },
+      "tags": [
+        "definition",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub06-005",
+      "domain": 2,
+      "subdomain": "2.6",
+      "difficulty": 2,
+      "stem": "A development team needs realistic card numbers for testing, while the organization must be able to retrieve the originals from a secure vault when needed. Which technique fits BEST?",
+      "options": [
+        "Data masking",
+        "Tokenization",
+        "Salted hashing",
+        "Full-disk encryption"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which of these transformations can authorized users reverse, and which are one-way?",
+        "Where would the originals have to live for retrieval to be possible?"
+      ],
+      "explanation": {
+        "correct": "Tokenization replaces sensitive values with surrogates and stores the originals in a secured vault, allowing retrieval and reducing system scope for compliance.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Masking is generally irreversible, so originals could not be retrieved."
+          },
+          {
+            "option": 2,
+            "why": "Hashing is one-way and loses the format and usability needed."
+          },
+          {
+            "option": 3,
+            "why": "Full-disk encryption protects the disk but does not substitute values for test use."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub06-006",
+      "domain": 2,
+      "subdomain": "2.6",
+      "difficulty": 3,
+      "stem": "A system has no wireless capability. The security manager removes the baseline's wireless controls from the system's requirements. Which process is this?",
+      "options": [
+        "Tailoring",
+        "Baselining",
+        "Scoping",
+        "Aggregation"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Is the manager changing whether a control applies at all, or changing how an applicable control is configured?",
+        "In NIST SP 800-53 baseline terms, which activity decides applicability before parameters are adjusted?"
+      ],
+      "explanation": {
+        "correct": "Scoping selects which baseline controls apply to a particular system and removes those that do not. Tailoring then adjusts the remaining controls, such as parameters, to the organization's needs.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Tailoring modifies controls to fit the environment, which is a subsequent step."
+          },
+          {
+            "option": 1,
+            "why": "Baselining establishes the initial minimum set of controls."
+          },
+          {
+            "option": 3,
+            "why": "Aggregation relates to combining data, not controls."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub06-007",
+      "domain": 2,
+      "subdomain": "2.6",
+      "difficulty": 3,
+      "stem": "A company replaces customer names with pseudonyms, keeping the mapping table in a separate secured system. How is the resulting data treated under privacy law like GDPR?",
+      "options": [
+        "As anonymous data that falls outside the law",
+        "As non-personal if the mapping table is encrypted",
+        "As public data once pseudonyms replace names",
+        "As personal data, since re-linking is possible"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Can anyone, with the means available, link the records back to individuals?",
+        "What distinguishes pseudonymization from true anonymization?"
+      ],
+      "explanation": {
+        "correct": "Pseudonymized data can be re-identified using additional information, so it remains personal data though risk is reduced. Only irreversible anonymization takes data out of scope.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Anonymous data must be irreversible, which pseudonyms with a retained mapping are not."
+          },
+          {
+            "option": 1,
+            "why": "Encrypting the table improves security but does not change the legal status."
+          },
+          {
+            "option": 2,
+            "why": "Replacing names does not make personal data public."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub06-008",
+      "domain": 2,
+      "subdomain": "2.6",
+      "difficulty": 2,
+      "stem": "A company plans to store EU customer data in a data center in another country. What should the security manager do FIRST?",
+      "options": [
+        "Check the legal rules for cross-border transfer",
+        "Encrypt all data in transit to the new data center",
+        "Choose the lowest-cost hosting region available",
+        "Deploy a CASB to monitor the new data center"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which constraint decides whether this transfer is permitted at all?",
+        "Is this a technical question or a compliance one?"
+      ],
+      "explanation": {
+        "correct": "Cross-border transfers are restricted by law, requiring a lawful mechanism such as adequacy or contractual clauses. Compliance requirements should be established before technical or cost decisions.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Encryption is a good control but does not make an unlawful transfer lawful."
+          },
+          {
+            "option": 2,
+            "why": "Cost cannot drive a decision before legal feasibility."
+          },
+          {
+            "option": 3,
+            "why": "A CASB offers visibility and enforcement but does not resolve legal permissibility."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d2-sub06-009",
+      "domain": 2,
+      "subdomain": "2.6",
+      "difficulty": 1,
+      "stem": "A laptop containing customer records is stolen. Which control would have BEST protected the data on the device?",
+      "options": [
+        "Transport layer security",
+        "Full-disk encryption",
+        "A network DLP gateway",
+        "A perimeter firewall"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which data state is the laptop's content in once it is in a thief's hands?",
+        "Which of these controls operate at the network edge, and which travel with the device?"
+      ],
+      "explanation": {
+        "correct": "Full-disk encryption protects data at rest on lost or stolen devices, rendering it unreadable without the key or authentication.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "TLS protects data in transit between systems."
+          },
+          {
+            "option": 2,
+            "why": "A network DLP gateway monitors network traffic and cannot see the stolen device."
+          },
+          {
+            "option": 3,
+            "why": "A perimeter firewall does not protect a device outside the network."
+          }
+        ]
+      },
+      "tags": [
+        "scenario"
+      ],
+      "reviewed": true
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f-d2-sub01-001",
+      "domain": 2,
+      "subdomain": "2.1",
+      "front": "US government classification levels, highest to lowest",
+      "back": "Top Secret (exceptionally grave damage), Secret (serious damage), Confidential (damage). Unclassified sits below.",
+      "whyItMatters": "Exam asks which level matches which damage wording."
+    },
+    {
+      "id": "f-d2-sub01-002",
+      "domain": 2,
+      "subdomain": "2.1",
+      "front": "Typical commercial classification levels",
+      "back": "Confidential/Restricted (highest), Private/Sensitive, Internal/Company confidential, Public. Names vary; consistency and handling rules matter.",
+      "whyItMatters": "Exam expects you to know schemes vary but need defined handling per level."
+    },
+    {
+      "id": "f-d2-sub01-003",
+      "domain": 2,
+      "subdomain": "2.1",
+      "front": "Data owner vs data custodian",
+      "back": "Owner: accountable, classifies, approves access, sets retention. Custodian: implements controls, backups, patching and day-to-day handling.",
+      "whyItMatters": "Exam wrong answers hand classification or access approval to custodians, administrators or auditors."
+    },
+    {
+      "id": "f-d2-sub01-004",
+      "domain": 2,
+      "subdomain": "2.1",
+      "front": "Aggregation of data (classification effect)",
+      "back": "Combining lower-sensitivity items can yield a result more sensitive than any part, so classify the compiled result.",
+      "whyItMatters": "Exam uses this to justify higher classification of reports."
+    },
+    {
+      "id": "f-d2-sub01-005",
+      "domain": 2,
+      "subdomain": "2.1",
+      "front": "Declassification and reclassification",
+      "back": "The data owner periodically reviews labels; sensitivity changes over time, so data may be downgraded, upgraded or declassified.",
+      "whyItMatters": "Exam wrong answers assign reclassification to custodians, auditors or the security team."
+    },
+    {
+      "id": "f-d2-sub01-006",
+      "domain": 2,
+      "subdomain": "2.1",
+      "front": "Asset inventory: minimum attributes",
+      "back": "Every asset needs a named owner, a classification, location and criticality in the inventory.",
+      "whyItMatters": "Missing owners are a classic governance finding."
+    },
+    {
+      "id": "f-d2-sub01-007",
+      "domain": 2,
+      "subdomain": "2.1",
+      "front": "PII vs PHI",
+      "back": "PII identifies or can be traced to an individual; PHI is health information linked to an individual, regulated by HIPAA in the US.",
+      "whyItMatters": "Exam differentiates data types to select regulation and controls."
+    },
+    {
+      "id": "f-d2-sub02-001",
+      "domain": 2,
+      "subdomain": "2.2",
+      "front": "Need-to-know vs least privilege",
+      "back": "Need-to-know limits which information a person may see for their duty; least privilege limits the rights and permissions they hold.",
+      "whyItMatters": "Frequent distractor pair on the exam."
+    },
+    {
+      "id": "f-d2-sub02-002",
+      "domain": 2,
+      "subdomain": "2.2",
+      "front": "Default handling of unlabeled or mixed data",
+      "back": "Treat it at the highest classification it may contain until classified.",
+      "whyItMatters": "Safe-default reasoning appears often."
+    },
+    {
+      "id": "f-d2-sub02-003",
+      "domain": 2,
+      "subdomain": "2.2",
+      "front": "Chain of custody for media",
+      "back": "Documents who held media, when and why, from creation to disposal, to give accountability and prove integrity of handling.",
+      "whyItMatters": "Applies to media shipping and evidence handling."
+    },
+    {
+      "id": "f-d2-sub02-004",
+      "domain": 2,
+      "subdomain": "2.2",
+      "front": "Secure print release",
+      "back": "Print jobs are held until the owner authenticates at the printer, preventing unattended sensitive output.",
+      "whyItMatters": "Exam favors controls that address exposure over labels or bans."
+    },
+    {
+      "id": "f-d2-sub02-005",
+      "domain": 2,
+      "subdomain": "2.2",
+      "front": "Purpose of labeling and marking",
+      "back": "Labels communicate classification and handling rules to people and systems; they enable control but do not enforce it alone.",
+      "whyItMatters": "Distinguishes labeling from enforcement controls like DLP."
+    },
+    {
+      "id": "f-d2-sub03-001",
+      "domain": 2,
+      "subdomain": "2.3",
+      "front": "Golden image",
+      "back": "An approved hardened baseline image used to deploy systems consistently, reducing drift and misconfiguration.",
+      "whyItMatters": "Appears in configuration management and provisioning questions."
+    },
+    {
+      "id": "f-d2-sub03-002",
+      "domain": 2,
+      "subdomain": "2.3",
+      "front": "Accountability when outsourcing",
+      "back": "You can transfer responsibility for operation but never accountability; the organization's owner stays accountable for data.",
+      "whyItMatters": "Exam answer for cloud and third-party scenarios."
+    },
+    {
+      "id": "f-d2-sub03-003",
+      "domain": 2,
+      "subdomain": "2.3",
+      "front": "Shared responsibility model split",
+      "back": "Provider secures the cloud itself; customer always secures its data, identities and access, plus more on IaaS than SaaS.",
+      "whyItMatters": "Know who owns what at IaaS, PaaS and SaaS."
+    },
+    {
+      "id": "f-d2-sub03-004",
+      "domain": 2,
+      "subdomain": "2.3",
+      "front": "Security requirements in procurement",
+      "back": "Specify them in the RFP and contract before acquisition, including right to audit and breach notification.",
+      "whyItMatters": "Early requirements beat retrofitting."
+    },
+    {
+      "id": "f-d2-sub03-005",
+      "domain": 2,
+      "subdomain": "2.3",
+      "front": "Asset lifecycle phases",
+      "back": "Acquire/procure, deploy, operate/maintain, retire/dispose, with inventory updated at each step.",
+      "whyItMatters": "Placement questions about when controls apply."
+    },
+    {
+      "id": "f-d2-sub04-001",
+      "domain": 2,
+      "subdomain": "2.4",
+      "front": "Data lifecycle phases (ISC2 order)",
+      "back": "Create, Store, Use, Share, Archive, Destroy.",
+      "whyItMatters": "Ordering questions often swap archive and share."
+    },
+    {
+      "id": "f-d2-sub04-002",
+      "domain": 2,
+      "subdomain": "2.4",
+      "front": "Controller vs processor",
+      "back": "Controller decides purposes and means of processing; processor processes only on the controller's instructions. A processor that sets its own purposes becomes a controller.",
+      "whyItMatters": "Central distinction for privacy scenarios."
+    },
+    {
+      "id": "f-d2-sub04-003",
+      "domain": 2,
+      "subdomain": "2.4",
+      "front": "Data steward",
+      "back": "Manages data quality, metadata, definitions and governance standards for a data domain; does not approve access or run backups.",
+      "whyItMatters": "Distinguishes steward from owner and custodian."
+    },
+    {
+      "id": "f-d2-sub04-004",
+      "domain": 2,
+      "subdomain": "2.4",
+      "front": "NIST SP 800-88 sanitization categories",
+      "back": "Clear (logical overwrite), Purge (lab-resistant: crypto erase, degauss), Destroy (physical destruction).",
+      "whyItMatters": "Exam asks which level suits media leaving control."
+    },
+    {
+      "id": "f-d2-sub04-005",
+      "domain": 2,
+      "subdomain": "2.4",
+      "front": "Degaussing limits",
+      "back": "Works only on magnetic media (HDD, tape), not SSDs or optical media; it also typically destroys the drive's servo tracks, leaving it unusable.",
+      "whyItMatters": "Common trap: choosing degaussing for an SSD, or for media leaving your control instead of destruction."
+    },
+    {
+      "id": "f-d2-sub04-006",
+      "domain": 2,
+      "subdomain": "2.4",
+      "front": "Crypto-shredding",
+      "back": "Destroy the encryption keys so encrypted data becomes unrecoverable; the standard cloud destruction method.",
+      "whyItMatters": "Answer when you cannot physically access media."
+    },
+    {
+      "id": "f-d2-sub04-007",
+      "domain": 2,
+      "subdomain": "2.4",
+      "front": "Data remanence",
+      "back": "Residual data persisting after deletion or format; the reason sanitization is required before reuse or disposal.",
+      "whyItMatters": "Defines why deletion is not enough."
+    },
+    {
+      "id": "f-d2-sub05-001",
+      "domain": 2,
+      "subdomain": "2.5",
+      "front": "Legal hold",
+      "back": "Suspends normal destruction of potentially relevant records once litigation or investigation is anticipated; overrides retention schedules.",
+      "whyItMatters": "First action in litigation scenarios."
+    },
+    {
+      "id": "f-d2-sub05-002",
+      "domain": 2,
+      "subdomain": "2.5",
+      "front": "Who sets retention",
+      "back": "The data owner defines retention in line with law, regulation and business need, advised by legal and compliance.",
+      "whyItMatters": "Wrong answers give it to IT or custodians."
+    },
+    {
+      "id": "f-d2-sub05-003",
+      "domain": 2,
+      "subdomain": "2.5",
+      "front": "Risk of over-retention",
+      "back": "Retaining beyond need increases breach exposure, discovery cost and breaches data minimization.",
+      "whyItMatters": "Supports disposal on schedule answers."
+    },
+    {
+      "id": "f-d2-sub05-004",
+      "domain": 2,
+      "subdomain": "2.5",
+      "front": "Archive media risks",
+      "back": "Media degrades and formats or drives become obsolete; test restores and migrate formats; keep encryption keys available.",
+      "whyItMatters": "Exam asks how to keep archives usable."
+    },
+    {
+      "id": "f-d2-sub05-005",
+      "domain": 2,
+      "subdomain": "2.5",
+      "front": "Data minimization",
+      "back": "Collect and keep only the personal data needed for a defined purpose and no longer than necessary.",
+      "whyItMatters": "Privacy principle behind retention limits."
+    },
+    {
+      "id": "f-d2-sub05-006",
+      "domain": 2,
+      "subdomain": "2.5",
+      "front": "Right to erasure vs legal retention",
+      "back": "Erasure requests do not override legal retention duties; delete what has no basis, restrict what must be kept.",
+      "whyItMatters": "Typical balancing scenario."
+    },
+    {
+      "id": "f-d2-sub06-001",
+      "domain": 2,
+      "subdomain": "2.6",
+      "front": "Three data states",
+      "back": "At rest (storage), in transit (network), in use (memory/CPU); data in use is hardest to protect, needing enclaves or memory protection.",
+      "whyItMatters": "Match controls to states."
+    },
+    {
+      "id": "f-d2-sub06-002",
+      "domain": 2,
+      "subdomain": "2.6",
+      "front": "DRM vs DLP",
+      "back": "DRM/IRM protects the file persistently with usage rights wherever it goes; DLP inspects content at boundaries to prevent leakage.",
+      "whyItMatters": "Exam distinguishes persistent vs perimeter protection."
+    },
+    {
+      "id": "f-d2-sub06-003",
+      "domain": 2,
+      "subdomain": "2.6",
+      "front": "What is a CASB and where does it sit?",
+      "back": "Sits between users and cloud services to give visibility, DLP, access control and encryption; discovers shadow IT.",
+      "whyItMatters": "Cloud control for unsanctioned services."
+    },
+    {
+      "id": "f-d2-sub06-004",
+      "domain": 2,
+      "subdomain": "2.6",
+      "front": "Tokenization vs masking",
+      "back": "Tokenization swaps values for surrogates, originals in a vault so reversible; masking obscures values irreversibly, often for test data.",
+      "whyItMatters": "Reversibility separates the two."
+    },
+    {
+      "id": "f-d2-sub06-005",
+      "domain": 2,
+      "subdomain": "2.6",
+      "front": "Pseudonymization vs anonymization",
+      "back": "Pseudonymized data can be re-identified with extra information and stays personal data; anonymized data is irreversible and out of scope.",
+      "whyItMatters": "Legal status question."
+    },
+    {
+      "id": "f-d2-sub06-006",
+      "domain": 2,
+      "subdomain": "2.6",
+      "front": "Scoping vs tailoring",
+      "back": "Scoping selects which baseline controls apply; tailoring adjusts the selected controls to the organization; compensating controls cover gaps.",
+      "whyItMatters": "NIST 800-53/ISC2 baseline terminology."
+    },
+    {
+      "id": "f-d2-sub06-007",
+      "domain": 2,
+      "subdomain": "2.6",
+      "front": "Data sovereignty and cross-border transfer",
+      "back": "Data is subject to the laws of the country where it is stored or processed; transfers need a lawful mechanism such as adequacy or standard clauses.",
+      "whyItMatters": "First step is identifying legal requirements."
+    },
+    {
+      "id": "f-d2-sub06-008",
+      "domain": 2,
+      "subdomain": "2.6",
+      "front": "Data masking approaches",
+      "back": "Static masking alters copies for non-production; dynamic masking hides values at query time based on the viewer's role.",
+      "whyItMatters": "Distinguish for test data and live queries."
+    }
+  ]
+}

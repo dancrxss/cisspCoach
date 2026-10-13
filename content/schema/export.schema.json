@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cissp-coach/export",
+  "title": "Performance export",
+  "type": "object",
+  "required": ["appVersion", "manifestVersion", "exportedAt", "attempts", "mastery", "flashcards", "flags"],
+  "additionalProperties": false,
+  "properties": {
+    "appVersion": { "type": "string" },
+    "manifestVersion": { "type": "integer" },
+    "exportedAt": { "type": "string", "format": "date-time" },
+    "sinceExportAt": { "type": ["string", "null"], "format": "date-time", "description": "null = all-time export" },
+    "attempts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["questionId", "mode", "correct", "chosen", "timeMs", "at"],
+        "additionalProperties": false,
+        "properties": {
+          "questionId": { "type": "string" },
+          "mode": { "type": "string", "enum": ["coach", "drill", "mock"] },
+          "sessionId": { "type": "string" },
+          "correct": { "type": "boolean" },
+          "chosen": { "type": "integer", "minimum": 0, "maximum": 3 },
+          "confidence": { "type": ["string", "null"], "enum": ["sure", "fairly", "guessing", null] },
+          "timeMs": { "type": "integer", "minimum": 0 },
+          "at": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "mastery": {
+      "type": "object",
+      "required": ["domains", "subdomains"],
+      "properties": {
+        "domains": { "type": "object", "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 } },
+        "subdomains": { "type": "object", "additionalProperties": {
+          "type": "object",
+          "required": ["score", "attempts"],
+          "properties": { "score": { "type": "number" }, "attempts": { "type": "integer" }, "lastAt": { "type": "string" } }
+        } }
+      }
+    },
+    "masteryHistory": {
+      "type": "array",
+      "description": "daily snapshots of domain mastery",
+      "items": { "type": "object", "required": ["date", "domains"], "properties": { "date": { "type": "string" }, "domains": { "type": "object" } } }
+    },
+    "flashcards": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["level", "history"],
+        "properties": {
+          "level": { "type": ["string", "null"], "enum": ["noidea", "shaky", "know", "solid", null] },
+          "history": { "type": "array", "items": { "type": "object", "properties": { "level": { "type": ["string", "null"] }, "at": { "type": "string" } } } },
+          "fsrs": { "type": "object", "description": "stability, difficulty, due, reps, lapses" }
+        }
+      }
+    },
+    "flags": {
+      "type": "array",
+      "items": { "type": "object", "required": ["id", "at"], "properties": { "id": { "type": "string" }, "note": { "type": "string" }, "at": { "type": "string" } } }
+    },
+    "confidentWrong": {
+      "type": "array",
+      "description": "convenience: question ids answered wrong with confidence 'sure'",
+      "items": { "type": "string" }
+    },
+    "mocks": {
+      "type": "array",
+      "items": { "type": "object", "properties": { "sessionId": { "type": "string" }, "at": { "type": "string" }, "score": { "type": "number" }, "byDomain": { "type": "object" }, "durationMs": { "type": "integer" } } }
+    }
+  }
+}

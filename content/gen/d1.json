@@ -1,0 +1,2305 @@
+{
+  "questions": [
+    {
+      "id": "q-d1-sub01-001",
+      "domain": 1,
+      "subdomain": "1.1",
+      "difficulty": 1,
+      "stem": "Under the (ISC)2 Code of Ethics canons, which responsibility takes precedence when two canons appear to conflict?",
+      "options": [
+        "Act honorably, honestly, justly, responsibly, and legally toward all principals and employers",
+        "Provide diligent and competent service to the organization that pays for your work",
+        "Protect society, the common good, public trust and confidence, and infrastructure",
+        "Advance and protect the profession by supporting other certified practitioners"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Is this asking which canon you personally like best, or whether the canons have an ordering?",
+        "If you had to rank duties to the public, to your employer, and to your profession, which group is the widest circle of people affected?"
+      ],
+      "explanation": {
+        "correct": "The canons are applied in order, and the first is to protect society, the common good, public trust and confidence, and the infrastructure. Where duties conflict, the broader public interest outranks duty to a single employer or the profession.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Honorable and legal conduct is the second canon; it ranks below the duty to society when the two clash."
+          },
+          {
+            "option": 1,
+            "why": "Diligent service to principals is the third canon, so it yields to the public-interest duty."
+          },
+          {
+            "option": 3,
+            "why": "Advancing the profession is the fourth and last canon in the ordering."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub01-002",
+      "domain": 1,
+      "subdomain": "1.1",
+      "difficulty": 2,
+      "stem": "During an audit, a CISSP learns that a senior executive has instructed staff to omit a known customer data exposure from a regulatory filing. The CISSP's employment contract includes a loyalty clause. What should the CISSP do FIRST?",
+      "options": [
+        "Escalate the instruction to the general counsel and document the concern in writing",
+        "Follow the executive's instruction because the employer is a principal under the code",
+        "Contact a journalist to publicize the exposure and protect affected customers",
+        "Resign immediately and refuse to discuss the matter with anyone at the firm"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Is this asking what is technically possible, or what an ethical professional should do before taking any drastic step?",
+        "Which internal party is both able to assess legal obligations and independent of the executive who gave the instruction?"
+      ],
+      "explanation": {
+        "correct": "Duty to society and legal conduct outrank loyalty to an individual executive. The measured first step is to escalate through proper channels, such as legal counsel, and keep a written record, which also protects the practitioner.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Following an unlawful instruction breaches the canons because legal and ethical conduct ranks above employer loyalty."
+          },
+          {
+            "option": 2,
+            "why": "Going to the press skips internal escalation and may breach confidentiality duties; it is a last resort, not a first step."
+          },
+          {
+            "option": 3,
+            "why": "Resigning and staying silent abandons the duty to protect the public and leaves the omission unresolved."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub01-003",
+      "domain": 1,
+      "subdomain": "1.1",
+      "difficulty": 2,
+      "stem": "A client asks a CISSP to sign off on the security of an industrial control system, a technology the CISSP has never assessed. The deadline is tight and the client is willing to pay a premium. Which action BEST fits the code of ethics?",
+      "options": [
+        "Accept the engagement and learn the technology on the job to meet the deadline",
+        "Accept the engagement and rely on generic templates from a prior assessment",
+        "Decline silently and give the client no reason for withdrawing from the work",
+        "Disclose their expertise limits and involve a qualified assessor"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which canon speaks to the quality and competence of the service you provide?",
+        "What does honesty to the client require when your skills do not fully cover the task?"
+      ],
+      "explanation": {
+        "correct": "Providing diligent and competent service means not representing competence you lack. Disclosing the limitation and bringing in a qualified assessor keeps the work honest and competent, and the client can still meet the objective.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Learning on the job while certifying the system misrepresents competence and risks harm to the client."
+          },
+          {
+            "option": 1,
+            "why": "Reusing generic templates does not address the unfamiliar technology and could produce a misleading sign-off."
+          },
+          {
+            "option": 2,
+            "why": "Declining without explanation avoids the problem but fails the duty of honesty to the client and offers no path forward."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub02-001",
+      "domain": 1,
+      "subdomain": "1.2",
+      "difficulty": 1,
+      "stem": "A file's SHA-256 hash is recorded when it is published, and users later recompute the hash before use. Which security property is this MOST directly protecting?",
+      "options": [
+        "Confidentiality",
+        "Integrity",
+        "Availability",
+        "Non-repudiation"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Is the concern here who can read the file, or whether the file has been altered?",
+        "What does a mismatch between two hash values tell you about the content?"
+      ],
+      "explanation": {
+        "correct": "A hash detects unauthorized modification, so it supports integrity. If the recomputed value differs from the published one, the content has changed.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Confidentiality would require access restrictions or encryption; a hash does not hide content."
+          },
+          {
+            "option": 2,
+            "why": "Availability concerns timely access to the system or data; hashing does not keep a file accessible."
+          },
+          {
+            "option": 3,
+            "why": "Non-repudiation needs a signature tied to an identity; a plain hash is not bound to a signer."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub02-002",
+      "domain": 1,
+      "subdomain": "1.2",
+      "difficulty": 1,
+      "stem": "Which mechanism provides non-repudiation for a signed contract sent by email?",
+      "options": [
+        "A message authentication code created with a shared secret key",
+        "A digital signature created with the sender's private key",
+        "Encryption of the message body with a symmetric session key",
+        "A TLS connection between the sender's and recipient's mail servers"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Who must be able to prove the message came from one particular party, and who must be unable to deny it?",
+        "If two parties share the same secret key, can either one prove to a third party that the other created the message?"
+      ],
+      "explanation": {
+        "correct": "A digital signature uses the sender's private key, which only the sender holds, so a third party can verify the origin and the sender cannot credibly deny it. This provides non-repudiation along with integrity and authenticity.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A MAC uses a shared key, so either party could have produced it; it cannot prove origin to a third party."
+          },
+          {
+            "option": 2,
+            "why": "Symmetric encryption protects confidentiality but does not tie the message to a unique signer."
+          },
+          {
+            "option": 3,
+            "why": "TLS protects the transport hop between servers, not the authorship of the message once delivered."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub02-003",
+      "domain": 1,
+      "subdomain": "1.2",
+      "difficulty": 2,
+      "stem": "Ransomware encrypts a hospital's patient scheduling database. No data is disclosed outside the hospital and no records are altered once decrypted. Which element of the CIA triad is PRIMARILY affected?",
+      "options": [
+        "Confidentiality",
+        "Integrity",
+        "Authenticity",
+        "Availability"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Was any unauthorized party given access to the data, and was any record changed?",
+        "With nothing exposed or altered, what is the remaining effect on the staff who need the scheduling system?"
+      ],
+      "explanation": {
+        "correct": "The immediate impact is that authorized staff cannot use the data when needed, which is a loss of availability. The data is neither exposed nor altered in this scenario.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Confidentiality is lost only if unauthorized parties obtain the data; the scenario says nothing was disclosed."
+          },
+          {
+            "option": 1,
+            "why": "Integrity concerns unauthorized alteration; encryption is reversible and the records are unchanged after decryption."
+          },
+          {
+            "option": 2,
+            "why": "Authenticity concerns the genuineness of data or its source, which is not what the outage affects."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub03-001",
+      "domain": 1,
+      "subdomain": "1.3",
+      "difficulty": 1,
+      "stem": "Which statement BEST describes the relationship between security governance and security management?",
+      "options": [
+        "Governance sets direction and oversight; management executes within that direction",
+        "Governance implements technical controls; management writes the board-level strategy",
+        "Governance and management are the same function performed by the security team",
+        "Governance monitors daily operations; management sets organizational risk appetite"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which function decides what the organization is trying to achieve, and which one carries it out?",
+        "Who is accountable to shareholders or the board for the overall direction of security?"
+      ],
+      "explanation": {
+        "correct": "Governance is the board and executive function of setting direction, objectives, and oversight. Management plans, builds, and runs the controls and processes to meet those objectives.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "This reverses the roles; technical implementation is a management task, and strategy comes from governance."
+          },
+          {
+            "option": 2,
+            "why": "They are distinct; governance provides oversight while management operates under it."
+          },
+          {
+            "option": 3,
+            "why": "This swaps the functions; risk appetite is a governance decision, and daily operations belong to management."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub03-002",
+      "domain": 1,
+      "subdomain": "1.3",
+      "difficulty": 2,
+      "stem": "A security manager wants the security program to remain relevant as the business enters new markets. Which approach BEST ensures security objectives stay aligned with business strategy?",
+      "options": [
+        "Let the security team set priorities independently based on industry best practices",
+        "Purchase a new security tool suite each time a new market is entered",
+        "Set up a steering committee with business leaders to review priorities",
+        "Use the previous year's audit findings to set priorities for the next two years"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Is alignment something the security team can achieve alone, or does it need input from those who own the business strategy?",
+        "Why would independent best-practice choices, new tools, or last year's audit findings all fail to track a changing business strategy?"
+      ],
+      "explanation": {
+        "correct": "Alignment with business strategy requires ongoing input from business leadership, which a steering committee provides. It lets security priorities and funding track the organization's goals.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Best practice does not account for the organization's own goals, so it can drift from business needs."
+          },
+          {
+            "option": 1,
+            "why": "Tools do not create alignment; they are solutions chosen before the business needs are understood."
+          },
+          {
+            "option": 3,
+            "why": "Static audit findings look backward and cannot track a changing strategy."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub03-003",
+      "domain": 1,
+      "subdomain": "1.3",
+      "difficulty": 2,
+      "stem": "A company's security team spent months researching a new vendor's security posture and documented the findings, but never implemented the contractual safeguards that the research recommended. Which statement is accurate?",
+      "options": [
+        "Due care was performed, but due diligence was not",
+        "Both due care and due diligence were performed",
+        "Neither due care nor due diligence was performed",
+        "Due diligence was performed, but due care was not"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which concept is about investigating and learning, and which is about acting on what was learned?",
+        "Which of the two did the team stop short of completing?"
+      ],
+      "explanation": {
+        "correct": "Due diligence is the research and investigation; due care is acting responsibly on the findings, as a prudent person would. The team investigated but did not act, so only due diligence occurred.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "This reverses the concepts; due care is the action step, and that step was skipped."
+          },
+          {
+            "option": 1,
+            "why": "Due care requires implementing the safeguards, which the team never did."
+          },
+          {
+            "option": 2,
+            "why": "The team did investigate, so due diligence was clearly met."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub03-004",
+      "domain": 1,
+      "subdomain": "1.3",
+      "difficulty": 1,
+      "stem": "Who is ULTIMATELY accountable for the protection of an organization's information assets?",
+      "options": [
+        "The chief information security officer",
+        "Senior management",
+        "The information system custodian",
+        "The internal audit function"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Responsibility can be delegated; can accountability be delegated in the same way?",
+        "Between operating the program, running the systems, and providing independent assurance, which role sits above all of those?"
+      ],
+      "explanation": {
+        "correct": "Senior management holds ultimate accountability and may delegate responsibility for specific tasks. Executives are the ones answerable to owners and regulators.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The CISO is responsible for running the program, but accountability stays with senior management."
+          },
+          {
+            "option": 2,
+            "why": "Custodians carry out day-to-day protection under the owner's direction and are not ultimately accountable."
+          },
+          {
+            "option": 3,
+            "why": "Internal audit provides independent assurance and does not own the protection of assets."
+          }
+        ]
+      },
+      "tags": [
+        "definition",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub03-005",
+      "domain": 1,
+      "subdomain": "1.3",
+      "difficulty": 3,
+      "stem": "A multinational wants to build a security governance framework that is certifiable by an external body and focuses on an information security management system with continual improvement. Which choice BEST meets that need?",
+      "options": [
+        "COBIT",
+        "NIST SP 800-53",
+        "ISO/IEC 27001",
+        "ISO/IEC 27002"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which standard is one an external auditor can actually certify an organization against?",
+        "Is a catalogue of controls the same thing as a management system with requirements?"
+      ],
+      "explanation": {
+        "correct": "ISO/IEC 27001 specifies requirements for an ISMS and is the certifiable standard. It uses a plan-do-check-act cycle for continual improvement.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "COBIT is an IT governance framework and is not certifiable as an ISMS."
+          },
+          {
+            "option": 1,
+            "why": "NIST SP 800-53 is a control catalogue for US federal systems; it is not an ISMS certification standard."
+          },
+          {
+            "option": 3,
+            "why": "ISO/IEC 27002 is guidance on control implementation and contains no certifiable requirements."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub04-001",
+      "domain": 1,
+      "subdomain": "1.4",
+      "difficulty": 1,
+      "stem": "Which form of intellectual property protection is the BEST fit for a proprietary algorithm that a company wants to keep secret indefinitely?",
+      "options": [
+        "Trade secret",
+        "Patent",
+        "Copyright",
+        "Trademark"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Does the owner want to publish the idea in exchange for protection, or keep it hidden?",
+        "Which protections require public disclosure or expire after a fixed term, and which do not?"
+      ],
+      "explanation": {
+        "correct": "A trade secret remains protected as long as the owner takes reasonable measures to keep it confidential. It requires no public disclosure and has no fixed expiry.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "A patent requires public disclosure of the invention and expires after a fixed term."
+          },
+          {
+            "option": 2,
+            "why": "Copyright protects expression such as source code text, not the underlying algorithm or idea."
+          },
+          {
+            "option": 3,
+            "why": "A trademark protects brand identifiers like names and logos, not technical methods."
+          }
+        ]
+      },
+      "tags": [
+        "definition",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub04-002",
+      "domain": 1,
+      "subdomain": "1.4",
+      "difficulty": 2,
+      "stem": "An organization suffers a breach exposing personal data of EU residents. The security team is still investigating the full scope. Under GDPR, what is the controller's obligation regarding the supervisory authority?",
+      "options": [
+        "Notify within 72 hours of becoming aware, with phased updates if needed",
+        "Wait until the full investigation is complete before notifying the authority",
+        "Notify only if the data subjects have already reported financial losses",
+        "Notify within 30 days after the breach is contained and remediated"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Does the notification clock start when the investigation finishes or when the organization becomes aware?",
+        "Does the regulation allow incomplete information to be supplied initially?"
+      ],
+      "explanation": {
+        "correct": "GDPR requires the controller to notify the supervisory authority without undue delay, and where feasible within 72 hours of becoming aware, unless the breach is unlikely to risk individuals. Information may be provided in phases.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Waiting for a full investigation delays notice beyond the regulatory period."
+          },
+          {
+            "option": 2,
+            "why": "Notification depends on risk to individuals, not on reported financial losses."
+          },
+          {
+            "option": 3,
+            "why": "Thirty days exceeds the 72-hour requirement and ignores that the clock starts at awareness."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub04-003",
+      "domain": 1,
+      "subdomain": "1.4",
+      "difficulty": 2,
+      "stem": "A multinational plans to transfer employee records from its European subsidiary to a data center in another country. What should the security manager do FIRST?",
+      "options": [
+        "Encrypt all of the records and begin the transfer using the existing VPN",
+        "Ask the destination country's government for permission to receive the data",
+        "Consult legal counsel on the legal basis for the cross-border transfer",
+        "Anonymize the records first and then ask whether legal restrictions apply"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Is this primarily a technical question about moving data, or a legal question about whether and how it may be moved?",
+        "Who in the organization is qualified to interpret transfer rules across jurisdictions?"
+      ],
+      "explanation": {
+        "correct": "Cross-border transfers of personal data are governed by laws that may require specific mechanisms or approvals. Determining those obligations with legal counsel comes before technical implementation.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Encryption protects data in transit but does not make an unlawful transfer lawful."
+          },
+          {
+            "option": 1,
+            "why": "Destination governments do not generally grant such permission; the obligations come from the source jurisdiction."
+          },
+          {
+            "option": 3,
+            "why": "Anonymizing first assumes the outcome and could reduce the data's usefulness before the legal question is answered."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub04-004",
+      "domain": 1,
+      "subdomain": "1.4",
+      "difficulty": 3,
+      "stem": "A cloud provider's data center in Country A holds a customer's data. Country B's law enforcement serves the provider's local office with a warrant for that data, but Country A's privacy law prohibits disclosure without local court approval. What should the provider's security manager do FIRST?",
+      "options": [
+        "Comply with the warrant immediately because law enforcement requests override policy",
+        "Involve legal counsel to assess the conflicting obligations before any disclosure",
+        "Reject the warrant outright because Country A law always takes precedence",
+        "Move the data to a third country so that neither warrant applies"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Does the conflict need to be resolved by technical staff, or by someone who can weigh the competing legal duties?",
+        "Which options act on one set of laws without examining the other?"
+      ],
+      "explanation": {
+        "correct": "Conflicting jurisdictional obligations are a legal question. Counsel can assess which law applies, whether to challenge the request, and how to respond, so the organization does not violate either legal regime unnecessarily.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Complying at once may breach Country A law and the contractual commitments to the customer."
+          },
+          {
+            "option": 2,
+            "why": "Rejecting outright assumes one law prevails without legal analysis and may expose the provider to penalties."
+          },
+          {
+            "option": 3,
+            "why": "Relocating data to evade a legal request can itself be unlawful and does not resolve the underlying duty."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub04-005",
+      "domain": 1,
+      "subdomain": "1.4",
+      "difficulty": 1,
+      "stem": "Which statement about PCI DSS is accurate?",
+      "options": [
+        "It is a federal statute that imposes criminal penalties on non-compliant merchants",
+        "It is an ISO standard certified by accredited bodies worldwide",
+        "It applies only to banks and not to merchants that accept cards",
+        "It is an industry standard enforced by card brands and acquirers"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which kind of body publishes PCI DSS, and does that body have the power to imprison anyone?",
+        "Where do the consequences of non-compliance come from: a court, or the merchant's agreements?"
+      ],
+      "explanation": {
+        "correct": "PCI DSS is created by the payment card industry and applies through contractual obligations with card brands and acquirers. Failure leads to fines, higher fees, or loss of card processing, not criminal prosecution by default.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "PCI DSS is not statute; its enforcement is contractual."
+          },
+          {
+            "option": 1,
+            "why": "It is published by the PCI Security Standards Council, not ISO."
+          },
+          {
+            "option": 2,
+            "why": "It applies to any entity that stores, processes, or transmits cardholder data, including merchants."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub04-006",
+      "domain": 1,
+      "subdomain": "1.4",
+      "difficulty": 2,
+      "stem": "An organization discovers it is running more copies of a commercial application than its license permits. Which risk does this MOST directly represent?",
+      "options": [
+        "A violation of the vendor's trademark rights",
+        "A breach of the organization's data classification policy",
+        "A breach of the software license agreement terms",
+        "A failure of the organization's disaster recovery plan"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What does an organization actually acquire when it buys commercial software: ownership of the code, or permission to use it on conditions?",
+        "Is the exposure here about branding, data handling, or the terms of use?"
+      ],
+      "explanation": {
+        "correct": "Exceeding licensed copies breaches the license agreement and exposes the company to damages and audit penalties. This is a compliance and legal risk that the manager must remediate by true-up or reduction.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Trademark protects names and logos; over-deployment does not misuse the vendor's brand."
+          },
+          {
+            "option": 1,
+            "why": "Classification policy deals with data sensitivity, not software licensing."
+          },
+          {
+            "option": 3,
+            "why": "Disaster recovery planning concerns restoring operations, which is unrelated to license counts."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub05-001",
+      "domain": 1,
+      "subdomain": "1.5",
+      "difficulty": 1,
+      "stem": "What is the standard of proof generally required in a criminal case?",
+      "options": [
+        "Beyond a reasonable doubt",
+        "Preponderance of the evidence",
+        "Clear and convincing evidence",
+        "Probable cause"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Does a criminal conviction carry a lighter or heavier burden than a civil judgement?",
+        "Which phrase conveys near certainty rather than 'more likely than not'?"
+      ],
+      "explanation": {
+        "correct": "Criminal cases require proof beyond a reasonable doubt, the highest standard because liberty is at stake. Civil cases usually require a preponderance of the evidence.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Preponderance is the typical civil standard, meaning more likely than not."
+          },
+          {
+            "option": 2,
+            "why": "Clear and convincing is an intermediate standard used in limited civil matters."
+          },
+          {
+            "option": 3,
+            "why": "Probable cause is the threshold for warrants and arrests, not for conviction."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub05-002",
+      "domain": 1,
+      "subdomain": "1.5",
+      "difficulty": 2,
+      "stem": "A responder arrives at a compromised server that is still running. When collecting evidence, which item should be captured FIRST according to the order of volatility?",
+      "options": [
+        "A forensic image of the primary hard drive on the server",
+        "Backup tapes held in an off-site storage vault facility",
+        "The written network and firewall configuration documents",
+        "Memory contents, such as running processes and connections"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Does the order of collection depend on how important the data is, or on how quickly it would be lost?",
+        "If you could only capture one source before it vanishes, which would it be?"
+      ],
+      "explanation": {
+        "correct": "Evidence is collected from most to least volatile. Memory and running state are lost on shutdown or reboot, so they are captured before disk, backups, and documents.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A drive image matters, but disk data persists across reboots, so it is less volatile than memory and can be captured second."
+          },
+          {
+            "option": 1,
+            "why": "Off-site backup tapes are long-lived and can be collected last."
+          },
+          {
+            "option": 2,
+            "why": "Written documentation is stable and can be gathered at any time."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "ordering"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub05-003",
+      "domain": 1,
+      "subdomain": "1.5",
+      "difficulty": 3,
+      "stem": "A security analyst suspects an administrator of siphoning data. Before taking any action, which step is MOST appropriate for the security manager?",
+      "options": [
+        "Confront the administrator directly and request an explanation of the activity",
+        "Engage legal counsel and HR to guide the investigation and preserve evidence",
+        "Begin examining the administrator's files and email using the administrator's own credentials",
+        "Disable the administrator's account and wipe the workstation to contain the threat"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which parties must authorize and oversee an investigation that could lead to discipline or prosecution?",
+        "What damage might a hasty containment action do to evidence you may later need?"
+      ],
+      "explanation": {
+        "correct": "Internal investigations carry legal and HR implications, such as privacy, authorization, and admissibility. Coordinating with counsel and HR ensures a defensible process and preserves evidence before any intrusive step.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Confronting the suspect tips them off and may allow evidence destruction."
+          },
+          {
+            "option": 2,
+            "why": "Using the suspect's credentials taints evidence and may violate policy and law."
+          },
+          {
+            "option": 3,
+            "why": "Wiping the workstation destroys evidence and could compromise a later case."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub06-001",
+      "domain": 1,
+      "subdomain": "1.6",
+      "difficulty": 1,
+      "stem": "Which document type is OPTIONAL advice that supports a policy but is not mandatory?",
+      "options": [
+        "Standard",
+        "Guideline",
+        "Baseline",
+        "Procedure"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which of the four document types uses the word 'should' rather than 'must'?",
+        "Which one leaves room for discretion?"
+      ],
+      "explanation": {
+        "correct": "Guidelines are recommendations that supply flexibility; compliance is discretionary. Policies, standards, baselines, and procedures are mandatory.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Standards specify mandatory requirements, such as approved technologies or settings."
+          },
+          {
+            "option": 2,
+            "why": "A baseline is a mandatory minimum configuration level."
+          },
+          {
+            "option": 3,
+            "why": "Procedures are step-by-step instructions that staff must follow."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub06-002",
+      "domain": 1,
+      "subdomain": "1.6",
+      "difficulty": 2,
+      "stem": "Which individual or group should APPROVE a high-level information security policy?",
+      "options": [
+        "The security operations team",
+        "The help desk manager",
+        "The external auditor",
+        "Senior management"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Policy expresses the organization's intent; who has the authority to speak for the organization?",
+        "Who must show support so that staff take the policy seriously?"
+      ],
+      "explanation": {
+        "correct": "Policies reflect management's direction and must be approved and supported by senior management. That backing gives them authority and enforceability.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Operations staff implement policy and lack authority to set organizational direction."
+          },
+          {
+            "option": 1,
+            "why": "The help desk manager has no organizational authority over policy."
+          },
+          {
+            "option": 2,
+            "why": "Auditors assess compliance against policy and must remain independent of approving it."
+          }
+        ]
+      },
+      "tags": [
+        "definition",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub06-003",
+      "domain": 1,
+      "subdomain": "1.6",
+      "difficulty": 3,
+      "stem": "A business unit tells the security manager it cannot comply with a password-length standard because a legacy application supports only eight characters. What is the BEST way to handle this?",
+      "options": [
+        "Document a time-limited exception with compensating controls and owner sign-off",
+        "Lower the password-length standard for the entire company to eight characters",
+        "Tell the business unit to stop using the application until it can comply fully",
+        "Ignore the gap because the application is legacy and not exposed to the internet"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Is this about changing the rule for everyone, or managing a single known deviation?",
+        "Who is entitled to accept the leftover risk once other safeguards are applied?"
+      ],
+      "explanation": {
+        "correct": "A formal exception process lets the organization manage deviations transparently. Compensating controls reduce risk, and the accountable business owner signs off on what remains.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Lowering the standard organization-wide weakens security for all systems because of one exception."
+          },
+          {
+            "option": 2,
+            "why": "An outright ban may be disproportionate and disregards the business impact without a risk assessment."
+          },
+          {
+            "option": 3,
+            "why": "Ignoring the gap leaves an undocumented risk with no owner or control."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub07-001",
+      "domain": 1,
+      "subdomain": "1.7",
+      "difficulty": 1,
+      "stem": "What is the PRIMARY purpose of a business impact analysis (BIA)?",
+      "options": [
+        "Select the specific technical controls used to protect each system",
+        "Estimate the likelihood of every possible threat to the organization",
+        "Identify critical functions and the impact of their disruption",
+        "Assign blame for outages that occurred during earlier incidents"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Is the BIA about how likely a disruption is, or about what a disruption would cost?",
+        "What would the recovery planners need to know first to decide what to restore before anything else?"
+      ],
+      "explanation": {
+        "correct": "The BIA identifies critical processes, their dependencies, and the impact of downtime, which drives recovery priorities, RTOs, and RPOs. It looks at consequences rather than causes.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Control selection follows from risk assessment and recovery strategy, not from the BIA itself."
+          },
+          {
+            "option": 1,
+            "why": "Likelihood of threats belongs to risk assessment; the BIA focuses on impact."
+          },
+          {
+            "option": 3,
+            "why": "The BIA is forward-looking and not an exercise to assign fault."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub07-002",
+      "domain": 1,
+      "subdomain": "1.7",
+      "difficulty": 2,
+      "stem": "A system has a maximum tolerable downtime (MTD) of 24 hours. How should its recovery time objective (RTO) relate to the MTD?",
+      "options": [
+        "The RTO must be equal to the MTD so no resources are wasted on recovery",
+        "The RTO can be longer than the MTD if backups are tested regularly",
+        "The RTO is unrelated to the MTD because it measures data loss",
+        "The RTO must be shorter than the MTD, leaving time to resume work"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which value is the outer limit the business can survive, and which is the target the IT team sets?",
+        "After systems are restored, is any further work needed before the business can use them?"
+      ],
+      "explanation": {
+        "correct": "MTD is the outer limit before the business suffers unacceptable harm. The RTO is the target for restoration and must be lower, leaving a work recovery time for validation before the MTD is reached.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Setting RTO equal to MTD leaves no time to verify data and resume work."
+          },
+          {
+            "option": 1,
+            "why": "An RTO beyond the MTD means the business would already be harmed before restoration."
+          },
+          {
+            "option": 2,
+            "why": "Data loss tolerance is measured by RPO, not RTO."
+          }
+        ]
+      },
+      "tags": [
+        "definition",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub07-003",
+      "domain": 1,
+      "subdomain": "1.7",
+      "difficulty": 2,
+      "stem": "A security manager has been asked to launch a business continuity program for a mid-sized company. Which step should come FIRST?",
+      "options": [
+        "Purchase and configure an alternate processing facility",
+        "Obtain management support and define the scope",
+        "Run a full-interruption test of the recovery plan",
+        "Draft detailed recovery procedures for each application"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which resource does every later phase depend on: authority and funding, or technical detail?",
+        "Would a test or a facility make sense before you know what the plan covers?"
+      ],
+      "explanation": {
+        "correct": "A continuity program needs management commitment, resources, and a defined scope before analysis and planning can begin. Without sponsorship, later steps lack authority and funding.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Buying a site before the BIA and strategy may produce the wrong capacity or location."
+          },
+          {
+            "option": 2,
+            "why": "A test requires an existing plan and cannot be the first step."
+          },
+          {
+            "option": 3,
+            "why": "Detailed procedures depend on the scope and BIA results established earlier."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "ordering"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub07-004",
+      "domain": 1,
+      "subdomain": "1.7",
+      "difficulty": 1,
+      "stem": "Which recovery site option has the LOWEST cost but the LONGEST recovery time?",
+      "options": [
+        "Warm site",
+        "Hot site",
+        "Cold site",
+        "Mirror site"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which kind of site starts with little more than space, power, and connectivity?",
+        "Which tradeoff are you accepting when you pay less each year for recovery?"
+      ],
+      "explanation": {
+        "correct": "A cold site provides basic facilities without equipment or current data, so it is cheapest but needs the most time to bring online.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A warm site has hardware and connectivity, so it costs more and recovers faster."
+          },
+          {
+            "option": 1,
+            "why": "A hot site is fully equipped with near-current data, costing more and recovering quickly."
+          },
+          {
+            "option": 3,
+            "why": "A mirror site is a redundant duplicate, the most expensive and fastest option."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub07-005",
+      "domain": 1,
+      "subdomain": "1.7",
+      "difficulty": 3,
+      "stem": "A critical order system has an MTD of 24 hours. Restoring the system takes 16 hours (RTO). After restoration, data verification and re-entry of transactions takes another 10 hours (WRT). What does this show?",
+      "options": [
+        "The plan exceeds the MTD by 2 hours, so targets must be cut",
+        "The plan meets the MTD with 8 hours to spare because the RTO is below 24",
+        "The plan meets the MTD because verification time is excluded from the MTD",
+        "The plan exceeds the MTD by 10 hours because the WRT is added twice"
+      ],
+      "correct": 0,
+      "ladder": [
+        "How do the restoration time and the work recovery time combine when compared with the MTD?",
+        "If the two phases are added, how does the total compare with the outer limit?"
+      ],
+      "explanation": {
+        "correct": "MTD covers RTO plus work recovery time, so 16 + 10 = 26 hours exceeds the 24-hour limit by 2 hours. Either the RTO or the WRT must be shortened or the MTD reassessed.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Comparing only the RTO to the MTD ignores the work recovery time that also counts against the MTD."
+          },
+          {
+            "option": 2,
+            "why": "MTD includes verification and resumption of work, so it is not excluded."
+          },
+          {
+            "option": 3,
+            "why": "The WRT is counted once; the overage is 2 hours, not 10."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "calculation",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub08-001",
+      "domain": 1,
+      "subdomain": "1.8",
+      "difficulty": 1,
+      "stem": "Requiring two different people to complete the steps of a sensitive process, such as one to create a vendor and another to approve payment, is an example of what principle?",
+      "options": [
+        "Separation of duties",
+        "Job rotation",
+        "Least privilege",
+        "Need to know"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Is the control splitting one task between multiple people, or moving people between jobs?",
+        "What risk does the control reduce: a single person acting alone to commit fraud?"
+      ],
+      "explanation": {
+        "correct": "Separation of duties divides critical functions among several individuals so no single person can complete a fraudulent act without collusion.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Job rotation moves people between roles over time to detect irregularities."
+          },
+          {
+            "option": 2,
+            "why": "Least privilege limits each account to the access required for its job, which is a different concept."
+          },
+          {
+            "option": 3,
+            "why": "Need to know limits access to information a person requires for duties."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub08-002",
+      "domain": 1,
+      "subdomain": "1.8",
+      "difficulty": 2,
+      "stem": "An employee in a sensitive role is being terminated for cause. When should the security manager arrange for the employee's access to be disabled?",
+      "options": [
+        "After the employee has returned all company equipment",
+        "At the end of the employee's final pay period",
+        "At the time the employee is notified of the termination",
+        "After the exit interview has been scheduled with the employee"
+      ],
+      "correct": 2,
+      "ladder": [
+        "When does an unhappy employee have the greatest opportunity and motive to cause damage?",
+        "Should access depend on the employee completing any administrative step?"
+      ],
+      "explanation": {
+        "correct": "Access should be revoked at or before the moment of notification for terminations, particularly for cause. Delay creates a window for sabotage or data theft.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Waiting for equipment return leaves access open while the employee knows they are leaving."
+          },
+          {
+            "option": 1,
+            "why": "Pay periods are unrelated to the risk and may be weeks away."
+          },
+          {
+            "option": 3,
+            "why": "Scheduling an exit interview adds delay and is no reason to retain access."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub08-003",
+      "domain": 1,
+      "subdomain": "1.8",
+      "difficulty": 2,
+      "stem": "An organization wants to detect fraud by employees in the finance department who might otherwise conceal wrongdoing through continuous personal involvement in a process. Which control is MOST appropriate?",
+      "options": [
+        "Annual security awareness training for finance staff",
+        "Mandatory vacation with another employee covering the role",
+        "Installation of monitoring software on finance workstations",
+        "An acceptable use policy signed upon hire by all employees"
+      ],
+      "correct": 1,
+      "ladder": [
+        "If a fraud only works while the perpetrator keeps touching the records, what event would break that dependency?",
+        "Is the goal here to deter and detect concealed fraud, or to educate about policy?"
+      ],
+      "explanation": {
+        "correct": "Mandatory vacation (and job rotation) lets another person examine the records, exposing irregularities that require the original employee's constant involvement to hide.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Training raises awareness but does not expose concealed misconduct."
+          },
+          {
+            "option": 2,
+            "why": "Monitoring may help but does not provide the independent review that coverage by another employee does."
+          },
+          {
+            "option": 3,
+            "why": "A signed AUP sets expectations and does not detect fraud."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub09-001",
+      "domain": 1,
+      "subdomain": "1.9",
+      "difficulty": 1,
+      "stem": "What is residual risk?",
+      "options": [
+        "The risk that exists before any controls are implemented",
+        "The risk an organization is willing to accept for all assets",
+        "The risk transferred to a third party through insurance",
+        "The risk that remains after controls have been applied"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Does the term describe a state before or after safeguards are put in place?",
+        "If every control worked as intended, what would still be left over?"
+      ],
+      "explanation": {
+        "correct": "Residual risk is what remains after safeguards and countermeasures. Management must decide whether it falls within the risk appetite or needs more treatment.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Risk before controls is inherent risk."
+          },
+          {
+            "option": 1,
+            "why": "Risk the organization will accept describes risk appetite or tolerance, not what remains."
+          },
+          {
+            "option": 2,
+            "why": "Insurance is one way of transferring risk and does not define residual risk."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub09-002",
+      "domain": 1,
+      "subdomain": "1.9",
+      "difficulty": 1,
+      "stem": "A company buys cyber insurance to cover the financial impact of a data breach. Which risk response does this represent?",
+      "options": [
+        "Risk avoidance",
+        "Risk mitigation",
+        "Risk transfer",
+        "Risk acceptance"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Does the company remove the risk, reduce it, or shift its financial consequences to someone else?",
+        "Who now bears the cost if the event occurs?"
+      ],
+      "explanation": {
+        "correct": "Insurance shifts the financial impact to a third party, which is risk transfer. The organization remains accountable for the underlying event and its non-financial consequences.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Avoidance would mean stopping the activity that creates the risk."
+          },
+          {
+            "option": 1,
+            "why": "Mitigation reduces likelihood or impact through controls, which insurance does not do."
+          },
+          {
+            "option": 3,
+            "why": "Acceptance means taking the risk with no further action."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub09-003",
+      "domain": 1,
+      "subdomain": "1.9",
+      "difficulty": 2,
+      "stem": "An asset is valued at $500,000. A particular threat would destroy 40% of its value, and the threat is expected to occur once every four years. What is the annualized loss expectancy (ALE)?",
+      "options": [
+        "$50,000",
+        "$200,000",
+        "$125,000",
+        "$500,000"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which two numbers give the loss from a single event, and which converts it to a yearly figure?",
+        "If an event happens once in four years, what fraction of an occurrence is expected in one year?"
+      ],
+      "explanation": {
+        "correct": "SLE = asset value x exposure factor = $500,000 x 0.40 = $200,000. ARO = 1/4 = 0.25, so ALE = SLE x ARO = $50,000.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "$200,000 is the single loss expectancy, not the annualized figure."
+          },
+          {
+            "option": 2,
+            "why": "$125,000 applies the annual rate to the asset value rather than to the SLE: it ignores the exposure factor."
+          },
+          {
+            "option": 3,
+            "why": "$500,000 is simply the asset value."
+          }
+        ]
+      },
+      "tags": [
+        "calculation"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub09-004",
+      "domain": 1,
+      "subdomain": "1.9",
+      "difficulty": 2,
+      "stem": "Without a control, a risk has an ALE of $80,000. A proposed control reduces the ALE to $20,000 and costs $45,000 per year. What is the annual value of the safeguard?",
+      "options": [
+        "$35,000",
+        "$60,000",
+        "$105,000",
+        "$15,000"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which figure represents the reduction in expected loss, and what must be subtracted from it?",
+        "Does the cost of the control belong on the benefit side or the cost side?"
+      ],
+      "explanation": {
+        "correct": "Value = ALE before - ALE after - annual cost = 80,000 - 20,000 - 45,000 = $15,000. A positive result means the control is cost effective.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "$35,000 subtracts only the 45,000 cost from the ALE before, ignoring the remaining ALE after the control."
+          },
+          {
+            "option": 1,
+            "why": "$60,000 is the reduction in ALE and does not deduct the control's cost."
+          },
+          {
+            "option": 2,
+            "why": "$105,000 incorrectly adds the control cost to the risk reduction."
+          }
+        ]
+      },
+      "tags": [
+        "calculation"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub09-005",
+      "domain": 1,
+      "subdomain": "1.9",
+      "difficulty": 3,
+      "stem": "A $200,000 server room faces a flood with an exposure factor of 50%, expected once every four years. A flood barrier reduces the frequency to once every 20 years and costs $15,000 per year. Insurance would cost $30,000 per year. Which option is MOST cost-effective annually?",
+      "options": [
+        "Buy the insurance for $30,000 per year and make no other changes to controls",
+        "Install the flood barrier, for a total annual cost of $20,000",
+        "Accept the risk, taking an annual expected loss of $25,000 with no controls",
+        "Install the barrier and buy insurance for a combined $45,000 per year"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What is the ALE with no action, and what is the ALE once the barrier lowers the frequency?",
+        "For each option, what is the full annual cost once control spending and remaining expected loss are both counted?"
+      ],
+      "explanation": {
+        "correct": "SLE = 200,000 x 0.5 = 100,000. With no action, ALE = 100,000 x 0.25 = 25,000. With the barrier, ARO = 0.05 so ALE = 5,000, and 5,000 + 15,000 = 20,000 total, the lowest of the options.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Insurance at 30,000 per year costs more than both the 25,000 expected loss and the barrier route at 20,000, and it adds no control."
+          },
+          {
+            "option": 2,
+            "why": "Accepting costs 25,000 per year in expected loss, which is higher than the barrier route's 20,000."
+          },
+          {
+            "option": 3,
+            "why": "Combining both costs 45,000 per year plus any uninsured residual, far above the other options."
+          }
+        ]
+      },
+      "tags": [
+        "calculation",
+        "scenario",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub09-006",
+      "domain": 1,
+      "subdomain": "1.9",
+      "difficulty": 2,
+      "stem": "A security manager is beginning a formal risk assessment for a newly acquired subsidiary. Which activity should come FIRST?",
+      "options": [
+        "Select countermeasures for the highest risks",
+        "Identify and value the subsidiary's assets",
+        "Calculate the annualized loss expectancy for each threat",
+        "Obtain management's acceptance of the residual risk"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What must you know about the organization before you can say what is worth protecting?",
+        "Which steps depend on knowing asset values and which must precede them?"
+      ],
+      "explanation": {
+        "correct": "Risk assessment starts by identifying and valuing assets, then identifying threats and vulnerabilities, assessing risk, and selecting treatments. Asset valuation sets the basis for all later calculations.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Countermeasures are chosen only after risks are quantified or ranked."
+          },
+          {
+            "option": 2,
+            "why": "ALE depends on asset values, which must be established first."
+          },
+          {
+            "option": 3,
+            "why": "Residual risk acceptance is the final step after controls are chosen."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "ordering",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub09-007",
+      "domain": 1,
+      "subdomain": "1.9",
+      "difficulty": 1,
+      "stem": "Which of the following is an example of a qualitative risk analysis technique?",
+      "options": [
+        "Annualized loss expectancy calculation",
+        "Monte Carlo simulation with loss distributions",
+        "Single loss expectancy based on an exposure factor",
+        "Delphi technique using anonymous expert opinion"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Does the technique produce numeric dollar values or relative ratings from judgement?",
+        "Which technique gathers opinions from experts while limiting group pressure?"
+      ],
+      "explanation": {
+        "correct": "Qualitative analysis relies on expert judgement and ratings such as high, medium, and low. The Delphi technique gathers anonymous opinions and iterates toward consensus.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "ALE is a quantitative dollar-based measure."
+          },
+          {
+            "option": 1,
+            "why": "Monte Carlo simulation is a quantitative technique that produces numeric distributions."
+          },
+          {
+            "option": 2,
+            "why": "SLE is a quantitative figure derived from asset value and exposure factor."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub09-008",
+      "domain": 1,
+      "subdomain": "1.9",
+      "difficulty": 3,
+      "stem": "A manager estimates that a control costing $120,000 per year would reduce an ALE of $50,000 to $10,000. The control is also proposed by the audit team as best practice. What should the security manager recommend?",
+      "options": [
+        "Seek a cheaper alternative, or have the owner formally accept the risk",
+        "Implement the control because audit teams recommend it as best practice",
+        "Reject the control and have the security team accept the remaining risk",
+        "Implement the control and charge its cost to the owning business unit"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Does the control cost less than the loss reduction it provides?",
+        "Who has authority to decide that a risk should be left in place, and how should that decision be documented?"
+      ],
+      "explanation": {
+        "correct": "A control costing more than the expected loss it prevents is not cost effective ($40,000 reduction against $120,000 cost). The manager should look for cheaper options; if none exist, the accountable owner formally accepts the risk, and the decision is recorded.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Best practice does not override cost-benefit analysis: the control costs more than the 40,000 of expected loss it removes."
+          },
+          {
+            "option": 2,
+            "why": "Rejecting is reasonable, but the security team cannot accept risk on the business's behalf; the accountable risk owner must make and record that decision."
+          },
+          {
+            "option": 3,
+            "why": "Shifting the cost to another unit does not change the fact that the control is not economical."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub10-001",
+      "domain": 1,
+      "subdomain": "1.10",
+      "difficulty": 1,
+      "stem": "In the STRIDE model, which threat category does an attacker impersonating a legitimate user represent?",
+      "options": [
+        "Tampering",
+        "Repudiation",
+        "Spoofing",
+        "Elevation of privilege"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which security property does the attacker defeat by pretending to be someone else?",
+        "Is the attack against data content, or against identity?"
+      ],
+      "explanation": {
+        "correct": "Spoofing is pretending to be another user or system, which defeats authentication. It is mitigated by strong authentication mechanisms.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Tampering is unauthorized modification of data or code and threatens integrity."
+          },
+          {
+            "option": 1,
+            "why": "Repudiation is denying having performed an action, countered by logging and signatures."
+          },
+          {
+            "option": 3,
+            "why": "Elevation of privilege is gaining rights beyond those authorized."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub10-002",
+      "domain": 1,
+      "subdomain": "1.10",
+      "difficulty": 2,
+      "stem": "During threat modelling, a team notes that a customer could claim they never placed an order and the system has no reliable record to prove otherwise. Which STRIDE category does this describe, and which control addresses it?",
+      "options": [
+        "Spoofing, addressed by multifactor authentication on the order page itself",
+        "Information disclosure, addressed by encrypting orders in the database",
+        "Denial of service, addressed by rate limiting requests to the order system",
+        "Repudiation, addressed by secure audit logging and signed transactions"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Is the weakness here about identifying the customer, hiding data, keeping the system up, or proving what happened afterwards?",
+        "Which controls produce evidence that ties an action to an identity?"
+      ],
+      "explanation": {
+        "correct": "Repudiation is the ability to deny performing an action when there is no proof. Tamper-resistant audit logs and signed transactions provide the evidence needed for non-repudiation.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Spoofing is about impersonation; here the concern is lack of proof, not who the person was."
+          },
+          {
+            "option": 1,
+            "why": "Information disclosure concerns confidentiality, not provability of actions."
+          },
+          {
+            "option": 2,
+            "why": "Denial of service affects availability and is not the issue described."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub10-003",
+      "domain": 1,
+      "subdomain": "1.10",
+      "difficulty": 3,
+      "stem": "A team must threat model an existing legacy application that has no architecture documentation. Which activity should come FIRST?",
+      "options": [
+        "Apply STRIDE categories to a generic list of attacks against similar applications",
+        "Decompose the application with a data flow diagram showing trust boundaries",
+        "Run an automated vulnerability scan and rank the findings by CVSS score alone",
+        "Interview the vendor and accept their claim that the application is secure"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Can you identify threats to components you have not yet identified?",
+        "Which of these options works from the real system's structure, and which from generic lists, scanners, or vendor assertions?"
+      ],
+      "explanation": {
+        "correct": "Threat modelling begins by understanding the system: components, data flows, entry points, and trust boundaries. A data flow diagram provides the structure on which threats can then be systematically identified.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Applying categories to a generic list skips understanding the actual system."
+          },
+          {
+            "option": 2,
+            "why": "A scan finds known vulnerabilities, not design-level threats, and does not map the system."
+          },
+          {
+            "option": 3,
+            "why": "Vendor claims are unverified assurances and do not substitute for analysis."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "ordering",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub10-004",
+      "domain": 1,
+      "subdomain": "1.10",
+      "difficulty": 3,
+      "stem": "A security architect wants a threat modelling methodology that is risk-centric, aligns analysis with business objectives, and proceeds through seven stages from objectives to risk and impact analysis. Which methodology BEST fits?",
+      "options": [
+        "STRIDE",
+        "DREAD",
+        "PASTA",
+        "Attack trees"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which methodologies are about categorizing threats, and which are about ranking them?",
+        "Which of these produce threat categories or scores, and which is a staged process that starts from business objectives?"
+      ],
+      "explanation": {
+        "correct": "PASTA (Process for Attack Simulation and Threat Analysis) is a seven-stage, risk-centric methodology that links threats to business objectives and impact.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "STRIDE categorizes threat types and is not a seven-stage business-aligned process."
+          },
+          {
+            "option": 1,
+            "why": "DREAD is a rating scheme for scoring threats rather than a methodology."
+          },
+          {
+            "option": 3,
+            "why": "Attack trees model goals and the paths to achieve them, without the staged business alignment."
+          }
+        ]
+      },
+      "tags": [
+        "definition",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub10-005",
+      "domain": 1,
+      "subdomain": "1.10",
+      "difficulty": 1,
+      "stem": "At which point in the development lifecycle is threat modelling MOST cost effective?",
+      "options": [
+        "During design, before the system is built",
+        "During testing, after code is complete",
+        "After deployment, when users report problems",
+        "During decommissioning, to inform lessons learned"
+      ],
+      "correct": 0,
+      "ladder": [
+        "When is it cheapest to change a design: before or after it has been built?",
+        "Which phase allows structural problems to be fixed without rework?"
+      ],
+      "explanation": {
+        "correct": "Finding threats at the design stage allows security requirements to be built in. Fixing flaws later costs more because of rework and change.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Testing finds issues late, when changes are costly."
+          },
+          {
+            "option": 2,
+            "why": "Post-deployment discovery is the most expensive time to fix a design flaw."
+          },
+          {
+            "option": 3,
+            "why": "Decommissioning is too late to affect the system's security."
+          }
+        ]
+      },
+      "tags": [
+        "definition",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub11-001",
+      "domain": 1,
+      "subdomain": "1.11",
+      "difficulty": 1,
+      "stem": "Which contractual provision allows a customer to verify that a supplier is meeting its security obligations?",
+      "options": [
+        "A right-to-audit clause",
+        "A force majeure clause",
+        "An indemnification clause",
+        "A non-compete clause"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which of these clauses concern verification, and which concern liability, excused performance, or competition?",
+        "Which clause is about the customer's ability to examine the supplier, rather than about who pays or who is excused?"
+      ],
+      "explanation": {
+        "correct": "A right-to-audit clause lets the customer, or an appointed assessor, examine the supplier's controls and compliance. It supports third-party assurance.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Force majeure excuses performance for extraordinary events."
+          },
+          {
+            "option": 2,
+            "why": "Indemnification allocates financial liability for losses."
+          },
+          {
+            "option": 3,
+            "why": "A non-compete limits business dealings and does not give inspection rights."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub11-002",
+      "domain": 1,
+      "subdomain": "1.11",
+      "difficulty": 2,
+      "stem": "A business unit wants to onboard a new SaaS vendor that will store customer personal data. The contract is ready for signature. What should the security manager do FIRST?",
+      "options": [
+        "Sign the contract and perform the assessment during the first year of service",
+        "Rely on the vendor's marketing materials describing its security features",
+        "Perform a security and privacy due diligence assessment before signing",
+        "Require the vendor to carry insurance and skip further assessment"
+      ],
+      "correct": 2,
+      "ladder": [
+        "When do you have the most leverage to require changes from a supplier?",
+        "Is a vendor's own description of its controls evidence you can rely on?"
+      ],
+      "explanation": {
+        "correct": "Due diligence before contract signature identifies gaps while the organization still has leverage to require remediation or walk away. Assurance should be evidence-based.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Assessing after signature loses leverage and may leave data exposed meanwhile."
+          },
+          {
+            "option": 1,
+            "why": "Marketing material is not independent evidence of the vendor's controls."
+          },
+          {
+            "option": 3,
+            "why": "Insurance transfers financial loss but does not verify or improve the vendor's security."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub11-003",
+      "domain": 1,
+      "subdomain": "1.11",
+      "difficulty": 3,
+      "stem": "A procurement team offers a vendor's SOC 2 report as proof of security assurance. Which feature of the report matters MOST to the security manager when relying on it?",
+      "options": [
+        "It is a Type I report from a well-known audit firm",
+        "It is a Type II report scoped to the services in use",
+        "It is a Type II report scoped to a different product line",
+        "It is a short marketing summary of a SOC 2 report"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What can a report tell you if it tests controls at one moment, versus across a period of time?",
+        "Does the report even cover the service you are buying?"
+      ],
+      "explanation": {
+        "correct": "A Type II report tests operating effectiveness over a period, and scope must cover the services being used. Both are needed to support reliance on the report.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A Type I report shows control design at a point in time without testing operation, so it gives weaker assurance."
+          },
+          {
+            "option": 2,
+            "why": "Even a Type II report gives no assurance on the service in use if it covers a different product line."
+          },
+          {
+            "option": 3,
+            "why": "A marketing summary is not the auditor's full report and lacks tested detail."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub12-001",
+      "domain": 1,
+      "subdomain": "1.12",
+      "difficulty": 1,
+      "stem": "Which of the following BEST describes security awareness, as distinct from training and education?",
+      "options": [
+        "Deep academic study that prepares people for careers in security",
+        "Skills instruction for particular job roles, such as administrators",
+        "Technical certification courses for incident response teams",
+        "Short reminders that keep all staff attentive to security duties"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which of the three aims to change attention and behavior broadly rather than build skills?",
+        "Who is the intended audience: everyone, or specialists?"
+      ],
+      "explanation": {
+        "correct": "Awareness is the broad, recurring effort that keeps all personnel alert to security. Training builds job-specific skills, and education develops deeper understanding for security professionals.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Deep academic study describes education, not awareness."
+          },
+          {
+            "option": 1,
+            "why": "Role-specific skills instruction is training."
+          },
+          {
+            "option": 2,
+            "why": "Certification courses for specialist teams fall under training or education."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub12-002",
+      "domain": 1,
+      "subdomain": "1.12",
+      "difficulty": 1,
+      "stem": "Who should receive security awareness training in an organization?",
+      "options": [
+        "Only employees with access to sensitive information systems",
+        "Only the members of the IT department and its help desk",
+        "All personnel, including executives and contractors",
+        "Only new hires during their first week on the job"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Who can cause or prevent a security incident through everyday choices?",
+        "Does risk stop at the IT department's boundary?"
+      ],
+      "explanation": {
+        "correct": "Awareness applies to everyone with access to organizational assets, including executives and contractors, and it must be repeated because threats change.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Limiting it to sensitive-data users leaves other staff as easy targets."
+          },
+          {
+            "option": 1,
+            "why": "IT staff are not the only people who handle email, devices, or visitors."
+          },
+          {
+            "option": 3,
+            "why": "One-time onboarding fades; awareness must be recurring."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d1-sub12-003",
+      "domain": 1,
+      "subdomain": "1.12",
+      "difficulty": 2,
+      "stem": "After a phishing simulation, an employee clicks a malicious link for the third time. What is the MOST appropriate response by the security manager?",
+      "options": [
+        "Provide targeted follow-up training and review role or process factors",
+        "Terminate the employee immediately for repeated policy violations at work",
+        "Remove the employee from future simulations to avoid embarrassment",
+        "Publish the employee's name to the company as a deterrent"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Is the goal of the program to punish or to change behavior?",
+        "What might a pattern of repeat failures say about the program itself?"
+      ],
+      "explanation": {
+        "correct": "Awareness programs aim to improve behavior. Targeted coaching, plus examining whether the employee's workload or the program design contributes, is constructive and proportionate.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Immediate termination is disproportionate and discourages reporting."
+          },
+          {
+            "option": 2,
+            "why": "Excluding the employee removes the practice that would help them improve."
+          },
+          {
+            "option": 3,
+            "why": "Public shaming damages culture and reduces willingness to report incidents."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f-d1-sub01-001",
+      "domain": 1,
+      "subdomain": "1.1",
+      "front": "List the four (ISC)2 Code of Ethics canons in order.",
+      "back": "1) Protect society, the common good, necessary public trust and confidence, and the infrastructure. 2) Act honorably, honestly, justly, responsibly, and legally. 3) Provide diligent and competent service to principals. 4) Advance and protect the profession.",
+      "whyItMatters": "Exam scenarios resolve ethics conflicts by canon order: society first, profession last."
+    },
+    {
+      "id": "f-d1-sub01-002",
+      "domain": 1,
+      "subdomain": "1.1",
+      "front": "Which canon applies when an employer's instruction conflicts with the public interest?",
+      "back": "Canon 1 (protect society and the infrastructure) outranks duty to the employer (canon 3). Escalate internally first, then act as required by law and ethics.",
+      "whyItMatters": "The correct answer is rarely 'obey the boss' and rarely 'go public' immediately."
+    },
+    {
+      "id": "f-d1-sub02-001",
+      "domain": 1,
+      "subdomain": "1.2",
+      "front": "What does the Parkerian Hexad add to the CIA triad?",
+      "back": "Three further attributes: possession or control, authenticity, and utility. Together with confidentiality, integrity, and availability they make six.",
+      "whyItMatters": "Exam may ask which concept covers loss of a stolen but still-encrypted tape: possession."
+    },
+    {
+      "id": "f-d1-sub02-002",
+      "domain": 1,
+      "subdomain": "1.2",
+      "front": "What does non-repudiation require, and which technology provides it?",
+      "back": "Proof of origin that the sender cannot credibly deny, to a third party. It needs asymmetric digital signatures plus identity binding; shared-key MACs cannot provide it.",
+      "whyItMatters": "Frequently tested as the property a MAC lacks and a signature provides."
+    },
+    {
+      "id": "f-d1-sub02-003",
+      "domain": 1,
+      "subdomain": "1.2",
+      "front": "Define the AAA services and the order they occur.",
+      "back": "Authentication (prove identity), authorization (determine allowed actions), accounting (record actions). Identification comes first, claiming an identity before it is verified.",
+      "whyItMatters": "Exam tests the order and which service each control supports."
+    },
+    {
+      "id": "f-d1-sub03-001",
+      "domain": 1,
+      "subdomain": "1.3",
+      "front": "Due care vs due diligence?",
+      "back": "Due diligence is investigating and researching risks before deciding; due care is acting on findings the way a prudent person would. Diligence is the research, care is the action.",
+      "whyItMatters": "One of the most frequently confused pairs; scenarios hinge on which step was skipped."
+    },
+    {
+      "id": "f-d1-sub03-002",
+      "domain": 1,
+      "subdomain": "1.3",
+      "front": "Who holds ultimate accountability for information security in an organization?",
+      "back": "Senior management and the board; responsibility for tasks may be delegated, accountability cannot. The CISO operates the program on their behalf.",
+      "whyItMatters": "Answer picks involving 'senior management' usually win in governance questions."
+    },
+    {
+      "id": "f-d1-sub03-003",
+      "domain": 1,
+      "subdomain": "1.3",
+      "front": "What is the top-down approach to security governance?",
+      "back": "Senior management initiates, sponsors, and directs the program, with policies flowing down. Bottom-up (IT-initiated) efforts tend to lack funding and authority.",
+      "whyItMatters": "Exam asks which approach is more likely to succeed: top-down."
+    },
+    {
+      "id": "f-d1-sub04-001",
+      "domain": 1,
+      "subdomain": "1.4",
+      "front": "Name the four main types of intellectual property protection and what each covers.",
+      "back": "Patent: inventions, about 20 years. Copyright: creative expression, typically life of author plus 70 years. Trademark: brand identifiers, renewable. Trade secret: confidential info, lasts while secrecy is kept.",
+      "whyItMatters": "Stems describe an asset and ask for the right protection."
+    },
+    {
+      "id": "f-d1-sub04-002",
+      "domain": 1,
+      "subdomain": "1.4",
+      "front": "How long does GDPR give a controller to notify the supervisory authority of a personal data breach?",
+      "back": "Without undue delay and where feasible within 72 hours of becoming aware, unless the breach is unlikely to result in a risk to individuals. Processors notify the controller.",
+      "whyItMatters": "The 72-hour clock starting at awareness (not at investigation completion) is the detail breach scenarios test."
+    },
+    {
+      "id": "f-d1-sub04-003",
+      "domain": 1,
+      "subdomain": "1.4",
+      "front": "What distinguishes a data controller from a data processor under GDPR?",
+      "back": "The controller determines the purposes and means of processing; the processor handles data on the controller's behalf under contract. Controllers remain accountable.",
+      "whyItMatters": "Cloud and vendor scenarios ask who is responsible for compliance."
+    },
+    {
+      "id": "f-d1-sub04-004",
+      "domain": 1,
+      "subdomain": "1.4",
+      "front": "Is PCI DSS a law?",
+      "back": "No. It is an industry standard from the PCI Security Standards Council, enforced contractually by card brands and acquirers through fines, fees, or loss of card processing.",
+      "whyItMatters": "Frequent trap: choosing 'legal violation' for what is contractual non-compliance."
+    },
+    {
+      "id": "f-d1-sub05-001",
+      "domain": 1,
+      "subdomain": "1.5",
+      "front": "State the burden of proof in criminal, civil, and administrative cases.",
+      "back": "Criminal: beyond a reasonable doubt. Civil: preponderance of the evidence (more likely than not). Administrative/regulatory: usually preponderance, though it varies by regulator.",
+      "whyItMatters": "Stems ask which investigation type needs the strictest evidence handling."
+    },
+    {
+      "id": "f-d1-sub05-002",
+      "domain": 1,
+      "subdomain": "1.5",
+      "front": "List the digital forensics evidence handling steps in order.",
+      "back": "Identify, preserve, collect, examine, analyze, present (report). Work from a forensic copy with verified hashes, and maintain chain of custody throughout.",
+      "whyItMatters": "Ordering questions on investigations, and why originals are never analyzed directly."
+    },
+    {
+      "id": "f-d1-sub06-001",
+      "domain": 1,
+      "subdomain": "1.6",
+      "front": "Rank policy, standard, procedure, baseline, guideline by mandatory status.",
+      "back": "Policy, standard, baseline, and procedure are mandatory. Guidelines are discretionary recommendations. Policy is highest-level and technology neutral; procedures are step-by-step.",
+      "whyItMatters": "Which document is optional is a recurring easy point."
+    },
+    {
+      "id": "f-d1-sub06-002",
+      "domain": 1,
+      "subdomain": "1.6",
+      "front": "Which document type states the minimum security configuration for a platform?",
+      "back": "A baseline. It is a mandatory minimum level of security, such as a hardened OS configuration, that systems are measured against.",
+      "whyItMatters": "Baseline (mandatory minimum configuration) is the usual correct answer when a stem mentions a hardened OS image."
+    },
+    {
+      "id": "f-d1-sub06-003",
+      "domain": 1,
+      "subdomain": "1.6",
+      "front": "What is the correct response when a team cannot comply with a policy?",
+      "back": "Request a formal, documented exception with a defined expiry, compensating controls, and sign-off by the risk owner. Do not silently ignore the gap or rewrite the policy.",
+      "whyItMatters": "Manager-mindset questions favour documented risk acceptance over ad hoc fixes."
+    },
+    {
+      "id": "f-d1-sub07-001",
+      "domain": 1,
+      "subdomain": "1.7",
+      "front": "Define MTD, RTO, RPO, and WRT.",
+      "back": "MTD: maximum tolerable downtime before unacceptable harm. RTO: target time to restore. RPO: maximum tolerable data loss, measured in time. WRT: work recovery time to verify. MTD = RTO + WRT.",
+      "whyItMatters": "Calculation stems give RTO and WRT and ask whether MTD is met; RPO is the data-loss measure that distractors swap in."
+    },
+    {
+      "id": "f-d1-sub07-002",
+      "domain": 1,
+      "subdomain": "1.7",
+      "front": "Rank hot, warm, cold, and mirror recovery sites by cost and recovery speed.",
+      "back": "Cold: cheapest, slowest (days or weeks). Warm: hardware and connectivity, hours to days. Hot: equipped with current data, minutes to hours. Mirror: duplicate site, near-instant, most costly.",
+      "whyItMatters": "Scenario fits site type to the RTO."
+    },
+    {
+      "id": "f-d1-sub07-003",
+      "domain": 1,
+      "subdomain": "1.7",
+      "front": "What are the usual BCP/DRP test types, from least to most disruptive?",
+      "back": "Read-through (checklist), walkthrough (tabletop), simulation, parallel test, full-interruption test. Parallel runs recovery systems without taking production down.",
+      "whyItMatters": "Tests are asked in order and by risk to operations."
+    },
+    {
+      "id": "f-d1-sub07-004",
+      "domain": 1,
+      "subdomain": "1.7",
+      "front": "BCP vs DRP: what is the difference in scope?",
+      "back": "BCP keeps the whole business functioning during disruption; DRP restores IT systems and data after a disaster. DRP is a component of the broader BCP.",
+      "whyItMatters": "Stems about restoring the business versus restoring IT hinge on knowing DRP sits inside BCP."
+    },
+    {
+      "id": "f-d1-sub08-001",
+      "domain": 1,
+      "subdomain": "1.8",
+      "front": "What is the difference between job rotation and separation of duties?",
+      "back": "Separation of duties splits a critical task between people to prevent fraud without collusion. Job rotation moves people between roles to reveal irregularities and cross-train staff.",
+      "whyItMatters": "Pairs are often placed together as distractors."
+    },
+    {
+      "id": "f-d1-sub08-002",
+      "domain": 1,
+      "subdomain": "1.8",
+      "front": "What is the first action when an employee is terminated for cause?",
+      "back": "Disable access (accounts, badges, remote access) at or before notification, then recover assets and conduct exit processes. Escort the employee if appropriate.",
+      "whyItMatters": "Timing of access removal is a regular scenario answer."
+    },
+    {
+      "id": "f-d1-sub09-001",
+      "domain": 1,
+      "subdomain": "1.9",
+      "front": "What are the formulas for SLE and ALE?",
+      "back": "SLE = asset value x exposure factor. ALE = SLE x ARO (annualized rate of occurrence).",
+      "whyItMatters": "Calculation questions every exam; ARO is a yearly frequency, e.g. once in 5 years = 0.2."
+    },
+    {
+      "id": "f-d1-sub09-002",
+      "domain": 1,
+      "subdomain": "1.9",
+      "front": "How do you calculate the annual value of a safeguard?",
+      "back": "ALE before control - ALE after control - annual cost of control. A positive result means the control is cost-effective.",
+      "whyItMatters": "Used to decide whether a control is worth buying."
+    },
+    {
+      "id": "f-d1-sub09-003",
+      "domain": 1,
+      "subdomain": "1.9",
+      "front": "List the four risk treatment options.",
+      "back": "Mitigate (reduce), transfer (insurance, contract), avoid (stop the activity), accept (document and monitor). Ignoring a risk is not a valid option.",
+      "whyItMatters": "Scenario answers map actions to these responses."
+    },
+    {
+      "id": "f-d1-sub09-004",
+      "domain": 1,
+      "subdomain": "1.9",
+      "front": "Total (inherent) risk vs residual risk: what are the formulas?",
+      "back": "Total (inherent) risk = threats x vulnerabilities x asset value, before controls. Residual risk = total risk x control gap, what remains after controls are applied.",
+      "whyItMatters": "Residual risk is what management formally accepts."
+    },
+    {
+      "id": "f-d1-sub09-005",
+      "domain": 1,
+      "subdomain": "1.9",
+      "front": "In what order do the risk management steps occur?",
+      "back": "Frame, assess, respond, monitor (NIST SP 800-39). In assessment: identify assets, threats, vulnerabilities, then analyze risk. Asset identification starts the process.",
+      "whyItMatters": "Ordering stems about what to do first."
+    },
+    {
+      "id": "f-d1-sub09-006",
+      "domain": 1,
+      "subdomain": "1.9",
+      "front": "Who has the authority to accept risk?",
+      "back": "The business or risk owner with authority over the asset, typically senior management, not the security team. Security advises; the owner decides and signs.",
+      "whyItMatters": "Manager-mindset staple for risk acceptance."
+    },
+    {
+      "id": "f-d1-sub10-001",
+      "domain": 1,
+      "subdomain": "1.10",
+      "front": "Name the six STRIDE categories and the property each violates.",
+      "back": "Spoofing (authentication), Tampering (integrity), Repudiation (non-repudiation), Information disclosure (confidentiality), Denial of service (availability), Elevation of privilege (authorization).",
+      "whyItMatters": "Stems describe a threat and ask for the category or the violated property."
+    },
+    {
+      "id": "f-d1-sub10-002",
+      "domain": 1,
+      "subdomain": "1.10",
+      "front": "What does DREAD do, and what does it stand for?",
+      "back": "It scores threats: Damage, Reproducibility, Exploitability, Affected users, Discoverability. It rates severity and does not identify threats.",
+      "whyItMatters": "Distinguish rating schemes from identification methods."
+    },
+    {
+      "id": "f-d1-sub10-003",
+      "domain": 1,
+      "subdomain": "1.10",
+      "front": "What is PASTA?",
+      "back": "Process for Attack Simulation and Threat Analysis: a seven-stage, risk-centric, attacker-focused methodology that aligns technical threats with business objectives.",
+      "whyItMatters": "Known as the risk-centric alternative to STRIDE."
+    },
+    {
+      "id": "f-d1-sub10-004",
+      "domain": 1,
+      "subdomain": "1.10",
+      "front": "What is a trust boundary in a data flow diagram?",
+      "back": "A line where data crosses between differently trusted zones, such as internet to DMZ. Threats cluster at these crossings, so they get analysis first.",
+      "whyItMatters": "Threat modelling steps begin with decomposition and trust boundaries."
+    },
+    {
+      "id": "f-d1-sub11-001",
+      "domain": 1,
+      "subdomain": "1.11",
+      "front": "What are the typical stages of supplier risk management?",
+      "back": "Due diligence before contract, security requirements and SLAs in the contract, right to audit, ongoing monitoring, and secure termination and data return.",
+      "whyItMatters": "Pre-contract assessment is a common right answer."
+    },
+    {
+      "id": "f-d1-sub11-002",
+      "domain": 1,
+      "subdomain": "1.11",
+      "front": "SOC 2 Type I vs Type II?",
+      "back": "Type I: design of controls at a point in time. Type II: operating effectiveness over a period, usually 6 to 12 months. Type II gives stronger assurance.",
+      "whyItMatters": "Stems ask which report to demand from a cloud provider."
+    },
+    {
+      "id": "f-d1-sub12-001",
+      "domain": 1,
+      "subdomain": "1.12",
+      "front": "Awareness vs training vs education?",
+      "back": "Awareness: broad, recurring reminders for everyone. Training: role-specific skills. Education: deeper career-level understanding for professionals.",
+      "whyItMatters": "Stems give an audience and goal (all staff reminded, admins skilled, professionals educated) and ask which activity fits."
+    },
+    {
+      "id": "f-d1-sub12-002",
+      "domain": 1,
+      "subdomain": "1.12",
+      "front": "Which metric best shows a phishing awareness program is working?",
+      "back": "Falling click rate combined with rising report rate over repeated simulations. Completion counts only show participation, not behaviour change.",
+      "whyItMatters": "Exam favours outcome measures over activity measures."
+    },
+    {
+      "id": "f-d1-sub12-003",
+      "domain": 1,
+      "subdomain": "1.12",
+      "front": "How often should awareness training occur?",
+      "back": "At onboarding and then regularly and repeatedly, such as annually with reinforcement, and when threats, roles, or policies change. One-time training decays.",
+      "whyItMatters": "Common scenario about program design."
+    }
+  ]
+}

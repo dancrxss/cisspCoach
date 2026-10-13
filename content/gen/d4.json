@@ -1,0 +1,2276 @@
+{
+  "questions": [
+    {
+      "id": "q-d4-sub01-001",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 1,
+      "stem": "At which layer of the OSI model do routers primarily operate to forward packets between networks based on logical addresses?",
+      "options": [
+        "Network layer (Layer 3)",
+        "Data Link layer (Layer 2)",
+        "Transport layer (Layer 4)",
+        "Session layer (Layer 5)"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which kind of address, physical or logical, does a router use to decide the next hop?",
+        "Which OSI layer is responsible for logical addressing and path selection?"
+      ],
+      "explanation": {
+        "correct": "Routers examine the destination IP address, a logical address, and select the best path. Logical addressing and routing are the responsibility of the Network layer (Layer 3).",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Layer 2 devices such as switches forward frames using MAC addresses within a LAN, not logical addresses between networks."
+          },
+          {
+            "option": 2,
+            "why": "The Transport layer manages end-to-end delivery using ports; it does not choose paths between networks."
+          },
+          {
+            "option": 3,
+            "why": "The Session layer manages dialogues between applications and has no role in packet routing."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-002",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 1,
+      "stem": "Which OSI layer is responsible for end-to-end reliable delivery, sequencing and flow control using mechanisms such as TCP?",
+      "options": [
+        "Network layer (Layer 3)",
+        "Transport layer (Layer 4)",
+        "Session layer (Layer 5)",
+        "Application layer (Layer 7)"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which layer owns ports and the choice between TCP and UDP?",
+        "Where do sequence numbers and acknowledgements live?"
+      ],
+      "explanation": {
+        "correct": "TCP operates at Layer 4 and provides sequencing, acknowledgements, retransmission and flow control. UDP also lives here but offers none of these guarantees.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The Network layer provides best-effort addressing and routing; it does not guarantee delivery or ordering."
+          },
+          {
+            "option": 2,
+            "why": "The Session layer sets up and tears down dialogues; it does not provide segment sequencing or acknowledgements."
+          },
+          {
+            "option": 3,
+            "why": "The Application layer holds protocols such as HTTP; reliability is provided beneath it by the transport protocol."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-003",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 1,
+      "stem": "A network switch forwards Ethernet frames by examining which address?",
+      "options": [
+        "The destination IP address",
+        "The destination port number",
+        "The destination MAC address",
+        "The source hostname"
+      ],
+      "correct": 2,
+      "ladder": [
+        "At which OSI layer does a basic switch work?",
+        "What type of address is used at that layer?"
+      ],
+      "explanation": {
+        "correct": "A traditional switch is a Layer 2 device that builds a table of MAC addresses against switch ports and forwards frames accordingly.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "IP addresses are used by routers (or Layer 3 switches); a standard Layer 2 switch does not inspect them for forwarding."
+          },
+          {
+            "option": 1,
+            "why": "Port numbers are Layer 4 values used by firewalls and hosts, not by a basic switch."
+          },
+          {
+            "option": 3,
+            "why": "Hostnames are resolved by DNS at the application level and are not present in frame forwarding decisions."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-004",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 1,
+      "stem": "Which statement best describes the core principle of a zero trust architecture?",
+      "options": [
+        "Internal network traffic is trusted once it passes the perimeter firewall",
+        "Trust is established once per session and never re-evaluated",
+        "Trusted devices are exempt from authentication on the internal network",
+        "No user or device is trusted by default, and every access request is verified"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Does zero trust give weight to where on the network a request originates?",
+        "What is the default posture toward every access request?"
+      ],
+      "explanation": {
+        "correct": "Zero trust assumes breach and removes implicit trust based on network location. Each request is authenticated, authorised and evaluated against policy using context such as identity, device posture and behaviour.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "This describes the traditional perimeter model that zero trust is designed to replace."
+          },
+          {
+            "option": 1,
+            "why": "Zero trust requires continuous or per-request evaluation, not a single verification at the start."
+          },
+          {
+            "option": 2,
+            "why": "Zero trust does not grant implicit trust based on device or network location."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-005",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 1,
+      "stem": "What is the primary purpose of placing public-facing servers in a demilitarized zone (DMZ)?",
+      "options": [
+        "To isolate public servers so a compromise does not reach the internal network",
+        "To encrypt all traffic between internet clients and internal users",
+        "To remove the need for a firewall at the network perimeter",
+        "To ensure internal hosts can be reached directly from the internet"
+      ],
+      "correct": 0,
+      "ladder": [
+        "What is the risk if an internet-facing server sits on the same segment as internal file servers?",
+        "What does a buffer zone between untrusted and trusted networks achieve?"
+      ],
+      "explanation": {
+        "correct": "A DMZ is a screened subnet that holds exposed services. Firewall rules restrict traffic between the internet, DMZ and internal network, so a compromised public server cannot freely reach internal assets.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "A DMZ is a segmentation construct; it does not by itself provide encryption of traffic."
+          },
+          {
+            "option": 2,
+            "why": "A DMZ is created and enforced using firewalls; it does not replace them."
+          },
+          {
+            "option": 3,
+            "why": "The DMZ is intended to prevent direct external access to internal hosts."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-006",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 1,
+      "stem": "A SYN flood denial-of-service attack primarily abuses which layer of the OSI model?",
+      "options": [
+        "Physical layer (Layer 1)",
+        "Transport layer (Layer 4)",
+        "Data Link layer (Layer 2)",
+        "Presentation layer (Layer 6)"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which protocol uses a three-way handshake?",
+        "At which layer does that protocol operate?"
+      ],
+      "explanation": {
+        "correct": "A SYN flood sends many TCP SYN packets without completing the handshake, exhausting the server connection table. TCP is a Layer 4 protocol.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Physical layer attacks involve cable cutting or signal jamming, not half-open TCP connections."
+          },
+          {
+            "option": 2,
+            "why": "Data Link attacks include MAC flooding and ARP spoofing, not TCP handshake abuse."
+          },
+          {
+            "option": 3,
+            "why": "The Presentation layer deals with data formatting and encryption, not connection setup."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-007",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 1,
+      "stem": "Which transport protocol is connectionless and provides no guaranteed delivery or sequencing?",
+      "options": [
+        "TCP",
+        "SCTP",
+        "UDP",
+        "ICMP"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which transport protocol trades reliability for low overhead?",
+        "Which common protocols, such as DNS queries and VoIP media, favour that trade?"
+      ],
+      "explanation": {
+        "correct": "UDP is connectionless and best-effort, which suits latency-sensitive traffic such as DNS lookups and streaming voice. TCP is the reliable, connection-oriented counterpart.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "TCP is connection-oriented and provides acknowledgements, sequencing and retransmission."
+          },
+          {
+            "option": 1,
+            "why": "SCTP is a connection-oriented transport protocol with reliable delivery options."
+          },
+          {
+            "option": 3,
+            "why": "ICMP is a Layer 3 control protocol used for error and diagnostic messages, not a transport protocol."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-008",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 1,
+      "stem": "ARP spoofing (ARP poisoning) is an attack against which OSI layer?",
+      "options": [
+        "Network layer (Layer 3)",
+        "Transport layer (Layer 4)",
+        "Application layer (Layer 7)",
+        "Data Link layer (Layer 2)"
+      ],
+      "correct": 3,
+      "ladder": [
+        "What does a forged ARP reply change on the victim host?",
+        "Which layer deals with MAC addresses and frames?"
+      ],
+      "explanation": {
+        "correct": "ARP spoofing sends false ARP replies so that victims associate the attacker MAC address with another host IP. This enables man-in-the-middle on the local segment and is considered a Data Link layer attack.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Although ARP maps IP to MAC addresses, the attack manipulates the MAC-to-IP mapping to redirect frames and is classed as a Layer 2 attack."
+          },
+          {
+            "option": 1,
+            "why": "Transport layer attacks concern TCP/UDP behaviour such as session hijacking or SYN floods."
+          },
+          {
+            "option": 2,
+            "why": "Application layer attacks target protocols such as HTTP, DNS and SMTP."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-009",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 2,
+      "stem": "A web server in a DMZ must query a customer database. Which placement of the database BEST supports secure network design?",
+      "options": [
+        "On an internal segment behind a second firewall allowing only the web server",
+        "In the DMZ alongside the web server to reduce query latency and cost",
+        "On the internet-facing segment with host-based encryption enabled",
+        "On the DMZ with the firewall rules disabled for the database port"
+      ],
+      "correct": 0,
+      "ladder": [
+        "What is the value of the data compared with the value of the web front end?",
+        "How can an attacker who compromises the web server be prevented from moving further?"
+      ],
+      "explanation": {
+        "correct": "Sensitive data stores belong in the most protected segment. A second firewall layer permits only the specific application-to-database flow, which supports defence in depth and limits blast radius.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Placing sensitive data stores in the DMZ exposes them to the same threats as the public server."
+          },
+          {
+            "option": 2,
+            "why": "Encryption does not compensate for placing a data store on an internet-facing segment."
+          },
+          {
+            "option": 3,
+            "why": "Disabling firewall rules removes the control that restricts access to the database."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-010",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 2,
+      "stem": "In a software-defined network (SDN), what is the key architectural change compared with traditional networking?",
+      "options": [
+        "Routing decisions are made independently by every switch in the network",
+        "Control plane is separated from data plane and centralised in a controller",
+        "Hardware switches are replaced by physical hubs on each network segment",
+        "All traffic is tunnelled through a single IPsec gateway for inspection"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which plane makes forwarding decisions, and which plane merely forwards packets?",
+        "Where does SDN place the intelligence?"
+      ],
+      "explanation": {
+        "correct": "SDN decouples the control plane from the data plane. A central controller programs forwarding devices through APIs, which enables policy-driven automation but makes the controller a high-value target to protect.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Distributed, per-device decision-making describes traditional networks."
+          },
+          {
+            "option": 2,
+            "why": "SDN does not replace switches with hubs; it still uses forwarding devices."
+          },
+          {
+            "option": 3,
+            "why": "SDN is not defined by tunnelling through a single gateway."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-011",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 2,
+      "stem": "Ransomware spread rapidly across a flat internal network from one workstation to file servers in several departments. What design improvement would BEST limit similar spread?",
+      "options": [
+        "Increase the bandwidth of the core switches in the data centre",
+        "Move all workstations into a single larger subnet for simplicity",
+        "Segment the network and restrict inter-segment flows with firewall rules",
+        "Disable logging on internal systems to reduce processing overhead"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What network characteristic allowed one compromised host to reach so many others?",
+        "Which design control limits which systems can talk to each other?"
+      ],
+      "explanation": {
+        "correct": "Segmentation confines compromise to a smaller area and enforces least privilege on network flows. Applying filtering between segments is a core secure network design principle.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Bandwidth has no effect on lateral movement; faster links can even speed propagation."
+          },
+          {
+            "option": 1,
+            "why": "A larger single subnet increases the broadcast domain and lateral movement opportunity."
+          },
+          {
+            "option": 3,
+            "why": "Disabling logging reduces detection and does nothing to prevent spread."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-012",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 2,
+      "stem": "An attacker sends frames with two 802.1Q tags so that traffic reaches a VLAN the attacker is not a member of. Which mitigation is MOST effective against this VLAN hopping technique?",
+      "options": [
+        "Enable DHCP snooping on all access ports",
+        "Increase the MAC address table aging timeout",
+        "Replace copper Ethernet cabling with fibre",
+        "Use an unused native VLAN and keep user ports off it"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which VLAN does a trunk leave untagged by default?",
+        "If an attacker's frame carries a second tag, what happens to the outer tag at the first switch?"
+      ],
+      "explanation": {
+        "correct": "Double-tagging relies on the trunk native VLAN stripping the outer tag. Moving the native VLAN to an unused VLAN, not placing hosts on it and disabling dynamic trunking (DTP) on access ports defeats the technique.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "DHCP snooping mitigates rogue DHCP servers, not double-tagging."
+          },
+          {
+            "option": 1,
+            "why": "Changing the MAC aging time has no bearing on VLAN tag handling."
+          },
+          {
+            "option": 2,
+            "why": "The cabling medium does not influence VLAN tagging attacks."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-013",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 2,
+      "stem": "An attacker spoofs the victim IP address and sends ICMP echo requests to a network broadcast address so that many hosts reply to the victim. Which attack is this, and which control mitigates it?",
+      "options": [
+        "Smurf attack; disable directed broadcasts on routers",
+        "Teardrop attack; enable fragment reassembly limits",
+        "Land attack; filter packets with identical source and destination",
+        "Fraggle attack; block ICMP echo replies only"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Why would many hosts reply to a single spoofed request?",
+        "What router behaviour lets an outside packet fan out to every host on a subnet?"
+      ],
+      "explanation": {
+        "correct": "A Smurf attack amplifies ICMP echo traffic through broadcast addresses to flood a spoofed victim. Disabling directed (IP-directed) broadcasts and filtering spoofed sources are the standard mitigations.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Teardrop abuses overlapping IP fragments, not broadcast amplification."
+          },
+          {
+            "option": 2,
+            "why": "A Land attack sends packets where source and destination are the same, not broadcast pings."
+          },
+          {
+            "option": 3,
+            "why": "Fraggle is the UDP equivalent of Smurf; the described attack uses ICMP, and blocking replies alone does not stop directed broadcast amplification."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-014",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 2,
+      "stem": "How many bits are in an IPv6 address?",
+      "options": [
+        "32",
+        "128",
+        "64",
+        "256"
+      ],
+      "correct": 1,
+      "ladder": [
+        "How does IPv6 address space compare with IPv4 address space?",
+        "Is IPv4 or IPv6 written in hexadecimal groups?"
+      ],
+      "explanation": {
+        "correct": "IPv6 addresses are 128 bits, written as eight groups of hexadecimal values. IPv4 addresses are 32 bits.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "32 bits is the length of an IPv4 address."
+          },
+          {
+            "option": 2,
+            "why": "64 bits is the typical length of the IPv6 network prefix or interface identifier, not the full address."
+          },
+          {
+            "option": 3,
+            "why": "256 bits is not an IP address length."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-015",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 2,
+      "stem": "In NIST zero trust architecture, which component evaluates each access request and decides whether to grant it?",
+      "options": [
+        "The policy enforcement point (PEP)",
+        "The intrusion prevention system",
+        "The policy decision point (PDP)",
+        "The load balancer"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Is the question about who evaluates the request or who carries out the result?",
+        "Which component weighs identity, device posture and policy before returning grant or deny?"
+      ],
+      "explanation": {
+        "correct": "The PDP, made up of the policy engine and policy administrator, decides on access. The PEP at the resource enforces that decision. This separation is central to NIST SP 800-207.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The PEP carries out the decision by enabling or terminating the connection; it does not make the decision."
+          },
+          {
+            "option": 1,
+            "why": "An IPS inspects traffic for malicious patterns but is not the access decision engine."
+          },
+          {
+            "option": 3,
+            "why": "A load balancer distributes traffic and has no role in access decisions."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-016",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 2,
+      "stem": "Administrators manage routers and switches over interfaces that are reachable from user VLANs. What design change would BEST reduce risk?",
+      "options": [
+        "Share the management VLAN with the guest wireless network",
+        "Permit management access from any internal address",
+        "Use the user VLAN default gateway as the management gateway",
+        "Place device management on a dedicated out-of-band network"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Who should be able to reach device administration interfaces?",
+        "What kind of network separation limits that reachability?"
+      ],
+      "explanation": {
+        "correct": "A dedicated management network, ideally out-of-band, restricts administrative access to authorised systems and protects device management planes from user-segment threats.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Sharing management with guests exposes management interfaces to untrusted users."
+          },
+          {
+            "option": 1,
+            "why": "Open access from any internal address allows any compromised host to attack management interfaces."
+          },
+          {
+            "option": 2,
+            "why": "Using the user VLAN gateway keeps management reachable from user segments."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-017",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 3,
+      "stem": "An executive proposes buying a single zero trust product to \"become zero trust\" within the quarter. What should the security manager do FIRST?",
+      "options": [
+        "Map the protect surface and transaction flows for critical assets",
+        "Purchase the product and enable it in monitor mode across all segments",
+        "Remove the perimeter firewall to demonstrate commitment",
+        "Require all users to complete additional security awareness training"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Is zero trust a product, or an approach built around what you protect?",
+        "What must be understood before policy can be written for access to critical assets?"
+      ],
+      "explanation": {
+        "correct": "Zero trust is an architectural strategy. A sound start is to identify the protect surface (critical data, assets, applications, services) and the flows touching it, so policy enforcement points and controls are designed around actual business transactions.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Buying first risks misaligned tooling; zero trust is a strategy and architecture, not a single product."
+          },
+          {
+            "option": 2,
+            "why": "Removing existing controls reduces security and zero trust does not eliminate perimeter defences."
+          },
+          {
+            "option": 3,
+            "why": "Training is useful but does not establish the architecture or identify what needs protecting."
+          }
+        ]
+      },
+      "tags": [
+        "manager-mindset",
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-018",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 3,
+      "stem": "A manufacturer must connect the corporate network to its industrial control system (ICS) network so production data can be reported. Which design BEST protects the ICS environment?",
+      "options": [
+        "A DMZ with data historians and no sessions initiated into the ICS network",
+        "A flat network so ICS devices can be patched with corporate tools",
+        "A VPN from each corporate workstation directly to the ICS controllers",
+        "Dual-homed ICS controllers connected to both networks"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which environment has the higher availability and safety consequence?",
+        "Which design keeps safety-critical controllers one step removed from corporate threats while production data can still be reported?"
+      ],
+      "explanation": {
+        "correct": "Following the Purdue-style layered model, an intermediate DMZ with replicated data (for example a historian) and tightly controlled, preferably one-way, flows keeps corporate threats away from safety-critical controllers.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A flat design exposes fragile ICS devices to corporate threats."
+          },
+          {
+            "option": 2,
+            "why": "Direct VPN access from many workstations widens the attack surface into safety-critical systems."
+          },
+          {
+            "option": 3,
+            "why": "Dual-homed devices can bridge networks and bypass segmentation controls."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-019",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 3,
+      "stem": "An organisation uses iSCSI for its storage network over the existing data centre Ethernet. Which approach BEST reduces the risk of storage traffic exposure?",
+      "options": [
+        "Keep storage traffic on the general server VLAN for troubleshooting",
+        "Rely on an obscure LUN naming convention to hide the storage",
+        "Isolate storage on a dedicated VLAN and require CHAP authentication",
+        "Disable initiator authentication to avoid any performance impact"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What new exposure arises when block storage traffic runs over an IP network?",
+        "What does that exposure imply about how storage traffic should be separated and which initiators may connect?"
+      ],
+      "explanation": {
+        "correct": "iSCSI carries SCSI commands over IP, so it inherits IP-network threats. Segregating the storage network and requiring initiator authentication (CHAP) with optional IPsec for encryption reduces exposure.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Mixing storage with general traffic raises sniffing and spoofing risk."
+          },
+          {
+            "option": 1,
+            "why": "Obscure naming is security through obscurity and does not control access."
+          },
+          {
+            "option": 3,
+            "why": "Disabling authentication removes the control that prevents unauthorised initiators connecting."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub01-020",
+      "domain": 4,
+      "subdomain": "4.1",
+      "difficulty": 3,
+      "stem": "Monitoring shows an attacker moved laterally between application servers in the same data centre without crossing any perimeter firewall. Which control BEST addresses this east-west risk?",
+      "options": [
+        "Adding another perimeter firewall at the internet edge",
+        "Enlarging the DMZ to hold more application servers",
+        "Deploying additional NIDS sensors only at the internet gateway",
+        "Microsegmentation with workload-level policies between servers"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Where did the malicious traffic travel, and which controls were positioned there?",
+        "Which approach enforces policy between individual workloads?"
+      ],
+      "explanation": {
+        "correct": "East-west traffic bypasses perimeter devices. Microsegmentation applies least-privilege policy between workloads, often via hypervisor or host-based enforcement, which limits lateral movement.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The traffic never crosses the perimeter, so edge firewalls cannot affect it."
+          },
+          {
+            "option": 1,
+            "why": "A bigger DMZ does not control internal server-to-server flows."
+          },
+          {
+            "option": 2,
+            "why": "Sensors only at the gateway cannot see east-west traffic inside the data centre."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub02-001",
+      "domain": 4,
+      "subdomain": "4.2",
+      "difficulty": 1,
+      "stem": "Which firewall type filters traffic only on header fields such as source and destination IP address, port and protocol, without tracking connection state?",
+      "options": [
+        "Packet-filtering (stateless) firewall",
+        "Stateful inspection firewall",
+        "Application-layer proxy firewall",
+        "Web application firewall (WAF)"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which firewall generation relies only on Layer 3 and 4 header fields?",
+        "Which type has no memory of previous packets?"
+      ],
+      "explanation": {
+        "correct": "First-generation packet filters apply ACL rules to each packet independently using header values. They are fast but cannot recognise whether a packet belongs to an established session.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Stateful firewalls maintain a state table of active connections."
+          },
+          {
+            "option": 2,
+            "why": "Application proxies inspect application-layer content and act as intermediaries."
+          },
+          {
+            "option": 3,
+            "why": "A WAF inspects HTTP/HTTPS content to protect web applications."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub02-002",
+      "domain": 4,
+      "subdomain": "4.2",
+      "difficulty": 1,
+      "stem": "A firewall keeps a table of active connections and permits return traffic only for sessions initiated from inside. Which firewall type is this?",
+      "options": [
+        "Packet-filtering firewall",
+        "Stateful inspection firewall",
+        "Web application firewall",
+        "Reverse proxy server"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What does the firewall remember between packets?",
+        "Which type uses a connection state table?"
+      ],
+      "explanation": {
+        "correct": "Stateful inspection tracks the state of connections, so only packets matching a legitimate existing session are admitted. It evolved from the stateless packet filter by adding a state table.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A stateless packet filter would not track session state."
+          },
+          {
+            "option": 2,
+            "why": "A WAF inspects HTTP/HTTPS content to protect web applications; it is not defined by a connection state table."
+          },
+          {
+            "option": 3,
+            "why": "A reverse proxy terminates client sessions on behalf of servers; it is not the device described by a state table of return traffic."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub02-003",
+      "domain": 4,
+      "subdomain": "4.2",
+      "difficulty": 1,
+      "stem": "Which Wi-Fi security protocol replaces the pre-shared key exchange with Simultaneous Authentication of Equals (SAE)?",
+      "options": [
+        "WPA2",
+        "WEP",
+        "WPA3",
+        "WPA with TKIP"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which generation of Wi-Fi security is newest?",
+        "Which one introduced a handshake resistant to offline dictionary attacks?"
+      ],
+      "explanation": {
+        "correct": "WPA3-Personal uses SAE, a password-authenticated key exchange that resists offline dictionary attacks and provides forward secrecy. WPA2-Personal uses a PSK handshake.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "WPA2-Personal uses a pre-shared key four-way handshake that can be captured and attacked offline."
+          },
+          {
+            "option": 1,
+            "why": "WEP uses RC4 with weak initialisation vectors and is broken."
+          },
+          {
+            "option": 3,
+            "why": "WPA with TKIP is an older interim standard that relied on RC4."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub02-004",
+      "domain": 4,
+      "subdomain": "4.2",
+      "difficulty": 1,
+      "stem": "What is the main difference between an intrusion detection system (IDS) and an intrusion prevention system (IPS)?",
+      "options": [
+        "An IDS blocks attacks while an IPS only logs them",
+        "An IDS works only at Layer 7 while an IPS works only at Layer 2",
+        "An IPS requires signatures while an IDS uses only anomaly detection",
+        "An IPS sits inline and can block traffic, while an IDS monitors and alerts"
+      ],
+      "correct": 3,
+      "ladder": [
+        "What action can each system take once it identifies suspicious traffic?",
+        "Which system must be placed in the traffic path to take that action?"
+      ],
+      "explanation": {
+        "correct": "An IDS is passive and generates alerts; an IPS is placed inline and can drop or reset malicious traffic. The inline placement is also why an IPS can introduce latency or cause outages if it fails closed.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "This reverses the roles of the two systems."
+          },
+          {
+            "option": 1,
+            "why": "Both can operate at multiple layers; this is not the distinction."
+          },
+          {
+            "option": 2,
+            "why": "Both IDS and IPS can use signatures, anomaly detection or both."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub02-005",
+      "domain": 4,
+      "subdomain": "4.2",
+      "difficulty": 1,
+      "stem": "A hub operates at which OSI layer?",
+      "options": [
+        "Physical layer (Layer 1)",
+        "Data Link layer (Layer 2)",
+        "Network layer (Layer 3)",
+        "Transport layer (Layer 4)"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Does a hub examine addresses, or simply repeat electrical signals?",
+        "Which layer deals with signals and bits?"
+      ],
+      "explanation": {
+        "correct": "A hub is a multiport repeater that regenerates signals to all ports, making it a Layer 1 device. It creates a single collision domain and enables easy sniffing.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Switches and bridges operate at Layer 2 using MAC addresses."
+          },
+          {
+            "option": 2,
+            "why": "Routers operate at Layer 3."
+          },
+          {
+            "option": 3,
+            "why": "Firewalls and load balancers may operate at Layer 4 and above."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub02-006",
+      "domain": 4,
+      "subdomain": "4.2",
+      "difficulty": 1,
+      "stem": "Which control is designed to protect web applications by filtering HTTP and HTTPS requests for attacks such as SQL injection and cross-site scripting?",
+      "options": [
+        "Stateless packet filter",
+        "Web application firewall (WAF)",
+        "Network layer router",
+        "Layer 2 switch"
+      ],
+      "correct": 1,
+      "ladder": [
+        "At which layer do SQL injection and XSS exist?",
+        "Which device is aware of HTTP content?"
+      ],
+      "explanation": {
+        "correct": "A WAF operates at Layer 7 and inspects web traffic against rules to detect and block application-layer attacks, protecting applications that may not yet be patched.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A packet filter looks only at IP and port headers and cannot interpret application payloads."
+          },
+          {
+            "option": 2,
+            "why": "A router forwards packets based on IP addresses and is not application aware."
+          },
+          {
+            "option": 3,
+            "why": "A switch forwards frames by MAC address and does not inspect web requests."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub02-007",
+      "domain": 4,
+      "subdomain": "4.2",
+      "difficulty": 2,
+      "stem": "In an IEEE 802.1X deployment, what is the role of the device that sits between the client and the authentication server, such as a switch or wireless access point?",
+      "options": [
+        "Supplicant",
+        "Authentication server",
+        "Authenticator",
+        "Certificate authority"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Is the device in the stem the one requesting access, the one deciding, or the one in between?",
+        "What does a switch port do while the authentication outcome is still pending?"
+      ],
+      "explanation": {
+        "correct": "In 802.1X, the supplicant is the client, the authenticator is the switch or access point that blocks the port until authentication succeeds, and the authentication server (for example RADIUS) makes the decision.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The supplicant is the client requesting access."
+          },
+          {
+            "option": 1,
+            "why": "The authentication server, typically RADIUS, validates credentials."
+          },
+          {
+            "option": 3,
+            "why": "A certificate authority issues certificates and does not relay authentication."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub02-008",
+      "domain": 4,
+      "subdomain": "4.2",
+      "difficulty": 2,
+      "stem": "Which EAP method requires both the server and the client to present digital certificates for mutual authentication?",
+      "options": [
+        "PEAP",
+        "EAP-MD5",
+        "LEAP",
+        "EAP-TLS"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which EAP method relies on certificates on both sides?",
+        "What infrastructure does that imply for every client?"
+      ],
+      "explanation": {
+        "correct": "EAP-TLS provides mutual certificate-based authentication and is regarded as the strongest EAP method, but needs a PKI that issues and manages client certificates.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "PEAP authenticates the server with a certificate but the client usually uses a password inside a TLS tunnel."
+          },
+          {
+            "option": 1,
+            "why": "EAP-MD5 offers only one-way client authentication with a hash and no mutual authentication."
+          },
+          {
+            "option": 2,
+            "why": "LEAP is a Cisco protocol with known weaknesses based on MS-CHAP."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub02-009",
+      "domain": 4,
+      "subdomain": "4.2",
+      "difficulty": 2,
+      "stem": "Users on a corporate floor are being lured to connect to a rogue access point broadcasting the same SSID as the corporate network. Which control MOST effectively reduces the risk that users authenticate to it?",
+      "options": [
+        "WPA3-Enterprise or 802.1X with clients validating the server certificate",
+        "Hiding the SSID so attackers cannot discover and copy it",
+        "Using a much longer pre-shared key that is shared with all staff",
+        "Disabling the DHCP server on the guest wireless network segment"
+      ],
+      "correct": 0,
+      "ladder": [
+        "What would let a client verify the network is genuine?",
+        "Which authentication approach authenticates the infrastructure to the user?"
+      ],
+      "explanation": {
+        "correct": "With enterprise authentication, the RADIUS server proves its identity through a certificate, and properly configured clients refuse to connect to an impostor. Wireless IDS can also help detect rogue APs.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Hiding the SSID is trivially defeated because SSIDs are exposed in probe responses and association frames."
+          },
+          {
+            "option": 2,
+            "why": "A shared PSK is known to every user and does not authenticate the access point to the client."
+          },
+          {
+            "option": 3,
+            "why": "DHCP configuration on the guest network does not influence rogue AP association."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub02-010",
+      "domain": 4,
+      "subdomain": "4.2",
+      "difficulty": 2,
+      "stem": "Which type of IDS is MOST likely to detect a previously unknown (zero-day) attack?",
+      "options": [
+        "Signature-based IDS",
+        "Behaviour- or anomaly-based IDS",
+        "Hash-based file integrity monitor",
+        "Static ACL-based packet filter"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which detection approach depends on knowing the attack beforehand?",
+        "Which approach can flag activity it has never seen described before?"
+      ],
+      "explanation": {
+        "correct": "Anomaly detection flags deviations from normal behaviour and can catch novel attacks, at the cost of higher false-positive rates. Signature detection is accurate for known threats but blind to new ones.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Signature-based systems require a known pattern and miss zero-day attacks until a signature exists."
+          },
+          {
+            "option": 2,
+            "why": "File integrity monitoring detects changes to files but is not a network IDS."
+          },
+          {
+            "option": 3,
+            "why": "A static ACL cannot recognise malicious behaviour."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub02-011",
+      "domain": 4,
+      "subdomain": "4.2",
+      "difficulty": 2,
+      "stem": "An organisation wants to hide the real addresses and configuration of its web servers while terminating client connections, caching content and filtering requests. Which component fits BEST?",
+      "options": [
+        "Forward proxy",
+        "Stateless packet filter",
+        "Reverse proxy",
+        "Network tap"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Is the proxy acting for the clients or for the servers?",
+        "Which type receives requests on behalf of the web servers?"
+      ],
+      "explanation": {
+        "correct": "A reverse proxy sits in front of servers, hiding their identity and enabling caching, load distribution, TLS termination and request filtering. A forward proxy represents internal clients to the outside.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A forward proxy sits in front of clients and represents them to the internet."
+          },
+          {
+            "option": 1,
+            "why": "A stateless packet filter cannot terminate sessions, cache or inspect content."
+          },
+          {
+            "option": 3,
+            "why": "A tap copies traffic for monitoring and does not terminate sessions."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub02-012",
+      "domain": 4,
+      "subdomain": "4.2",
+      "difficulty": 2,
+      "stem": "A network access control (NAC) solution checks a laptop for current patches and anti-malware before granting full network access. What is this capability called?",
+      "options": [
+        "Network address translation",
+        "Port mirroring",
+        "Spanning tree negotiation",
+        "Posture assessment"
+      ],
+      "correct": 3,
+      "ladder": [
+        "What is the NAC solution evaluating about the device?",
+        "What happens to a device that fails the evaluation?"
+      ],
+      "explanation": {
+        "correct": "NAC performs posture (health) assessment and can place non-compliant devices into a remediation VLAN or deny access, enforcing endpoint policy at the network edge.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "NAT translates addresses and does not evaluate device health."
+          },
+          {
+            "option": 1,
+            "why": "Port mirroring copies traffic to a monitoring port."
+          },
+          {
+            "option": 2,
+            "why": "Spanning tree prevents Layer 2 loops and is unrelated to endpoint health."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub02-013",
+      "domain": 4,
+      "subdomain": "4.2",
+      "difficulty": 3,
+      "stem": "A new IPS was deployed inline and is blocking some legitimate business-critical traffic. A manager wants it disabled immediately. What should the security manager do FIRST?",
+      "options": [
+        "Analyse the blocked events, then tune the faulty rules under change control",
+        "Disable the IPS completely until the next maintenance window",
+        "Leave the IPS unchanged and ask users to retry blocked transactions",
+        "Replace the IPS with a stateless firewall that causes fewer disruptions"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which security objective is currently harmed, and which is being protected?",
+        "What information is needed before deciding which rules to change?"
+      ],
+      "explanation": {
+        "correct": "A security manager balances availability and protection: confirm which rules cause the false positives, tune them with the business owners under change control, and keep the control in place. This is risk-based tuning rather than abandoning or ignoring the control.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Disabling the IPS discards the control and its risk benefit without analysis, and leaves the network exposed in the meantime."
+          },
+          {
+            "option": 2,
+            "why": "Leaving it unchanged continues to disrupt the business and ignores availability."
+          },
+          {
+            "option": 3,
+            "why": "A stateless firewall provides weaker protection and does not address the tuning problem."
+          }
+        ]
+      },
+      "tags": [
+        "manager-mindset",
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub02-014",
+      "domain": 4,
+      "subdomain": "4.2",
+      "difficulty": 3,
+      "stem": "The security team proposes decrypting employee TLS traffic at the proxy to detect malware. What should the security manager ensure FIRST?",
+      "options": [
+        "That the proxy supports the fastest cipher suites available",
+        "Legal and HR review, an updated acceptable use policy and staff notice",
+        "That decryption covers every category including banking and health",
+        "That TLS 1.3 is disabled on all managed employee devices"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What privacy and legal considerations arise from reading employee traffic?",
+        "Which stakeholders should be consulted before employee communications are inspected?"
+      ],
+      "explanation": {
+        "correct": "TLS inspection involves personal data and employee privacy. Policy, legal review, notification and sensible category exclusions must be in place before technical deployment.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Performance matters, but legal and policy basis must precede deployment."
+          },
+          {
+            "option": 2,
+            "why": "Decrypting sensitive categories without need increases privacy and legal risk; exemptions are usually appropriate."
+          },
+          {
+            "option": 3,
+            "why": "Disabling TLS 1.3 weakens security and is not required to perform inspection with a proper proxy."
+          }
+        ]
+      },
+      "tags": [
+        "manager-mindset",
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub02-015",
+      "domain": 4,
+      "subdomain": "4.2",
+      "difficulty": 3,
+      "stem": "An organisation uses a single WPA2-Personal passphrase across 200 staff. A departing employee knew the passphrase. Which change BEST addresses both this risk and the underlying design weakness?",
+      "options": [
+        "Change the passphrase and send the new one to all staff by email",
+        "Hide the SSID and enable MAC address filtering on the access points",
+        "Adopt WPA2/WPA3-Enterprise with 802.1X and per-user credentials",
+        "Reduce the transmit power of the access points near the building edge"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What happens each time a shared secret must be revoked?",
+        "What property would let you remove one person's wireless access without affecting everyone else?"
+      ],
+      "explanation": {
+        "correct": "Enterprise mode uses per-user credentials or certificates, so access can be revoked for one person and activity is attributable. A shared PSK cannot offer either.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Rotating the shared key repeats the problem every time someone leaves and does not provide user accountability."
+          },
+          {
+            "option": 1,
+            "why": "SSID hiding and MAC filtering are easily bypassed and do not provide authentication."
+          },
+          {
+            "option": 3,
+            "why": "Reducing power limits range but does not stop an authorised former user nearby."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub03-001",
+      "domain": 4,
+      "subdomain": "4.3",
+      "difficulty": 1,
+      "stem": "Which IPsec protocol provides data origin authentication and integrity but does NOT provide confidentiality?",
+      "options": [
+        "Encapsulating Security Payload (ESP)",
+        "Internet Key Exchange (IKE)",
+        "Point-to-Point Tunnelling Protocol (PPTP)",
+        "Authentication Header (AH)"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which of the two IPsec protocols encrypts the payload?",
+        "Which one only authenticates?"
+      ],
+      "explanation": {
+        "correct": "AH provides integrity, authentication and anti-replay protection but no encryption. ESP provides confidentiality as well as optional integrity and authentication.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "ESP can provide confidentiality in addition to integrity and authentication."
+          },
+          {
+            "option": 1,
+            "why": "IKE negotiates security associations and keys; it does not protect the data payload."
+          },
+          {
+            "option": 2,
+            "why": "PPTP is a separate VPN protocol, not part of IPsec."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub03-002",
+      "domain": 4,
+      "subdomain": "4.3",
+      "difficulty": 1,
+      "stem": "In IPsec tunnel mode, what is protected?",
+      "options": [
+        "The entire original packet, wrapped inside a new IP header",
+        "Only the payload of the original packet, leaving its IP header visible",
+        "Only the transport-layer header of the original packet",
+        "Only the IKE negotiation messages exchanged between the peers"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which mode is typically used between two gateways?",
+        "Does the mode in question hide the original IP header, or only the data behind it?"
+      ],
+      "explanation": {
+        "correct": "Tunnel mode wraps the whole original packet, including its header, and adds a new outer IP header. It is common for site-to-site VPNs; transport mode protects only the payload and is used host-to-host.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Protecting only the payload while the IP header stays visible describes transport mode."
+          },
+          {
+            "option": 2,
+            "why": "IPsec never protects just a transport header; transport mode protects the payload and tunnel mode the whole original packet."
+          },
+          {
+            "option": 3,
+            "why": "IKE negotiation is a separate control channel and is not what the data protection mode covers."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub03-003",
+      "domain": 4,
+      "subdomain": "4.3",
+      "difficulty": 1,
+      "stem": "Which email authentication mechanism lets a domain publish, in DNS, the mail servers authorised to send mail for that domain?",
+      "options": [
+        "DKIM",
+        "SPF",
+        "DNSSEC",
+        "S/MIME"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which mechanism is about who is allowed to send?",
+        "Which mechanism is published as a list in a DNS record rather than as a cryptographic signature?"
+      ],
+      "explanation": {
+        "correct": "Sender Policy Framework (SPF) publishes authorised sending hosts in DNS TXT records so receivers can check whether the connecting server is permitted.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "DKIM provides cryptographic message signatures, not a list of authorised senders."
+          },
+          {
+            "option": 2,
+            "why": "DNSSEC signs DNS records but does not list authorised mail servers."
+          },
+          {
+            "option": 3,
+            "why": "S/MIME provides message-level signing and encryption between users."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub03-004",
+      "domain": 4,
+      "subdomain": "4.3",
+      "difficulty": 1,
+      "stem": "IPsec peers negotiate security associations and keying material using which protocol?",
+      "options": [
+        "Authentication Header (AH)",
+        "Secure Shell (SSH)",
+        "Internet Key Exchange (IKE)",
+        "Simple Network Management Protocol (SNMP)"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What must the peers agree before traffic can be protected?",
+        "Which protocol uses UDP port 500 for that purpose?"
+      ],
+      "explanation": {
+        "correct": "IKE (via ISAKMP) authenticates peers and establishes security associations and keys for IPsec. It uses UDP 500, plus UDP 4500 when NAT traversal is required.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "AH protects packets but does not negotiate keys."
+          },
+          {
+            "option": 1,
+            "why": "SSH is a separate secure remote administration protocol."
+          },
+          {
+            "option": 3,
+            "why": "SNMP is used for network management."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub03-005",
+      "domain": 4,
+      "subdomain": "4.3",
+      "difficulty": 1,
+      "stem": "Which protocol is used in VoIP to set up, manage and terminate call sessions?",
+      "options": [
+        "Real-time Transport Protocol (RTP)",
+        "Simple Mail Transfer Protocol (SMTP)",
+        "Dynamic Host Configuration Protocol (DHCP)",
+        "Session Initiation Protocol (SIP)"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which protocol handles signalling and which handles media?",
+        "Which protocol uses ports 5060 and 5061?"
+      ],
+      "explanation": {
+        "correct": "SIP handles signalling, such as registration and call setup. RTP carries the audio or video, and SRTP secures that media.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "RTP carries the media stream after the session is established."
+          },
+          {
+            "option": 1,
+            "why": "SMTP transports email."
+          },
+          {
+            "option": 2,
+            "why": "DHCP assigns IP configuration."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub03-006",
+      "domain": 4,
+      "subdomain": "4.3",
+      "difficulty": 1,
+      "stem": "Which protocol should replace Telnet for secure remote administration of network devices?",
+      "options": [
+        "SSH",
+        "FTP",
+        "HTTP",
+        "SNMPv1"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which protocol encrypts a remote command session?",
+        "Which uses TCP port 22?"
+      ],
+      "explanation": {
+        "correct": "SSH provides encrypted remote login and command execution, protecting credentials and sessions that Telnet exposes in clear text.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "FTP transfers files in clear text and is not a remote shell."
+          },
+          {
+            "option": 2,
+            "why": "HTTP is a clear-text web protocol."
+          },
+          {
+            "option": 3,
+            "why": "SNMPv1 uses clear-text community strings and is not a remote shell."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub03-007",
+      "domain": 4,
+      "subdomain": "4.3",
+      "difficulty": 2,
+      "stem": "What does a DMARC policy primarily allow a domain owner to do?",
+      "options": [
+        "Encrypt message bodies end to end between sender and recipient",
+        "Tell receivers how to handle mail that fails SPF and DKIM alignment",
+        "Sign DNS zone data so resolvers can detect forged responses",
+        "Authenticate remote employees to the corporate VPN gateway"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What do receivers do when both SPF and DKIM fail?",
+        "Who tells them what to do, and where do the reports go?"
+      ],
+      "explanation": {
+        "correct": "DMARC builds on SPF and DKIM by requiring alignment with the From domain and publishing a policy (none, quarantine, reject) plus reporting addresses, enabling enforcement against spoofing.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "End-to-end encryption is a function of S/MIME or PGP, not DMARC."
+          },
+          {
+            "option": 2,
+            "why": "Signing zones is DNSSEC."
+          },
+          {
+            "option": 3,
+            "why": "VPN authentication is unrelated to email domain policy."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub03-008",
+      "domain": 4,
+      "subdomain": "4.3",
+      "difficulty": 2,
+      "stem": "How does DKIM help a receiving mail server detect message tampering and forged senders?",
+      "options": [
+        "The receiver encrypts the message with a password shared with the sender",
+        "The sender lists its authorised mail server IP addresses in DNS",
+        "The sender signs each message; the receiver checks it with a DNS public key",
+        "The recipient replies to the sender to confirm the sender's identity"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which cryptographic mechanism proves a message was signed by a domain?",
+        "What does the receiver need in order to check such a signature?"
+      ],
+      "explanation": {
+        "correct": "DKIM adds a digital signature to outbound mail. Receivers retrieve the domain public key from DNS and verify the signature, confirming integrity and domain-level origin.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "DKIM does not use shared passwords."
+          },
+          {
+            "option": 1,
+            "why": "Listing authorised IP addresses is SPF."
+          },
+          {
+            "option": 3,
+            "why": "Reply-based confirmation is not part of DKIM."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub03-009",
+      "domain": 4,
+      "subdomain": "4.3",
+      "difficulty": 2,
+      "stem": "Remote employees connect to the corporate VPN with split tunnelling enabled. What is the PRIMARY security concern?",
+      "options": [
+        "The VPN encryption strength is reduced for the corporate traffic",
+        "IPsec can no longer negotiate keys with the corporate VPN gateway",
+        "Remote users lose access to internal DNS name resolution services",
+        "Internet traffic bypasses corporate inspection, exposing the internal network"
+      ],
+      "correct": 3,
+      "ladder": [
+        "What path does non-corporate traffic take under split tunnelling?",
+        "What does that mean for corporate security monitoring of that traffic?"
+      ],
+      "explanation": {
+        "correct": "With split tunnelling, internet traffic bypasses corporate controls, and an infected endpoint is simultaneously on the internet and inside the corporate network, creating a pivot point. Full tunnelling forces traffic through corporate inspection.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Split tunnelling does not weaken encryption strength of the tunnel itself."
+          },
+          {
+            "option": 1,
+            "why": "Key negotiation is not prevented by split tunnelling."
+          },
+          {
+            "option": 2,
+            "why": "DNS resolution issues are not the primary security concern."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub03-010",
+      "domain": 4,
+      "subdomain": "4.3",
+      "difficulty": 2,
+      "stem": "Contractors need access to a single internal web application from unmanaged devices. Which solution BEST fits while avoiding full network-level access?",
+      "options": [
+        "A clientless TLS VPN or reverse proxy publishing only that application",
+        "A full-tunnel IPsec VPN placing the device on the internal network",
+        "A site-to-site VPN to each contractor's home network and router",
+        "Sharing the internal admin credentials with the contractors"
+      ],
+      "correct": 0,
+      "ladder": [
+        "What is the minimum access the contractors need?",
+        "Which approach publishes one application rather than extending a network connection to the device?"
+      ],
+      "explanation": {
+        "correct": "An SSL/TLS VPN or application proxy grants access to specific applications through the browser, supporting least privilege and avoiding installing client software on unmanaged devices.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Full network-level access to unmanaged devices expands exposure beyond the required application."
+          },
+          {
+            "option": 2,
+            "why": "Site-to-site VPNs to home networks are impractical and over-provision access."
+          },
+          {
+            "option": 3,
+            "why": "Sharing credentials breaks accountability and least privilege."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub03-011",
+      "domain": 4,
+      "subdomain": "4.3",
+      "difficulty": 2,
+      "stem": "During a TLS session, which key type is used to encrypt the bulk of the application data after the handshake completes?",
+      "options": [
+        "The server private key",
+        "A symmetric session key",
+        "The client public key",
+        "The certificate authority root key"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Why would designers avoid asymmetric encryption for bulk data?",
+        "What does the handshake establish for the remainder of the session?"
+      ],
+      "explanation": {
+        "correct": "TLS uses asymmetric cryptography or key agreement to authenticate and establish shared secrets, then uses fast symmetric session keys for bulk data confidentiality and integrity.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The server private key is used for authentication and, in older RSA key exchange, key transport, not bulk encryption."
+          },
+          {
+            "option": 2,
+            "why": "A client public key encrypts only small items, if used at all, and not bulk data."
+          },
+          {
+            "option": 3,
+            "why": "The CA root key signs certificates and is not used for session encryption."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub03-012",
+      "domain": 4,
+      "subdomain": "4.3",
+      "difficulty": 2,
+      "stem": "Which control BEST protects VoIP media from eavesdropping on the corporate network?",
+      "options": [
+        "Use a longer SIP registration timeout",
+        "Place IP phones on the default VLAN",
+        "Encrypt the media stream with SRTP",
+        "Increase the jitter buffer"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which protocol carries the audio itself?",
+        "What is the secured version of that protocol called?"
+      ],
+      "explanation": {
+        "correct": "SRTP encrypts and authenticates RTP media streams. Combined with SIP over TLS and a separate voice VLAN, it reduces eavesdropping and tampering risk.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Registration timeout has no impact on confidentiality."
+          },
+          {
+            "option": 1,
+            "why": "The default VLAN mixes voice and data traffic, increasing sniffing exposure."
+          },
+          {
+            "option": 3,
+            "why": "Jitter buffering improves call quality, not security."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub03-013",
+      "domain": 4,
+      "subdomain": "4.3",
+      "difficulty": 3,
+      "stem": "A site-to-site IPsec VPN using AH repeatedly fails when one gateway sits behind a NAT device. Which statement BEST explains the cause and fix?",
+      "options": [
+        "ESP cannot cross any NAT device, so AH is the only option",
+        "NAT encrypts the outer IP header, which breaks AH validation",
+        "IKE cannot run over UDP, so negotiation fails behind NAT",
+        "AH covers IP header fields NAT alters; use ESP with NAT-T"
+      ],
+      "correct": 3,
+      "ladder": [
+        "What does AH include in its integrity calculation?",
+        "What does NAT change in the packet that would invalidate that calculation?"
+      ],
+      "explanation": {
+        "correct": "AH covers immutable IP header fields, so NAT address rewriting invalidates its integrity check. ESP does not authenticate the outer header and, with NAT-T on UDP 4500, works through NAT.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "ESP with UDP encapsulation (NAT-T) is the standard approach through NAT."
+          },
+          {
+            "option": 1,
+            "why": "NAT rewrites addresses but does not encrypt headers."
+          },
+          {
+            "option": 2,
+            "why": "IKE normally uses UDP 500 or 4500, and the protocol transport is not the cause."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub03-014",
+      "domain": 4,
+      "subdomain": "4.3",
+      "difficulty": 3,
+      "stem": "Employees use personal laptops over the corporate VPN. Several have been found with malware. Which control BEST addresses the risk that these devices pose to internal systems?",
+      "options": [
+        "Enforce endpoint posture checks and quarantine failing devices before access",
+        "Increase the VPN encryption key length for remote sessions",
+        "Extend the VPN session timeout so users re-authenticate less often",
+        "Publish a reminder email about safe browsing habits for remote staff"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Is the main risk in the tunnel or at the device on the end of it?",
+        "What can the organisation verify about a device before it is allowed onto the internal network?"
+      ],
+      "explanation": {
+        "correct": "The VPN extends the trust boundary to the endpoint. NAC-style posture assessment, with quarantine or remediation for non-compliant devices, manages the risk from unmanaged personal laptops, ideally backed by a policy for personal devices.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Stronger encryption protects data in transit but does not reduce risk from compromised endpoints."
+          },
+          {
+            "option": 2,
+            "why": "A longer timeout increases exposure of authenticated sessions."
+          },
+          {
+            "option": 3,
+            "why": "Awareness helps but is a weaker preventive control than technical enforcement."
+          }
+        ]
+      },
+      "tags": [
+        "manager-mindset",
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d4-sub03-015",
+      "domain": 4,
+      "subdomain": "4.3",
+      "difficulty": 3,
+      "stem": "Attackers send mail displaying the organisation domain in the visible From address. SPF passes because the message uses an attacker-owned envelope domain. Which action BEST stops this spoofing?",
+      "options": [
+        "Tighten the SPF record to a hard fail for the organisation domain",
+        "Publish a DMARC quarantine or reject policy requiring From alignment",
+        "Enable mandatory TLS on the organisation's outbound mail server",
+        "Add DKIM signing for internal mailboxes but not external mail"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which address does SPF check, and which one does the user see?",
+        "Which mechanism links the authenticated domain to the visible From domain?"
+      ],
+      "explanation": {
+        "correct": "SPF validates the envelope (MAIL FROM) domain, so it can pass while the visible From is forged. DMARC requires SPF or DKIM to align with the From domain and lets the owner instruct receivers to reject failures.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "SPF validates the envelope sender, so a stricter record for the organisation domain does not affect attacker-owned envelope domains."
+          },
+          {
+            "option": 2,
+            "why": "TLS protects mail in transit between servers and does not authenticate the From domain."
+          },
+          {
+            "option": 3,
+            "why": "Signing internal mail does not prevent receivers from accepting spoofed external mail."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f-d4-sub01-001",
+      "domain": 4,
+      "subdomain": "4.1",
+      "front": "OSI layers 1 to 7 in order",
+      "back": "1 Physical, 2 Data Link, 3 Network, 4 Transport, 5 Session, 6 Presentation, 7 Application (Please Do Not Throw Sausage Pizza Away).",
+      "whyItMatters": "Many questions give a layer number or name and expect the other."
+    },
+    {
+      "id": "f-d4-sub01-002",
+      "domain": 4,
+      "subdomain": "4.1",
+      "front": "PDU name at each OSI layer (1 to 4, and 5 to 7)",
+      "back": "1 bits, 2 frame, 3 packet, 4 segment (TCP) or datagram (UDP), 5-7 data.",
+      "whyItMatters": "Exams ask which PDU a device or attack works on."
+    },
+    {
+      "id": "f-d4-sub01-003",
+      "domain": 4,
+      "subdomain": "4.1",
+      "front": "Data Link layer sublayers and addressing",
+      "back": "LLC (Logical Link Control) on top, MAC (Media Access Control) below. Uses 48-bit MAC addresses; switches and bridges operate here.",
+      "whyItMatters": "Switch vs router vs hub questions rely on this."
+    },
+    {
+      "id": "f-d4-sub01-004",
+      "domain": 4,
+      "subdomain": "4.1",
+      "front": "TCP vs UDP",
+      "back": "TCP: connection-oriented, reliable, sequenced, three-way handshake. UDP: connectionless, best-effort, low overhead (DNS, VoIP media, streaming).",
+      "whyItMatters": "Frequently tested distinction at Layer 4."
+    },
+    {
+      "id": "f-d4-sub01-005",
+      "domain": 4,
+      "subdomain": "4.1",
+      "front": "TCP three-way handshake",
+      "back": "SYN, then SYN-ACK, then ACK. A SYN flood leaves connections half-open to exhaust server resources.",
+      "whyItMatters": "Links the handshake to SYN flood DoS questions."
+    },
+    {
+      "id": "f-d4-sub01-006",
+      "domain": 4,
+      "subdomain": "4.1",
+      "front": "TCP/IP model layers and OSI mapping",
+      "back": "Four layers: Link (OSI 1-2), Internet (OSI 3), Transport (OSI 4), Application (OSI 5-7).",
+      "whyItMatters": "Exam may ask where a protocol sits in the TCP/IP model."
+    },
+    {
+      "id": "f-d4-sub01-007",
+      "domain": 4,
+      "subdomain": "4.1",
+      "front": "Ports: FTP, SSH, Telnet",
+      "back": "FTP 20 (data) and 21 (control); SSH 22; Telnet 23 (clear text).",
+      "whyItMatters": "Port and clear-text vs encrypted questions are common."
+    },
+    {
+      "id": "f-d4-sub01-008",
+      "domain": 4,
+      "subdomain": "4.1",
+      "front": "Ports: SMTP, POP3, IMAP",
+      "back": "SMTP 25 (587 submission), POP3 110 (995 with TLS), IMAP 143 (993 with TLS).",
+      "whyItMatters": "Email protocol ports and secure variants appear regularly."
+    },
+    {
+      "id": "f-d4-sub01-009",
+      "domain": 4,
+      "subdomain": "4.1",
+      "front": "Ports: DNS, DHCP, SNMP",
+      "back": "DNS 53 (UDP queries, TCP for zone transfers); DHCP UDP 67 server and 68 client; SNMP UDP 161 and traps 162.",
+      "whyItMatters": "Zone transfer on TCP 53 is a common trap."
+    },
+    {
+      "id": "f-d4-sub01-010",
+      "domain": 4,
+      "subdomain": "4.1",
+      "front": "Ports: HTTP, HTTPS, LDAP, LDAPS, RDP",
+      "back": "HTTP 80, HTTPS 443, LDAP 389, LDAPS 636, RDP 3389.",
+      "whyItMatters": "Secure vs insecure port pairs show up in scenario questions."
+    },
+    {
+      "id": "f-d4-sub01-011",
+      "domain": 4,
+      "subdomain": "4.1",
+      "front": "IPv6 facts",
+      "back": "128-bit addresses written in hexadecimal; no broadcast (uses multicast/anycast). IPsec support was originally mandatory but is now only recommended (RFC 6434).",
+      "whyItMatters": "Differences from IPv4 (32-bit) are tested."
+    },
+    {
+      "id": "f-d4-sub01-012",
+      "domain": 4,
+      "subdomain": "4.1",
+      "front": "NIST SP 800-207 zero trust components",
+      "back": "Policy decision point (policy engine plus policy administrator) decides; policy enforcement point enforces. Assume breach; no implicit trust from network location.",
+      "whyItMatters": "Defines the vocabulary used for zero trust questions."
+    },
+    {
+      "id": "f-d4-sub01-013",
+      "domain": 4,
+      "subdomain": "4.1",
+      "front": "SDN planes",
+      "back": "Control plane (decisions, centralised in the controller) is separated from the data plane (forwarding). Controllers talk southbound to devices (e.g. OpenFlow) and northbound to apps.",
+      "whyItMatters": "SDN architecture and its controller risk are examinable."
+    },
+    {
+      "id": "f-d4-sub01-014",
+      "domain": 4,
+      "subdomain": "4.1",
+      "front": "VLAN standard and purpose",
+      "back": "IEEE 802.1Q tags frames to create logical Layer 2 segments; inter-VLAN traffic needs a Layer 3 device. Mitigate VLAN hopping with unused native VLAN and no DTP.",
+      "whyItMatters": "Segmentation and VLAN attack mitigations are exam favourites."
+    },
+    {
+      "id": "f-d4-sub02-001",
+      "domain": 4,
+      "subdomain": "4.2",
+      "front": "Firewall generations",
+      "back": "Common order: 1 packet filter, 2 stateful inspection, 3 application-layer proxy, 4 dynamic packet filter, 5 kernel proxy (some texts put the proxy before stateful). NGFW adds app awareness, IPS, identity.",
+      "whyItMatters": "Exam asks which generation or layer a firewall type works at."
+    },
+    {
+      "id": "f-d4-sub02-002",
+      "domain": 4,
+      "subdomain": "4.2",
+      "front": "Circuit-level proxy vs application-level proxy",
+      "back": "Circuit-level (e.g. SOCKS, around Layer 5) validates sessions without inspecting content; application proxy (Layer 7) inspects content per protocol.",
+      "whyItMatters": "Distinguishing proxies by layer is tested."
+    },
+    {
+      "id": "f-d4-sub02-003",
+      "domain": 4,
+      "subdomain": "4.2",
+      "front": "IDS/IPS types by location and method",
+      "back": "NIDS watches network segments; HIDS watches a single host. Methods: signature-based (known), anomaly/behaviour-based (unknown, more false positives).",
+      "whyItMatters": "Placement and detection method questions are common."
+    },
+    {
+      "id": "f-d4-sub02-004",
+      "domain": 4,
+      "subdomain": "4.2",
+      "front": "Forward proxy vs reverse proxy",
+      "back": "Forward proxy fronts clients going out to the internet; reverse proxy fronts servers receiving inbound requests (hides servers, TLS termination, caching).",
+      "whyItMatters": "Direction of protection is the usual trap."
+    },
+    {
+      "id": "f-d4-sub02-005",
+      "domain": 4,
+      "subdomain": "4.2",
+      "front": "Honeypot vs honeynet vs darknet",
+      "back": "Honeypot: decoy system. Honeynet: network of honeypots. Darknet: unused address space that should receive no legitimate traffic. Beware enticement vs entrapment.",
+      "whyItMatters": "Deception tools appear with legal considerations."
+    },
+    {
+      "id": "f-d4-sub02-006",
+      "domain": 4,
+      "subdomain": "4.2",
+      "front": "IEEE 802.1X roles",
+      "back": "Supplicant (client), authenticator (switch/AP), authentication server (usually RADIUS). Port-based network access control.",
+      "whyItMatters": "Needed to answer NAC and enterprise Wi-Fi questions."
+    },
+    {
+      "id": "f-d4-sub02-007",
+      "domain": 4,
+      "subdomain": "4.2",
+      "front": "EAP variants",
+      "back": "EAP-TLS: client and server certificates. PEAP and EAP-TTLS: server certificate, tunnel carries client credentials. LEAP: weak, Cisco proprietary. EAP-FAST: PAC-based.",
+      "whyItMatters": "Which EAP method is strongest or needs a client PKI is common."
+    },
+    {
+      "id": "f-d4-sub02-008",
+      "domain": 4,
+      "subdomain": "4.2",
+      "front": "Wi-Fi security protocol progression",
+      "back": "WEP: RC4 with 24-bit IV, broken. WPA: TKIP/RC4. WPA2: AES-CCMP. WPA3: SAE handshake, forward secrecy, 192-bit enterprise suite.",
+      "whyItMatters": "Choosing the most secure wireless standard is tested."
+    },
+    {
+      "id": "f-d4-sub02-009",
+      "domain": 4,
+      "subdomain": "4.2",
+      "front": "Common Wi-Fi attacks",
+      "back": "Evil twin (fake AP with same SSID), rogue AP (unauthorised AP on the network), deauthentication attack, WPS PIN brute force, war driving.",
+      "whyItMatters": "Rogue vs evil twin wording is exam material."
+    },
+    {
+      "id": "f-d4-sub02-010",
+      "domain": 4,
+      "subdomain": "4.2",
+      "front": "Bluetooth attacks",
+      "back": "Bluejacking: sending unsolicited messages. Bluesnarfing: stealing data. Bluebugging: taking control of the device.",
+      "whyItMatters": "Distinguishing the three is a classic question."
+    },
+    {
+      "id": "f-d4-sub02-011",
+      "domain": 4,
+      "subdomain": "4.2",
+      "front": "Hub vs bridge vs switch vs router",
+      "back": "Hub (L1, repeats), bridge/switch (L2, MAC), router and Layer 3 switch (L3, IP), gateway (can translate across protocol layers).",
+      "whyItMatters": "Device-to-layer mapping appears constantly."
+    },
+    {
+      "id": "f-d4-sub02-012",
+      "domain": 4,
+      "subdomain": "4.2",
+      "front": "Network Access Control posture assessment",
+      "back": "NAC checks device health (patches, AV, config) before granting access and can quarantine failures into a remediation VLAN.",
+      "whyItMatters": "Endpoint compliance scenarios point to NAC."
+    },
+    {
+      "id": "f-d4-sub02-013",
+      "domain": 4,
+      "subdomain": "4.2",
+      "front": "RADIUS vs TACACS+ vs Diameter",
+      "back": "RADIUS: UDP 1812/1813, encrypts only password. TACACS+: TCP 49, encrypts full payload, separates AAA. Diameter: successor to RADIUS, TCP/SCTP.",
+      "whyItMatters": "Protocol selection for AAA is tested."
+    },
+    {
+      "id": "f-d4-sub03-001",
+      "domain": 4,
+      "subdomain": "4.3",
+      "front": "AH vs ESP",
+      "back": "AH (IP protocol 51): integrity and authentication, no encryption. ESP (protocol 50): confidentiality plus optional integrity and authentication.",
+      "whyItMatters": "Core IPsec distinction."
+    },
+    {
+      "id": "f-d4-sub03-002",
+      "domain": 4,
+      "subdomain": "4.3",
+      "front": "IPsec transport vs tunnel mode",
+      "back": "Transport: protects payload only, host-to-host. Tunnel: protects the whole original packet inside a new IP header, gateway-to-gateway.",
+      "whyItMatters": "Mode selection by use case is regularly tested."
+    },
+    {
+      "id": "f-d4-sub03-003",
+      "domain": 4,
+      "subdomain": "4.3",
+      "front": "IKE and NAT traversal ports",
+      "back": "IKE uses UDP 500; NAT traversal encapsulates ESP in UDP 4500. AH breaks under NAT because it covers the IP header.",
+      "whyItMatters": "Explains AH vs NAT scenarios."
+    },
+    {
+      "id": "f-d4-sub03-004",
+      "domain": 4,
+      "subdomain": "4.3",
+      "front": "Legacy VPN protocols",
+      "back": "PPTP: TCP 1723, weak. L2TP: UDP 1701, no encryption by itself, used with IPsec. L2F: Cisco, predecessor to L2TP.",
+      "whyItMatters": "Identifying weak or unencrypted tunnelling protocols."
+    },
+    {
+      "id": "f-d4-sub03-005",
+      "domain": 4,
+      "subdomain": "4.3",
+      "front": "TLS facts",
+      "back": "TLS succeeded SSL (SSL 2.0/3.0 deprecated). Handshake uses asymmetric cryptography/key agreement, then a symmetric session key. TLS 1.3 removes legacy ciphers and mandates forward secrecy.",
+      "whyItMatters": "TLS versions and key usage are heavily tested."
+    },
+    {
+      "id": "f-d4-sub03-006",
+      "domain": 4,
+      "subdomain": "4.3",
+      "front": "SPF, DKIM and DMARC",
+      "back": "SPF: authorised sending IPs (envelope sender). DKIM: digital signature verified via DNS public key. DMARC: policy (none/quarantine/reject), alignment and reporting. All use DNS TXT records.",
+      "whyItMatters": "Email authentication trio is a modern exam topic."
+    },
+    {
+      "id": "f-d4-sub03-007",
+      "domain": 4,
+      "subdomain": "4.3",
+      "front": "S/MIME vs PGP",
+      "back": "S/MIME: hierarchical PKI with X.509 certificates. PGP: web of trust. Both provide message signing and encryption.",
+      "whyItMatters": "Trust model difference is tested."
+    },
+    {
+      "id": "f-d4-sub03-008",
+      "domain": 4,
+      "subdomain": "4.3",
+      "front": "VoIP protocols and ports",
+      "back": "SIP signalling UDP/TCP 5060 (TLS 5061); RTP carries media; SRTP encrypts it. Threats: eavesdropping, vishing, SPIT, toll fraud.",
+      "whyItMatters": "VoIP control selection questions appear."
+    },
+    {
+      "id": "f-d4-sub03-009",
+      "domain": 4,
+      "subdomain": "4.3",
+      "front": "DNSSEC",
+      "back": "Adds digital signatures to DNS records for origin authentication and integrity; it does NOT encrypt queries or provide confidentiality.",
+      "whyItMatters": "Distinguishes integrity from confidentiality in DNS."
+    },
+    {
+      "id": "f-d4-sub03-010",
+      "domain": 4,
+      "subdomain": "4.3",
+      "front": "Remote access: split vs full tunnel",
+      "back": "Split tunnel sends only corporate traffic through the VPN (internet bypasses inspection, risk of pivoting). Full tunnel sends everything through the VPN.",
+      "whyItMatters": "VPN configuration risk questions."
+    },
+    {
+      "id": "f-d4-sub03-011",
+      "domain": 4,
+      "subdomain": "4.3",
+      "front": "MPLS and VPN types",
+      "back": "MPLS labels packets for fast forwarding between sites, sits between L2 and L3. Site-to-site VPN links networks; remote-access VPN links users.",
+      "whyItMatters": "Wide area connectivity and VPN types."
+    }
+  ]
+}

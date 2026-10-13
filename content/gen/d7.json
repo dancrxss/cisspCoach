@@ -1,0 +1,2292 @@
+{
+ "questions": [
+  {
+   "id": "q-d7-sub01-001",
+   "domain": 7,
+   "subdomain": "7.1",
+   "difficulty": 1,
+   "stem": "During a forensic investigation, which of the following should be collected FIRST according to the order of volatility?",
+   "options": [
+    "System memory (RAM) contents",
+    "Contents of the local hard disk",
+    "Archived offsite backup media",
+    "Printed configuration documents"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Which of these sources of evidence would be lost soonest if the system were powered off?",
+    "Does the order of collection run from the most stable data to the least stable, or the reverse?"
+   ],
+   "explanation": {
+    "correct": "The order of volatility says to collect the most perishable evidence first: CPU registers and cache, then RAM, network state, running processes, then disk, remote logs and finally archival media. Memory is lost when power is removed, so it comes before disk.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Disk data persists without power, so it is less volatile than memory and can be collected after RAM."
+     },
+     {
+      "option": 2,
+      "why": "Archives are among the least volatile sources and can safely wait until later in collection."
+     },
+     {
+      "option": 3,
+      "why": "Paper records are stable and are collected after volatile electronic data."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub01-002",
+   "domain": 7,
+   "subdomain": "7.1",
+   "difficulty": 2,
+   "stem": "A security analyst seizes a suspect laptop and leaves it on an unattended desk overnight before handing it to the forensic examiner, with no record of who handled it. What is the PRIMARY risk created?",
+   "options": [
+    "The stored data will be overwritten while the laptop sits idle",
+    "The evidence may be excluded as its integrity cannot be shown",
+    "The suspect may be entitled to have the charges dismissed",
+    "The examiner will no longer be able to hash the drive"
+   ],
+   "correct": 1,
+   "ladder": [
+    "What must a court be convinced of before it will accept a piece of evidence?",
+    "Which documented record shows who held the evidence, when, and what they did with it?"
+   ],
+   "explanation": {
+    "correct": "Chain of custody documents every person who handled evidence, when, where and why. A gap lets the opposing side argue the evidence was altered, putting its admissibility and weight at risk.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Unattended storage does not overwrite data on its own; the issue is provability, not data loss."
+     },
+     {
+      "option": 2,
+      "why": "A gap in custody weakens the evidence but does not by itself dismiss a case against the suspect."
+     },
+     {
+      "option": 3,
+      "why": "Hashing is still technically possible; the problem is that nobody can show the original was untouched."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub01-003",
+   "domain": 7,
+   "subdomain": "7.1",
+   "difficulty": 1,
+   "stem": "What is the PRIMARY purpose of calculating a cryptographic hash of a disk when a forensic image is acquired?",
+   "options": [
+    "To encrypt the image so it can be transported securely",
+    "To recover files the user had deleted from the disk",
+    "To prove the image is unchanged since acquisition",
+    "To identify which person created the stored files"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Which security property is being demonstrated when two hash values match?",
+    "Is the aim to hide the evidence, find more of it, or show it was not altered?"
+   ],
+   "explanation": {
+    "correct": "A hash taken at acquisition and compared later demonstrates the evidence has not been modified, supporting integrity and admissibility. Examiners work on verified copies while the original is preserved.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Hashing is one-way and does not provide confidentiality; encryption is a separate control."
+     },
+     {
+      "option": 1,
+      "why": "Hashing verifies integrity and does not restore deleted data."
+     },
+     {
+      "option": 3,
+      "why": "A hash identifies content, not an author or owner."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub01-004",
+   "domain": 7,
+   "subdomain": "7.1",
+   "difficulty": 2,
+   "stem": "In a civil lawsuit arising from a data breach, which standard of proof normally applies?",
+   "options": [
+    "Beyond a reasonable doubt",
+    "Clear and convincing evidence",
+    "Probable cause standard",
+    "Preponderance of the evidence"
+   ],
+   "correct": 3,
+   "ladder": [
+    "Are civil cases decided on the same burden as criminal prosecutions?",
+    "Which standard simply asks whether something is more likely true than not?"
+   ],
+   "explanation": {
+    "correct": "Civil matters use preponderance of the evidence (more likely than not). Criminal cases require proof beyond a reasonable doubt, which is why investigators handling criminal matters must be especially rigorous with evidence handling.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "This is the higher criminal standard and is not required in civil cases."
+     },
+     {
+      "option": 1,
+      "why": "This intermediate standard is used only for certain claims, such as fraud allegations in some jurisdictions; the normal civil burden is the lower more-likely-than-not test."
+     },
+     {
+      "option": 2,
+      "why": "Probable cause governs searches and arrests, not the burden of proof at trial."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub01-005",
+   "domain": 7,
+   "subdomain": "7.1",
+   "difficulty": 3,
+   "stem": "A security manager finds evidence on an employee workstation suggesting internal fraud. A system administrator offers to quickly browse the files on the live machine to confirm. What should the manager do FIRST?",
+   "options": [
+    "Secure the system and engage legal counsel and forensic staff",
+    "Let the administrator review the files to confirm the suspicion",
+    "Reimage the workstation so the suspicious files are removed",
+    "Confront the employee at once to obtain a quick admission"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Is the immediate goal to prove the fraud quickly or to protect the organisation's ability to act on it later?",
+    "Who should be directing how evidence is touched when legal action is possible?",
+    "Which options change the state of the machine before it has been preserved?"
+   ],
+   "explanation": {
+    "correct": "When misconduct may lead to legal action, the manager preserves the scene and engages legal counsel and forensic specialists so evidence is collected in a defensible way. Speed is secondary to preserving admissible evidence.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Browsing a live system alters timestamps and may contaminate evidence, and the administrator is not a trained examiner."
+     },
+     {
+      "option": 2,
+      "why": "Reimaging destroys the evidence needed for any disciplinary or legal action."
+     },
+     {
+      "option": 3,
+      "why": "This alerts the suspect, risks evidence destruction, and bypasses legal and HR process."
+     }
+    ]
+   },
+   "tags": [
+    "manager-mindset",
+    "scenario"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub02-001",
+   "domain": 7,
+   "subdomain": "7.2",
+   "difficulty": 1,
+   "stem": "What is the PRIMARY function of a security information and event management (SIEM) system?",
+   "options": [
+    "Block malicious traffic inline at the network perimeter",
+    "Correlate logs from many sources to raise alerts",
+    "Encrypt and archive the log files stored on endpoints",
+    "Patch vulnerable systems automatically as flaws are found"
+   ],
+   "correct": 1,
+   "ladder": [
+    "Does a SIEM act on traffic itself, or does it consume data produced by other systems?",
+    "What value comes from seeing events from many devices in one place?"
+   ],
+   "explanation": {
+    "correct": "A SIEM collects, normalises and correlates logs and events from many systems so patterns invisible in a single log can trigger alerts and support investigation and reporting.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Inline blocking is the role of an IPS or firewall, not a SIEM."
+     },
+     {
+      "option": 2,
+      "why": "Encryption protects confidentiality; it is not what a SIEM is for."
+     },
+     {
+      "option": 3,
+      "why": "Patch deployment is handled by patch management tooling."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub02-002",
+   "domain": 7,
+   "subdomain": "7.2",
+   "difficulty": 2,
+   "stem": "An attacker with administrative rights on a server clears the local logs to cover their activity. Which control would BEST have preserved the evidence?",
+   "options": [
+    "Increasing the size of the local log files on each server",
+    "Encrypting the local log files with a strong cipher",
+    "Sending logs in real time to a protected log server",
+    "Having administrators review local logs once every day"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Which options stop an administrator on the host from altering the record, and which do not?",
+    "Does the option change where the record lives, or only its size, privacy or review?"
+   ],
+   "explanation": {
+    "correct": "Logs held only on the host are exposed to anyone who controls it. Sending them promptly to a separate, access-restricted collector (ideally write-once) protects log integrity and supports accountability.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "A larger file does not stop an administrator from deleting it."
+     },
+     {
+      "option": 1,
+      "why": "Encryption does not stop deletion by someone with administrative rights."
+     },
+     {
+      "option": 3,
+      "why": "Review is detective and would still find nothing after logs are cleared."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub02-003",
+   "domain": 7,
+   "subdomain": "7.2",
+   "difficulty": 2,
+   "stem": "What is the purpose of a clipping level in audit log monitoring?",
+   "options": [
+    "To remove the oldest entries once the log reaches a size limit",
+    "To mask sensitive fields in each of the log entries",
+    "To prevent privileged users from viewing the audit logs",
+    "To set a threshold of acceptable errors before alerting"
+   ],
+   "correct": 3,
+   "ladder": [
+    "Why would a monitoring team not want an alert on a single mistyped password?",
+    "What kind of value separates normal noise from suspicious volume?"
+   ],
+   "explanation": {
+    "correct": "A clipping level is a baseline threshold, such as three failed logins, below which events are treated as normal errors. Crossing it triggers an alert and reduces noise.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "That describes log rotation, not clipping levels."
+     },
+     {
+      "option": 1,
+      "why": "Clipping levels have nothing to do with encryption or masking."
+     },
+     {
+      "option": 2,
+      "why": "Access to logs is controlled by permissions, not clipping levels."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub02-004",
+   "domain": 7,
+   "subdomain": "7.2",
+   "difficulty": 3,
+   "stem": "A SIEM generates thousands of alerts daily, and analysts are missing genuine incidents. Management proposes hiring more analysts. What should the security manager do FIRST?",
+   "options": [
+    "Tune correlation rules to focus on the highest risks",
+    "Disable all low-severity rules to cut the alert volume",
+    "Buy more log storage so every alert can be retained",
+    "Send all alerts to the system owners for triage"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Is the problem a shortage of people, or the quality of what reaches them?",
+    "Which action improves signal-to-noise using knowledge of the organisation's risks?",
+    "Which options simply move or store the noise rather than reduce it?"
+   ],
+   "explanation": {
+    "correct": "Alert fatigue is a tuning and process issue. The manager should improve the monitoring programme by aligning rules to risk and known use cases before adding resources, so analysts see meaningful events.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Low-severity events can be early indicators; disabling them wholesale is not based on risk."
+     },
+     {
+      "option": 2,
+      "why": "Storage does not address analyst overload or alert quality."
+     },
+     {
+      "option": 3,
+      "why": "This pushes the problem onto people without security context and does not improve detection."
+     }
+    ]
+   },
+   "tags": [
+    "manager-mindset",
+    "scenario"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub03-001",
+   "domain": 7,
+   "subdomain": "7.3",
+   "difficulty": 1,
+   "stem": "What is a configuration baseline?",
+   "options": [
+    "A list of every asset owned by the organisation",
+    "An approved set of settings used as a reference",
+    "The default settings the vendor ships with a product",
+    "The output produced by the latest vulnerability scan"
+   ],
+   "correct": 1,
+   "ladder": [
+    "What do you compare a system against to know whether it has drifted?",
+    "Who approves what counts as the standard state?"
+   ],
+   "explanation": {
+    "correct": "A baseline is the approved secure configuration against which systems are built, measured and changes are assessed. It underpins configuration management and change control.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "That describes an asset inventory, not a configuration baseline."
+     },
+     {
+      "option": 2,
+      "why": "Defaults are often insecure and are not necessarily approved by the organisation."
+     },
+     {
+      "option": 3,
+      "why": "A scan reports findings; it is not an approved standard."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub03-002",
+   "domain": 7,
+   "subdomain": "7.3",
+   "difficulty": 2,
+   "stem": "A scan shows that several production servers no longer match their approved baseline because of undocumented local changes. Which response is MOST appropriate?",
+   "options": [
+    "Rely on a yearly manual audit of every production server",
+    "Accept the current settings as the new approved baseline",
+    "Automate drift detection and restore under change control",
+    "Allow local administrators to adjust settings as they need"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Which approach keeps the approved standard authoritative rather than the current state?",
+    "How can deviations be found quickly and consistently across many servers?"
+   ],
+   "explanation": {
+    "correct": "Automated tools continuously compare systems with the baseline and remediate drift, while any legitimate change goes through change management so the baseline is updated deliberately.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "An annual check lets drift persist for months and does not scale."
+     },
+     {
+      "option": 1,
+      "why": "Accepting unapproved changes as the standard bypasses review and may bake in weaknesses."
+     },
+     {
+      "option": 3,
+      "why": "This causes the very drift that undermines consistency and security."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub04-001",
+   "domain": 7,
+   "subdomain": "7.4",
+   "difficulty": 1,
+   "stem": "What is the PRIMARY purpose of mandatory vacations for employees in sensitive positions?",
+   "options": [
+    "To reduce employee burnout and raise overall staff morale",
+    "To cross-train staff so others can cover each role",
+    "To satisfy employment law requirements for time off",
+    "To expose fraud as another person performs the duties"
+   ],
+   "correct": 3,
+   "ladder": [
+    "What might a replacement discover while covering for someone who is absent?",
+    "Is this a preventive control, or does it mainly help uncover wrongdoing?"
+   ],
+   "explanation": {
+    "correct": "Mandatory vacation (and job rotation) is a detective control: while the person is away, irregularities or fraud they were concealing can surface when someone else handles their work.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Wellbeing is a benefit, but the security purpose is detection of irregularities."
+     },
+     {
+      "option": 1,
+      "why": "Cross-training relates to job rotation and resilience, not the primary rationale for mandatory leave."
+     },
+     {
+      "option": 2,
+      "why": "Mandatory vacation as a control is a security choice, not a legal requirement in itself."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub04-002",
+   "domain": 7,
+   "subdomain": "7.4",
+   "difficulty": 2,
+   "stem": "To recover an encryption master key, two custodians must each enter their own half of the passphrase at the same time. This is BEST described as which control?",
+   "options": [
+    "Dual control with split knowledge",
+    "Job rotation between administrators",
+    "Need to know access restriction",
+    "Non-repudiation of administrator actions"
+   ],
+   "correct": 0,
+   "ladder": [
+    "How many people are required to complete this single sensitive action?",
+    "Does any one person hold the entire secret?"
+   ],
+   "explanation": {
+    "correct": "Split knowledge means no one has the complete secret; dual control means two people must act together. Together they prevent a single individual from compromising a critical function.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Job rotation moves staff between roles over time and does not split a single secret."
+     },
+     {
+      "option": 2,
+      "why": "Need to know limits access to information, not how many people must act together."
+     },
+     {
+      "option": 3,
+      "why": "Non-repudiation prevents denial of an action; it is not a method of requiring multiple people."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub04-003",
+   "domain": 7,
+   "subdomain": "7.4",
+   "difficulty": 2,
+   "stem": "Users who transfer between departments in an organisation are found to retain access from earlier roles. Which control BEST detects and corrects this?",
+   "options": [
+    "A stronger password complexity policy",
+    "Periodic access reviews by data owners",
+    "Single sign-on for all applications",
+    "More verbose logging on file servers"
+   ],
+   "correct": 1,
+   "ladder": [
+    "What is the name for rights that accumulate as people change jobs?",
+    "Who is best placed to say whether a user still needs a given permission?"
+   ],
+   "explanation": {
+    "correct": "Privilege creep is corrected by regular access recertification where owners and managers confirm each entitlement is still required, supporting least privilege and separation of duties.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Passwords protect authentication and do nothing about excess entitlements."
+     },
+     {
+      "option": 2,
+      "why": "SSO simplifies login but does not remove accumulated rights."
+     },
+     {
+      "option": 3,
+      "why": "Logging records activity but does not identify or remove unneeded access."
+     }
+    ]
+   },
+   "tags": [
+    "manager-mindset",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub05-001",
+   "domain": 7,
+   "subdomain": "7.5",
+   "difficulty": 1,
+   "stem": "A magnetic hard drive holding highly sensitive data is being retired and will never be reused. Which sanitization method provides the GREATEST assurance?",
+   "options": [
+    "A single-pass overwrite of the whole drive",
+    "Deleting the files and emptying the recycle bin",
+    "Physical destruction of the drive by shredding",
+    "Quick formatting the drive before disposal"
+   ],
+   "correct": 2,
+   "ladder": [
+    "If the drive will never be reused, what is the most certain way to ensure data cannot be recovered?",
+    "Which options leave the data physically on the platters?"
+   ],
+   "explanation": {
+    "correct": "For highly sensitive media that will not be reused, destruction (shredding, pulverising, incineration) gives the highest assurance. Clear and purge are suitable only when media is kept or reused.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Overwriting can leave residual data in some situations and offers less assurance than destruction."
+     },
+     {
+      "option": 1,
+      "why": "Deletion removes only references, leaving the data recoverable."
+     },
+     {
+      "option": 3,
+      "why": "A quick format does not erase the underlying data."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub05-002",
+   "domain": 7,
+   "subdomain": "7.5",
+   "difficulty": 2,
+   "stem": "An organisation is leaving a cloud provider and cannot physically access the storage hardware that held its encrypted data. Which method BEST supports sanitization?",
+   "options": [
+    "Degaussing the provider's storage arrays on site",
+    "Overwriting the volumes repeatedly from the customer side",
+    "Asking the provider to delete the volumes and trusting them",
+    "Cryptographic erasure by destroying the encryption keys"
+   ],
+   "correct": 3,
+   "ladder": [
+    "If you cannot touch the hardware, what can you make unreadable instead?",
+    "Which method does not depend on how the provider stores blocks?"
+   ],
+   "explanation": {
+    "correct": "Cryptographic erasure (crypto-shredding) renders data unrecoverable by destroying the keys, so it works where physical destruction or reliable overwriting is impossible, as in cloud and SSD environments.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "The customer cannot degauss shared provider hardware, and degaussing does not work on SSDs."
+     },
+     {
+      "option": 1,
+      "why": "Wear levelling and abstraction mean the overwrite may not reach every physical block."
+     },
+     {
+      "option": 2,
+      "why": "Provider deletion without verification gives little assurance of sanitization."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub06-001",
+   "domain": 7,
+   "subdomain": "7.6",
+   "difficulty": 1,
+   "stem": "In the incident management lifecycle, which phase comes immediately AFTER mitigation?",
+   "options": [
+    "Reporting",
+    "Recovery",
+    "Remediation",
+    "Lessons learned"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Can you recall the ISC2 sequence beginning detection, response, mitigation?",
+    "After containment, which step does the sequence place before systems are restored?"
+   ],
+   "explanation": {
+    "correct": "The ISC2 phases run: detection, response, mitigation, reporting, recovery, remediation, lessons learned. Reporting follows mitigation, once the incident is contained.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Recovery follows reporting in the ISC2 sequence."
+     },
+     {
+      "option": 2,
+      "why": "Remediation comes after recovery, to fix root causes."
+     },
+     {
+      "option": 3,
+      "why": "Lessons learned is the final phase of the lifecycle."
+     }
+    ]
+   },
+   "tags": [
+    "ordering"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub06-002",
+   "domain": 7,
+   "subdomain": "7.6",
+   "difficulty": 1,
+   "stem": "A SOC confirms ransomware is spreading and isolates the affected hosts from the network to stop it. In which phase is this action taken?",
+   "options": [
+    "Detection",
+    "Mitigation",
+    "Remediation",
+    "Recovery"
+   ],
+   "correct": 1,
+   "ladder": [
+    "Has the incident already been identified, and is it still active?",
+    "Which phase has the goal of containing the scope and impact of an active incident?"
+   ],
+   "explanation": {
+    "correct": "Mitigation is the containment phase: limiting the scope and impact of the incident, for example by isolating hosts or disabling accounts. It follows response and precedes reporting and recovery.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Detection is identifying and confirming the event; isolation is a containing action."
+     },
+     {
+      "option": 2,
+      "why": "Remediation addresses root causes after recovery rather than containing spread."
+     },
+     {
+      "option": 3,
+      "why": "Recovery restores systems to normal operation, which comes later."
+     }
+    ]
+   },
+   "tags": [
+    "scenario"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub06-003",
+   "domain": 7,
+   "subdomain": "7.6",
+   "difficulty": 2,
+   "stem": "After an incident has been fully recovered, a review meeting is held. What is the PRIMARY purpose of this lessons learned phase?",
+   "options": [
+    "To assign disciplinary blame to the responsible individuals",
+    "To restore the affected systems to production service",
+    "To identify improvements to future prevention and response",
+    "To meet the mandatory regulatory notification deadlines"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Has the incident already been contained and the systems restored by this point?",
+    "What is the organisation hoping to gain from examining how the incident went?"
+   ],
+   "explanation": {
+    "correct": "Lessons learned analyses what happened, what worked and what did not, feeding improvements to controls, plans and training. It closes the loop on the process.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Reviews are meant to improve the process, not to blame people."
+     },
+     {
+      "option": 1,
+      "why": "Restoration is part of recovery, which has already finished."
+     },
+     {
+      "option": 3,
+      "why": "Notifications belong to the reporting phase and cannot wait for a post-incident review."
+     }
+    ]
+   },
+   "tags": [
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub06-004",
+   "domain": 7,
+   "subdomain": "7.6",
+   "difficulty": 2,
+   "stem": "A compromised web server has been rebuilt from clean backups and is serving customers again. The vulnerable plugin that allowed the intrusion is then patched across all servers. The patching is BEST described as which phase?",
+   "options": [
+    "Recovery",
+    "Mitigation",
+    "Detection",
+    "Remediation"
+   ],
+   "correct": 3,
+   "ladder": [
+    "Which phase returns services to normal, and which deals with the underlying cause?",
+    "Was the incident still active when the plugin was patched, or already contained and recovered?"
+   ],
+   "explanation": {
+    "correct": "Recovery restores operations; remediation then addresses root causes (patching, configuration, control improvements) so the same weakness is not exploited again.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Recovery already took place when the service was restored."
+     },
+     {
+      "option": 1,
+      "why": "Mitigation limits an active incident; here the incident was already contained and recovered."
+     },
+     {
+      "option": 2,
+      "why": "Detection is identifying the incident, which happened at the beginning."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "ordering"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub06-005",
+   "domain": 7,
+   "subdomain": "7.6",
+   "difficulty": 3,
+   "stem": "An intrusion detection alert indicates that a database server may be exfiltrating customer data. What should the security manager do FIRST?",
+   "options": [
+    "Validate the alert and confirm a genuine incident exists",
+    "Notify the regulator and the affected customers now",
+    "Power off the database server to stop the exfiltration",
+    "Forensically image every server in the data centre"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Is the alert already a confirmed incident, or only an indicator?",
+    "Which action is proportionate and prevents both over-reacting and ignoring a real attack?",
+    "Which options commit resources or cause disruption before the facts are known?"
+   ],
+   "explanation": {
+    "correct": "Detection includes triage and verification: determine whether the event is a true incident and its scope according to the plan. Containment, notification and forensics follow once that is established.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Notification is a later step and premature before the incident is confirmed and scoped."
+     },
+     {
+      "option": 2,
+      "why": "Shutting down loses volatile evidence and may cause needless business disruption before confirmation."
+     },
+     {
+      "option": 3,
+      "why": "This is disproportionate and slow without first confirming what is affected."
+     }
+    ]
+   },
+   "tags": [
+    "manager-mindset",
+    "scenario"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub06-006",
+   "domain": 7,
+   "subdomain": "7.6",
+   "difficulty": 3,
+   "stem": "During a major incident, a system owner refuses to let the response team isolate a production server, citing revenue impact, and the team has no authority to override. Which prior action would have BEST prevented this problem?",
+   "options": [
+    "More detailed technical playbooks for the response team",
+    "A management-approved policy granting the team authority",
+    "A larger SIEM deployment with better correlation rules",
+    "Cross-training the team on several additional tools"
+   ],
+   "correct": 1,
+   "ladder": [
+    "Is the obstacle technical capability, or permission to act?",
+    "Who must sign off so that the response team can decide quickly in the middle of an incident?"
+   ],
+   "explanation": {
+    "correct": "Incident response needs senior management sponsorship and a policy that defines roles, authority and escalation. Without it, teams can be blocked by competing business interests when speed matters.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Playbooks guide actions but do not give the authority to act over objections."
+     },
+     {
+      "option": 2,
+      "why": "Better detection does not resolve disputes about authority to contain."
+     },
+     {
+      "option": 3,
+      "why": "Skills do not create authority to override a system owner."
+     }
+    ]
+   },
+   "tags": [
+    "manager-mindset",
+    "scenario"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub07-001",
+   "domain": 7,
+   "subdomain": "7.7",
+   "difficulty": 1,
+   "stem": "Which characteristic BEST distinguishes an intrusion prevention system (IPS) from an intrusion detection system (IDS)?",
+   "options": [
+    "An IPS only analyses copies of the traffic stream",
+    "An IPS cannot use signature-based detection methods",
+    "An IPS sits inline and can block malicious traffic",
+    "An IPS only operates on individual host systems"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Which device sits in the path of traffic and can act on it?",
+    "What does the \"prevention\" in the name imply about the ability to respond?"
+   ],
+   "explanation": {
+    "correct": "An IDS detects and alerts, usually from a passive tap or span port. An IPS sits inline and can drop or reset malicious traffic, at the risk of blocking legitimate traffic if tuned poorly.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Passive monitoring of copies is typical of an IDS."
+     },
+     {
+      "option": 1,
+      "why": "IPS products commonly use signatures as well as anomaly detection."
+     },
+     {
+      "option": 3,
+      "why": "Network-based IPS exists and is common; host placement is not what defines an IPS."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub07-002",
+   "domain": 7,
+   "subdomain": "7.7",
+   "difficulty": 2,
+   "stem": "A security team plans to publicly advertise fake credentials to attract attackers to a honeypot. Which legal concern is GREATEST?",
+   "options": [
+    "It breaches software copyright law",
+    "It leaves data remanence on the honeypot",
+    "It removes non-repudiation from logs",
+    "It could be viewed as entrapment"
+   ],
+   "correct": 3,
+   "ladder": [
+    "What is the difference between making a target available and inducing someone to commit a crime?",
+    "Which option is about how a court might judge the organisation's own conduct?"
+   ],
+   "explanation": {
+    "correct": "Enticement (leaving a system attractive) is generally acceptable, whereas entrapment (inducing a crime) can undermine prosecution and create liability. Actively advertising lures edges toward entrapment.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Copyright is unrelated to a honeypot's lure design."
+     },
+     {
+      "option": 1,
+      "why": "Data remanence concerns residual data on media, not lures."
+     },
+     {
+      "option": 2,
+      "why": "Honeypots do not affect log non-repudiation."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub07-003",
+   "domain": 7,
+   "subdomain": "7.7",
+   "difficulty": 2,
+   "stem": "A kiosk in a public area must run only a small set of approved programs. Which control BEST prevents unknown executables from running?",
+   "options": [
+    "Allowlisting of approved programs",
+    "Signature-based antivirus software",
+    "Host-based intrusion detection",
+    "Full disk encryption of the kiosk"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Is it easier to list what is known good or everything that is bad?",
+    "Which control is preventive and works against software nobody has seen before?"
+   ],
+   "explanation": {
+    "correct": "Allowlisting (default deny) permits only approved applications, so unknown or malicious programs cannot execute. It suits fixed-function systems.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Signatures only catch known malware and cannot block unknown programs."
+     },
+     {
+      "option": 2,
+      "why": "This is detective and would alert after the fact."
+     },
+     {
+      "option": 3,
+      "why": "Encryption protects data at rest, not which programs may run."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub08-001",
+   "domain": 7,
+   "subdomain": "7.8",
+   "difficulty": 1,
+   "stem": "What is the BEST action before deploying a vendor patch to production systems?",
+   "options": [
+    "Deploy immediately to all systems for speed",
+    "Test it in a representative non-production environment",
+    "Wait for other organisations to report issues indefinitely",
+    "Skip testing if the vendor says the patch is critical"
+   ],
+   "correct": 1,
+   "ladder": [
+    "What could go wrong if a patch is installed blind?",
+    "Where can compatibility be checked without affecting customers?"
+   ],
+   "explanation": {
+    "correct": "Patches should be tested, scheduled through change management, deployed with a rollback plan and verified. Testing protects availability while closing vulnerabilities.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Untested patches can cause outages or conflicts."
+     },
+     {
+      "option": 2,
+      "why": "Delaying with no plan leaves systems exposed."
+     },
+     {
+      "option": 3,
+      "why": "Criticality increases urgency but not the need to test."
+     }
+    ]
+   },
+   "tags": [
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub08-002",
+   "domain": 7,
+   "subdomain": "7.8",
+   "difficulty": 2,
+   "stem": "A critical vulnerability is announced in a core application, and no vendor patch exists yet. What should the security manager do?",
+   "options": [
+    "Permanently remove the application from service",
+    "Wait for the vendor patch without taking any action",
+    "Apply compensating controls and track the risk",
+    "Formally accept the risk with no further controls"
+   ],
+   "correct": 2,
+   "ladder": [
+    "If the real fix is unavailable, what can reduce the likelihood or impact in the meantime?",
+    "How should the business view the interim exposure?"
+   ],
+   "explanation": {
+    "correct": "Interim measures such as virtual patching, segmentation, tighter monitoring or disabling the vulnerable feature reduce exposure, while the risk is managed and tracked until a patch is released.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "This is disproportionate and ignores the business need for the application."
+     },
+     {
+      "option": 1,
+      "why": "Doing nothing leaves the organisation exposed during the window of risk."
+     },
+     {
+      "option": 3,
+      "why": "Acceptance without mitigation of a critical risk is not a measured response."
+     }
+    ]
+   },
+   "tags": [
+    "manager-mindset",
+    "scenario"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub08-003",
+   "domain": 7,
+   "subdomain": "7.8",
+   "difficulty": 3,
+   "stem": "A vulnerability scan reports 400 high-severity findings across the estate. How should the security manager prioritise remediation?",
+   "options": [
+    "By the highest CVSS base score first, whatever the asset",
+    "By the oldest open finding first, to clear the backlog",
+    "By the easiest fix first, to close the most findings",
+    "By asset criticality, exploitability and threat context"
+   ],
+   "correct": 3,
+   "ladder": [
+    "Does a score on its own tell you what the vulnerability would mean to this organisation?",
+    "Which factors turn a technical severity into business risk?"
+   ],
+   "explanation": {
+    "correct": "Prioritisation should be risk-based: combine severity with asset value, exposure, exploit availability and threat intelligence. This directs limited effort toward what most reduces risk.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "The base score ignores how important the asset is and whether it is exposed."
+     },
+     {
+      "option": 1,
+      "why": "Age does not equal risk."
+     },
+     {
+      "option": 2,
+      "why": "Ease of fix can help efficiency but does not address the greatest risks first."
+     }
+    ]
+   },
+   "tags": [
+    "manager-mindset",
+    "scenario"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub09-001",
+   "domain": 7,
+   "subdomain": "7.9",
+   "difficulty": 1,
+   "stem": "What is the PRIMARY objective of change management?",
+   "options": [
+    "To keep changes controlled so security is not harmed",
+    "To speed up the deployment of new software releases",
+    "To remove the need for testing before release",
+    "To maintain an inventory of all organisational assets"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Is the process intended to enable changes quickly, or to make them safe and accountable?",
+    "Which outcome would an auditor look for when reviewing the change process?"
+   ],
+   "explanation": {
+    "correct": "Change management requires requests to be documented, assessed for impact (including security), approved, tested, implemented and verified, with rollback available. The aim is protection of stability and security.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Speed is not the goal; control is, and it can slow deployments."
+     },
+     {
+      "option": 2,
+      "why": "Change management requires testing rather than removing it."
+     },
+     {
+      "option": 3,
+      "why": "Asset inventory is related but is not the objective of change management."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub09-002",
+   "domain": 7,
+   "subdomain": "7.9",
+   "difficulty": 2,
+   "stem": "During a production outage, an administrator applies an emergency fix directly without prior approval. What should happen NEXT?",
+   "options": [
+    "Nothing further, because emergencies are exempt from documentation",
+    "The change is documented and reviewed after the event",
+    "The change is immediately rolled back to its previous state",
+    "The administrator is the sole approver of the change record"
+   ],
+   "correct": 1,
+   "ladder": [
+    "Which parts of change control can be delayed in an emergency, and which cannot be skipped?",
+    "Who should review a change that bypassed normal approval?"
+   ],
+   "explanation": {
+    "correct": "Emergency procedures allow expedited action but require after-the-fact documentation, review and approval (for example by the change advisory board) to maintain accountability and update records.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Even emergency changes must be recorded and reviewed afterward."
+     },
+     {
+      "option": 2,
+      "why": "Rolling back could restore the outage; the change should be reviewed, not reflexively removed."
+     },
+     {
+      "option": 3,
+      "why": "Self-approval defeats separation of duties and oversight."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub09-003",
+   "domain": 7,
+   "subdomain": "7.9",
+   "difficulty": 3,
+   "stem": "A software team proposes a change to the authentication module. Which approach BEST ensures security is considered before the change is approved?",
+   "options": [
+    "Test security only after the change has been deployed",
+    "Let the developers self-certify that the change is secure",
+    "Require a security impact analysis before approval",
+    "Have the security manager personally sign every change"
+   ],
+   "correct": 2,
+   "ladder": [
+    "At what point in the process is it cheapest to find a security problem?",
+    "Does the answer build analysis into the process, or just add an approver?"
+   ],
+   "explanation": {
+    "correct": "A mandatory security impact analysis before approval gives decision-makers risk information when it matters. Security becomes an input to the decision rather than an afterthought.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Finding issues post-deployment is costly and exposes production."
+     },
+     {
+      "option": 1,
+      "why": "Self-certification lacks independent review."
+     },
+     {
+      "option": 3,
+      "why": "This does not scale and focuses on a signature rather than analysis."
+     }
+    ]
+   },
+   "tags": [
+    "manager-mindset",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub10-001",
+   "domain": 7,
+   "subdomain": "7.10",
+   "difficulty": 1,
+   "stem": "Which recovery site is fully equipped, has current data mirrored from production, and can take over within minutes to hours?",
+   "options": [
+    "Warm site",
+    "Cold site",
+    "Mobile site",
+    "Hot site"
+   ],
+   "correct": 3,
+   "ladder": [
+    "What levels of readiness can a recovery site have, from empty space to fully equipped?",
+    "Which readiness levels need data restored from backup, and which do not?"
+   ],
+   "explanation": {
+    "correct": "A hot site is ready to operate with current data, giving the shortest recovery time and the highest cost. Warm and cold sites trade longer recovery for lower cost.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "A warm site has hardware but lacks current data and needs time to be brought up."
+     },
+     {
+      "option": 1,
+      "why": "A cold site offers space and utilities only, with equipment and data to be brought in."
+     },
+     {
+      "option": 2,
+      "why": "A mobile site is a transportable unit and does not by definition hold mirrored data."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub10-002",
+   "domain": 7,
+   "subdomain": "7.10",
+   "difficulty": 1,
+   "stem": "A critical application has a recovery time objective of 72 hours. A hot site is too costly. Which option BEST balances cost and recovery requirements?",
+   "options": [
+    "A warm site, restoring data from backups on arrival",
+    "A hot site with real-time data replication in place",
+    "A cold site with only floor space and utilities",
+    "A reciprocal agreement with a competing company"
+   ],
+   "correct": 0,
+   "ladder": [
+    "How quickly must the application be running again?",
+    "Given a 72-hour RTO, which options recover faster than needed and which cannot meet it?"
+   ],
+   "explanation": {
+    "correct": "Matching the recovery strategy to the RTO avoids overspending. A warm site with hardware in place can usually be brought online within days with data restored from backups.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "This exceeds the requirement and the stated cost limit."
+     },
+     {
+      "option": 2,
+      "why": "Procuring equipment from scratch may not fit within 72 hours."
+     },
+     {
+      "option": 3,
+      "why": "This offers little assurance of capacity or confidentiality and is hard to enforce."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub10-003",
+   "domain": 7,
+   "subdomain": "7.10",
+   "difficulty": 3,
+   "stem": "Full backups are taken every Sunday and differential backups every night. A server fails on Thursday morning. Which backups are needed to restore it?",
+   "options": [
+    "The Sunday full backup and Monday to Wednesday differentials",
+    "The Sunday full backup and the Wednesday night differential",
+    "The Wednesday night differential backup on its own",
+    "The Sunday full backup only, with no differentials"
+   ],
+   "correct": 1,
+   "ladder": [
+    "What does a differential backup contain relative to the last full backup?",
+    "How many differential sets must be restored if each one is cumulative?"
+   ],
+   "explanation": {
+    "correct": "A differential captures everything changed since the last full backup, so recovery needs just the full and the latest differential. Incrementals, by contrast, require the full plus every incremental in order.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Differentials are cumulative, so the Monday and Tuesday sets are redundant once the Wednesday set exists; restoring them adds time but nothing new."
+     },
+     {
+      "option": 2,
+      "why": "A differential holds only changes since the last full backup, so it cannot be restored without that full backup."
+     },
+     {
+      "option": 3,
+      "why": "This loses every change made from Monday to Wednesday."
+     }
+    ]
+   },
+   "tags": [
+    "scenario",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub10-004",
+   "domain": 7,
+   "subdomain": "7.10",
+   "difficulty": 2,
+   "stem": "The business impact analysis sets a maximum tolerable downtime (MTD) of 24 hours for an order system. After systems are restored, 6 hours are needed to verify and reconfigure data (work recovery time). What is the MAXIMUM recovery time objective (RTO)?",
+   "options": [
+    "24 hours",
+    "6 hours",
+    "18 hours",
+    "30 hours"
+   ],
+   "correct": 2,
+   "ladder": [
+    "What does MTD represent compared with RTO and WRT?",
+    "Must the sum of recovery time and work recovery time stay within or beyond the MTD?"
+   ],
+   "explanation": {
+    "correct": "RTO + WRT must not exceed MTD. With MTD of 24 hours and WRT of 6 hours, RTO can be at most 18 hours. RPO is separate and addresses acceptable data loss.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "This ignores the work recovery time that must also fit inside the MTD."
+     },
+     {
+      "option": 1,
+      "why": "This is only the work recovery time, not the RTO."
+     },
+     {
+      "option": 3,
+      "why": "Adding the figures exceeds the MTD, which is the opposite of the relationship."
+     }
+    ]
+   },
+   "tags": [
+    "calculation"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub11-001",
+   "domain": 7,
+   "subdomain": "7.11",
+   "difficulty": 1,
+   "stem": "What is the PRIMARY focus of a disaster recovery plan (DRP)?",
+   "options": [
+    "Sustaining all business processes through any disruption",
+    "Preventing disasters from ever occurring",
+    "Limiting the organisation's legal liability",
+    "Restoring IT systems and data after a disruption"
+   ],
+   "correct": 3,
+   "ladder": [
+    "Does the plan address keeping the whole business running, or recovering technology after a disaster?",
+    "Which plan is a subset of the wider business continuity effort?"
+   ],
+   "explanation": {
+    "correct": "The DRP is a subset of business continuity focused on recovering IT infrastructure, applications and data. The BCP covers wider business operations, including people and facilities.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "This describes the broader business continuity plan."
+     },
+     {
+      "option": 1,
+      "why": "Prevention is part of risk management; the DRP assumes a disaster has already occurred."
+     },
+     {
+      "option": 2,
+      "why": "Liability reduction is a result, not the plan's focus."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub11-002",
+   "domain": 7,
+   "subdomain": "7.11",
+   "difficulty": 1,
+   "stem": "A fire breaks out in the data centre during working hours. What is the FIRST priority?",
+   "options": [
+    "Ensuring the safety of personnel",
+    "Activating the alternate hot site",
+    "Securing the offsite backup media",
+    "Notifying customers of the outage"
+   ],
+   "correct": 0,
+   "ladder": [
+    "In any security or recovery decision, what is always placed above assets and data?",
+    "Among these actions, which concern assets or messaging, and which concern people?"
+   ],
+   "explanation": {
+    "correct": "Human safety is always the first priority in the CISSP exam and in real emergency response. Evacuation and life safety come before system recovery or communications.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Activation is important but comes after people are safe."
+     },
+     {
+      "option": 2,
+      "why": "Media can be replaced; people cannot."
+     },
+     {
+      "option": 3,
+      "why": "Customer communication follows once the emergency is under control."
+     }
+    ]
+   },
+   "tags": [
+    "manager-mindset",
+    "scenario"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub11-003",
+   "domain": 7,
+   "subdomain": "7.11",
+   "difficulty": 3,
+   "stem": "The primary site has been repaired after a disaster, and operations are running at the alternate site. Which systems should be moved back to the primary site FIRST?",
+   "options": [
+    "The most critical business systems",
+    "The least critical business systems",
+    "The systems holding the most data",
+    "All business systems at the same time"
+   ],
+   "correct": 1,
+   "ladder": [
+    "If the repaired site still has hidden problems, which services do you want exposed to them?",
+    "Which order lets you prove the site works while keeping essential services safe?"
+   ],
+   "explanation": {
+    "correct": "Restore to the primary in reverse order of criticality: least critical first, most critical last, so the proven site carries the important workloads and any issues affect low-impact services.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "If the primary site has residual problems, critical services would be at risk."
+     },
+     {
+      "option": 2,
+      "why": "Size is not a risk-based criterion."
+     },
+     {
+      "option": 3,
+      "why": "A single large cutover increases risk and gives no chance to find issues."
+     }
+    ]
+   },
+   "tags": [
+    "manager-mindset",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub11-004",
+   "domain": 7,
+   "subdomain": "7.11",
+   "difficulty": 2,
+   "stem": "During a regional disaster, the media requests a statement about the outage. Who should respond according to good disaster recovery practice?",
+   "options": [
+    "The CISO, as the most senior security executive",
+    "Whichever manager is contacted first by reporters",
+    "The spokesperson named in the communications plan",
+    "The leader of the technical recovery team on site"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Why is it important to have a single consistent message?",
+    "Where in the DR documents is the person authorised to speak identified?"
+   ],
+   "explanation": {
+    "correct": "The plan should name a trained spokesperson (usually from communications or PR) so external messages are consistent, accurate and approved, while technical staff concentrate on recovery.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "The CISO may advise but should not speak unless designated as spokesperson."
+     },
+     {
+      "option": 1,
+      "why": "Uncoordinated statements risk inconsistent or damaging information."
+     },
+     {
+      "option": 3,
+      "why": "The team should focus on recovery and leave communication to the designated spokesperson."
+     }
+    ]
+   },
+   "tags": [
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub12-001",
+   "domain": 7,
+   "subdomain": "7.12",
+   "difficulty": 1,
+   "stem": "Which disaster recovery test is the MOST disruptive to normal business operations?",
+   "options": [
+    "Parallel processing test",
+    "Tabletop walkthrough test",
+    "Checklist review test",
+    "Full interruption test"
+   ],
+   "correct": 3,
+   "ladder": [
+    "Which tests involve only discussion or documents, and which actually run systems?",
+    "From least to most disruptive, where does each test fall?"
+   ],
+   "explanation": {
+    "correct": "The progression is read-through (checklist), walkthrough (tabletop), simulation, parallel, then full interruption, which shuts down the primary and transfers operations, delivering the best proof at the highest risk.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Parallel testing runs alternate processing alongside production without stopping it."
+     },
+     {
+      "option": 1,
+      "why": "A tabletop discussion has no operational impact."
+     },
+     {
+      "option": 2,
+      "why": "A checklist review involves only reading documents."
+     }
+    ]
+   },
+   "tags": [
+    "definition",
+    "ordering"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub12-002",
+   "domain": 7,
+   "subdomain": "7.12",
+   "difficulty": 2,
+   "stem": "A company brings the alternate site online and processes live transactions there while production continues uninterrupted at the primary site. Which test is this?",
+   "options": [
+    "Parallel processing test",
+    "Full interruption test",
+    "Simulation scenario test",
+    "Tabletop walkthrough test"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Is the primary site still doing its normal work in this exercise?",
+    "Is anything actually being processed at the alternate site?"
+   ],
+   "explanation": {
+    "correct": "A parallel test starts the recovery site and runs processing there at the same time as production, so the plan is proven without interrupting live operations.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "Full interruption stops the primary site; here production keeps running."
+     },
+     {
+      "option": 2,
+      "why": "A simulation walks through a scenario without actually running the alternate site."
+     },
+     {
+      "option": 3,
+      "why": "A walkthrough is a discussion of the plan steps and does not involve activating systems."
+     }
+    ]
+   },
+   "tags": [
+    "scenario"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub12-003",
+   "domain": 7,
+   "subdomain": "7.12",
+   "difficulty": 3,
+   "stem": "A DR test shows that restoring a key system took 30 hours against an RTO of 12 hours. What should the security manager do?",
+   "options": [
+    "Change the documented RTO to 30 hours to match the test result",
+    "Analyse the gap, then close it or let the owner reassess",
+    "Treat the plan as satisfactory since the system was restored",
+    "Immediately buy hot-site capacity for every critical system"
+   ],
+   "correct": 1,
+   "ladder": [
+    "Is the purpose of a test to confirm the plan or to find gaps?",
+    "Who owns the decision on how fast a business process must be restored?",
+    "Which option makes the numbers look better without changing capability?"
+   ],
+   "explanation": {
+    "correct": "Testing exists to expose gaps. The manager should analyse root causes, then close the gap or have the business owner formally accept a revised RTO based on impact, and update the plan accordingly.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Changing the RTO to match performance hides the gap without business agreement."
+     },
+     {
+      "option": 2,
+      "why": "Meeting recovery eventually does not meet the stated objective."
+     },
+     {
+      "option": 3,
+      "why": "This is an unanalysed, costly reaction that may not be justified for every system."
+     }
+    ]
+   },
+   "tags": [
+    "manager-mindset",
+    "scenario"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub13-001",
+   "domain": 7,
+   "subdomain": "7.13",
+   "difficulty": 1,
+   "stem": "After management approves the scope of a business continuity planning project, which step comes NEXT?",
+   "options": [
+    "Develop the recovery strategies",
+    "Test the draft continuity plan",
+    "Conduct a business impact analysis",
+    "Select an alternate processing site"
+   ],
+   "correct": 2,
+   "ladder": [
+    "What must be understood before deciding how to recover anything?",
+    "Does choosing a site or strategy come before or after learning each function's tolerance for downtime?"
+   ],
+   "explanation": {
+    "correct": "Business continuity planning follows: project scope and planning, BIA, continuity planning (strategy and plan development), then approval and implementation, with testing and maintenance after that.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Strategies depend on BIA results to set priorities and objectives."
+     },
+     {
+      "option": 1,
+      "why": "Testing occurs only after the plan has been developed."
+     },
+     {
+      "option": 3,
+      "why": "Site selection follows from the recovery requirements the BIA identifies."
+     }
+    ]
+   },
+   "tags": [
+    "ordering"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub13-002",
+   "domain": 7,
+   "subdomain": "7.13",
+   "difficulty": 2,
+   "stem": "During a business impact analysis, who should be the PRIMARY source for determining how critical a business process is?",
+   "options": [
+    "The information technology manager",
+    "The chief information security officer",
+    "The external auditor assessing the process",
+    "The owner of the business process itself"
+   ],
+   "correct": 3,
+   "ladder": [
+    "Who understands the effects on revenue, customers and obligations if a process stops?",
+    "Is criticality a technical or a business decision?"
+   ],
+   "explanation": {
+    "correct": "Criticality and tolerance for downtime are business decisions. Process owners and senior management supply impact information that drives MTD, RTO and RPO.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "IT supports processes but cannot determine business criticality alone."
+     },
+     {
+      "option": 1,
+      "why": "Security advises on risk but does not own business impact."
+     },
+     {
+      "option": 2,
+      "why": "Auditors assess compliance and do not set business priorities."
+     }
+    ]
+   },
+   "tags": [
+    "manager-mindset",
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub14-001",
+   "domain": 7,
+   "subdomain": "7.14",
+   "difficulty": 1,
+   "stem": "Which physical control BEST prevents tailgating into a secure data centre?",
+   "options": [
+    "A mantrap at the entrance vestibule",
+    "A badge reader on the entry door",
+    "A security camera above the entrance",
+    "A perimeter fence around the site"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Does the threat here need detection, or a physical barrier at the moment of entry?",
+    "Which options only detect or record what happened?"
+   ],
+   "explanation": {
+    "correct": "A mantrap (airlock) allows only one authenticated person through at a time, preventing tailgating and piggybacking. Cameras and readers alone are detective or insufficient.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "A badge reader alone cannot stop a second person following through the open door."
+     },
+     {
+      "option": 2,
+      "why": "Cameras record or deter but do not physically prevent entry."
+     },
+     {
+      "option": 3,
+      "why": "A fence guards the perimeter but does nothing about people following through the door."
+     }
+    ]
+   },
+   "tags": [
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub14-002",
+   "domain": 7,
+   "subdomain": "7.14",
+   "difficulty": 2,
+   "stem": "Which type of sprinkler system is BEST for a data centre because it minimises the risk of accidental water discharge?",
+   "options": [
+    "Wet pipe",
+    "Pre-action",
+    "Deluge",
+    "Dry pipe"
+   ],
+   "correct": 1,
+   "ladder": [
+    "Where would an accidental discharge do the most damage, and what would limit it?",
+    "Of the designs that keep pipes dry at first, which also needs a separate detection signal before water fills them?"
+   ],
+   "explanation": {
+    "correct": "A pre-action system requires a detection event (such as smoke) to fill the pipes and then a heat-activated head to open, allowing time to stop false activations.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Wet pipes are always charged with water and a leak or fault can discharge into equipment."
+     },
+     {
+      "option": 2,
+      "why": "A deluge system releases water from all heads at once and is the worst fit for sensitive electronics."
+     },
+     {
+      "option": 3,
+      "why": "Dry pipe systems reduce leaks from freezing but still release water on a single trigger."
+     }
+    ]
+   },
+   "tags": [
+    "best-answer"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub14-003",
+   "domain": 7,
+   "subdomain": "7.14",
+   "difficulty": 1,
+   "stem": "Which class of fire involves energised electrical equipment?",
+   "options": [
+    "Class A",
+    "Class B",
+    "Class C",
+    "Class D"
+   ],
+   "correct": 2,
+   "ladder": [
+    "Which fire type calls for a non-conductive extinguishing agent?",
+    "Where would live electrical equipment sit in the lettered fire classification?"
+   ],
+   "explanation": {
+    "correct": "Class C fires involve electrical equipment and need non-conductive agents such as CO2 or clean gas. Water is unsuitable because it conducts electricity.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Class A is ordinary combustibles such as wood and paper."
+     },
+     {
+      "option": 1,
+      "why": "Class B is flammable liquids and gases."
+     },
+     {
+      "option": 3,
+      "why": "Class D is combustible metals."
+     }
+    ]
+   },
+   "tags": [
+    "definition"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub14-004",
+   "domain": 7,
+   "subdomain": "7.14",
+   "difficulty": 3,
+   "stem": "A facility has a strong fence and cameras, but guards need 20 minutes to respond, while an intruder could breach the building in 5 minutes. Which change BEST addresses the gap?",
+   "options": [
+    "Install further cameras covering every approach to the site",
+    "Upgrade the existing cameras to higher resolution",
+    "Reduce guard patrol frequency to save staffing cost",
+    "Add barriers that delay intruders beyond response time"
+   ],
+   "correct": 3,
+   "ladder": [
+    "Which period must be longer: the intruder's delay or the response time?",
+    "Does the gap lie in detecting the intruder or in the time before a response arrives?"
+   ],
+   "explanation": {
+    "correct": "Physical protection depends on delay exceeding detection plus response time. Additional layers of barriers or locks slow the intruder so responders arrive before the breach is complete.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "Cameras improve detection, which is not the weak point."
+     },
+     {
+      "option": 1,
+      "why": "Better images do not slow intruders down."
+     },
+     {
+      "option": 2,
+      "why": "This would make response even slower."
+     }
+    ]
+   },
+   "tags": [
+    "manager-mindset",
+    "scenario"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub15-001",
+   "domain": 7,
+   "subdomain": "7.15",
+   "difficulty": 1,
+   "stem": "An employee is forced by an attacker to enter the data centre. Which control allows them to silently signal for help?",
+   "options": [
+    "A duress code entered at the door",
+    "A mantrap at the entrance vestibule",
+    "Two-factor authentication at the door",
+    "A visitor escort policy for guests"
+   ],
+   "correct": 0,
+   "ladder": [
+    "Is the problem here controlling who can enter, or letting a coerced person communicate?",
+    "Which of these options would the attacker notice being used, and which would not?"
+   ],
+   "explanation": {
+    "correct": "A duress code or silent alarm lets staff signal coercion while appearing to comply. Personnel safety controls like this protect people first.",
+    "distractors": [
+     {
+      "option": 1,
+      "why": "A mantrap controls entry but gives no covert signal."
+     },
+     {
+      "option": 2,
+      "why": "It strengthens identity assurance but does not warn of coercion."
+     },
+     {
+      "option": 3,
+      "why": "Escorts apply to visitors, not coerced employees."
+     }
+    ]
+   },
+   "tags": [
+    "definition",
+    "scenario"
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "q-d7-sub15-002",
+   "domain": 7,
+   "subdomain": "7.15",
+   "difficulty": 2,
+   "stem": "Executives will travel to a high-risk country carrying company laptops. Which approach is BEST?",
+   "options": [
+    "Ban all business travel to the country concerned",
+    "Issue clean loaner devices and brief travellers",
+    "Let them use personal devices over a corporate VPN",
+    "Allow normal laptops protected by disk encryption alone"
+   ],
+   "correct": 1,
+   "ladder": [
+    "What is the least amount of data and exposure that the trip actually requires?",
+    "Is the control aimed at the device, the data, or the person?"
+   ],
+   "explanation": {
+    "correct": "Minimising what is carried and educating travellers on local risks is a proportionate, risk-based approach that supports business and protects both people and data.",
+    "distractors": [
+     {
+      "option": 0,
+      "why": "This is excessive and ignores business needs."
+     },
+     {
+      "option": 2,
+      "why": "Personal devices are unmanaged and increase exposure."
+     },
+     {
+      "option": 3,
+      "why": "Encryption helps but devices can still be seized, coerced or tampered with, and carry more data than needed."
+     }
+    ]
+   },
+   "tags": [
+    "manager-mindset",
+    "scenario"
+   ],
+   "reviewed": true
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "f-d7-sub01-001",
+   "domain": 7,
+   "subdomain": "7.1",
+   "front": "Order of volatility (collect first to last)",
+   "back": "CPU registers/cache, RAM, network state and processes, disk, remote logs and monitoring data, then archival media and backups.",
+   "whyItMatters": "Exam asks which evidence to gather first from a live system."
+  },
+  {
+   "id": "f-d7-sub01-002",
+   "domain": 7,
+   "subdomain": "7.1",
+   "front": "Chain of custody records which facts?",
+   "back": "Who collected and handled the evidence, when, where, why and how it was stored or transferred, with each hand-off documented.",
+   "whyItMatters": "Gaps in custody are the classic reason evidence becomes inadmissible."
+  },
+  {
+   "id": "f-d7-sub01-003",
+   "domain": 7,
+   "subdomain": "7.1",
+   "front": "Standard of proof: civil vs criminal",
+   "back": "Civil: preponderance of the evidence (more likely than not). Criminal: beyond a reasonable doubt.",
+   "whyItMatters": "Scenario questions test which burden an investigation must meet."
+  },
+  {
+   "id": "f-d7-sub02-001",
+   "domain": 7,
+   "subdomain": "7.2",
+   "front": "What is a clipping level?",
+   "back": "A baseline threshold of acceptable errors (such as 3 failed logins) below which no alert is raised; crossing it triggers review.",
+   "whyItMatters": "Appears in questions on reducing monitoring noise."
+  },
+  {
+   "id": "f-d7-sub02-002",
+   "domain": 7,
+   "subdomain": "7.2",
+   "front": "How should logs be protected from tampering?",
+   "back": "Send them to a central, access-restricted server in real time, use write-once storage and hashing, and synchronise clocks (NTP).",
+   "whyItMatters": "Exam favours centralised, protected logs for integrity and admissibility."
+  },
+  {
+   "id": "f-d7-sub03-001",
+   "domain": 7,
+   "subdomain": "7.3",
+   "front": "Configuration management steps",
+   "back": "Identification, change control, configuration status accounting, then verification and audit, all against a baseline.",
+   "whyItMatters": "Tests the sequence and difference from change management."
+  },
+  {
+   "id": "f-d7-sub03-002",
+   "domain": 7,
+   "subdomain": "7.3",
+   "front": "Baseline vs configuration drift",
+   "back": "Baseline is the approved secure standard; drift is any unapproved deviation from it, detected by comparison and corrected under change control.",
+   "whyItMatters": "Drift scenarios ask for automated detection plus change control."
+  },
+  {
+   "id": "f-d7-sub04-001",
+   "domain": 7,
+   "subdomain": "7.4",
+   "front": "Separation of duties vs dual control vs split knowledge",
+   "back": "SoD divides a task among people; dual control needs two people to act together; split knowledge gives each only part of a secret.",
+   "whyItMatters": "Commonly confused trio on the exam."
+  },
+  {
+   "id": "f-d7-sub04-002",
+   "domain": 7,
+   "subdomain": "7.4",
+   "front": "Job rotation and mandatory vacation purpose",
+   "back": "Both are detective controls that expose fraud and reduce reliance on one person by having others perform the duties.",
+   "whyItMatters": "Exam asks which control detects collusion or fraud."
+  },
+  {
+   "id": "f-d7-sub05-001",
+   "domain": 7,
+   "subdomain": "7.5",
+   "front": "NIST SP 800-88 sanitization levels",
+   "back": "Clear (logical overwrite), Purge (stronger, such as crypto erase or degauss), Destroy (physical destruction).",
+   "whyItMatters": "Know which method fits sensitivity and reuse of media."
+  },
+  {
+   "id": "f-d7-sub05-002",
+   "domain": 7,
+   "subdomain": "7.5",
+   "front": "Why does degaussing not work on SSDs?",
+   "back": "Degaussing disrupts magnetic media; SSDs use flash. Use crypto erase, secure erase or destruction instead.",
+   "whyItMatters": "Exam traps pair SSDs with degaussing or overwriting."
+  },
+  {
+   "id": "f-d7-sub06-001",
+   "domain": 7,
+   "subdomain": "7.6",
+   "front": "ISC2 incident management phases in order",
+   "back": "Detection, response, mitigation, reporting, recovery, remediation, lessons learned.",
+   "whyItMatters": "Ordering questions expect this exact sequence."
+  },
+  {
+   "id": "f-d7-sub06-002",
+   "domain": 7,
+   "subdomain": "7.6",
+   "front": "Recovery vs remediation",
+   "back": "Recovery restores systems to normal operation; remediation fixes root causes and the vulnerability so the incident cannot recur.",
+   "whyItMatters": "Frequently confused phases in scenarios."
+  },
+  {
+   "id": "f-d7-sub06-003",
+   "domain": 7,
+   "subdomain": "7.6",
+   "front": "Mitigation phase in one line",
+   "back": "Contain the incident and limit its scope and damage, for example by isolating hosts or disabling accounts.",
+   "whyItMatters": "Distinguishes containment from recovery and remediation."
+  },
+  {
+   "id": "f-d7-sub06-004",
+   "domain": 7,
+   "subdomain": "7.6",
+   "front": "Event vs incident",
+   "back": "An event is any observable occurrence; an incident is an event that actually or potentially violates policy or harms confidentiality, integrity or availability.",
+   "whyItMatters": "Exam tests triage: first decide whether an event is an incident."
+  },
+  {
+   "id": "f-d7-sub07-001",
+   "domain": 7,
+   "subdomain": "7.7",
+   "front": "IDS detection methods",
+   "back": "Signature-based (known patterns), anomaly or behaviour-based (deviation from baseline), and heuristic or rule-based approaches.",
+   "whyItMatters": "Know the strengths: signatures miss zero-days, anomaly gives false positives."
+  },
+  {
+   "id": "f-d7-sub07-002",
+   "domain": 7,
+   "subdomain": "7.7",
+   "front": "Enticement vs entrapment",
+   "back": "Enticement makes a target attractive to those already inclined; entrapment induces someone to commit a crime and may block prosecution.",
+   "whyItMatters": "Honeypot legality question."
+  },
+  {
+   "id": "f-d7-sub08-001",
+   "domain": 7,
+   "subdomain": "7.8",
+   "front": "CVSS score ranges",
+   "back": "Scored 0 to 10: None 0, Low 0.1-3.9, Medium 4.0-6.9, High 7.0-8.9, Critical 9.0-10.0.",
+   "whyItMatters": "Used in prioritising vulnerabilities, but context also matters."
+  },
+  {
+   "id": "f-d7-sub08-002",
+   "domain": 7,
+   "subdomain": "7.8",
+   "front": "Patch management lifecycle",
+   "back": "Identify and assess, prioritise by risk, test, approve via change management, deploy, verify, and document with rollback ready.",
+   "whyItMatters": "Exam wants testing and change control before production deployment."
+  },
+  {
+   "id": "f-d7-sub09-001",
+   "domain": 7,
+   "subdomain": "7.9",
+   "front": "Change management process steps",
+   "back": "Request, impact and security assessment, approval by CAB, build and test, schedule and implement with rollback plan, verify, document.",
+   "whyItMatters": "Ordering questions on change control."
+  },
+  {
+   "id": "f-d7-sub09-002",
+   "domain": 7,
+   "subdomain": "7.9",
+   "front": "Emergency change rule",
+   "back": "Expedite the fix, but document and review it afterward through the normal change process.",
+   "whyItMatters": "Exam rejects both skipping documentation and refusing the fix."
+  },
+  {
+   "id": "f-d7-sub10-001",
+   "domain": 7,
+   "subdomain": "7.10",
+   "front": "Recovery site types",
+   "back": "Hot: ready with current data, minutes to hours. Warm: hardware, no current data, days. Cold: space and utilities only, weeks. Mobile: transportable unit.",
+   "whyItMatters": "Match site type to RTO and cost."
+  },
+  {
+   "id": "f-d7-sub10-002",
+   "domain": 7,
+   "subdomain": "7.10",
+   "front": "RPO, RTO, MTD and WRT",
+   "back": "RPO: acceptable data loss. RTO: time to restore. WRT: time to verify afterward. MTD: absolute limit; RTO + WRT must not exceed MTD.",
+   "whyItMatters": "Core recovery metrics with a frequently tested relationship."
+  },
+  {
+   "id": "f-d7-sub10-003",
+   "domain": 7,
+   "subdomain": "7.10",
+   "front": "Backup types and restore needs",
+   "back": "Full copies all; incremental copies changes since the last backup of any type (needs full plus all incrementals); differential copies changes since last full (needs full plus latest).",
+   "whyItMatters": "Calculation-style restore scenarios."
+  },
+  {
+   "id": "f-d7-sub10-004",
+   "domain": 7,
+   "subdomain": "7.10",
+   "front": "RAID levels 0, 1, 5, 10",
+   "back": "0: striping, no redundancy. 1: mirroring. 5: striping with parity, survives one disk loss. 10: striped mirrors (mirrored pairs, then striped).",
+   "whyItMatters": "Know which levels give redundancy; RAID is not a backup."
+  },
+  {
+   "id": "f-d7-sub11-001",
+   "domain": 7,
+   "subdomain": "7.11",
+   "front": "DRP vs BCP",
+   "back": "BCP keeps critical business processes running during disruption; DRP is the IT-focused subset that restores systems and data.",
+   "whyItMatters": "Classic definition distinction."
+  },
+  {
+   "id": "f-d7-sub11-002",
+   "domain": 7,
+   "subdomain": "7.11",
+   "front": "Order of returning to primary site after disaster",
+   "back": "Move the least critical systems back first and the most critical last, after the site is proven stable.",
+   "whyItMatters": "Counterintuitive point the exam likes."
+  },
+  {
+   "id": "f-d7-sub12-001",
+   "domain": 7,
+   "subdomain": "7.12",
+   "front": "DR test types, least to most disruptive",
+   "back": "Read-through (checklist), walkthrough (tabletop), simulation, parallel, full interruption.",
+   "whyItMatters": "Ordering of test types is a regular question."
+  },
+  {
+   "id": "f-d7-sub12-002",
+   "domain": 7,
+   "subdomain": "7.12",
+   "front": "Parallel vs full interruption test",
+   "back": "Parallel runs processing at the alternate site while production continues; full interruption shuts down primary and fails over for real.",
+   "whyItMatters": "Know which test risks live operations."
+  },
+  {
+   "id": "f-d7-sub12-003",
+   "domain": 7,
+   "subdomain": "7.12",
+   "front": "Tabletop vs simulation test",
+   "back": "Tabletop is a talk-through of the plan by key staff; simulation acts out a disaster scenario with participants performing their roles.",
+   "whyItMatters": "Distinguishes two low-impact tests."
+  },
+  {
+   "id": "f-d7-sub13-001",
+   "domain": 7,
+   "subdomain": "7.13",
+   "front": "Main BCP steps in order",
+   "back": "Project scope and planning, business impact analysis, continuity planning (strategy and plan), approval and implementation, then testing and maintenance.",
+   "whyItMatters": "Sequence question: BIA comes right after scope."
+  },
+  {
+   "id": "f-d7-sub13-002",
+   "domain": 7,
+   "subdomain": "7.13",
+   "front": "What a business impact analysis produces",
+   "back": "Critical functions and dependencies, impact over time, and MTD, RTO and RPO recovery priorities.",
+   "whyItMatters": "BIA drives recovery strategy choice."
+  },
+  {
+   "id": "f-d7-sub14-001",
+   "domain": 7,
+   "subdomain": "7.14",
+   "front": "Fire classes (US)",
+   "back": "A: ordinary combustibles. B: flammable liquids. C: electrical. D: combustible metals. K: cooking oils.",
+   "whyItMatters": "Pairing class with correct suppression is common."
+  },
+  {
+   "id": "f-d7-sub14-002",
+   "domain": 7,
+   "subdomain": "7.14",
+   "front": "Sprinkler types",
+   "back": "Wet pipe: always charged. Dry pipe: air-filled until triggered. Pre-action: needs detection event plus heat, best for data centres. Deluge: all heads open.",
+   "whyItMatters": "Pre-action is the usual data-centre answer."
+  },
+  {
+   "id": "f-d7-sub14-003",
+   "domain": 7,
+   "subdomain": "7.14",
+   "front": "Fence height deterrence",
+   "back": "About 3-4 ft deters casual trespass, 6-7 ft is hard to climb, and 8 ft with barbed wire deters determined intruders.",
+   "whyItMatters": "Numbers can be tested directly."
+  },
+  {
+   "id": "f-d7-sub14-004",
+   "domain": 7,
+   "subdomain": "7.14",
+   "front": "Common power problems",
+   "back": "Spike: brief high voltage. Surge: prolonged high voltage. Sag: brief low voltage. Brownout: prolonged low. Blackout: total loss. Fault: brief total loss.",
+   "whyItMatters": "Terms and UPS or surge protector answers."
+  },
+  {
+   "id": "f-d7-sub15-001",
+   "domain": 7,
+   "subdomain": "7.15",
+   "front": "Duress code",
+   "back": "A covert code or alarm signal an employee uses to tell security they are under coercion while appearing to comply.",
+   "whyItMatters": "Personnel safety control tested in scenarios."
+  },
+  {
+   "id": "f-d7-sub15-002",
+   "domain": 7,
+   "subdomain": "7.15",
+   "front": "Priority in any conflict between safety and assets",
+   "back": "Human life and safety take priority over data, equipment and systems.",
+   "whyItMatters": "Exam answer when safety conflicts with recovery or evidence."
+  }
+ ]
+}

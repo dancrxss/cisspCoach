@@ -1,0 +1,13 @@
+{
+  "name": "cissp-coach",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline-first CISSP prep PWA. No build step: vanilla ES modules served as-is. npm exists for tests and content scripts only.",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/engine.test.mjs && node tests/fsrs.test.mjs",
+    "validate": "for n in 1 2 3 4 5 6 7 8; do node scripts/validate-content.mjs content/gen/d$n.json --domain $n | tail -1; done",
+    "build:pack": "node scripts/build-pack.mjs",
+    "serve": "python3 -m http.server 8765 --bind 127.0.0.1"
+  }
+}

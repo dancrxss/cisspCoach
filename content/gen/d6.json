@@ -1,0 +1,2299 @@
+{
+  "questions": [
+    {
+      "id": "q-d6-sub01-001",
+      "domain": 6,
+      "subdomain": "6.1",
+      "difficulty": 1,
+      "stem": "Which type of audit provides the GREATEST assurance of independence to outside stakeholders such as regulators and customers?",
+      "options": [
+        "An audit performed by the organization's internal audit department",
+        "A self-assessment completed by each control owner",
+        "A peer review performed by another business unit",
+        "An audit performed by an independent external audit firm"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Who is the audience for this assurance, and do they sit inside or outside the organization?",
+        "Whose opinion would an outsider trust, given who employs and pays the examiner?"
+      ],
+      "explanation": {
+        "correct": "External auditors have no organizational ties to the entity being audited, so their opinion carries the most weight with outside parties. Independence and objectivity are the key attributes the exam associates with external audits.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Internal auditors are valuable and can report to the audit committee, but they are still employees, so outside parties give their work less weight."
+          },
+          {
+            "option": 1,
+            "why": "Self-assessments are useful for management but have no independence, since the control owner is judging their own work."
+          },
+          {
+            "option": 2,
+            "why": "A peer unit shares the same parent organization and may have conflicting interests, so independence is limited."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer",
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub01-002",
+      "domain": 6,
+      "subdomain": "6.1",
+      "difficulty": 1,
+      "stem": "Which statement BEST describes a vulnerability assessment?",
+      "options": [
+        "It identifies and ranks weaknesses without exploiting them",
+        "It exploits weaknesses to prove an attacker could gain access",
+        "It evaluates employee compliance with security policy",
+        "It measures the effectiveness of the incident response team"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Does the activity stop at finding weaknesses, or does it go on to use them?",
+        "What is the key difference between listing a weakness and proving it can be exploited?"
+      ],
+      "explanation": {
+        "correct": "A vulnerability assessment discovers, ranks, and reports weaknesses, typically using scanners, but does not attempt exploitation. Exploitation to demonstrate real impact is the defining feature of penetration testing.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Exploiting weaknesses to prove access describes a penetration test, not a vulnerability assessment."
+          },
+          {
+            "option": 2,
+            "why": "Policy compliance is examined by compliance checks and audits, not by vulnerability assessment."
+          },
+          {
+            "option": 3,
+            "why": "Incident response effectiveness is measured through exercises and post-incident reviews, not vulnerability scanning."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub01-003",
+      "domain": 6,
+      "subdomain": "6.1",
+      "difficulty": 1,
+      "stem": "In a security exercise, which team simulates the tactics of a real adversary against the organization?",
+      "options": [
+        "The blue team",
+        "The audit team",
+        "The change advisory board",
+        "The red team"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Is this team attacking, or defending?",
+        "Which side of the conventional color-coded team model plays the attacker?"
+      ],
+      "explanation": {
+        "correct": "The red team emulates adversary behavior to test people, process, and technology. The blue team defends and responds, and a purple approach combines both to share lessons.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The blue team is the defending and detecting side, so it is the target of the red team rather than the attacker."
+          },
+          {
+            "option": 1,
+            "why": "The audit team evaluates controls against criteria and does not emulate adversaries."
+          },
+          {
+            "option": 2,
+            "why": "A change advisory board approves changes and has no role in adversary simulation."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub01-004",
+      "domain": 6,
+      "subdomain": "6.1",
+      "difficulty": 2,
+      "stem": "A security manager receives approval to commission a penetration test of the payment environment. What should be completed BEFORE any testing begins?",
+      "options": [
+        "A full vulnerability scan of the entire corporate network",
+        "Notification of all staff so everyone can prepare for the test",
+        "Written authorization defining scope and rules of engagement",
+        "Installation of the testing tools on production servers"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What separates authorized testing from an attack in legal terms?",
+        "Which artifacts establish both legal permission and technical boundaries for the testers?"
+      ],
+      "explanation": {
+        "correct": "Penetration testing without explicit written authorization and agreed rules of engagement can be illegal and can cause unplanned outages. The scope, timing, contacts, and permitted techniques must be documented first.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A scan may be part of the test later, but it does not provide the authorization or boundaries needed to start."
+          },
+          {
+            "option": 1,
+            "why": "Telling everyone beforehand can tip off real attackers and spoil the test; only the stakeholders named in the rules of engagement need to know."
+          },
+          {
+            "option": 3,
+            "why": "Installing tools on production servers without defined scope increases risk and is not a prerequisite."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub01-005",
+      "domain": 6,
+      "subdomain": "6.1",
+      "difficulty": 2,
+      "stem": "What should PRIMARILY determine the frequency and scope of an organization's security assessments?",
+      "options": [
+        "Risk assessment results and asset criticality",
+        "The size of the security team's budget",
+        "The schedule used by last year's audit",
+        "The number of vulnerabilities the scanner reports"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Should assessment effort be spread evenly, or aimed where harm would be greatest?",
+        "What do you already know about where harm would hurt most, and where did that knowledge come from?"
+      ],
+      "explanation": {
+        "correct": "Assessment strategy should be risk-based: higher risk and more critical assets are tested more often and more deeply. This lets the organization focus limited resources on what matters to the business.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Budget constrains what can be done but should not be the driver; the risk picture should justify the budget."
+          },
+          {
+            "option": 2,
+            "why": "Repeating last year's schedule ignores changes in threats, systems, and business priorities."
+          },
+          {
+            "option": 3,
+            "why": "Scanner counts are one input after testing begins and do not decide how assessments are planned."
+          }
+        ]
+      },
+      "tags": [
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub01-006",
+      "domain": 6,
+      "subdomain": "6.1",
+      "difficulty": 2,
+      "stem": "A company wants to test how much damage a malicious insider with a standard employee account could cause. Which testing approach BEST fits?",
+      "options": [
+        "Black box testing with no prior knowledge of the target systems",
+        "Gray box testing with partial knowledge and a user account",
+        "White box testing with full source code and architecture",
+        "Blind testing where the defenders have not been told"
+      ],
+      "correct": 1,
+      "ladder": [
+        "How much does the simulated attacker already know in an insider scenario?",
+        "Which approach sits between knowing nothing and knowing everything?"
+      ],
+      "explanation": {
+        "correct": "Gray box (partial knowledge) testing mirrors an insider or authenticated user who knows something about the environment but not everything. It is the closest match to the stated threat.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Black box simulates an outsider with no knowledge, which does not match a user with an existing account."
+          },
+          {
+            "option": 2,
+            "why": "White box gives the tester full internal detail, which overstates what a typical employee knows."
+          },
+          {
+            "option": 3,
+            "why": "Blinding the defenders is about detection testing, not about the tester's level of knowledge."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub01-007",
+      "domain": 6,
+      "subdomain": "6.1",
+      "difficulty": 2,
+      "stem": "Which sequence lists the phases of a penetration test in the order they normally occur, per common guidance such as NIST SP 800-115?",
+      "options": [
+        "Planning, discovery, attack, reporting",
+        "Discovery, planning, reporting, attack",
+        "Attack, planning, discovery, reporting",
+        "Planning, attack, reporting, discovery"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which activity must happen before any technical action is taken?",
+        "Can you attack a target before you know what is on it?"
+      ],
+      "explanation": {
+        "correct": "Testing starts with planning (scope, authorization, rules), followed by discovery (scanning and enumeration), then attack (exploitation, escalation, pivoting), and finally reporting. Reporting also runs alongside the other phases.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Discovery before planning means technical activity begins before scope and authorization exist."
+          },
+          {
+            "option": 2,
+            "why": "Attacking before planning or discovery is unauthorized and unfocused, and reporting cannot precede the work."
+          },
+          {
+            "option": 3,
+            "why": "Reporting cannot come before discovery because there would be nothing to report."
+          }
+        ]
+      },
+      "tags": [
+        "ordering"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub01-008",
+      "domain": 6,
+      "subdomain": "6.1",
+      "difficulty": 2,
+      "stem": "An organization contracts a cloud service provider to process regulated customer data. Which contract provision BEST supports the organization's ability to gain assurance over the provider's controls?",
+      "options": [
+        "A right-to-audit clause plus access to independent audit reports",
+        "A commitment to notify the customer of any breach within 72 hours",
+        "A service credit schedule that compensates for downtime",
+        "A clause limiting the provider's liability for data loss"
+      ],
+      "correct": 0,
+      "ladder": [
+        "How will you verify controls rather than simply trust them?",
+        "What contractual access would let you check the provider's claims instead of taking them on trust?"
+      ],
+      "explanation": {
+        "correct": "A right-to-audit clause, together with access to independent audit reports, lets the customer verify the provider's controls. Because accountability for the data stays with the customer, ongoing assurance is a due diligence expectation.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Breach notification is valuable but reactive and does not verify controls in advance."
+          },
+          {
+            "option": 2,
+            "why": "Service credits compensate for availability failures and give no assurance about security controls."
+          },
+          {
+            "option": 3,
+            "why": "Liability limits reduce the provider's exposure and do nothing to provide assurance."
+          }
+        ]
+      },
+      "tags": [
+        "manager-mindset",
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub01-009",
+      "domain": 6,
+      "subdomain": "6.1",
+      "difficulty": 2,
+      "stem": "A CISO wants to know whether a chain of low-rated weaknesses could combine to let an attacker reach the customer database. Which activity is MOST appropriate?",
+      "options": [
+        "A vulnerability scan",
+        "A policy compliance check",
+        "A penetration test",
+        "A tabletop exercise"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Is the question about listing weaknesses or about chaining them into real compromise?",
+        "Which activity goes beyond listing individual findings to testing how they combine?"
+      ],
+      "explanation": {
+        "correct": "A penetration test attempts to chain weaknesses, escalate privileges, and pivot, showing real-world impact that individual scan findings do not reveal. Scans list issues in isolation.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A scan identifies individual weaknesses but does not attempt to exploit or chain them."
+          },
+          {
+            "option": 1,
+            "why": "A compliance check compares configuration to a standard and says nothing about attack paths."
+          },
+          {
+            "option": 3,
+            "why": "A tabletop exercise tests decision-making in a discussion setting and does not probe technical paths."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub01-010",
+      "domain": 6,
+      "subdomain": "6.1",
+      "difficulty": 3,
+      "stem": "The internal audit manager reports administratively to the CFO. An audit of the finance department's access controls is planned, and the CFO asks that the draft findings be softened before they are issued. What is the BEST action?",
+      "options": [
+        "Soften the findings as requested to preserve the working relationship",
+        "Escalate the request to the audit committee and keep the findings",
+        "Delay issuing the report until the CFO changes their mind",
+        "Remove the finance department from the audit scope entirely"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which principle of auditing is under pressure in this scenario?",
+        "To whom should an auditor turn when the audited party interferes?"
+      ],
+      "explanation": {
+        "correct": "Auditor independence and objectivity must be protected, and internal audit should have a functional reporting line to the audit committee or board. Escalating the interference there protects the integrity of the findings.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Softening findings under pressure compromises objectivity and defeats the purpose of the audit."
+          },
+          {
+            "option": 2,
+            "why": "Delaying the report until the audited party is comfortable lets that party control the outcome and leaves the control weakness unreported."
+          },
+          {
+            "option": 3,
+            "why": "Dropping the department from scope lets the audited party decide what is reviewed and removes assurance."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub01-011",
+      "domain": 6,
+      "subdomain": "6.1",
+      "difficulty": 3,
+      "stem": "During an authorized penetration test, a tester's exploit causes a critical production application to crash. According to the rules of engagement, what should the tester do FIRST?",
+      "options": [
+        "Continue testing other systems and include the crash in the final report",
+        "Restart the application and log it in the test notes only",
+        "Stop testing and immediately notify the designated emergency contact",
+        "Wait until the end of the test window to disclose the impact"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What does the rules of engagement say about unplanned impact?",
+        "When unplanned harm occurs mid-test, should containing it or finishing the work come first?"
+      ],
+      "explanation": {
+        "correct": "Rules of engagement normally require testers to halt and notify named contacts when production is impacted, so the business can respond. Safety and communication come before continuing the test or documenting.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Continuing the test risks more damage, and delaying disclosure prevents timely recovery."
+          },
+          {
+            "option": 1,
+            "why": "Restarting quietly and not telling the owner withholds time-sensitive information and breaches the rules of engagement."
+          },
+          {
+            "option": 3,
+            "why": "Waiting until the end deprives the owner of time-sensitive information while the outage continues."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub02-001",
+      "domain": 6,
+      "subdomain": "6.2",
+      "difficulty": 1,
+      "stem": "Which technique analyzes application source code for flaws without executing the program?",
+      "options": [
+        "Dynamic application security testing (DAST)",
+        "Fuzz testing",
+        "Static application security testing (SAST)",
+        "Synthetic transaction monitoring"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Is the program running when the analysis occurs?",
+        "What does 'static' imply about the state of the code under test?"
+      ],
+      "explanation": {
+        "correct": "SAST examines source code, bytecode, or binaries at rest, so it can be used early in development. It finds issues like injection patterns and insecure functions without running the software.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "DAST tests the running application from the outside, so it does execute the program."
+          },
+          {
+            "option": 1,
+            "why": "Fuzzing sends malformed input to a running program to cause failures."
+          },
+          {
+            "option": 3,
+            "why": "Synthetic transactions are scripted user actions used to monitor service behavior."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub02-002",
+      "domain": 6,
+      "subdomain": "6.2",
+      "difficulty": 1,
+      "stem": "What is the main purpose of fuzz testing?",
+      "options": [
+        "To find crashes and flaws by sending malformed input",
+        "To confirm that code follows the team's formatting standards",
+        "To measure how satisfied users are with the interface",
+        "To validate that backups can be restored successfully"
+      ],
+      "correct": 0,
+      "ladder": [
+        "What kind of input do real users NOT normally provide?",
+        "What observable outcome tells a fuzzer it has found a problem?"
+      ],
+      "explanation": {
+        "correct": "Fuzzing feeds invalid, random, or unexpected data to a program and watches for crashes, hangs, or memory errors. It is effective at finding input-handling flaws such as buffer overflows.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Code formatting is checked by linters or code review, not fuzzing."
+          },
+          {
+            "option": 2,
+            "why": "User satisfaction is measured by usability testing and surveys."
+          },
+          {
+            "option": 3,
+            "why": "Restore verification is a backup test, which has nothing to do with input fuzzing."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub02-003",
+      "domain": 6,
+      "subdomain": "6.2",
+      "difficulty": 1,
+      "stem": "Scripted transactions that mimic user actions are run on a schedule against a production web application to detect failures before users notice. What are these called?",
+      "options": [
+        "Synthetic transactions",
+        "Real user monitoring",
+        "Regression tests",
+        "Misuse cases"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Are real users generating the traffic, or is something simulating them?",
+        "Which monitoring style is proactive rather than waiting for real users to hit a failure?"
+      ],
+      "explanation": {
+        "correct": "Synthetic transactions are scripted, repeatable simulations of user behavior used to proactively check availability and performance. Real user monitoring, by contrast, passively records actual user sessions.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Real user monitoring captures genuine sessions rather than scripted ones."
+          },
+          {
+            "option": 2,
+            "why": "Regression tests verify that changes did not break existing functionality, typically before release."
+          },
+          {
+            "option": 3,
+            "why": "Misuse cases describe how an attacker might abuse a system, not scheduled monitoring."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub02-004",
+      "domain": 6,
+      "subdomain": "6.2",
+      "difficulty": 1,
+      "stem": "A vulnerability scanner reports a critical flaw on a server, but manual verification shows the flaw does not exist. What is this result called?",
+      "options": [
+        "A false negative",
+        "A false positive",
+        "A true positive",
+        "A true negative"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Did the tool say something was wrong when it was not?",
+        "If the tool is wrong, did it wrongly say yes or wrongly say no?"
+      ],
+      "explanation": {
+        "correct": "A false positive is a reported issue that does not actually exist. Findings should be validated so remediation effort is not wasted.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A false negative would be a real flaw the scanner failed to report."
+          },
+          {
+            "option": 2,
+            "why": "A true positive is a correctly reported real flaw."
+          },
+          {
+            "option": 3,
+            "why": "A true negative is a correctly reported absence of a flaw."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub02-005",
+      "domain": 6,
+      "subdomain": "6.2",
+      "difficulty": 2,
+      "stem": "A security manager must assess a web application purchased from a vendor, with no access to the source code. Which approach is MOST appropriate?",
+      "options": [
+        "Static analysis of the application source code",
+        "Dynamic testing of the running application",
+        "Manual peer review of the vendor's code",
+        "Review of the vendor's compiler warnings"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What access does the team have to the application?",
+        "Which category of testing needs no internal artifacts at all?"
+      ],
+      "explanation": {
+        "correct": "Dynamic testing (DAST) interacts with the running application and needs no source code, so it suits purchased software. It finds runtime issues like authentication and session flaws.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Static analysis needs source code, which is unavailable."
+          },
+          {
+            "option": 2,
+            "why": "Peer code review also requires the code."
+          },
+          {
+            "option": 3,
+            "why": "Compiler warnings are generated by the build process the vendor controls."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub02-006",
+      "domain": 6,
+      "subdomain": "6.2",
+      "difficulty": 2,
+      "stem": "A vulnerability scan of a server run without credentials produced many false positives. Which change would MOST improve result accuracy?",
+      "options": [
+        "Run the same unauthenticated scan far more often",
+        "Scan from outside the firewall instead",
+        "Disable the scanner's signature updates",
+        "Perform an authenticated (credentialed) scan"
+      ],
+      "correct": 3,
+      "ladder": [
+        "What can a scanner see from outside versus with a login?",
+        "What would let a scanner read patch levels and settings instead of guessing from network responses?"
+      ],
+      "explanation": {
+        "correct": "Authenticated scans log in and inspect patch levels, configuration, and installed software directly, which reduces false positives and gives more detail than a network-only view.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Running more often repeats the same inaccurate method."
+          },
+          {
+            "option": 1,
+            "why": "Scanning from outside shows only exposed services, which is typically less detail, not more."
+          },
+          {
+            "option": 2,
+            "why": "Disabling updates would make results less current and less accurate."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub02-007",
+      "domain": 6,
+      "subdomain": "6.2",
+      "difficulty": 1,
+      "stem": "What does interface testing evaluate?",
+      "options": [
+        "The throughput of the organization's network backbone",
+        "Physical access controls at the facility entrances",
+        "Employee awareness of social engineering and phishing attacks",
+        "How components and APIs exchange data and handle errors"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Where do two components meet, and what flows across that boundary?",
+        "Which testing focuses on connection points rather than internal logic?"
+      ],
+      "explanation": {
+        "correct": "Interface testing verifies that modules, APIs, and user and system interfaces pass data correctly and handle invalid input and errors securely. Interface weaknesses are a common source of vulnerabilities.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Network speed is measured by performance monitoring, not interface testing."
+          },
+          {
+            "option": 1,
+            "why": "Physical access controls are reviewed in physical security assessments."
+          },
+          {
+            "option": 2,
+            "why": "Awareness is measured through phishing simulations and training metrics."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub02-008",
+      "domain": 6,
+      "subdomain": "6.2",
+      "difficulty": 1,
+      "stem": "What does test coverage analysis measure?",
+      "options": [
+        "The percentage of known vulnerabilities fixed each quarter",
+        "The number of users who passed a security course",
+        "The proportion of code or requirements exercised by tests",
+        "The share of production servers that are patched"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What is the denominator: things that exist in the software, or things that exist in the organization?",
+        "What question does it answer about the thoroughness of testing?"
+      ],
+      "explanation": {
+        "correct": "Test coverage analysis shows how much of the software (code paths, features, requirements) was actually exercised by tests. Low coverage means untested areas may hide defects.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Remediation rates are a vulnerability management metric."
+          },
+          {
+            "option": 1,
+            "why": "Training completion is an awareness program metric."
+          },
+          {
+            "option": 3,
+            "why": "Patch compliance is an operational metric and does not describe the testing of software."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub02-009",
+      "domain": 6,
+      "subdomain": "6.2",
+      "difficulty": 1,
+      "stem": "A team builds test cases describing how an attacker might deliberately abuse an application feature, such as bypassing a payment step. What are these test cases called?",
+      "options": [
+        "Use cases",
+        "Unit tests",
+        "Misuse (abuse) cases",
+        "Acceptance criteria"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Is the actor following the intended path or deliberately subverting it?",
+        "Which test cases are written from the attacker's perspective rather than the legitimate user's?"
+      ],
+      "explanation": {
+        "correct": "Misuse or abuse cases model malicious behavior against a system, helping developers identify missing security requirements and test that controls resist abuse.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Use cases describe intended legitimate functionality."
+          },
+          {
+            "option": 1,
+            "why": "Unit tests check individual components against expected behavior, not adversarial scenarios."
+          },
+          {
+            "option": 3,
+            "why": "Acceptance criteria define when a feature is satisfactory to the business."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub02-010",
+      "domain": 6,
+      "subdomain": "6.2",
+      "difficulty": 2,
+      "stem": "A company wants a continuous, automated way to validate whether its existing controls detect and block common attacker techniques. Which approach BEST meets this need?",
+      "options": [
+        "A one-time external audit",
+        "Breach and attack simulation",
+        "A tabletop exercise",
+        "A policy review"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Is the goal a point-in-time opinion or ongoing automated validation?",
+        "How often must the validation run, and does it depend on staff effort each time?"
+      ],
+      "explanation": {
+        "correct": "Breach and attack simulation (BAS) tools safely and repeatedly emulate attacker techniques, showing which controls detect or stop them. They complement, but do not replace, penetration tests.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "An audit is periodic and relies on evidence rather than automated attack emulation."
+          },
+          {
+            "option": 2,
+            "why": "A tabletop exercise tests discussion and decisions, not live technical controls."
+          },
+          {
+            "option": 3,
+            "why": "A policy review examines documents, not whether controls work."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub02-011",
+      "domain": 6,
+      "subdomain": "6.2",
+      "difficulty": 1,
+      "stem": "Which BEST describes a security compliance check?",
+      "options": [
+        "Attempting to breach systems to expose weaknesses",
+        "Reviewing application source code for logic errors and flaws",
+        "Monitoring the availability and speed of a website",
+        "Verifying systems against a defined policy or standard"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Against what are the systems being compared?",
+        "Is this about breaking in or about conformance?"
+      ],
+      "explanation": {
+        "correct": "Compliance checks compare actual configurations and practices with required baselines, policies, or regulations, such as hardening standards. They show conformance rather than exploitability.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Attempting breaches describes penetration testing."
+          },
+          {
+            "option": 1,
+            "why": "Reviewing code for flaws is a code review activity."
+          },
+          {
+            "option": 2,
+            "why": "Monitoring website performance is operational monitoring, such as synthetic transactions."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub02-012",
+      "domain": 6,
+      "subdomain": "6.2",
+      "difficulty": 2,
+      "stem": "A security manager wants to detect low-and-slow attacks that individual alerts miss. Which log review practice is MOST effective?",
+      "options": [
+        "Correlating logs from many sources in a SIEM",
+        "Reviewing each server's logs on its own monthly",
+        "Extending log retention from 90 days to a year",
+        "Alerting only on high-severity events per host"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Does an attacker's activity appear in just one place?",
+        "What capability connects events across systems over time?"
+      ],
+      "explanation": {
+        "correct": "Correlating logs across sources in a SIEM exposes patterns that no single log shows, like slow reconnaissance followed by lateral movement. Review should be regular and, where possible, automated.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Reviewing in isolation misses cross-system patterns and is slow."
+          },
+          {
+            "option": 2,
+            "why": "Longer retention helps investigations but does not improve detection by itself."
+          },
+          {
+            "option": 3,
+            "why": "Low-and-slow activity produces low-severity events individually, so alerting only on high severity discards the very signals needed."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub02-013",
+      "domain": 6,
+      "subdomain": "6.2",
+      "difficulty": 3,
+      "stem": "A scanner reports 400 high-CVSS findings across the estate. The remediation team can fix only a small portion this quarter. What should the security manager do FIRST?",
+      "options": [
+        "Divide the findings equally among all remediation teams",
+        "Prioritize using asset criticality, exposure, and threat context",
+        "Accept the risk for all but the first 50 findings ranked by score",
+        "Ask the scanner vendor to lower the severity ratings"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Is a score alone the same as business risk?",
+        "What additional information tells you which findings could cause the most harm?"
+      ],
+      "explanation": {
+        "correct": "Risk-based prioritization combines severity with asset value, exposure, exploitability, and compensating controls so limited resources reduce the most risk. Scores alone ignore business context.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Equal assignment wastes effort on low-impact assets while critical ones wait."
+          },
+          {
+            "option": 2,
+            "why": "Cutting off at an arbitrary number is not a reasoned risk decision and could leave the worst exposures open."
+          },
+          {
+            "option": 3,
+            "why": "Asking the vendor to change ratings hides issues without reducing risk."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub02-014",
+      "domain": 6,
+      "subdomain": "6.2",
+      "difficulty": 3,
+      "stem": "The security team wants to scan a plant's legacy industrial control systems, which are known to fail when unexpected packets arrive. What is the BEST approach?",
+      "options": [
+        "Use passive monitoring or a replica lab with operations' agreement",
+        "Run a full active scan during normal business hours for best accuracy",
+        "Skip the assessment because the systems are legacy",
+        "Run an active scan at night without telling operations"
+      ],
+      "correct": 0,
+      "ladder": [
+        "What is the largest risk of scanning this particular environment?",
+        "How can you gain information without sending harmful traffic to fragile systems?"
+      ],
+      "explanation": {
+        "correct": "Fragile operational systems can be disrupted by active scans, so passive monitoring, replica testing, or carefully planned and coordinated testing is safer. Assessment still must happen, but in a way that respects availability and safety.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "A full active scan risks outages and safety incidents on fragile equipment."
+          },
+          {
+            "option": 2,
+            "why": "Skipping assessment leaves unknown risk on systems that may be critical."
+          },
+          {
+            "option": 3,
+            "why": "Unannounced scanning removes operational readiness and can cause unplanned downtime."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub03-001",
+      "domain": 6,
+      "subdomain": "6.3",
+      "difficulty": 1,
+      "stem": "What is the key difference between a key performance indicator (KPI) and a key risk indicator (KRI)?",
+      "options": [
+        "A KPI measures risk exposure while a KRI measures performance",
+        "KPIs are used only by auditors, while KRIs are used only by managers",
+        "They are the same metric reported under two different names",
+        "A KPI shows how well a process performs; a KRI warns of rising risk"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Does the indicator look at how well something is done, or at how likely something bad is becoming?",
+        "Which one is forward looking about risk?"
+      ],
+      "explanation": {
+        "correct": "KPIs show whether objectives are being met, for example the percentage of patches deployed on time. KRIs act as early warnings that risk exposure is increasing, for example a growing backlog of unpatched critical systems.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "This reverses the definitions."
+          },
+          {
+            "option": 1,
+            "why": "Both are used across management levels; neither is restricted to a single role."
+          },
+          {
+            "option": 2,
+            "why": "They are different measures with different purposes, though some metrics may serve as both."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub03-002",
+      "domain": 6,
+      "subdomain": "6.3",
+      "difficulty": 1,
+      "stem": "Which concept describes ongoing awareness of security, vulnerabilities, and threats to support risk decisions, as described in NIST SP 800-137?",
+      "options": [
+        "Continuous monitoring (ISCM)",
+        "Annual penetration testing",
+        "Periodic policy review",
+        "Business impact analysis"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Is the activity continuous or point-in-time?",
+        "Which term describes maintaining ongoing situational awareness?"
+      ],
+      "explanation": {
+        "correct": "ISCM maintains ongoing awareness of information security, vulnerabilities, and threats to support risk-based decisions. It relies on automated and manual collection of security process data at defined frequencies.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "An annual penetration test is a point-in-time activity."
+          },
+          {
+            "option": 2,
+            "why": "Periodic policy review addresses documentation and not ongoing technical awareness."
+          },
+          {
+            "option": 3,
+            "why": "A BIA identifies critical processes and impacts, not continuous security monitoring."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub03-003",
+      "domain": 6,
+      "subdomain": "6.3",
+      "difficulty": 1,
+      "stem": "Which technology BEST supports centralized collection, normalization, and correlation of log data from many systems?",
+      "options": [
+        "A host-based firewall",
+        "A SIEM platform",
+        "A password vault",
+        "A network switch"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which tool pulls events from many sources into one place?",
+        "What does correlation require that a single device cannot provide?"
+      ],
+      "explanation": {
+        "correct": "A SIEM aggregates and normalizes log data from multiple sources and correlates events to produce alerts and reports, enabling collection of security process data at scale.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A host firewall filters traffic on one machine and does not aggregate logs from others."
+          },
+          {
+            "option": 2,
+            "why": "A password vault stores credentials and does not correlate events."
+          },
+          {
+            "option": 3,
+            "why": "A switch forwards traffic and is, at most, a source of logs."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub03-004",
+      "domain": 6,
+      "subdomain": "6.3",
+      "difficulty": 2,
+      "stem": "A review of user accounts finds several active accounts belonging to employees who left the company months ago. Which process improvement would BEST prevent this?",
+      "options": [
+        "Perform an annual manual review of all accounts",
+        "Ask managers to remind their staff to report any departures",
+        "Connect HR termination events to automated deprovisioning",
+        "Enforce longer password lengths for all accounts"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Where does the information about departures originate?",
+        "How can the process reduce reliance on someone remembering to act?"
+      ],
+      "explanation": {
+        "correct": "Linking HR events to identity management automates timely deprovisioning, closing the gap at the source. Periodic account reviews remain valuable as a detective control but should not be the primary fix.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "An annual review is detective and slow; accounts could remain active for nearly a year."
+          },
+          {
+            "option": 1,
+            "why": "Reminders rely on human diligence and are unreliable."
+          },
+          {
+            "option": 3,
+            "why": "Longer passwords do nothing about accounts that should no longer exist."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub03-005",
+      "domain": 6,
+      "subdomain": "6.3",
+      "difficulty": 2,
+      "stem": "The disaster recovery team states that nightly backups complete successfully each night. Which additional data BEST confirms the organization can recover?",
+      "options": [
+        "The total storage capacity of the backup media",
+        "The number of backup jobs that are scheduled to run each night",
+        "Results of periodic test restores against RTO and RPO",
+        "The date on which the backup software was first purchased"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Does a successful job prove usable data?",
+        "What do you measure to know that recovery meets RTO and RPO?"
+      ],
+      "explanation": {
+        "correct": "Backup completion does not prove data can be restored. Regular test restores, compared with RTO and RPO, give evidence that recovery will work when needed.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Media size says nothing about whether the data is recoverable."
+          },
+          {
+            "option": 1,
+            "why": "Scheduled job counts show intent, not outcomes."
+          },
+          {
+            "option": 3,
+            "why": "Purchase dates are irrelevant to recoverability."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub03-006",
+      "domain": 6,
+      "subdomain": "6.3",
+      "difficulty": 2,
+      "stem": "What is the PRIMARY purpose of a management review of the information security program?",
+      "options": [
+        "To test technical controls for exploitable weaknesses",
+        "To assign blame to the staff responsible for incidents",
+        "To produce the documentation that auditors request on demand",
+        "To confirm ongoing effectiveness and direct improvements"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Who conducts a management review and what decision does it support?",
+        "Is the focus on technical tests or on the program's direction and resourcing?"
+      ],
+      "explanation": {
+        "correct": "Management review, as in ISO 27001, has senior management evaluate audit results, metrics, incidents, and changes to confirm the program remains suitable and effective and to set improvements and resources.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Technical weakness testing is done by assessments, not the management review."
+          },
+          {
+            "option": 1,
+            "why": "Reviews are about improvement and accountability, not blame."
+          },
+          {
+            "option": 2,
+            "why": "Documentation is a by-product; the purpose is oversight and direction."
+          }
+        ]
+      },
+      "tags": [
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub03-007",
+      "domain": 6,
+      "subdomain": "6.3",
+      "difficulty": 2,
+      "stem": "The security team runs quarterly phishing simulations. Which metric BEST indicates whether the awareness program is improving security behavior?",
+      "options": [
+        "The total number of emails sent in each simulation run",
+        "The number of employees enrolled in the annual training course",
+        "The click-rate trend alongside the rate of reported messages",
+        "The licensing cost of the simulation platform per year"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Does the metric show behavior change or just activity?",
+        "What positive behavior would you want to see rise?"
+      ],
+      "explanation": {
+        "correct": "Behavior-focused metrics, such as declining click rates and rising reporting rates over time, show real improvement. Activity metrics only show that training happened.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Emails sent measures activity, not behavior."
+          },
+          {
+            "option": 1,
+            "why": "Enrollment shows participation, not whether behavior changed."
+          },
+          {
+            "option": 3,
+            "why": "Cost relates to efficiency, not effectiveness."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub03-008",
+      "domain": 6,
+      "subdomain": "6.3",
+      "difficulty": 3,
+      "stem": "Over three months, the average time to patch critical vulnerabilities has risen from 7 to 21 days, though no incident has occurred. How should this metric be used?",
+      "options": [
+        "Ignore it because no incident has occurred",
+        "Track it as a KPI only, reviewed at the annual audit",
+        "Drop it from the dashboard until the trend improves",
+        "Treat it as a KRI and escalate with a response plan"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Does the lack of incidents mean risk has not changed?",
+        "Is the trend looking backward or forward?"
+      ],
+      "explanation": {
+        "correct": "A worsening patch latency trend is a leading indicator that exposure is growing, making it a KRI. A manager should escalate, investigate causes, and decide on response before an incident occurs.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Absence of incidents is a lagging view and does not show that exposure is stable."
+          },
+          {
+            "option": 1,
+            "why": "Waiting until the annual audit delays action on a trend that needs timely attention."
+          },
+          {
+            "option": 2,
+            "why": "Hiding a worsening metric until it improves keeps decision makers from seeing growing risk."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub03-009",
+      "domain": 6,
+      "subdomain": "6.3",
+      "difficulty": 3,
+      "stem": "A privileged-access review finds that several employees who transferred departments still have administrative rights from their previous roles. Which finding is MOST significant, and what should be recommended?",
+      "options": [
+        "Weak passwords; require longer password lengths",
+        "Privilege creep; recertify access at each role change",
+        "Insider threat; terminate the employees involved",
+        "Insufficient logging; extend log retention periods for audit"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What is the underlying cause of accumulated rights?",
+        "At what point in an employee's lifecycle did these rights stop being needed?"
+      ],
+      "explanation": {
+        "correct": "Accumulation of rights through role changes is privilege creep, violating least privilege. Access should be re-evaluated and re-approved at transfer, supported by periodic recertification.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Password length is unrelated to excess permissions."
+          },
+          {
+            "option": 2,
+            "why": "There is no evidence of malicious intent; terminating staff would be unjustified."
+          },
+          {
+            "option": 3,
+            "why": "Log retention helps investigations but does not remove excess privilege."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub04-001",
+      "domain": 6,
+      "subdomain": "6.4",
+      "difficulty": 1,
+      "stem": "A penetration tester's report includes a finding that the manager believes may be wrong. What should happen to the finding BEFORE it is reported to the business?",
+      "options": [
+        "It should be validated as a true positive",
+        "It should be dropped to avoid any disputes",
+        "It should be rated critical to get attention",
+        "It should be forwarded unchanged to system owners"
+      ],
+      "correct": 0,
+      "ladder": [
+        "How can you know the finding reflects reality?",
+        "What does reporting an unverified issue cost the receiving team?"
+      ],
+      "explanation": {
+        "correct": "Findings should be verified and validated so reports contain accurate, actionable information. Unvalidated findings waste effort and reduce trust in the assessment.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Dropping a finding without checking could hide a real risk."
+          },
+          {
+            "option": 2,
+            "why": "Inflating severity is dishonest and misleads prioritization."
+          },
+          {
+            "option": 3,
+            "why": "Sending unchecked results spreads noise and may cause unnecessary remediation."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub04-002",
+      "domain": 6,
+      "subdomain": "6.4",
+      "difficulty": 1,
+      "stem": "After a vulnerability has been remediated, what is the BEST way to confirm the fix?",
+      "options": [
+        "Accept the owner's word that the issue has been fixed",
+        "Close the ticket once the patch is deployed",
+        "Wait for the next annual audit to find out",
+        "Rescan or retest the affected system to verify"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Is deploying a patch the same as proving the weakness is gone?",
+        "What gives objective evidence of closure?"
+      ],
+      "explanation": {
+        "correct": "Verification through retesting or rescanning provides evidence that the issue is resolved and the fix did not introduce others. Closure should rely on evidence, not assertion.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Owner statements are unverified and lack objective evidence."
+          },
+          {
+            "option": 1,
+            "why": "A deployed patch may fail or be incomplete, so deployment alone does not show closure."
+          },
+          {
+            "option": 2,
+            "why": "Waiting a year leaves risk unconfirmed."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub04-003",
+      "domain": 6,
+      "subdomain": "6.4",
+      "difficulty": 2,
+      "stem": "Which content is MOST important in a security assessment report for senior executives?",
+      "options": [
+        "Business impact, overall risk posture, and decisions needed",
+        "Raw scanner output listing every technical detail and finding",
+        "Source code excerpts for each vulnerability found",
+        "A complete list of every tool used in testing"
+      ],
+      "correct": 0,
+      "ladder": [
+        "What decisions do executives need to make?",
+        "What level of detail helps them make those decisions?"
+      ],
+      "explanation": {
+        "correct": "Executives need a concise view of risk in business terms, along with what actions or resources are required. Technical detail belongs in appendices for technical audiences.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Raw output overwhelms non-technical readers and does not support decisions."
+          },
+          {
+            "option": 2,
+            "why": "Code excerpts are for developers."
+          },
+          {
+            "option": 3,
+            "why": "Tools are of minor interest to executives and do not convey risk."
+          }
+        ]
+      },
+      "tags": [
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub04-004",
+      "domain": 6,
+      "subdomain": "6.4",
+      "difficulty": 2,
+      "stem": "Following an assessment, the remediation team needs to decide the order of fixes. Which factor should have the MOST influence on priority?",
+      "options": [
+        "Which finding would take the least effort to fix",
+        "Which finding was discovered first during testing",
+        "The personal preference of the system administrator",
+        "The business impact and likelihood of exploitation"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Should ease or harm drive the order of work?",
+        "Which two risk components determine priority?"
+      ],
+      "explanation": {
+        "correct": "Remediation should be risk-based, combining impact and likelihood so that the most dangerous exposures are addressed first. Quick wins can be done in parallel but should not displace higher risk work.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Ease of fix may help scheduling but ignores risk."
+          },
+          {
+            "option": 1,
+            "why": "Discovery order has no relation to risk."
+          },
+          {
+            "option": 2,
+            "why": "Personal preference is not a risk-based criterion."
+          }
+        ]
+      },
+      "tags": [
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub04-005",
+      "domain": 6,
+      "subdomain": "6.4",
+      "difficulty": 2,
+      "stem": "A system cannot be patched for a finding because the vendor no longer supports it. What is the BEST way to handle this?",
+      "options": [
+        "Leave the finding open without any notation",
+        "Mark the finding closed because the vendor cannot fix it",
+        "Document a formal exception with compensating controls",
+        "Shut the unsupported system down immediately"
+      ],
+      "correct": 2,
+      "ladder": [
+        "How should a known, unremediated weakness be recorded?",
+        "What can reduce risk when the primary fix is not possible?"
+      ],
+      "explanation": {
+        "correct": "When remediation is not feasible, the organization should document an exception, apply compensating controls such as isolation or monitoring, and review it periodically under management's approval.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Leaving it unrecorded hides the risk and fails governance."
+          },
+          {
+            "option": 1,
+            "why": "Closing the finding falsely implies the risk is resolved."
+          },
+          {
+            "option": 3,
+            "why": "Immediate shutdown may be disproportionate to the business need and is not the first option."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub04-006",
+      "domain": 6,
+      "subdomain": "6.4",
+      "difficulty": 3,
+      "stem": "A business unit leader decides not to remediate a high-rated finding because the fix would delay a product launch. Who should formally accept the residual risk?",
+      "options": [
+        "The security manager on the leader's behalf",
+        "The external assessor who found the issue",
+        "The accountable business risk owner, fully informed",
+        "The IT operations team that runs and supports the system"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Who bears the business consequences of the risk?",
+        "Does the security function own the decision to accept risk?"
+      ],
+      "explanation": {
+        "correct": "Risk acceptance is a business decision made by the accountable risk owner with authority and full information. Security advises and documents it; it does not accept risk on the business's behalf.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "The security manager advises but is not the accountable owner of the business risk."
+          },
+          {
+            "option": 1,
+            "why": "Assessors report; they do not own or accept risk."
+          },
+          {
+            "option": 3,
+            "why": "The operations team runs the system but has no authority to accept business risk on the organization's behalf."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub04-007",
+      "domain": 6,
+      "subdomain": "6.4",
+      "difficulty": 3,
+      "stem": "During testing, an assessor finds an actively exploitable critical flaw on an internet-facing system, with the final report due in three weeks. What is the BEST action?",
+      "options": [
+        "Wait for the final report to avoid incomplete reporting",
+        "Post the finding publicly for peer review by others",
+        "Exploit the flaw further to demonstrate its full impact",
+        "Notify the designated contact immediately per the plan"
+      ],
+      "correct": 3,
+      "ladder": [
+        "What happens to exposure time if the assessor waits?",
+        "What does the agreed communication plan say about critical issues?"
+      ],
+      "explanation": {
+        "correct": "Critical findings with immediate exposure should be reported promptly through the agreed escalation path, rather than waiting for the final report. This allows rapid mitigation while the report is finished.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Waiting leaves a known, exploitable flaw exposed for weeks."
+          },
+          {
+            "option": 1,
+            "why": "Public disclosure could aid attackers and breaches confidentiality."
+          },
+          {
+            "option": 2,
+            "why": "Exploiting further exceeds the necessary scope and increases risk."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub05-001",
+      "domain": 6,
+      "subdomain": "6.5",
+      "difficulty": 1,
+      "stem": "A SOC 1 report primarily addresses controls relevant to which area?",
+      "options": [
+        "The security, availability, and confidentiality of customer data",
+        "Service controls relevant to customers' financial reporting",
+        "The service organization's detailed network architecture",
+        "The truthfulness of the provider's public security claims"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which stakeholders rely on a SOC 1 report, and for what purpose?",
+        "What kind of internal control do a customer's financial statement auditors care about?"
+      ],
+      "explanation": {
+        "correct": "SOC 1 reports cover controls at a service organization that are relevant to the user entities' internal control over financial reporting (ICFR). They are used by customers and their auditors.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Security, availability, and confidentiality are Trust Services Criteria, which SOC 2 reports address, not SOC 1."
+          },
+          {
+            "option": 2,
+            "why": "SOC reports do not provide network design details for general release."
+          },
+          {
+            "option": 3,
+            "why": "SOC 3 is a general-use report, but even it focuses on trust services criteria, not marketing."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub05-002",
+      "domain": 6,
+      "subdomain": "6.5",
+      "difficulty": 1,
+      "stem": "SOC 2 reports evaluate controls against which set of criteria?",
+      "options": [
+        "The PCI DSS requirements",
+        "The COBIT framework",
+        "The Trust Services Criteria",
+        "The OWASP Top 10"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which body publishes the criteria that service organization examiners test against, and what does it call them?",
+        "Which framework is specific to service organization attestation?"
+      ],
+      "explanation": {
+        "correct": "SOC 2 examinations are based on the AICPA Trust Services Criteria: security (common criteria), availability, processing integrity, confidentiality, and privacy.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "PCI DSS has its own assessment process and report on compliance."
+          },
+          {
+            "option": 1,
+            "why": "COBIT is an IT governance framework and not the basis for SOC 2 criteria."
+          },
+          {
+            "option": 3,
+            "why": "The OWASP Top 10 is an application risk awareness list and not an audit criteria set."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub05-003",
+      "domain": 6,
+      "subdomain": "6.5",
+      "difficulty": 1,
+      "stem": "What is the difference between a Type I and a Type II SOC report?",
+      "options": [
+        "Type I tests operation over a period; Type II tests design on a single date",
+        "Type I tests design on one date; Type II tests operation over a period",
+        "Type I is for public use; Type II is restricted to user entities",
+        "Type I is for financial controls; Type II is for security controls"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which type tests whether controls actually worked over time?",
+        "Which type is only a snapshot?"
+      ],
+      "explanation": {
+        "correct": "A Type I report covers whether controls are suitably designed as of a specific date. A Type II report also tests whether they operated effectively over a period, usually six to twelve months, so it gives stronger assurance.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "This reverses the two types."
+          },
+          {
+            "option": 2,
+            "why": "Distribution is determined by the SOC category, not Type I or II."
+          },
+          {
+            "option": 3,
+            "why": "Type applies to both SOC 1 and SOC 2 and is not a financial versus security split."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub05-004",
+      "domain": 6,
+      "subdomain": "6.5",
+      "difficulty": 1,
+      "stem": "Which SOC report is intended for general use and can be freely distributed, for example to prospective customers on a website?",
+      "options": [
+        "SOC 3",
+        "SOC 1 Type II",
+        "SOC 2 Type II",
+        "SOC 2 Type I"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which report removes the sensitive detail so it can be shared widely?",
+        "Which reports have restricted distribution?"
+      ],
+      "explanation": {
+        "correct": "SOC 3 is a general-use report summarizing the examination against the Trust Services Criteria without confidential control details, so it may be shared publicly. SOC 1 and SOC 2 reports are restricted-use.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "SOC 1 Type II is restricted to user entities and their auditors."
+          },
+          {
+            "option": 2,
+            "why": "SOC 2 Type II contains detailed testing results and is restricted-use under NDA."
+          },
+          {
+            "option": 3,
+            "why": "SOC 2 Type I is also restricted-use and covers design only."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub05-005",
+      "domain": 6,
+      "subdomain": "6.5",
+      "difficulty": 2,
+      "stem": "A customer asks a service provider for the BEST evidence that the provider's security controls have operated effectively over time. Which should the provider supply?",
+      "options": [
+        "A SOC 2 Type I report",
+        "A SOC 3 report",
+        "A self-completed questionnaire",
+        "A SOC 2 Type II report"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Does the customer need design only, or operation over time?",
+        "Which reports show an auditor's test results on how controls operated, not just how they were designed?"
+      ],
+      "explanation": {
+        "correct": "A SOC 2 Type II report includes the auditor's testing of control operation over a period and detailed results, providing the strongest assurance of ongoing security effectiveness.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Type I covers design at a single date and does not show sustained operation."
+          },
+          {
+            "option": 1,
+            "why": "SOC 3 is a summary without detailed test results, so it gives less assurance."
+          },
+          {
+            "option": 2,
+            "why": "A self-completed questionnaire is unverified; it carries no independent testing of control operation."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub05-006",
+      "domain": 6,
+      "subdomain": "6.5",
+      "difficulty": 2,
+      "stem": "What should an auditor do FIRST when beginning an audit engagement?",
+      "options": [
+        "Interview the managers and staff who will be audited",
+        "Agree the audit objectives, scope, and criteria",
+        "Draft the final audit opinion for review",
+        "Begin sampling evidence from key systems"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What must be agreed before evidence can be collected?",
+        "How does the auditor know what to test and against what?"
+      ],
+      "explanation": {
+        "correct": "Audits begin with planning: agreeing objectives, scope, criteria, and approach. Without these, evidence gathering is unfocused and findings cannot be measured against standards.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Interviews are fieldwork activities that come after planning."
+          },
+          {
+            "option": 2,
+            "why": "Opinions are issued at the end of the audit."
+          },
+          {
+            "option": 3,
+            "why": "Sampling is performed after criteria and scope are known."
+          }
+        ]
+      },
+      "tags": [
+        "ordering",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub05-007",
+      "domain": 6,
+      "subdomain": "6.5",
+      "difficulty": 2,
+      "stem": "A SOC 2 report from a provider notes that certain controls must be implemented by customers for the control objectives to be met. What are these called?",
+      "options": [
+        "Compensating controls",
+        "Carve-out controls",
+        "Common criteria",
+        "Complementary user entity controls"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Whose responsibility is a control that the provider's design assumes the customer will perform?",
+        "Is this a scope exclusion by the provider, or a responsibility the customer must carry out?"
+      ],
+      "explanation": {
+        "correct": "Complementary user entity controls (CUECs) are controls the service organization assumes customers will implement. Customers must review and apply them, otherwise the provider's assurance does not cover the whole control environment.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Compensating controls substitute for a primary control that cannot be implemented; they are not controls assumed to be performed by customers."
+          },
+          {
+            "option": 1,
+            "why": "Carve-out refers to excluding a subservice organization from the report scope, not customer-side controls."
+          },
+          {
+            "option": 2,
+            "why": "Common criteria are the security criteria in the Trust Services Criteria."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub05-008",
+      "domain": 6,
+      "subdomain": "6.5",
+      "difficulty": 3,
+      "stem": "A customer reviewing a provider's SOC 2 Type II report notes that a key subservice organization is carved out of scope, and that the report lists complementary user entity controls. What is the BEST next step?",
+      "options": [
+        "Consider the carve-out irrelevant because the report is Type II",
+        "Accept the report as complete assurance for the whole service chain",
+        "Assess the subservice provider's risk and map CUECs to own controls",
+        "Ask the provider for a SOC 3 report to close the assurance gap"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Does the report cover everything the customer depends on?",
+        "Which responsibilities remain with the customer after reading the report?"
+      ],
+      "explanation": {
+        "correct": "A carve-out means the subservice provider's controls were not examined, so the customer must obtain separate assurance. The customer must also implement the CUECs, since accountability for the data remains with the customer.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Type II concerns the period of testing and does not bring carved-out services into scope."
+          },
+          {
+            "option": 1,
+            "why": "Treating the report as complete overlooks the carve-out and customer responsibilities."
+          },
+          {
+            "option": 3,
+            "why": "SOC 3 offers less detail and would not close the gap."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d6-sub05-009",
+      "domain": 6,
+      "subdomain": "6.5",
+      "difficulty": 3,
+      "stem": "Which type of audit evidence is generally considered the MOST reliable?",
+      "options": [
+        "A verbal assurance given by the control owner in interview",
+        "Reports prepared by the audited team and handed to the auditor",
+        "Evidence the auditor gathers directly, such as by re-performance",
+        "Output from the control owner's own tools, taken without verification"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Who produced the evidence, and could they have a stake in the outcome?",
+        "Which type of evidence is gathered by the auditor firsthand?"
+      ],
+      "explanation": {
+        "correct": "Evidence gathered directly by an independent auditor, via direct observation, inspection, and re-performance, is more reliable than information supplied by the audited party. Reliability is higher when sourced independently and from systems with strong controls.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Verbal statements are the weakest form and are not independently verified."
+          },
+          {
+            "option": 1,
+            "why": "Documents prepared by the audited team may be incomplete or biased."
+          },
+          {
+            "option": 3,
+            "why": "Unverified tool output depends on trust in the owner and the tool's integrity."
+          }
+        ]
+      },
+      "tags": [
+        "best-answer"
+      ],
+      "reviewed": true
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f-d6-sub01-001",
+      "domain": 6,
+      "subdomain": "6.1",
+      "front": "Pen test phases (NIST SP 800-115)",
+      "back": "Planning, discovery, attack (with a loop back to discovery as new hosts are found), then reporting. Reporting is also produced throughout.",
+      "whyItMatters": "Exam asks for the correct order and that planning/authorization comes first."
+    },
+    {
+      "id": "f-d6-sub01-002",
+      "domain": 6,
+      "subdomain": "6.1",
+      "front": "Black box vs gray box vs white box testing",
+      "back": "Black: no prior knowledge (outsider). Gray: partial knowledge or limited credentials (insider). White: full knowledge, design and source (also called crystal or full-knowledge).",
+      "whyItMatters": "Questions map attacker profile to test type."
+    },
+    {
+      "id": "f-d6-sub01-003",
+      "domain": 6,
+      "subdomain": "6.1",
+      "front": "Vulnerability assessment vs penetration test",
+      "back": "VA finds and ranks weaknesses without exploiting them. Pen test exploits and chains weaknesses to demonstrate real impact, under written authorization.",
+      "whyItMatters": "Classic distinction; exploitation requires authorization."
+    },
+    {
+      "id": "f-d6-sub01-004",
+      "domain": 6,
+      "subdomain": "6.1",
+      "front": "Rules of engagement (ROE)",
+      "back": "Written agreement defining scope, targets, permitted techniques, test windows, emergency contacts, and data handling. Must be approved before testing starts.",
+      "whyItMatters": "Written authorization is the first-step answer for pen test scenarios."
+    },
+    {
+      "id": "f-d6-sub01-005",
+      "domain": 6,
+      "subdomain": "6.1",
+      "front": "Red team, blue team, purple team",
+      "back": "Red emulates the adversary; blue defends and detects; purple is collaboration where red and blue share findings to improve defenses.",
+      "whyItMatters": "Exam asks which team attacks, which defends, and what purple adds."
+    },
+    {
+      "id": "f-d6-sub01-006",
+      "domain": 6,
+      "subdomain": "6.1",
+      "front": "Internal vs external vs third-party audit",
+      "back": "Internal: own staff, reports to audit committee. External: independent firm, highest independence for outside parties. Third-party: provider audited by an independent party, shared as reports (for example SOC).",
+      "whyItMatters": "Exam probes who is independent and for whom."
+    },
+    {
+      "id": "f-d6-sub01-007",
+      "domain": 6,
+      "subdomain": "6.1",
+      "front": "Why risk should drive assessment strategy",
+      "back": "Frequency and depth of testing should reflect asset criticality, threat level, and prior findings, not a fixed calendar or budget alone.",
+      "whyItMatters": "When options offer budget, last year's schedule, or risk, the risk-driven answer wins."
+    },
+    {
+      "id": "f-d6-sub02-001",
+      "domain": 6,
+      "subdomain": "6.2",
+      "front": "SAST vs DAST vs IAST",
+      "back": "SAST: analyzes source or binaries at rest, no execution. DAST: tests the running app from outside, no source needed. IAST: instrumented agent observes the app from inside while it is tested.",
+      "whyItMatters": "Exam asks which method fits access to code or runtime."
+    },
+    {
+      "id": "f-d6-sub02-002",
+      "domain": 6,
+      "subdomain": "6.2",
+      "front": "Fuzzing",
+      "back": "Supplies malformed, random, or unexpected input to a program to trigger crashes and expose flaws such as buffer overflows. Types: mutation-based (alters valid input) and generation-based (builds input from a model).",
+      "whyItMatters": "Know both what fuzzing finds and its two styles."
+    },
+    {
+      "id": "f-d6-sub02-003",
+      "domain": 6,
+      "subdomain": "6.2",
+      "front": "Synthetic transactions vs real user monitoring",
+      "back": "Synthetic: scripted, repeatable simulated transactions run proactively (active). RUM: passive capture of actual user sessions.",
+      "whyItMatters": "Common pairing; active vs passive."
+    },
+    {
+      "id": "f-d6-sub02-004",
+      "domain": 6,
+      "subdomain": "6.2",
+      "front": "Credentialed (authenticated) vs non-credentialed scan",
+      "back": "Credentialed scans log in to inspect patches and configuration, giving fewer false positives and more depth. Non-credentialed shows what an external attacker sees.",
+      "whyItMatters": "Reducing false positives is a frequent scenario."
+    },
+    {
+      "id": "f-d6-sub02-005",
+      "domain": 6,
+      "subdomain": "6.2",
+      "front": "False positive vs false negative",
+      "back": "False positive: reported flaw that does not exist. False negative: real flaw that the tool missed. False negatives are generally more dangerous.",
+      "whyItMatters": "Exam tests the terms and the greater risk."
+    },
+    {
+      "id": "f-d6-sub02-006",
+      "domain": 6,
+      "subdomain": "6.2",
+      "front": "Test coverage analysis",
+      "back": "Measures the share of code, branches, functions, or requirements exercised by test cases. Low coverage indicates untested areas.",
+      "whyItMatters": "Exam asks what low coverage implies about testing thoroughness, not about security posture."
+    },
+    {
+      "id": "f-d6-sub02-007",
+      "domain": 6,
+      "subdomain": "6.2",
+      "front": "Misuse (abuse) case testing",
+      "back": "Models how a malicious actor might subvert a feature, then tests that controls resist it. The attacker's counterpart of a use case.",
+      "whyItMatters": "Distinguishes abuse cases from use cases."
+    },
+    {
+      "id": "f-d6-sub02-008",
+      "domain": 6,
+      "subdomain": "6.2",
+      "front": "Interface testing",
+      "back": "Examines interactions between components: APIs, UIs, and server interfaces, covering data exchange, error handling, and boundary conditions.",
+      "whyItMatters": "Exam asks what interface testing covers (APIs, UIs, server boundaries) versus code review."
+    },
+    {
+      "id": "f-d6-sub02-009",
+      "domain": 6,
+      "subdomain": "6.2",
+      "front": "Breach and attack simulation (BAS)",
+      "back": "Automated, continuous emulation of attacker techniques to check whether controls detect or block them. Complements pen tests but is safer and repeatable.",
+      "whyItMatters": "Exam asks BAS purpose: continuous automated control validation, safer and more repeatable than a pen test."
+    },
+    {
+      "id": "f-d6-sub02-010",
+      "domain": 6,
+      "subdomain": "6.2",
+      "front": "Regression testing",
+      "back": "Re-running prior tests after a change to confirm existing functions and security controls still work and no new defects appeared.",
+      "whyItMatters": "Often asked after patching or code changes."
+    },
+    {
+      "id": "f-d6-sub03-001",
+      "domain": 6,
+      "subdomain": "6.3",
+      "front": "KPI vs KRI",
+      "back": "KPI: how well a process performs against objectives. KRI: leading signal that exposure to risk is rising. Example KRI: growing patch backlog.",
+      "whyItMatters": "Exam separates performance from risk signals."
+    },
+    {
+      "id": "f-d6-sub03-002",
+      "domain": 6,
+      "subdomain": "6.3",
+      "front": "NIST SP 800-137",
+      "back": "Information Security Continuous Monitoring (ISCM): ongoing awareness of security, vulnerabilities, and threats to support risk-based decisions.",
+      "whyItMatters": "Maps the standard number to the concept."
+    },
+    {
+      "id": "f-d6-sub03-003",
+      "domain": 6,
+      "subdomain": "6.3",
+      "front": "Account management review",
+      "back": "Periodic checks of accounts for orphaned, dormant, excessive, or privileged access, plus recertification at role change and termination.",
+      "whyItMatters": "Frequently tested with privilege creep scenarios."
+    },
+    {
+      "id": "f-d6-sub03-004",
+      "domain": 6,
+      "subdomain": "6.3",
+      "front": "Privilege creep",
+      "back": "Accumulation of access rights as a person changes roles without old rights being removed; violates least privilege. Fixed by recertification at role change.",
+      "whyItMatters": "Typical finding in access reviews."
+    },
+    {
+      "id": "f-d6-sub03-005",
+      "domain": 6,
+      "subdomain": "6.3",
+      "front": "Management review (ISO 27001)",
+      "back": "Senior management periodically reviews audit results, metrics, incidents, and changes to confirm the ISMS is suitable, adequate, and effective, and directs improvements.",
+      "whyItMatters": "Know who does it and why."
+    },
+    {
+      "id": "f-d6-sub03-006",
+      "domain": 6,
+      "subdomain": "6.3",
+      "front": "Backup verification data",
+      "back": "Success logs are not proof. Evidence of recoverability comes from periodic test restores measured against RTO and RPO.",
+      "whyItMatters": "Tests the difference between activity and assurance."
+    },
+    {
+      "id": "f-d6-sub03-007",
+      "domain": 6,
+      "subdomain": "6.3",
+      "front": "Awareness program metrics",
+      "back": "Activity metrics show completion. Behavior metrics (phishing click rate trend, reporting rate) show effectiveness.",
+      "whyItMatters": "Best-metric questions favour behavior outcomes."
+    },
+    {
+      "id": "f-d6-sub04-001",
+      "domain": 6,
+      "subdomain": "6.4",
+      "front": "Steps to take with a scanner finding",
+      "back": "Validate (rule out false positives), assess risk in context, prioritize, remediate or accept formally, then retest to verify closure.",
+      "whyItMatters": "Ordering and the verification step."
+    },
+    {
+      "id": "f-d6-sub04-002",
+      "domain": 6,
+      "subdomain": "6.4",
+      "front": "Reporting to executives vs technical teams",
+      "back": "Executives: business impact, risk posture, decisions needed, concise. Technical teams: reproduction steps, evidence, and remediation detail.",
+      "whyItMatters": "Audience tailoring is a classic question."
+    },
+    {
+      "id": "f-d6-sub04-003",
+      "domain": 6,
+      "subdomain": "6.4",
+      "front": "Exceptions and compensating controls",
+      "back": "When a fix is infeasible, record a formal exception approved by the risk owner, add compensating controls, and set a review date.",
+      "whyItMatters": "Tests proper handling of unfixable findings."
+    },
+    {
+      "id": "f-d6-sub04-004",
+      "domain": 6,
+      "subdomain": "6.4",
+      "front": "Who accepts residual risk?",
+      "back": "The accountable business or risk owner decides, with full information. Security advises and documents; it does not accept risk for the business.",
+      "whyItMatters": "Manager-mindset staple."
+    },
+    {
+      "id": "f-d6-sub04-005",
+      "domain": 6,
+      "subdomain": "6.4",
+      "front": "Handling critical findings during testing",
+      "back": "Report immediately through the agreed escalation path rather than waiting for the final report, especially when exploitable and exposed.",
+      "whyItMatters": "Appears in pen test conduct scenarios."
+    },
+    {
+      "id": "f-d6-sub05-001",
+      "domain": 6,
+      "subdomain": "6.5",
+      "front": "SOC 1 vs SOC 2 vs SOC 3",
+      "back": "SOC 1: controls relevant to customer financial reporting (ICFR). SOC 2: Trust Services Criteria, restricted use. SOC 3: summarized SOC 2 for general public use.",
+      "whyItMatters": "Most tested audit-report distinction."
+    },
+    {
+      "id": "f-d6-sub05-002",
+      "domain": 6,
+      "subdomain": "6.5",
+      "front": "Type I vs Type II report",
+      "back": "Type I: design of controls at a point in time. Type II: design plus operating effectiveness over a period (commonly 6 to 12 months).",
+      "whyItMatters": "Type II gives stronger assurance."
+    },
+    {
+      "id": "f-d6-sub05-003",
+      "domain": 6,
+      "subdomain": "6.5",
+      "front": "AICPA Trust Services Criteria",
+      "back": "Security (common criteria, always included), availability, processing integrity, confidentiality, and privacy.",
+      "whyItMatters": "Exam asks which criterion is mandatory in every SOC 2 (security) and to list the five."
+    },
+    {
+      "id": "f-d6-sub05-004",
+      "domain": 6,
+      "subdomain": "6.5",
+      "front": "Complementary user entity controls (CUECs)",
+      "back": "Controls the service provider assumes the customer implements; the customer must map them to its own environment.",
+      "whyItMatters": "Exam asks who must act on CUECs: the customer, not the provider."
+    },
+    {
+      "id": "f-d6-sub05-005",
+      "domain": 6,
+      "subdomain": "6.5",
+      "front": "Carve-out method",
+      "back": "A subservice organization is excluded from the report scope, so its controls were not examined; the customer must seek separate assurance.",
+      "whyItMatters": "Exam asks why a carve-out leaves a gap the customer must close separately."
+    },
+    {
+      "id": "f-d6-sub05-006",
+      "domain": 6,
+      "subdomain": "6.5",
+      "front": "Audit evidence reliability",
+      "back": "Evidence obtained directly by the auditor (observation, re-performance, inspection) is more reliable than representations from the audited party.",
+      "whyItMatters": "Which evidence is MOST reliable."
+    },
+    {
+      "id": "f-d6-sub05-007",
+      "domain": 6,
+      "subdomain": "6.5",
+      "front": "Auditor independence",
+      "back": "Auditors report to the audit committee or board, not to the function being audited, and should not audit controls they designed or operate.",
+      "whyItMatters": "Independence conflict scenarios."
+    },
+    {
+      "id": "f-d6-sub05-008",
+      "domain": 6,
+      "subdomain": "6.5",
+      "front": "Audit engagement order",
+      "back": "Plan (objectives, scope, criteria), perform fieldwork and collect evidence, analyze, report findings, then follow up on remediation.",
+      "whyItMatters": "Ordering question and planning first."
+    },
+    {
+      "id": "f-d6-sub05-009",
+      "domain": 6,
+      "subdomain": "6.5",
+      "front": "Right-to-audit clause",
+      "back": "Contract term letting a customer or its auditors examine a provider's controls. Accountability for the data stays with the customer regardless of outsourcing.",
+      "whyItMatters": "Third-party assurance and due diligence."
+    }
+  ]
+}

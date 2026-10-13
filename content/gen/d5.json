@@ -1,0 +1,2290 @@
+{
+  "questions": [
+    {
+      "id": "q-d5-sub01-001",
+      "domain": 5,
+      "subdomain": "5.1",
+      "difficulty": 1,
+      "stem": "Which control type is a mantrap (access control vestibule) primarily designed to address?",
+      "options": [
+        "Stopping tailgating by admitting one person at a time",
+        "Detecting smoke or fire early in a data center room",
+        "Encrypting sensitive data while it is in transit",
+        "Recovering operations quickly after a power outage"
+      ],
+      "correct": 0,
+      "ladder": [
+        "What physical threat involves following an authorized person through a door?",
+        "Which control forces individual authentication before the next door opens?"
+      ],
+      "explanation": {
+        "correct": "A mantrap uses two interlocking doors so only one person passes at a time, defeating tailgating and piggybacking while supporting individual accountability.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Fire detection is an environmental control and has nothing to do with entry control."
+          },
+          {
+            "option": 2,
+            "why": "Encryption protects logical data confidentiality, not physical entry."
+          },
+          {
+            "option": 3,
+            "why": "Power continuity is provided by UPS and generators, not by entry vestibules."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub01-002",
+      "domain": 5,
+      "subdomain": "5.1",
+      "difficulty": 1,
+      "stem": "Which security principle states that users should be granted only the access necessary to perform their assigned job functions?",
+      "options": [
+        "Separation of duties",
+        "Defense in depth",
+        "Fail-safe defaults",
+        "Least privilege"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Is the principle about how much access a person holds, or about dividing tasks between people?",
+        "If a clerk only needs to read one report, should the account be able to do anything more than that?"
+      ],
+      "explanation": {
+        "correct": "Least privilege limits users, processes and systems to the minimum permissions required, reducing the impact of error, misuse or compromise.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Separation of duties splits critical tasks among people to prevent fraud; it is not about minimizing rights."
+          },
+          {
+            "option": 1,
+            "why": "Defense in depth layers multiple controls; it does not define how much access an individual gets."
+          },
+          {
+            "option": 2,
+            "why": "Fail-safe defaults means denying access unless explicitly granted, which is related but does not by itself limit the scope of granted rights."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub01-003",
+      "domain": 5,
+      "subdomain": "5.1",
+      "difficulty": 2,
+      "stem": "A data center has a single badge reader at the entrance. Audit logs show badges used by employees who were never present, because staff routinely hold the door for colleagues. Which control would BEST address this?",
+      "options": [
+        "Awareness posters reminding staff not to hold doors",
+        "Keeping the badge reader logs for a longer period",
+        "A vestibule with anti-passback badge enforcement",
+        "A second badge reader at the interior door"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What behavior is actually defeating the control?",
+        "Which options only discourage or record the behavior, and which one physically controls who passes?"
+      ],
+      "explanation": {
+        "correct": "Tailgating is a physical behavior problem best solved by a preventive control that enforces one-at-a-time entry. A vestibule with anti-passback prevents a badge being reused to admit others.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Posters are a weak administrative reminder and do not prevent the behavior."
+          },
+          {
+            "option": 1,
+            "why": "Longer log retention is detective only; the logs are already showing the gap, and the problem is the entry itself."
+          },
+          {
+            "option": 3,
+            "why": "A second reader still allows a group to pass through if the door is held, so it does not stop tailgating."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub01-004",
+      "domain": 5,
+      "subdomain": "5.1",
+      "difficulty": 2,
+      "stem": "A retail company is deciding where to place a new server room. Management wants the room to attract minimal attention. Which placement is MOST consistent with sound physical security design?",
+      "options": [
+        "On the ground floor beside the public lobby for easy delivery access",
+        "Deep in the building interior, away from external walls, unmarked",
+        "Adjacent to the cafeteria to share chilled-water plumbing",
+        "On the top floor directly beneath the roof for cooling access"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What would an attacker, or a flood, fire or roof leak, find or reach most easily?",
+        "Where do water, public access and roof penetration each create risk for critical equipment?"
+      ],
+      "explanation": {
+        "correct": "Critical facilities belong in the core of a building, away from exterior walls, public areas, and water or roof hazards, and should not be advertised. This reduces both targeting and environmental risk.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Placing it next to the public lobby increases exposure to the public and to vehicle or forced-entry threats."
+          },
+          {
+            "option": 2,
+            "why": "Plumbing and a cafeteria add water, fire and traffic risks; shared utilities should be avoided near critical equipment."
+          },
+          {
+            "option": 3,
+            "why": "The top floor is exposed to roof leaks, wind and lightning, and is a poor location for critical systems."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub01-005",
+      "domain": 5,
+      "subdomain": "5.1",
+      "difficulty": 2,
+      "stem": "An administrator account on a payroll server is used daily by one engineer for both routine email and server maintenance. What is the BEST control to reduce risk while preserving the engineer's ability to work?",
+      "options": [
+        "Increase the password length on the existing account",
+        "Issue a separate account used only for admin tasks",
+        "Hide the administrator account name on the logon screen",
+        "Require the engineer to log out when idle for five minutes"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What makes a routinely used, highly privileged account dangerous?",
+        "Which principle limits high privilege to only the moments it is needed?"
+      ],
+      "explanation": {
+        "correct": "Separating everyday and privileged accounts applies least privilege and limits exposure of admin credentials to phishing and malware during routine use. It also improves accountability for administrative actions.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A longer password helps against guessing but does not stop credential theft through email-borne malware on the same account."
+          },
+          {
+            "option": 2,
+            "why": "Hiding the username is security by obscurity: it is easily discovered and does nothing about credential theft."
+          },
+          {
+            "option": 3,
+            "why": "An idle timeout reduces the window of misuse but the account still carries admin rights during all active use."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub01-006",
+      "domain": 5,
+      "subdomain": "5.1",
+      "difficulty": 3,
+      "stem": "A hospital is rolling out proximity-card access to server rooms. Facilities proposes a single master key card for IT staff to simplify operations. What should the security manager do FIRST?",
+      "options": [
+        "Assess the proposal against least privilege and accountability",
+        "Approve it, since IT staff are already trusted employees",
+        "Reject it and buy biometric readers for all rooms",
+        "Require a signed agreement from IT staff before issuing any cards"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Should the first move be an approval, a purchase or a paper agreement, or something that comes before all of those?",
+        "Which principles does a shared or universal credential weaken?"
+      ],
+      "explanation": {
+        "correct": "A master card undermines least privilege and individual accountability. The manager's first step is to assess the proposal against policy and risk, then recommend role-based access with logging, rather than jumping to a technology or an agreement.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Trust of employees does not remove the need for least privilege and audit trails; it is not risk-based reasoning."
+          },
+          {
+            "option": 2,
+            "why": "Selecting biometric hardware is a technical solution chosen before the requirements and risks are analysed."
+          },
+          {
+            "option": 3,
+            "why": "A signed agreement is administrative and does not fix excessive access or accountability gaps."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub02-001",
+      "domain": 5,
+      "subdomain": "5.2",
+      "difficulty": 1,
+      "stem": "Which of the following is an example of a 'something you are' authentication factor?",
+      "options": [
+        "A smart card",
+        "A one-time password sent by SMS",
+        "A passphrase",
+        "A fingerprint scan"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Which factor category depends on inherent biological characteristics?",
+        "Is the item something you hold, know, or are?"
+      ],
+      "explanation": {
+        "correct": "Inherence factors rely on biometric characteristics such as fingerprints, iris patterns or voice, which are 'something you are'.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A smart card is 'something you have' (possession)."
+          },
+          {
+            "option": 1,
+            "why": "An SMS code is delivered to a device you possess, so it is 'something you have'."
+          },
+          {
+            "option": 2,
+            "why": "A passphrase is 'something you know' (knowledge)."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub02-002",
+      "domain": 5,
+      "subdomain": "5.2",
+      "difficulty": 1,
+      "stem": "In biometric systems, what does the False Acceptance Rate (FAR) measure?",
+      "options": [
+        "How often an authorized user is incorrectly rejected by the system",
+        "How long biometric enrolment takes for each new user",
+        "How often an unauthorized person is incorrectly accepted",
+        "How often the biometric sensor needs recalibration"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Which error lets the wrong person in?",
+        "Which of the two error types is a Type II error?"
+      ],
+      "explanation": {
+        "correct": "FAR (Type II error) is the proportion of impostors the system wrongly accepts, a direct security risk.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "That describes the False Rejection Rate (FRR, Type I), which affects usability."
+          },
+          {
+            "option": 1,
+            "why": "Enrolment time is a throughput measure, not an error rate."
+          },
+          {
+            "option": 3,
+            "why": "Calibration frequency is a maintenance metric unrelated to FAR."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub02-003",
+      "domain": 5,
+      "subdomain": "5.2",
+      "difficulty": 1,
+      "stem": "The point at which a biometric system's FAR equals its FRR is known as the:",
+      "options": [
+        "Failure to enrol rate",
+        "Mean time between failures",
+        "Crossover error rate",
+        "Equal acceptance threshold"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What is the common name for the intersection of the two error curves?",
+        "Which metric is used to compare different biometric products?"
+      ],
+      "explanation": {
+        "correct": "The Crossover Error Rate (CER), also called the Equal Error Rate, is where FAR and FRR are equal. A lower CER indicates a more accurate biometric system.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Failure to enrol rate measures users who cannot register a template at all."
+          },
+          {
+            "option": 1,
+            "why": "MTBF is a reliability measure for hardware, not a biometric accuracy measure."
+          },
+          {
+            "option": 3,
+            "why": "'Equal acceptance threshold' is not a standard term for this metric."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub02-004",
+      "domain": 5,
+      "subdomain": "5.2",
+      "difficulty": 1,
+      "stem": "Which of the following combinations is considered true multi-factor authentication?",
+      "options": [
+        "A password and a security question",
+        "A password and a hardware token code",
+        "A PIN and a passphrase",
+        "A fingerprint and a retina scan"
+      ],
+      "correct": 1,
+      "ladder": [
+        "How many distinct factor categories does each pair use?",
+        "Which pair mixes two different categories rather than repeating one?"
+      ],
+      "explanation": {
+        "correct": "True MFA requires factors from at least two different categories. A password (knowledge) plus token (possession) qualifies.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Both a password and a security question are knowledge factors, so this is single-factor."
+          },
+          {
+            "option": 2,
+            "why": "A PIN and a passphrase are both knowledge factors."
+          },
+          {
+            "option": 3,
+            "why": "Fingerprint and retina are both inherence factors, so this is two instances of one category."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub02-005",
+      "domain": 5,
+      "subdomain": "5.2",
+      "difficulty": 2,
+      "stem": "A bank deploys a biometric system for vault access and wants to minimize the chance that an unauthorized person is admitted, accepting more legitimate users being rejected. How should the sensitivity be adjusted?",
+      "options": [
+        "Increase sensitivity so FAR decreases and FRR increases",
+        "Decrease sensitivity so FAR increases and FRR also decreases",
+        "Increase sensitivity so both FAR and FRR decrease",
+        "Leave sensitivity at the crossover error rate point"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which error matters most when guarding a high-value asset?",
+        "What happens to the other error when you tighten the threshold?"
+      ],
+      "explanation": {
+        "correct": "FAR and FRR trade off against each other. For high-security areas organizations tune toward a lower FAR, tolerating a higher FRR and some inconvenience.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "This favors usability and would raise the chance of admitting impostors, the wrong tradeoff for a vault."
+          },
+          {
+            "option": 2,
+            "why": "Tuning the threshold cannot reduce both errors at once; improving both requires a better biometric technology."
+          },
+          {
+            "option": 3,
+            "why": "The CER is a neutral comparison point and not necessarily the right operating point for a high-security area."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub02-006",
+      "domain": 5,
+      "subdomain": "5.2",
+      "difficulty": 2,
+      "stem": "Users complain about frequently forgetting complex passwords and call the help desk often. The security manager wants to reduce risk and cost. What is the BEST recommendation?",
+      "options": [
+        "Require longer, more complex passwords changed every 30 days",
+        "Allow users to write passwords on a card kept in their wallet",
+        "Remove the password requirement on internal systems",
+        "Adopt MFA with a password manager or passwordless sign-in"
+      ],
+      "correct": 3,
+      "ladder": [
+        "What is driving the help-desk cost: user behavior, or the design of the authentication scheme?",
+        "Which option reduces both the burden on users and the credential risk?"
+      ],
+      "explanation": {
+        "correct": "Reducing dependence on memorized secrets while adding another factor lowers both help-desk cost and compromise risk. This aligns with current guidance that discourages frequent forced rotation.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Frequent forced changes push users toward weak, predictable passwords and increase help-desk calls."
+          },
+          {
+            "option": 1,
+            "why": "Writing passwords down is poor practice and creates a physical theft risk, though it is a minor concern compared with the design fix."
+          },
+          {
+            "option": 2,
+            "why": "Removing authentication from internal systems eliminates accountability and violates least privilege."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub02-007",
+      "domain": 5,
+      "subdomain": "5.2",
+      "difficulty": 1,
+      "stem": "A manager wants to confirm that a person is who they claim to be before issuing a new employee credential. What process does this describe?",
+      "options": [
+        "Authorization",
+        "Accounting",
+        "Federation",
+        "Identity proofing"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Does this activity occur before or after a credential exists?",
+        "Is the activity about checking evidence of a real-world person, or about what that person may then do?"
+      ],
+      "explanation": {
+        "correct": "Identity proofing (vetting) validates an applicant's real-world identity during registration, before a credential is issued. It underpins the trustworthiness of every later authentication.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Authorization decides what an authenticated identity may do; it comes later."
+          },
+          {
+            "option": 1,
+            "why": "Accounting records actions after access is granted."
+          },
+          {
+            "option": 2,
+            "why": "Federation shares established identities across domains; it does not establish them."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub02-008",
+      "domain": 5,
+      "subdomain": "5.2",
+      "difficulty": 2,
+      "stem": "A company uses SMS one-time codes as the second factor for remote access. A risk assessment flags SIM-swapping attacks. What is the BEST improvement?",
+      "options": [
+        "Send each SMS code twice for added redundancy",
+        "Shorten the SMS code lifetime to 10 seconds",
+        "Move to authenticator-app or hardware-token factors",
+        "Require users to change their phone numbers annually"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What is the weakness in the channel carrying the code?",
+        "Which options still rely on the phone number the attacker now controls?"
+      ],
+      "explanation": {
+        "correct": "SIM swapping compromises the phone number itself, so any method that depends on that number is weak. Authenticator apps and hardware tokens bind the factor to a device rather than a number.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Sending twice still uses the same compromised channel."
+          },
+          {
+            "option": 1,
+            "why": "A shorter lifetime does not stop an attacker who already receives the message."
+          },
+          {
+            "option": 3,
+            "why": "Changing numbers does not address the vulnerability and is impractical."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub02-009",
+      "domain": 5,
+      "subdomain": "5.2",
+      "difficulty": 3,
+      "stem": "A company has deployed fingerprint readers for building access. Employees with worn fingerprints are frequently rejected, and executives want the system relaxed to avoid complaints. What should the security manager do FIRST?",
+      "options": [
+        "Lower the threshold across all doors to reduce the rejections",
+        "Weigh the FAR and FRR tradeoff against each area's risk level",
+        "Replace the readers with an entirely different biometric type",
+        "Issue backup passwords to all users who are rejected"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Is this a technical failure or a risk-versus-usability decision?",
+        "What information is needed before any change?"
+      ],
+      "explanation": {
+        "correct": "Threshold changes shift the balance between FAR and FRR and should reflect the asset's sensitivity. The manager first analyzes the tradeoff and potentially applies different thresholds or fallback factors by zone.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Lowering it everywhere raises FAR across all areas, including sensitive ones, without analysis."
+          },
+          {
+            "option": 2,
+            "why": "Replacing hardware is a solution chosen before understanding the real requirements and costs."
+          },
+          {
+            "option": 3,
+            "why": "Backup passwords introduce a weaker bypass that can be exploited by attackers."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub02-010",
+      "domain": 5,
+      "subdomain": "5.2",
+      "difficulty": 3,
+      "stem": "A mobile app lets users log in with a device biometric. The back end receives only a signed assertion that the local check succeeded, bound to a key stored in secure hardware. Which statement BEST describes this design?",
+      "options": [
+        "The template stays on the device; the server verifies key possession",
+        "The server stores every user's fingerprint template for later matching",
+        "The design is single-factor because only a biometric is used",
+        "The design is weak because the biometric is sent in clear text"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Where does the biometric match actually take place?",
+        "What does the server really verify?"
+      ],
+      "explanation": {
+        "correct": "In this model, such as FIDO-style authentication, the biometric unlocks a private key on the device. The server validates a cryptographic signature, proving possession of the registered device, so templates never leave it.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Server-side template storage is the opposite of the described design and raises privacy and breach risk."
+          },
+          {
+            "option": 2,
+            "why": "The assertion proves device possession (key) unlocked by a biometric, so it combines possession and inherence."
+          },
+          {
+            "option": 3,
+            "why": "The biometric is not transmitted at all; only a signed assertion is."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub03-001",
+      "domain": 5,
+      "subdomain": "5.3",
+      "difficulty": 1,
+      "stem": "In federated identity using SAML, which entity authenticates the user and issues the assertion?",
+      "options": [
+        "Identity provider",
+        "Service provider",
+        "Relying party database",
+        "Certificate authority"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which party holds the user's credentials?",
+        "Which party consumes the assertion rather than creating it?"
+      ],
+      "explanation": {
+        "correct": "The identity provider (IdP) authenticates the user and issues assertions that the service provider (SP) trusts to grant access.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "The service provider consumes assertions; it relies on the IdP to authenticate."
+          },
+          {
+            "option": 2,
+            "why": "A 'relying party database' is not an assertion issuer; relying parties consume tokens."
+          },
+          {
+            "option": 3,
+            "why": "A CA issues certificates, not authentication assertions in SAML flows."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub03-002",
+      "domain": 5,
+      "subdomain": "5.3",
+      "difficulty": 1,
+      "stem": "Which protocol is an authorization framework that allows a third-party application to obtain limited access to a resource on behalf of a user?",
+      "options": [
+        "Kerberos",
+        "LDAP",
+        "RADIUS",
+        "OAuth 2.0"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Is the protocol about proving identity or delegating access?",
+        "Which option would let an app act for a user without ever seeing the user's password?"
+      ],
+      "explanation": {
+        "correct": "OAuth 2.0 is a delegated authorization framework that issues scoped access tokens without sharing the user's credentials with the client application.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Kerberos is a ticket-based authentication protocol, not a delegated authorization framework for third-party apps."
+          },
+          {
+            "option": 1,
+            "why": "LDAP is a directory access protocol."
+          },
+          {
+            "option": 2,
+            "why": "RADIUS provides centralized network access authentication, authorization and accounting."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub03-003",
+      "domain": 5,
+      "subdomain": "5.3",
+      "difficulty": 1,
+      "stem": "OpenID Connect (OIDC) adds which capability on top of OAuth 2.0?",
+      "options": [
+        "Mutual TLS between all clients and servers",
+        "Ticket-granting for network services",
+        "An identity layer returning an ID token",
+        "Encryption of all data at rest"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What was OAuth 2.0 not designed to do on its own?",
+        "Which options are transport, storage or Kerberos concerns rather than a question of who the user is?"
+      ],
+      "explanation": {
+        "correct": "OAuth 2.0 handles authorization; OIDC extends it with authentication, returning an ID token (typically a JWT) that conveys who the user is.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Mutual TLS is a transport-layer option, not what OIDC adds."
+          },
+          {
+            "option": 1,
+            "why": "Ticket-granting is a Kerberos concept."
+          },
+          {
+            "option": 3,
+            "why": "OIDC does not address storage encryption."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub03-004",
+      "domain": 5,
+      "subdomain": "5.3",
+      "difficulty": 2,
+      "stem": "A company wants employees to sign in once to a third-party cloud HR application using corporate credentials, without the vendor storing any employee passwords. Which approach is MOST appropriate?",
+      "options": [
+        "Synchronize hashed passwords to the vendor database",
+        "Federate with the vendor through the corporate IdP",
+        "Create separate accounts with randomly generated passwords",
+        "Give the vendor read access to the corporate directory"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Where should authentication occur to keep credentials out of the vendor?",
+        "What trust relationship supports assertion-based login?"
+      ],
+      "explanation": {
+        "correct": "Federation keeps authentication with the corporate IdP and conveys the result through signed assertions or tokens, enabling SSO without credential sharing.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Syncing password hashes still places credential material at the vendor."
+          },
+          {
+            "option": 2,
+            "why": "Separate accounts create credential sprawl and defeat SSO."
+          },
+          {
+            "option": 3,
+            "why": "Directory access exposes far more data than needed, violating least privilege."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub03-005",
+      "domain": 5,
+      "subdomain": "5.3",
+      "difficulty": 2,
+      "stem": "In a SAML deployment, a user attempts to access a service provider directly and is redirected to the corporate IdP. After login the user returns with access. What is this flow called?",
+      "options": [
+        "IdP-initiated SSO",
+        "SP-initiated SSO",
+        "Kerberos pre-authentication",
+        "Credential stuffing"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Who did the user contact first?",
+        "Where does the redirect originate?"
+      ],
+      "explanation": {
+        "correct": "In SP-initiated flow the user begins at the service provider, which redirects to the IdP with an authentication request. The IdP then returns a signed assertion.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "In IdP-initiated flow, the user starts at the IdP portal and is sent to the SP with an unsolicited assertion."
+          },
+          {
+            "option": 2,
+            "why": "Pre-authentication is a Kerberos concept involving the KDC."
+          },
+          {
+            "option": 3,
+            "why": "Credential stuffing is an attack, not a login flow."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub03-006",
+      "domain": 5,
+      "subdomain": "5.3",
+      "difficulty": 2,
+      "stem": "A merger requires the acquiring firm's employees to access the acquired firm's partner portal. The acquired firm's IT team proposes creating new local accounts for each employee. What should the security manager recommend?",
+      "options": [
+        "Establish federation so the acquirer's identities are trusted",
+        "Create the local accounts and require quarterly password changes",
+        "Share one generic account among the acquirer's staff",
+        "Disable access until the companies merge their directories"
+      ],
+      "correct": 0,
+      "ladder": [
+        "What scales better than duplicating accounts across organizations?",
+        "What approach preserves accountability and central lifecycle control?"
+      ],
+      "explanation": {
+        "correct": "Federation lets each organization retain control of its identities and lifecycle, avoiding duplicated accounts that linger after termination. It also keeps accountability tied to one identity.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Local accounts create orphaned account risk and duplicate administration."
+          },
+          {
+            "option": 2,
+            "why": "A shared generic account destroys accountability."
+          },
+          {
+            "option": 3,
+            "why": "Blocking access ignores the business need; the manager should find a secure way to enable it."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub03-007",
+      "domain": 5,
+      "subdomain": "5.3",
+      "difficulty": 3,
+      "stem": "A SaaS application receives an OAuth 2.0 access token from a client and must decide whether the user is who they claim. A developer proposes treating the access token as proof of authentication. What is the PRIMARY issue?",
+      "options": [
+        "Access tokens always expire within a minute of being issued",
+        "OAuth cannot be used with web applications at all",
+        "Access tokens are never digitally signed by the server",
+        "Access tokens convey authorization, not authentication"
+      ],
+      "correct": 3,
+      "ladder": [
+        "What was the access token issued to represent?",
+        "Which layer or token is meant to convey the authenticated identity?"
+      ],
+      "explanation": {
+        "correct": "OAuth 2.0 access tokens represent delegated authorization. Authentication should rely on OIDC ID tokens or SAML assertions designed to assert identity and how it was verified.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Token lifetime is configurable and is not the core conceptual issue."
+          },
+          {
+            "option": 1,
+            "why": "OAuth is widely used for web apps."
+          },
+          {
+            "option": 2,
+            "why": "Tokens may be signed JWTs or opaque; the issue is their purpose, not signing."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub03-008",
+      "domain": 5,
+      "subdomain": "5.3",
+      "difficulty": 3,
+      "stem": "An organization's federated partner suffers a breach of its identity provider. Several of the organization's applications trust assertions from that IdP. What should the security manager do FIRST?",
+      "options": [
+        "Notify all employees to change their passwords right away",
+        "Replace the SAML libraries in each of the applications",
+        "Assess exposure and suspend trust in the partner's IdP",
+        "Begin renegotiating the contract with the partner"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What is the immediate risk to your own resources?",
+        "Which action limits the blast radius while facts are gathered?"
+      ],
+      "explanation": {
+        "correct": "The compromised IdP can mint valid assertions for anyone, so the first priority is containing the risk by evaluating exposure and temporarily revoking or restricting trust, then following incident response.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Your employees' passwords are held by your own IdP, not the partner's; this does not address forged assertions."
+          },
+          {
+            "option": 1,
+            "why": "Libraries are not the weakness; the issuer of the assertions is."
+          },
+          {
+            "option": 3,
+            "why": "Contract action is a later business step, not an immediate containment measure."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub04-001",
+      "domain": 5,
+      "subdomain": "5.4",
+      "difficulty": 1,
+      "stem": "In a Mandatory Access Control (MAC) model, who determines access to an object?",
+      "options": [
+        "The object owner at their discretion",
+        "The user, based on their group membership",
+        "The system, using labels and clearances",
+        "The help desk, on request from the user"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Can the owner of a file override the rules in this model?",
+        "What does the system compare to make decisions?"
+      ],
+      "explanation": {
+        "correct": "In MAC, access decisions are enforced centrally by the system using security labels on objects and clearances on subjects; owners cannot change them.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Owner discretion describes DAC."
+          },
+          {
+            "option": 1,
+            "why": "Group membership relates to role-based or group-based models, not MAC."
+          },
+          {
+            "option": 3,
+            "why": "Help desk grants would be an administrative process, not a MAC enforcement model."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub04-002",
+      "domain": 5,
+      "subdomain": "5.4",
+      "difficulty": 1,
+      "stem": "Which access control model assigns permissions to job functions rather than directly to individuals?",
+      "options": [
+        "Discretionary access control",
+        "Role-based access control",
+        "Rule-based access control",
+        "Mandatory access control"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What is the permission attached to?",
+        "Which model eases administration when staff change jobs?"
+      ],
+      "explanation": {
+        "correct": "RBAC maps permissions to roles; users get access by being assigned roles, which simplifies administration and supports least privilege and separation of duties.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "DAC lets owners grant access to individuals as they choose."
+          },
+          {
+            "option": 2,
+            "why": "Rule-based control applies global rules such as time of day or firewall rules, not job functions."
+          },
+          {
+            "option": 3,
+            "why": "MAC uses labels and clearances."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub04-003",
+      "domain": 5,
+      "subdomain": "5.4",
+      "difficulty": 1,
+      "stem": "Attribute-based access control (ABAC) makes access decisions primarily by evaluating:",
+      "options": [
+        "Multiple attributes of the user, resource and context",
+        "Only the user's job title within the organization",
+        "Only a static access control list on the object",
+        "Only the network address of the requesting system or host"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Does ABAC rely on one single data point or several?",
+        "What kinds of context can a policy consider?"
+      ],
+      "explanation": {
+        "correct": "ABAC evaluates policies against multiple attributes, such as user department, resource sensitivity and time or location, enabling fine-grained, dynamic decisions.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "A job title alone is the approach of simple RBAC."
+          },
+          {
+            "option": 2,
+            "why": "A static ACL is a list tied to an object and is not dynamic attribute evaluation."
+          },
+          {
+            "option": 3,
+            "why": "Network address alone is a narrow rule-based check."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub04-004",
+      "domain": 5,
+      "subdomain": "5.4",
+      "difficulty": 1,
+      "stem": "Which term describes granting a user only the rights needed for a task, and only for the duration it is needed?",
+      "options": [
+        "Standing privilege",
+        "Access aggregation",
+        "Privilege creep",
+        "Just-in-time access"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Is the access permanent or time-limited?",
+        "Which of these terms describe permanent or accumulated access rather than time-boxed access?"
+      ],
+      "explanation": {
+        "correct": "Just-in-time (JIT) access provisions elevated rights temporarily on request and removes them afterward, shrinking the attack surface from standing privileges.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Standing privilege is permanent access, the opposite of JIT."
+          },
+          {
+            "option": 1,
+            "why": "Aggregation is the accumulation of access across systems that can create excessive power."
+          },
+          {
+            "option": 2,
+            "why": "Privilege creep is gradual accumulation of rights as users change roles."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub04-005",
+      "domain": 5,
+      "subdomain": "5.4",
+      "difficulty": 2,
+      "stem": "A file owner shares a confidential document with a colleague by editing its permissions, and the colleague then forwards access to a third person. Which access control model allows this?",
+      "options": [
+        "Mandatory access control",
+        "Rule-based access control",
+        "Role-based access control",
+        "Discretionary access control"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Who decides who else may use the object?",
+        "In which model can owners pass on rights?"
+      ],
+      "explanation": {
+        "correct": "DAC allows owners to grant and sometimes delegate access at their discretion, which is flexible but difficult to control and prone to leakage.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "MAC prevents owners from changing access."
+          },
+          {
+            "option": 1,
+            "why": "Rule-based access depends on predefined global rules, not owner choices."
+          },
+          {
+            "option": 2,
+            "why": "RBAC is controlled by role assignment through administrators."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub04-006",
+      "domain": 5,
+      "subdomain": "5.4",
+      "difficulty": 2,
+      "stem": "A firewall allows administrative connections only from the management subnet between 08:00 and 18:00. Which access control model does this BEST illustrate?",
+      "options": [
+        "Role-based access control",
+        "Discretionary access control",
+        "Rule-based access control",
+        "Identity-based access control"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Is the decision driven by who the user is or by predefined conditions?",
+        "Which model applies rules uniformly to all requesters?"
+      ],
+      "explanation": {
+        "correct": "Rule-based access control applies system-wide rules, such as source address and time windows, to all subjects regardless of individual identity or role.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "RBAC depends on the user's assigned role."
+          },
+          {
+            "option": 1,
+            "why": "DAC depends on an owner's decisions."
+          },
+          {
+            "option": 3,
+            "why": "Identity-based control evaluates the specific user identity."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub04-007",
+      "domain": 5,
+      "subdomain": "5.4",
+      "difficulty": 2,
+      "stem": "An access review shows accountants from several departments have accumulated rights from prior roles, allowing them to both create and approve payments. What is the MOST significant concern?",
+      "options": [
+        "Increased storage cost for retaining audit logs",
+        "A separation of duties violation enabling fraud",
+        "Slower logon performance for accounting staff",
+        "Weaker password complexity on accounting accounts"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which combination of rights is dangerous in finance?",
+        "What could one person do if they could both start and finish a payment?"
+      ],
+      "explanation": {
+        "correct": "The ability to initiate and approve a payment defeats separation of duties and enables fraud without collusion. Remediation includes role redesign and revoking inherited rights.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Log storage is an operational matter, not the greatest risk."
+          },
+          {
+            "option": 2,
+            "why": "Login speed is unrelated."
+          },
+          {
+            "option": 3,
+            "why": "Password complexity is not tied to excessive rights accumulation."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub04-008",
+      "domain": 5,
+      "subdomain": "5.4",
+      "difficulty": 2,
+      "stem": "A hospital wants clinicians to see patient records only when they are assigned to that patient's care team and are on shift. Which model BEST supports this?",
+      "options": [
+        "Attribute-based access control",
+        "Mandatory access control",
+        "Role-based access control alone",
+        "Discretionary access control"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Does the decision depend on more than a single role?",
+        "Which model evaluates relationship and context attributes?"
+      ],
+      "explanation": {
+        "correct": "ABAC can combine role, assignment to care team and shift time in a single policy. Pure RBAC cannot express patient-specific or time-dependent conditions without role explosion.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "MAC uses labels and clearances and does not model care team assignment."
+          },
+          {
+            "option": 2,
+            "why": "Role alone would allow every clinician to see all patients."
+          },
+          {
+            "option": 3,
+            "why": "DAC leaves access to owners rather than policy."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub04-009",
+      "domain": 5,
+      "subdomain": "5.4",
+      "difficulty": 3,
+      "stem": "An organization uses RBAC but now has more than 900 roles, many differing by one permission. Administrators struggle to review them. What is the BEST way to address this?",
+      "options": [
+        "Add ABAC policies for variations and consolidate the roles",
+        "Convert the whole environment to discretionary access control",
+        "Remove the role reviews to reduce the review workload",
+        "Grant broader roles so that fewer roles are needed"
+      ],
+      "correct": 0,
+      "ladder": [
+        "What problem arises when roles encode every special case?",
+        "Which model handles variation without multiplying roles?"
+      ],
+      "explanation": {
+        "correct": "Role explosion is a known RBAC limitation. Layering attributes onto a smaller set of roles keeps policy manageable while preserving least privilege.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "DAC removes central governance and would increase risk."
+          },
+          {
+            "option": 2,
+            "why": "Dropping reviews removes a key detective control."
+          },
+          {
+            "option": 3,
+            "why": "Broader roles violate least privilege."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub04-010",
+      "domain": 5,
+      "subdomain": "5.4",
+      "difficulty": 3,
+      "stem": "During an audit, an administrator holds standing domain admin rights 24/7 to cover on-call duties, and these are rarely used. The IT director says revoking them would slow incident response. What is the BEST recommendation?",
+      "options": [
+        "Keep standing rights but require annual access attestations",
+        "Share a break-glass password with the whole team",
+        "Remove admin rights permanently from all on-call staff",
+        "Implement JIT elevation with approval and session logging"
+      ],
+      "correct": 3,
+      "ladder": [
+        "How can the business need and risk reduction both be met?",
+        "What reduces the exposure window while preserving speed?"
+      ],
+      "explanation": {
+        "correct": "JIT elevation meets operational needs while limiting privileges to when they are used, with approvals and logging for accountability. It addresses risk without disabling response capability.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Attestation is detective and leaves risk permanently open."
+          },
+          {
+            "option": 1,
+            "why": "A shared password destroys accountability and expands exposure."
+          },
+          {
+            "option": 2,
+            "why": "Total removal ignores the legitimate business need and would harm response."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub05-001",
+      "domain": 5,
+      "subdomain": "5.5",
+      "difficulty": 1,
+      "stem": "What is the term for the gradual accumulation of access rights as an employee changes roles over time?",
+      "options": [
+        "Privilege escalation",
+        "Access aggregation attack",
+        "Privilege creep",
+        "Role mining"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Does this happen through attack or through poor administration?",
+        "What control prevents it during job transfers?"
+      ],
+      "explanation": {
+        "correct": "Privilege creep occurs when old permissions are not removed after role changes, violating least privilege. Periodic access reviews and transfer procedures counter it.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Privilege escalation is an exploit gaining higher rights."
+          },
+          {
+            "option": 1,
+            "why": "Access aggregation is combining separate access rights, not accumulation due to role changes."
+          },
+          {
+            "option": 3,
+            "why": "Role mining discovers roles from existing permissions."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub05-002",
+      "domain": 5,
+      "subdomain": "5.5",
+      "difficulty": 1,
+      "stem": "Which provisioning lifecycle step should occur IMMEDIATELY when an employee is terminated?",
+      "options": [
+        "Archive the employee's performance file",
+        "Disable the employee's system access",
+        "Redesign the employee's job role",
+        "Recalculate the department budget"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which step reduces the risk from a departing employee?",
+        "Is it detective or preventive in nature?"
+      ],
+      "explanation": {
+        "correct": "Timely deprovisioning is critical to prevent unauthorized use and insider threats, ideally automated and coordinated with HR.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Archiving records is housekeeping that does not reduce immediate risk."
+          },
+          {
+            "option": 2,
+            "why": "Redesigning roles is a later organizational task."
+          },
+          {
+            "option": 3,
+            "why": "Budget recalculation is a finance matter."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub05-003",
+      "domain": 5,
+      "subdomain": "5.5",
+      "difficulty": 1,
+      "stem": "What is the PRIMARY purpose of a periodic user access review (recertification)?",
+      "options": [
+        "To reset all of the user passwords",
+        "To confirm access is still appropriate",
+        "To measure network bandwidth used by each user",
+        "To train users to recognize phishing"
+      ],
+      "correct": 1,
+      "ladder": [
+        "What does an access review validate?",
+        "Which principle does it enforce over time?"
+      ],
+      "explanation": {
+        "correct": "Access reviews, performed by managers or data owners, verify that rights match current duties and enforce least privilege.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Password resets are a separate control."
+          },
+          {
+            "option": 2,
+            "why": "Bandwidth measurement is an operational metric."
+          },
+          {
+            "option": 3,
+            "why": "Training is an awareness activity, not an access review."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub05-004",
+      "domain": 5,
+      "subdomain": "5.5",
+      "difficulty": 2,
+      "stem": "An employee transfers from accounts payable to marketing, and retains the old finance permissions. Who is BEST positioned to verify and confirm that these rights should be removed?",
+      "options": [
+        "The data owner, via recertification",
+        "The help desk analyst who processes the ticket",
+        "The employee's new peer group members",
+        "The network administrator on call"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Who is accountable for the data and its access decisions?",
+        "Who understands which rights the job requires?"
+      ],
+      "explanation": {
+        "correct": "Business owners are accountable for authorizing and reviewing access to their data. IT implements, but the decision should be made by those who understand the business need.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Help desk executes changes but doesn't determine business need."
+          },
+          {
+            "option": 2,
+            "why": "Peers have no authority."
+          },
+          {
+            "option": 3,
+            "why": "Network admins implement technical controls and shouldn't decide business access."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub05-005",
+      "domain": 5,
+      "subdomain": "5.5",
+      "difficulty": 2,
+      "stem": "Which sequence BEST represents the identity and access provisioning lifecycle?",
+      "options": [
+        "Provision, request, review, approve, revoke",
+        "Approve, review, request, revoke, provision",
+        "Review, provision, revoke, request, approve",
+        "Request, approve, provision, review, revoke"
+      ],
+      "correct": 3,
+      "ladder": [
+        "What must happen before anything is created?",
+        "Where does periodic checking fit relative to creation and removal?"
+      ],
+      "explanation": {
+        "correct": "Access is requested, approved by the proper authority, provisioned, periodically reviewed, then changed or revoked when no longer needed.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Provisioning before request or approval bypasses authorization."
+          },
+          {
+            "option": 1,
+            "why": "Approval before a request exists is illogical, and revocation precedes provisioning in this order."
+          },
+          {
+            "option": 2,
+            "why": "Review cannot precede the existence of access."
+          }
+        ]
+      },
+      "tags": [
+        "ordering"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub05-006",
+      "domain": 5,
+      "subdomain": "5.5",
+      "difficulty": 2,
+      "stem": "A company's HR system is the authoritative source for employment status. Which approach BEST ensures accounts are disabled promptly when employees leave?",
+      "options": [
+        "Ask managers to email IT when someone leaves",
+        "Disable accounts during the next quarterly access review",
+        "Automate deprovisioning triggered by HR status changes",
+        "Let accounts expire after one year of inactivity"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What is the trusted source of truth?",
+        "How can delay and human error be reduced?"
+      ],
+      "explanation": {
+        "correct": "Integrating identity management with the HR system provides timely, auditable and consistent deprovisioning without relying on manual notification.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Manual email is prone to delay and omission."
+          },
+          {
+            "option": 1,
+            "why": "Quarterly review leaves a long exposure window."
+          },
+          {
+            "option": 3,
+            "why": "A year of inactivity is far too long, and active accounts of leavers would remain."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub05-007",
+      "domain": 5,
+      "subdomain": "5.5",
+      "difficulty": 3,
+      "stem": "An audit finds 140 active accounts belonging to former contractors. The IT team proposes a one-time cleanup. What should the security manager recommend?",
+      "options": [
+        "Delete all 140 accounts immediately without further analysis",
+        "Implement a stronger password policy for contractor accounts",
+        "Find and fix the process failure behind them",
+        "Increase the frequency of access audits to monthly cycles"
+      ],
+      "correct": 2,
+      "ladder": [
+        "Does a one-time cleanup stop the problem from returning?",
+        "What does the finding reveal about the lifecycle?"
+      ],
+      "explanation": {
+        "correct": "The manager mindset targets root cause: a missing or broken deprovisioning process for contractors. Cleanup is needed, but sustainable correction requires fixing the process and ownership.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Deleting immediately may break dependencies and destroys evidence; and it does not prevent recurrence."
+          },
+          {
+            "option": 1,
+            "why": "Password strength is irrelevant to orphaned accounts."
+          },
+          {
+            "option": 3,
+            "why": "More audits detect but do not correct the underlying weakness."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub05-008",
+      "domain": 5,
+      "subdomain": "5.5",
+      "difficulty": 2,
+      "stem": "A privileged user's access request is approved by the same manager who will supervise that user's use of the access, and no one else reviews it. Which control would BEST reduce risk?",
+      "options": [
+        "Require the user to sign an acceptable use policy",
+        "Require a second approver such as the data owner",
+        "Log all actions without any further review",
+        "Shorten the password expiry interval for the user"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which principle prevents one person from controlling a sensitive process end to end?",
+        "Who else has a legitimate stake in privileged access?"
+      ],
+      "explanation": {
+        "correct": "Dual approval for privileged access applies separation of duties and brings the owner or security function into the decision, reducing collusion and error risk.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "A signed policy is an administrative reminder, not a control on approval."
+          },
+          {
+            "option": 2,
+            "why": "Logging without review is not an effective detective control."
+          },
+          {
+            "option": 3,
+            "why": "Password expiry is unrelated to the approval weakness."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub06-001",
+      "domain": 5,
+      "subdomain": "5.6",
+      "difficulty": 1,
+      "stem": "Kerberos authentication relies on which component to issue tickets to authenticated principals?",
+      "options": [
+        "Key Distribution Center",
+        "Registration authority",
+        "Security assertion server",
+        "Certificate revocation list"
+      ],
+      "correct": 0,
+      "ladder": [
+        "In a ticket-based scheme, which central party do both the client and the service trust?",
+        "Which options belong to PKI or SAML rather than Kerberos?"
+      ],
+      "explanation": {
+        "correct": "The KDC, comprising the Authentication Service and Ticket Granting Service, is the trusted third party that issues TGTs and service tickets using symmetric keys.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "A registration authority supports PKI enrollment."
+          },
+          {
+            "option": 2,
+            "why": "There is no 'security assertion server' in Kerberos; assertions belong to SAML."
+          },
+          {
+            "option": 3,
+            "why": "A CRL lists revoked certificates."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub06-002",
+      "domain": 5,
+      "subdomain": "5.6",
+      "difficulty": 1,
+      "stem": "In Kerberos, what is the correct order of events after a user logs in?",
+      "options": [
+        "Present a service ticket to the service, then obtain a TGT, then log in",
+        "The service issues the TGT, then the KDC issues the service ticket back",
+        "Request a service ticket before ever authenticating to the AS at all",
+        "Obtain a TGT, use it to get a service ticket, then present that ticket"
+      ],
+      "correct": 3,
+      "ladder": [
+        "What must the user hold before requesting service access?",
+        "Which ticket is obtained first?"
+      ],
+      "explanation": {
+        "correct": "The client authenticates to the AS and receives a TGT. It presents the TGT to the TGS to obtain a service ticket, then presents that ticket to the application server.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "This reverses the process."
+          },
+          {
+            "option": 1,
+            "why": "The service does not issue TGTs; the KDC does."
+          },
+          {
+            "option": 2,
+            "why": "A service ticket requires a valid TGT, which comes from the AS first."
+          }
+        ]
+      },
+      "tags": [
+        "ordering"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub06-003",
+      "domain": 5,
+      "subdomain": "5.6",
+      "difficulty": 1,
+      "stem": "What is the main benefit of single sign-on (SSO) to the organization's users?",
+      "options": [
+        "It removes the need for any form of authorization",
+        "It encrypts all of the stored data automatically",
+        "It guarantees passwords can never be stolen",
+        "Users authenticate once to reach multiple systems"
+      ],
+      "correct": 3,
+      "ladder": [
+        "What is the user-experience change SSO delivers?",
+        "Which options claim SSO does something unrelated to how often a user must log in?"
+      ],
+      "explanation": {
+        "correct": "SSO improves usability and reduces password fatigue, but concentrates risk in the primary credential, so it should be paired with MFA.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "SSO handles authentication; authorization remains necessary."
+          },
+          {
+            "option": 1,
+            "why": "SSO does not encrypt stored data."
+          },
+          {
+            "option": 2,
+            "why": "SSO does not prevent credential theft and may increase its impact."
+          }
+        ]
+      },
+      "tags": [
+        "definition"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub06-004",
+      "domain": 5,
+      "subdomain": "5.6",
+      "difficulty": 2,
+      "stem": "Users on a Windows domain notice that Kerberos logons fail on a server whose clock is 12 minutes ahead of the domain controller. What is the MOST likely cause?",
+      "options": [
+        "The users' passwords have all expired at once",
+        "The TGT was encrypted using an asymmetric key pair",
+        "Kerberos requires closely synchronized clocks",
+        "The server's certificate has been revoked by the CA"
+      ],
+      "correct": 2,
+      "ladder": [
+        "What does Kerberos include in tickets to prevent replay?",
+        "What happens when two clocks disagree?"
+      ],
+      "explanation": {
+        "correct": "Kerberos tickets carry timestamps to prevent replay attacks, so clocks must be synchronized (typically within five minutes). Skew causes authentication failures.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Expired passwords would produce a different failure and wouldn't depend on a single server."
+          },
+          {
+            "option": 1,
+            "why": "Kerberos uses symmetric keys primarily."
+          },
+          {
+            "option": 3,
+            "why": "Revoked certificates concern PKI, not standard Kerberos ticket validation."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub06-005",
+      "domain": 5,
+      "subdomain": "5.6",
+      "difficulty": 2,
+      "stem": "A network team needs centralized authentication, authorization and accounting for remote access devices from many vendors. Which protocol is MOST appropriate?",
+      "options": [
+        "Kerberos",
+        "RADIUS",
+        "SAML",
+        "OAuth 2.0"
+      ],
+      "correct": 1,
+      "ladder": [
+        "Which protocol is designed for network access servers and VPN concentrators?",
+        "Which one provides AAA services?"
+      ],
+      "explanation": {
+        "correct": "RADIUS is the widely used AAA protocol for network access such as VPN, Wi-Fi and dial-up. TACACS+ is an alternative that separates AAA functions and encrypts the full payload.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Kerberos is for ticket-based authentication within a realm and lacks accounting."
+          },
+          {
+            "option": 2,
+            "why": "SAML federates web SSO across domains."
+          },
+          {
+            "option": 3,
+            "why": "OAuth 2.0 is delegated authorization for APIs."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub06-006",
+      "domain": 5,
+      "subdomain": "5.6",
+      "difficulty": 2,
+      "stem": "Management wants SSO deployed across all enterprise apps. The security manager is concerned about a single point of failure and compromise. What is the BEST response?",
+      "options": [
+        "Deploy SSO with MFA, redundancy and IdP monitoring",
+        "Reject SSO because it increases overall risk",
+        "Deploy SSO protected only by a single long password",
+        "Deploy SSO but skip logging for privileged users"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Is the manager's job to block, or to reduce risk to an acceptable level?",
+        "Which option reduces the single-point-of-failure risk while still delivering the business benefit?"
+      ],
+      "explanation": {
+        "correct": "SSO provides benefits but concentrates risk. The risk-based answer enables the business objective and mitigates the weaknesses through strong authentication, high availability and monitoring.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "Rejection ignores business benefits; risk management seeks acceptable levels, not elimination."
+          },
+          {
+            "option": 2,
+            "why": "A single factor leaves the key credential vulnerable."
+          },
+          {
+            "option": 3,
+            "why": "Excluding privileged users from monitoring removes oversight where risk is highest."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub06-007",
+      "domain": 5,
+      "subdomain": "5.6",
+      "difficulty": 3,
+      "stem": "A Kerberos realm is believed compromised after an attacker obtained the KRBTGT account key and forged tickets with long lifetimes. What is the BEST remediation for the KRBTGT key?",
+      "options": [
+        "Reset the KRBTGT password twice",
+        "Reset the KRBTGT password once only",
+        "Disable Kerberos and fall back to NTLM",
+        "Reduce the maximum tolerated clock skew"
+      ],
+      "correct": 0,
+      "ladder": [
+        "Which key signed the forged tickets, and how many versions of it will the KDC still accept?",
+        "What invalidates tickets signed with a stolen key?"
+      ],
+      "explanation": {
+        "correct": "Because the KDC accepts both the current and previous KRBTGT keys, the password must be reset twice, with time for replication between resets, to invalidate Golden Ticket forgeries signed with the old key. The principle is that remediation must remove every trusted copy of the compromised secret.",
+        "distractors": [
+          {
+            "option": 1,
+            "why": "A single reset is the intuitive fix, but the previous key remains valid, so tickets forged with the stolen key are still accepted."
+          },
+          {
+            "option": 2,
+            "why": "NTLM is weaker and not a safe fallback."
+          },
+          {
+            "option": 3,
+            "why": "Clock skew does not remove forged ticket validity."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "best-answer"
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "q-d5-sub06-008",
+      "domain": 5,
+      "subdomain": "5.6",
+      "difficulty": 3,
+      "stem": "A company's legacy application cannot support modern federation or MFA, but handles sensitive data. Rewriting it is not budgeted this year. What should the security manager do FIRST?",
+      "options": [
+        "Accept the risk without documentation because of budget limits this year",
+        "Delay all other security projects until the rewrite is funded and done",
+        "Ask users to choose longer passwords for that application",
+        "Document the risk and add compensating controls, such as an MFA proxy"
+      ],
+      "correct": 3,
+      "ladder": [
+        "Is the answer to fix, accept silently, or manage the risk?",
+        "Which approach adds protection without changing the application?"
+      ],
+      "explanation": {
+        "correct": "When the ideal control is not feasible, the manager records the risk for formal treatment and applies compensating controls that deliver comparable protection, such as fronting the app with a proxy enforcing MFA.",
+        "distractors": [
+          {
+            "option": 0,
+            "why": "Undocumented acceptance bypasses governance and accountability for risk decisions."
+          },
+          {
+            "option": 1,
+            "why": "Halting other work is disproportionate and unrelated."
+          },
+          {
+            "option": 2,
+            "why": "Longer passwords alone do not meet the MFA requirement and keep reliance on a weak control."
+          }
+        ]
+      },
+      "tags": [
+        "scenario",
+        "manager-mindset"
+      ],
+      "reviewed": true
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f-d5-sub01-001",
+      "domain": 5,
+      "subdomain": "5.1",
+      "front": "CPTED stands for and aims to do what?",
+      "back": "Crime Prevention Through Environmental Design: shape the physical environment (lighting, sightlines, natural access control, territorial reinforcement) to deter crime.",
+      "whyItMatters": "Exam links CPTED to natural surveillance and territoriality."
+    },
+    {
+      "id": "f-d5-sub01-002",
+      "domain": 5,
+      "subdomain": "5.1",
+      "front": "Tailgating vs piggybacking",
+      "back": "Tailgating: following an authorized person without their knowledge. Piggybacking: entering with the authorized person's knowledge or consent. Mantraps/turnstiles counter both.",
+      "whyItMatters": "Tests the precise distinction and the mantrap countermeasure."
+    },
+    {
+      "id": "f-d5-sub01-003",
+      "domain": 5,
+      "subdomain": "5.1",
+      "front": "Fence height tiers (common exam values)",
+      "back": "About 3-4 ft deters casual trespassers; 6-7 ft is hard to climb easily; 8 ft topped with barbed wire deters determined intruders.",
+      "whyItMatters": "Numeric fence heights appear in physical security questions."
+    },
+    {
+      "id": "f-d5-sub01-004",
+      "domain": 5,
+      "subdomain": "5.1",
+      "front": "Fail-safe vs fail-secure for doors",
+      "back": "Fail-safe: unlocks on power loss to protect life safety. Fail-secure: stays locked on power loss to protect assets. Life safety takes priority.",
+      "whyItMatters": "Exam asks which to choose for egress doors."
+    },
+    {
+      "id": "f-d5-sub01-005",
+      "domain": 5,
+      "subdomain": "5.1",
+      "front": "Preferred lock type for high-security areas needing audit and revocation",
+      "back": "Electronic or smart-card locks with logging, since credentials can be revoked and use is auditable, unlike mechanical keys.",
+      "whyItMatters": "Ties physical access to accountability."
+    },
+    {
+      "id": "f-d5-sub02-001",
+      "domain": 5,
+      "subdomain": "5.2",
+      "front": "Three classic authentication factor categories",
+      "back": "Something you know, something you have, something you are. Somewhere you are and something you do are often added as contextual factors.",
+      "whyItMatters": "Basic but exam requires correct classification of examples."
+    },
+    {
+      "id": "f-d5-sub02-002",
+      "domain": 5,
+      "subdomain": "5.2",
+      "front": "Type I vs Type II biometric errors",
+      "back": "Type I = False Rejection Rate (FRR, valid user denied). Type II = False Acceptance Rate (FAR, impostor accepted). Type II is the security risk.",
+      "whyItMatters": "Mix-ups between Type I and II are a classic trap."
+    },
+    {
+      "id": "f-d5-sub02-003",
+      "domain": 5,
+      "subdomain": "5.2",
+      "front": "Crossover Error Rate (CER)",
+      "back": "The point where FAR equals FRR. Lower CER means a more accurate biometric; use it to compare products.",
+      "whyItMatters": "Exam asks which metric to compare biometric devices."
+    },
+    {
+      "id": "f-d5-sub02-004",
+      "domain": 5,
+      "subdomain": "5.2",
+      "front": "Most accepted vs most accurate biometrics (rule of thumb)",
+      "back": "Fingerprint and voice are widely accepted and cheap. Iris is highly accurate. Retina scans are accurate but intrusive and least accepted.",
+      "whyItMatters": "Questions ask for the best fit by accuracy versus user acceptance."
+    },
+    {
+      "id": "f-d5-sub02-006",
+      "domain": 5,
+      "subdomain": "5.2",
+      "front": "Synchronous vs asynchronous tokens",
+      "back": "Synchronous tokens use time or counter synchronization with the server (TOTP/HOTP). Asynchronous (challenge-response) tokens sign a server-supplied nonce.",
+      "whyItMatters": "Exam tests how OTP tokens generate codes."
+    },
+    {
+      "id": "f-d5-sub02-007",
+      "domain": 5,
+      "subdomain": "5.2",
+      "front": "Salting purpose in password storage",
+      "back": "A unique random value added per password before hashing defeats precomputed rainbow tables and prevents identical passwords producing identical hashes.",
+      "whyItMatters": "Common question on protecting stored credentials."
+    },
+    {
+      "id": "f-d5-sub02-008",
+      "domain": 5,
+      "subdomain": "5.2",
+      "front": "Recommended password policy direction (NIST 800-63B)",
+      "back": "Favor length and screening against breached lists; do not force periodic rotation or composition rules; require change only on evidence of compromise.",
+      "whyItMatters": "Modern guidance contradicts old policies."
+    },
+    {
+      "id": "f-d5-sub03-001",
+      "domain": 5,
+      "subdomain": "5.3",
+      "front": "SAML core roles",
+      "back": "Principal (user), Identity Provider (authenticates, issues assertions), Service Provider (consumes assertions). Assertions are XML signed by the IdP.",
+      "whyItMatters": "Exam asks who issues versus who consumes."
+    },
+    {
+      "id": "f-d5-sub03-002",
+      "domain": 5,
+      "subdomain": "5.3",
+      "front": "OAuth 2.0 four roles",
+      "back": "Resource owner, client, authorization server, resource server. Outputs scoped access tokens, not authentication.",
+      "whyItMatters": "Roles are tested as a mapping exercise."
+    },
+    {
+      "id": "f-d5-sub03-003",
+      "domain": 5,
+      "subdomain": "5.3",
+      "front": "OIDC adds what to OAuth 2.0",
+      "back": "An ID token (JWT) with identity claims, a UserInfo endpoint, and standard scopes such as openid.",
+      "whyItMatters": "Distinguishes authentication from authorization."
+    },
+    {
+      "id": "f-d5-sub03-004",
+      "domain": 5,
+      "subdomain": "5.3",
+      "front": "Federation trust model",
+      "back": "Organizations keep control of their own identities and exchange signed assertions or tokens, establishing trust through metadata and certificates rather than sharing passwords.",
+      "whyItMatters": "Principle behind cross-organization SSO."
+    },
+    {
+      "id": "f-d5-sub03-005",
+      "domain": 5,
+      "subdomain": "5.3",
+      "front": "Format of SAML assertions vs OIDC tokens",
+      "back": "SAML uses XML; OIDC ID tokens are JSON Web Tokens (JWT). SAML suits enterprise web SSO; OIDC suits mobile and APIs.",
+      "whyItMatters": "Exam compares protocols by format and use case."
+    },
+    {
+      "id": "f-d5-sub03-006",
+      "domain": 5,
+      "subdomain": "5.3",
+      "front": "Just-in-time (JIT) provisioning in federation",
+      "back": "Account created in the SP at first successful federated login using attributes from the assertion, avoiding pre-provisioning.",
+      "whyItMatters": "Distinguish from JIT privileged access."
+    },
+    {
+      "id": "f-d5-sub04-001",
+      "domain": 5,
+      "subdomain": "5.4",
+      "front": "Access control models: defining feature of each",
+      "back": "DAC: owner decides. MAC: system enforces labels and clearances. RBAC: permissions tied to roles. ABAC: policy over attributes. Rule-based: global rules for all subjects.",
+      "whyItMatters": "Core mapping exercise for the authorization domain."
+    },
+    {
+      "id": "f-d5-sub04-002",
+      "domain": 5,
+      "subdomain": "5.4",
+      "front": "Bell-LaPadula rules in MAC",
+      "back": "Simple security: no read up. Star property: no write down. Protects confidentiality.",
+      "whyItMatters": "Often paired with MAC questions."
+    },
+    {
+      "id": "f-d5-sub04-003",
+      "domain": 5,
+      "subdomain": "5.4",
+      "front": "Biba rules",
+      "back": "Simple integrity: no read down. Star integrity: no write up. Protects integrity.",
+      "whyItMatters": "Contrast with Bell-LaPadula."
+    },
+    {
+      "id": "f-d5-sub04-004",
+      "domain": 5,
+      "subdomain": "5.4",
+      "front": "Need-to-know vs least privilege",
+      "back": "Need-to-know limits access to information required for the job; least privilege limits rights/permissions to the minimum necessary to perform tasks.",
+      "whyItMatters": "Two related but distinct principles."
+    },
+    {
+      "id": "f-d5-sub04-005",
+      "domain": 5,
+      "subdomain": "5.4",
+      "front": "Separation of duties vs dual control",
+      "back": "SoD splits steps of a process among different people. Dual control requires two people to act together on a single step (such as two keys).",
+      "whyItMatters": "Exam distinguishes the two."
+    },
+    {
+      "id": "f-d5-sub04-006",
+      "domain": 5,
+      "subdomain": "5.4",
+      "front": "Access control matrix: ACL vs capability list",
+      "back": "ACL is a column: list of subjects with rights on one object. Capability list is a row: rights a subject holds across objects.",
+      "whyItMatters": "Tests matrix orientation."
+    },
+    {
+      "id": "f-d5-sub04-007",
+      "domain": 5,
+      "subdomain": "5.4",
+      "front": "Constrained interface / content-dependent / context-dependent control",
+      "back": "Constrained interface limits functions shown to user. Content-dependent control decides by data value; context-dependent by circumstances like time or sequence.",
+      "whyItMatters": "Specialized authorization mechanisms are tested by name."
+    },
+    {
+      "id": "f-d5-sub05-001",
+      "domain": 5,
+      "subdomain": "5.5",
+      "front": "Provisioning lifecycle stages",
+      "back": "Provisioning, review/recertification, modification on transfer, and deprovisioning. Joiner-mover-leaver describes the same flow.",
+      "whyItMatters": "Exam uses joiner-mover-leaver terminology."
+    },
+    {
+      "id": "f-d5-sub05-002",
+      "domain": 5,
+      "subdomain": "5.5",
+      "front": "Account lifecycle weak point",
+      "back": "Movers (role changes) are the usual source of privilege creep; leavers' orphaned accounts are the usual source of unauthorized access.",
+      "whyItMatters": "Identifies where audits focus."
+    },
+    {
+      "id": "f-d5-sub05-003",
+      "domain": 5,
+      "subdomain": "5.5",
+      "front": "Access aggregation vs privilege creep",
+      "back": "Aggregation: combining multiple low-level rights into powerful access. Creep: accumulating rights over time after role changes.",
+      "whyItMatters": "Often confused by candidates."
+    },
+    {
+      "id": "f-d5-sub05-004",
+      "domain": 5,
+      "subdomain": "5.5",
+      "front": "Who authorizes access: data owner vs custodian",
+      "back": "Data owner approves access and classifies data; custodian implements and maintains technical controls under the owner's direction.",
+      "whyItMatters": "Core ISC2 role distinction."
+    },
+    {
+      "id": "f-d5-sub05-005",
+      "domain": 5,
+      "subdomain": "5.5",
+      "front": "Role engineering/role mining",
+      "back": "Role mining discovers roles by analyzing existing permissions (bottom-up); role engineering designs them top-down from business functions. Top-down gives cleaner governance.",
+      "whyItMatters": "Exam covers how RBAC roles are built."
+    },
+    {
+      "id": "f-d5-sub05-006",
+      "domain": 5,
+      "subdomain": "5.5",
+      "front": "SCIM purpose",
+      "back": "System for Cross-domain Identity Management: standard REST/JSON protocol to automate user provisioning and deprovisioning between identity provider and applications.",
+      "whyItMatters": "Named standard for automated lifecycle management."
+    },
+    {
+      "id": "f-d5-sub06-001",
+      "domain": 5,
+      "subdomain": "5.6",
+      "front": "Kerberos components and key type",
+      "back": "Kerberos KDC = Authentication Service + Ticket Granting Service; client gets a TGT, then service tickets. Symmetric keys, timestamps, default 5-minute clock-skew tolerance.",
+      "whyItMatters": "Frequently tested flow detail."
+    },
+    {
+      "id": "f-d5-sub06-002",
+      "domain": 5,
+      "subdomain": "5.6",
+      "front": "Kerberos weaknesses",
+      "back": "Kerberos weaknesses: KDC is a single point of failure/compromise, clocks must be synchronized, replay is possible within ticket lifetime, and tickets allow offline password guessing.",
+      "whyItMatters": "Exam asks about Kerberos limitations."
+    },
+    {
+      "id": "f-d5-sub06-003",
+      "domain": 5,
+      "subdomain": "5.6",
+      "front": "RADIUS vs TACACS+",
+      "back": "RADIUS: UDP, encrypts only the password, combines authentication and authorization. TACACS+: TCP, encrypts whole payload, separates AAA functions (Cisco origin).",
+      "whyItMatters": "Standard comparison question."
+    },
+    {
+      "id": "f-d5-sub06-005",
+      "domain": 5,
+      "subdomain": "5.6",
+      "front": "LDAP and directory ports",
+      "back": "LDAP uses 389; LDAPS uses 636. Directories follow X.500 style hierarchy with DNs; LDAP queries identity data.",
+      "whyItMatters": "Port numbers are fair game."
+    },
+    {
+      "id": "f-d5-sub06-006",
+      "domain": 5,
+      "subdomain": "5.6",
+      "front": "EAP purpose",
+      "back": "Extensible Authentication Protocol is a framework (not a method) for authentication in 802.1X; methods include EAP-TLS (mutual certificates), PEAP and EAP-TTLS.",
+      "whyItMatters": "Tests which EAP method is strongest: EAP-TLS."
+    },
+    {
+      "id": "f-d5-sub05-007",
+      "domain": 5,
+      "subdomain": "5.5",
+      "front": "Privileged access management features",
+      "back": "Credential vaulting, session recording, just-in-time elevation, approval workflows and rotation of privileged secrets after use.",
+      "whyItMatters": "PAM vocabulary shows up in scenario answers."
+    },
+    {
+      "id": "f-d5-sub04-008",
+      "domain": 5,
+      "subdomain": "5.4",
+      "front": "Session management best practices",
+      "back": "Unpredictable session IDs, timeouts on idle and absolute lifetime, regeneration at login, secure/HttpOnly cookies, invalidation on logout.",
+      "whyItMatters": "Session controls are tested as authorization risks."
+    }
+  ]
+}

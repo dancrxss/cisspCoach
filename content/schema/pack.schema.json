@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cissp-coach/pack",
+  "title": "Content pack",
+  "type": "object",
+  "required": ["id", "version", "createdAt", "questions", "flashcards"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^pack-\\d{3}-[a-z0-9-]+$" },
+    "version": { "type": "integer", "minimum": 1 },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "source": { "type": "string", "description": "e.g. 'base' or 'coach-2026-10-20'" },
+    "note": { "type": "string" },
+    "retire": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "ids of questions or flashcards to remove from rotation"
+    },
+    "questions": { "type": "array", "items": { "$ref": "question.schema.json" } },
+    "flashcards": { "type": "array", "items": { "$ref": "flashcard.schema.json" } }
+  }
+}

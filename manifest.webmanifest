@@ -1,0 +1,12 @@
+{
+  "name": "CISSP Coach",
+  "short_name": "CISSP",
+  "description": "Offline CISSP prep: adaptive questions, flashcards, mock tests.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0d12",
+  "theme_color": "#0b0d12",
+  "icons": [{ "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
